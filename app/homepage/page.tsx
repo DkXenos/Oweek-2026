@@ -73,8 +73,8 @@ export default function Home() {
         ].map((item, index) => (
           <div key={index} className="flex flex-col items-center gap-4">
             <GlassSurface
-              width={160}
-              height={220}
+              width={190}
+              height={240}
               borderRadius={30}
               className="flex items-center justify-center bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_0_rgba(255,255,255,0.1)]"
             >
