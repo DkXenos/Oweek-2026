@@ -5,7 +5,10 @@ import GlassSurface from "@/components/GlassSurface";
 import LightRays from "../../components/LightRays";
 
 export default function Home() {
-  const targetDate = new Date("2026-08-17T00:00:00").getTime();
+  const [mounted, setMounted] = useState(false);
+  const targetDateStr = "2026-08-17";
+  const targetTimeStr = "17:00";
+  const targetDate = new Date(`${targetDateStr}T${targetTimeStr}:00`).getTime();
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -14,6 +17,7 @@ export default function Home() {
   });
 
   useEffect(() => {
+    setMounted(true);
     const interval = setInterval(() => {
       const now = new Date().getTime();
       const difference = targetDate - now;
@@ -56,12 +60,12 @@ export default function Home() {
       </div>
       
       <div className="relative z-10 flex flex-col items-center w-full">
-        <h1 className="text-5xl md:text-7xl font-bold mb-8 tracking-widest text-gray-100">
+        <h1 className="text-5xl md:text-7xl font-bold font-inter mb-8 tracking-widest text-gray-100">
           OWEEK 2026
         </h1>
 
-        <div className="flex gap-4 md:gap-8 justify-center">
-        {[
+        <div className="flex gap-4 md:gap-8 justify-center font-bold font-inter">
+        {mounted && [
           { label: "HARI", value: String(timeLeft.days).padStart(2, "0") },
           { label: "JAM", value: String(timeLeft.hours).padStart(2, "0") },
           { label: "MENIT", value: String(timeLeft.minutes).padStart(2, "0") },

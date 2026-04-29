@@ -161,7 +161,10 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
     mixBlendMode
   ]);
 
+  const [mounted, setMounted] = useState(false);
+  
   useEffect(() => {
+    setMounted(true);
     setSvgSupported(supportsSVGFilters());
   }, []);
 
@@ -229,6 +232,13 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
       '--glass-frost': backgroundOpacity,
       '--glass-saturation': saturation
     } as React.CSSProperties;
+
+    if (!mounted) {
+      return {
+        ...baseStyles,
+        background: isDarkMode ? `hsl(0 0% 0% / ${backgroundOpacity})` : `hsl(0 0% 100% / ${backgroundOpacity})`,
+      };
+    }
 
     const backdropFilterSupported = supportsBackdropFilter();
 
