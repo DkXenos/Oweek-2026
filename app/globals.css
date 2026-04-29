@@ -9,6 +9,20 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "DM";
+  src: url("/fonts/DMSerifDisplay-Regular.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 @custom-variant dark (&:is(.dark *));
 
