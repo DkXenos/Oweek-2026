@@ -15,7 +15,7 @@ export default function Home() {
     minutes: 0,
     seconds: 0,
   });
-
+// countdown logic
   useEffect(() => {
     setMounted(true);
     const interval = setInterval(() => {
