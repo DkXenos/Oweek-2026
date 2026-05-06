@@ -41,7 +41,7 @@ export default function Home() {
 
   return (
     <div
-      className="relative min-h-screen text-gray-200 flex flex-col items-center justify-start p-4 overflow-x-hidden bg-cover bg-center bg-no-repeat"
+      className="relative min-h-screen text-gray-200 flex flex-col items-center justify-start pb-[6rem] pt-[4rem] overflow-x-hidden bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/assets/template/bg-orange.webp')" }}
     >
       <img
