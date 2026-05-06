@@ -61,7 +61,7 @@ export default function Home() {
       />
       <div className="fixed inset-0 z-10 pointer-events-none">
         <LightRays
-          raysOrigin="top-center"
+          raysOrigin="top-center" //#ff9a00
           raysColor="#ffffff"
           raysSpeed={1}
           lightSpread={0.5}
@@ -90,21 +90,7 @@ export default function Home() {
         />
         <div className="relative mt-12 p-8 md:p-16 flex justify-center w-screen">
           <div className="absolute inset-y-0 w-screen bg-[#ff7100] -z-10 w-full mb-[-3rem] mt-[-3rem]"></div>
-          {/* Mobile Background */}
-          <div
-            className="absolute inset-0 z-0 bg-contain bg-center bg-no-repeat md:hidden"
-            style={{
-              backgroundImage:
-                "url('/assets/template/vertical-inner-mobile.webp')",
-            }}
-          ></div>
-          {/* Desktop Background */}
-          <div
-            className="absolute inset-0 z-0 bg-contain bg-center bg-no-repeat hidden md:block"
-            style={{
-              backgroundImage: "url('/assets/template/inner-square.webp')",
-            }}
-          ></div>
+         
           <div className="relative z-10 grid grid-cols-2 md:flex gap-4 md:gap-8 justify-center font-bold font-inter w-full max-w-[20rem] md:max-w-none">
             {mounted &&
               [
