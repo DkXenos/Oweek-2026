@@ -15,7 +15,7 @@ export default function Home() {
     minutes: 0,
     seconds: 0,
   });
-// countdown logic
+  // countdown logic
   useEffect(() => {
     setMounted(true);
     const interval = setInterval(() => {
@@ -77,7 +77,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center w-full h-screen pt-[8rem] pb-[6rem]">
+      <div className="relative z-10 flex flex-col items-center justify-center w-full h-screen pt-[12rem] pb-[6rem]">
         <img
           src="/assets/template/coming-soon.webp"
           alt="OWEEK 2026"
@@ -86,50 +86,53 @@ export default function Home() {
         <img
           src="/assets/template/oweek-title.webp"
           alt="OWEEK 2026"
-          className="mb-8 w-[100%] max-w-5xl h-auto"
+          className="mb-0 w-[100%] max-w-5xl h-auto"
         />
 
         <div className="relative p-8 md:p-16 flex justify-center w-full">
-          <div
-            className="absolute inset-0 z-0 bg-contain bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/assets/template/inner-square.webp')" }}
-          ></div>
+          <div className="absolute inset-0 z-0 bg-contain bg-center bg-no-repeat"></div>
           <div className="relative z-10 grid grid-cols-2 md:flex gap-4 md:gap-8 justify-center font-bold font-inter w-full max-w-[20rem] md:max-w-none">
             {mounted &&
-            [
-              { label: "HARI", value: String(timeLeft.days).padStart(2, "0") },
-              { label: "JAM", value: String(timeLeft.hours).padStart(2, "0") },
-              {
-                label: "MENIT",
-                value: String(timeLeft.minutes).padStart(2, "0"),
-              },
-              {
-                label: "DETIK",
-                value: String(timeLeft.seconds).padStart(2, "0"),
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center gap-2 md:gap-4 w-full md:w-[190px]"
-              >
-                <GlassSurface
-                  width="100%"
-                  height="100%"
-                  borderRadius={30}
-                  className="flex items-center justify-center bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_0_rgba(255,255,255,0.1)] aspect-[3/4] md:h-[240px]"
+              [
+                {
+                  label: "HARI",
+                  value: String(timeLeft.days).padStart(2, "0"),
+                },
+                {
+                  label: "JAM",
+                  value: String(timeLeft.hours).padStart(2, "0"),
+                },
+                {
+                  label: "MENIT",
+                  value: String(timeLeft.minutes).padStart(2, "0"),
+                },
+                {
+                  label: "DETIK",
+                  value: String(timeLeft.seconds).padStart(2, "0"),
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center gap-2 md:gap-4 w-full md:w-[190px]"
                 >
-                  <span className="text-5xl sm:text-6xl md:text-8xl font-bold text-gray-200 drop-shadow-md">
-                    {item.value}
-                  </span>
-                </GlassSurface>
+                  <GlassSurface
+                    width="100%"
+                    height="100%"
+                    borderRadius={30}
+                    className="flex items-center justify-center bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_0_rgba(255,255,255,0.1)] aspect-[3/4] md:h-[240px]"
+                  >
+                    <span className="text-5xl sm:text-6xl md:text-8xl font-bold text-gray-200 drop-shadow-md">
+                      {item.value}
+                    </span>
+                  </GlassSurface>
 
-                <div className="px-4 py-2 md:px-12 md:py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg mt-2 w-full text-center">
-                  <span className="text-lg md:text-2xl font-bold text-gray-300 tracking-wider">
-                    {item.label}
-                  </span>
+                  <div className="px-4 py-2 md:px-12 md:py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg mt-2 w-full text-center">
+                    <span className="text-lg md:text-2xl font-bold text-gray-300 tracking-wider">
+                      {item.label}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
       </div>
