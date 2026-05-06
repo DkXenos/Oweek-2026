@@ -77,15 +77,25 @@ export default function Home() {
         />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center w-full h-screen">
+      <div className="relative z-10 flex flex-col items-center justify-center w-full h-screen pt-[8rem] pb-[6rem]">
+        <img
+          src="/assets/template/coming-soon.webp"
+          alt="OWEEK 2026"
+          className="mb-2q w-[100%] max-w-2xl h-auto"
+        />
         <img
           src="/assets/template/oweek-title.webp"
           alt="OWEEK 2026"
           className="mb-8 w-[100%] max-w-5xl h-auto"
         />
 
-        <div className="grid grid-cols-2 md:flex gap-4 md:gap-8 justify-center font-bold font-inter w-full max-w-[20rem] md:max-w-none">
-          {mounted &&
+        <div className="relative p-8 md:p-16 flex justify-center w-full">
+          <div
+            className="absolute inset-0 z-0 bg-contain bg-center bg-no-repeat"
+            style={{ backgroundImage: "url('/assets/template/inner-square.webp')" }}
+          ></div>
+          <div className="relative z-10 grid grid-cols-2 md:flex gap-4 md:gap-8 justify-center font-bold font-inter w-full max-w-[20rem] md:max-w-none">
+            {mounted &&
             [
               { label: "HARI", value: String(timeLeft.days).padStart(2, "0") },
               { label: "JAM", value: String(timeLeft.hours).padStart(2, "0") },
@@ -120,6 +130,7 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
         </div>
       </div>
     </div>
