@@ -78,9 +78,11 @@ export default function Home() {
       </div>
 
       <div className="relative z-10 flex flex-col items-center justify-center w-full h-screen">
-        <h1 className="text-5xl md:text-7xl font-bold font-inter mb-8 tracking-widest text-gray-100 text-center">
-          OWEEK 2026
-        </h1>
+        <img
+          src="/assets/template/oweek-title.webp"
+          alt="OWEEK 2026"
+          className="mb-8 w-[100%] max-w-5xl h-auto"
+        />
 
         <div className="grid grid-cols-2 md:flex gap-4 md:gap-8 justify-center font-bold font-inter w-full max-w-[20rem] md:max-w-none">
           {mounted &&
