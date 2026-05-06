@@ -89,7 +89,7 @@ export default function Home() {
           className="mb-0 w-[100%] max-w-5xl h-auto"
         />
         <div className="relative mt-12 p-8 md:p-16 flex justify-center w-screen">
-          <div className="absolute inset-y-0 w-screen bg-[#ff7100] -z-10 w-full mb-[-3rem] mt-[-3rem]"></div>
+          {/* <div className="absolute inset-y-0 w-screen bg-[#ff7100] -z-10 w-full mb-[1.5rem] mt-[1.5rem]"></div> */}
          
           <div className="relative z-10 grid grid-cols-2 md:flex gap-4 md:gap-8 justify-center font-bold font-inter w-full max-w-[20rem] md:max-w-none">
             {mounted &&
@@ -121,13 +121,15 @@ export default function Home() {
                     borderRadius={30}
                     className="flex items-center justify-center bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_0_rgba(255,255,255,0.1)] aspect-[3/4] md:h-[240px]"
                   >
-                    <span className="text-5xl sm:text-6xl md:text-8xl font-bold text-gray-200 drop-shadow-md">
+                    <div className="absolute inset-0 bg-[#ff9a00] opacity-50 rounded-[inherit] pointer-events-none"></div>
+                    <span className="text-5xl sm:text-6xl md:text-8xl font-bold text-gray-200 drop-shadow-md z-10">
                       {item.value}
                     </span>
                   </GlassSurface>
 
-                  <div className="px-4 py-2 md:px-12 md:py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg mt-2 w-full text-center">
-                    <span className="text-lg md:text-2xl font-bold text-gray-300 tracking-wider">
+                  <div className="px-4 py-2 md:px-12 md:py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg mt-2 w-full text-center relative overflow-hidden">
+                    <div className="absolute inset-0 bg-[#ff9a00] opacity-50 pointer-events-none"></div>
+                    <span className="text-lg md:text-2xl font-bold text-gray-300 tracking-wider relative z-10">
                       {item.label}
                     </span>
                   </div>
