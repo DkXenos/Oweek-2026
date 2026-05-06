@@ -77,7 +77,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center w-full h-screen pt-[12rem] pb-[6rem]">
+      <div className="relative z-10 flex flex-col items-center justify-center w-[80%] h-[80%] pt-[12rem] pb-[6rem]">
         <img
           src="/assets/template/coming-soon.webp"
           alt="OWEEK 2026"
