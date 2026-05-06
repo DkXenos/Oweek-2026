@@ -42,12 +42,12 @@ export default function Home() {
   return (
     <div
       className="relative min-h-screen text-gray-200 flex flex-col items-center justify-start pb-[6rem] pt-[4rem] overflow-x-hidden bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/assets/template/bg-orange.webp')" }}
+      style={{ backgroundImage: "url('/assets/template/bg-scaled.webp')" }}
     >
       <img
         src="/assets/template/border-br.webp"
         alt="bl"
-        className="absolute bottom-0 right-0 w-[20%] h-auto"
+        className="absolute bottom-0 right-0 w-auto h-[38%]"
       />
       <img
         src="/assets/template/border-tl.webp"
@@ -88,10 +88,19 @@ export default function Home() {
           alt="OWEEK 2026"
           className="mb-0 w-[100%] max-w-5xl h-auto"
         />
-        <div className="relative p-8 md:p-16 flex justify-center w-screen">
-          <div className="bg-[#ff7100] w-screen h-auto absolute"></div>
+        <div className="relative mt-12 p-8 md:p-16 flex justify-center w-screen">
+          <div className="absolute inset-y-0 w-screen bg-[#ff7100] -z-10 w-full mb-[-3rem] mt-[-3rem]"></div>
+          {/* Mobile Background */}
           <div
-            className="absolute inset-0 z-0 bg-contain bg-center bg-no-repeat"
+            className="absolute inset-0 z-0 bg-contain bg-center bg-no-repeat md:hidden"
+            style={{
+              backgroundImage:
+                "url('/assets/template/vertical-inner-mobile.webp')",
+            }}
+          ></div>
+          {/* Desktop Background */}
+          <div
+            className="absolute inset-0 z-0 bg-contain bg-center bg-no-repeat hidden md:block"
             style={{
               backgroundImage: "url('/assets/template/inner-square.webp')",
             }}
