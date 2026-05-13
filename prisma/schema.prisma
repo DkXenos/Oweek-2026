@@ -1,18 +1,20 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
+// prisma/schema.prisma
+
+datasource db {
+  provider = "postgresql"
+}
 
 generator client {
   provider = "prisma-client-js"
   output   = "../generated/prisma/client"
 }
 
-datasource db {
-  provider = "postgresql"
-}
-
 model Event {
   id          String   @id @default(uuid())
   title       String
   description String?
+  date        DateTime @default(now())
+  location    String   @default("TBA")
   createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }

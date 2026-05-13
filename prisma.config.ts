@@ -1,9 +1,9 @@
-import "dotenv/config";
-import { defineConfig, env } from "prisma/config";
+// prisma.config.ts
+import { defineConfig } from '@prisma/config'
 
 export default defineConfig({
-  schema: "prisma/schema.prisma",
-  datasource: {
-    url: env("DATABASE_URL"),
-  },
-});
+  // @ts-ignore - Mengabaikan error tipe data sementara di Prisma 7
+  migrate: {
+    url: process.env.DATABASE_URL,
+  }
+} as any) // Tambahkan 'as any' di sini

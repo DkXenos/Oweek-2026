@@ -2059,8 +2059,8 @@ export namespace Prisma {
     id?: string
     title: string
     description?: string | null
-    date: Date | string
-    location: string
+    date?: Date | string
+    location?: string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -2069,8 +2069,8 @@ export namespace Prisma {
     id?: string
     title: string
     description?: string | null
-    date: Date | string
-    location: string
+    date?: Date | string
+    location?: string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -2099,8 +2099,8 @@ export namespace Prisma {
     id?: string
     title: string
     description?: string | null
-    date: Date | string
-    location: string
+    date?: Date | string
+    location?: string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
