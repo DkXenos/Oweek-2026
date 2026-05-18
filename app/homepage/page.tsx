@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import GlassSurface from "@/components/GlassSurface";
+// import GlassSurface from "@/components/GlassSurface";
 import LightRays from "../../components/LightRays";
 
 const BACKGROUND_IMAGES = [
@@ -53,18 +53,18 @@ export default function Home() {
 
   return (
     <div
-      className="relative min-h-screen text-gray-200 flex flex-col items-center justify-start pb-[6rem] pt-[4rem] overflow-x-hidden bg-cover bg-center bg-no-repeat"
+      className="relative min-h-screen text-gray-200 flex flex-col items-center justify-center pb-[6rem] pt-[4rem] overflow-x-hidden bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url('${backgroundImage}')` }}
     >
       <img
         src="/assets/template/border-br.webp"
         alt="bl"
-        className="absolute bottom-0 right-0 w-auto h-[38%]"
+        className="absolute bottom-0 right-0 w-auto h-[25%] md:h-[38%]"
       />
       <img
         src="/assets/template/border-tl.webp"
         alt="br"
-        className="absolute top-0 left-0 h-[38%] w-auto"
+        className="absolute top-0 left-0 w-[75%] h-auto md:h-[38%] md:w-auto"
       />
       <img
         src="/assets/template/logos.webp"
@@ -89,7 +89,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center w-[80%] h-[80%] pt-[12rem] pb-[6rem]">
+      <div className="relative z-10 flex flex-col items-center justify-center w-[80%] h-[80%] pt-[4rem] pb-[4rem]">
         <img
           src="/assets/template/coming-soon.webp"
           alt="OWEEK 2026"
@@ -100,7 +100,7 @@ export default function Home() {
           alt="OWEEK 2026"
           className="mb-0 w-full max-w-5xl h-auto"
         />
-        <div className="relative mt-12 p-8 md:p-16 flex justify-center w-screen">
+        <div className="relative mt-3 p-6 md:p-10 flex justify-center w-screen">
           {/* <div className="absolute inset-y-0 w-screen bg-[#ff7100] -z-10 w-full mb-[1.5rem] mt-[1.5rem]"></div> */}
          
           <div className="relative z-10 grid grid-cols-2 md:flex gap-4 md:gap-8 justify-center font-bold font-inter w-full max-w-[20rem] md:max-w-none">
@@ -127,17 +127,19 @@ export default function Home() {
                   key={index}
                   className="flex flex-col items-center gap-2 md:gap-4 w-full md:w-[190px]"
                 >
-                  <GlassSurface
+                  {/* <GlassSurface
                     width="100%"
                     height="100%"
                     borderRadius={30}
                     className="flex items-center justify-center bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_0_rgba(255,255,255,0.1)] aspect-[3/4] md:h-[240px]"
-                  >
+                  > */}
+                  <div className="relative flex items-center justify-center bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_0_rgba(255,255,255,0.1)] aspect-[3/4] md:h-[240px] w-full rounded-[30px] overflow-hidden">
                     <div className="absolute inset-0 bg-[#ff9a00] opacity-50 rounded-[inherit] pointer-events-none"></div>
                     <span className="text-5xl sm:text-6xl md:text-8xl font-bold text-gray-200 drop-shadow-md z-10">
                       {item.value}
                     </span>
-                  </GlassSurface>
+                  </div>
+                  {/* </GlassSurface> */}
 
                   <div className="px-4 py-2 md:px-12 md:py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg mt-2 w-full text-center relative overflow-hidden">
                     <div className="absolute inset-0 bg-[#ff9a00] opacity-50 pointer-events-none"></div>
