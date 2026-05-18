@@ -4,7 +4,18 @@ import { useState, useEffect } from "react";
 import GlassSurface from "@/components/GlassSurface";
 import LightRays from "../../components/LightRays";
 
+const BACKGROUND_IMAGES = [
+  "/assets/background-carousel/photo_1.webp",
+  "/assets/background-carousel/photo_2.webp",
+  "/assets/background-carousel/photo_3.webp",
+  "/assets/background-carousel/photo_4.webp",
+  "/assets/background-carousel/photo_5.webp",
+  "/assets/background-carousel/photo_6.webp",
+  "/assets/background-carousel/photo_7.webp",
+];
+
 export default function Home() {
+  const [backgroundImage, setBackgroundImage] = useState("/assets/template/bg-scaled.webp");
   const [mounted, setMounted] = useState(false);
   const targetDateStr = "2026-08-17";
   const targetTimeStr = "17:00";
@@ -18,6 +29,7 @@ export default function Home() {
   // countdown logic
   useEffect(() => {
     setMounted(true);
+    setBackgroundImage(BACKGROUND_IMAGES[Math.floor(Math.random() * BACKGROUND_IMAGES.length)]);
     const interval = setInterval(() => {
       const now = new Date().getTime();
       const difference = targetDate - now;
@@ -42,7 +54,7 @@ export default function Home() {
   return (
     <div
       className="relative min-h-screen text-gray-200 flex flex-col items-center justify-start pb-[6rem] pt-[4rem] overflow-x-hidden bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/assets/template/bg-scaled.webp')" }}
+      style={{ backgroundImage: `url('${backgroundImage}')` }}
     >
       <img
         src="/assets/template/border-br.webp"
@@ -73,7 +85,7 @@ export default function Home() {
           className="custom-rays"
           pulsating={false}
           fadeDistance={1}
-          saturation={1}
+          saturation={0.5}
         />
       </div>
 
