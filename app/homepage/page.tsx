@@ -93,12 +93,12 @@ export default function Home() {
         <img
           src="/assets/template/coming-soon.webp"
           alt="OWEEK 2026"
-          className="mb-2q w-[100%] max-w-2xl h-auto"
+          className="mb-2q w-full max-w-2xl h-auto"
         />
         <img
           src="/assets/template/oweek-title.webp"
           alt="OWEEK 2026"
-          className="mb-0 w-[100%] max-w-5xl h-auto"
+          className="mb-0 w-full max-w-5xl h-auto"
         />
         <div className="relative mt-12 p-8 md:p-16 flex justify-center w-screen">
           {/* <div className="absolute inset-y-0 w-screen bg-[#ff7100] -z-10 w-full mb-[1.5rem] mt-[1.5rem]"></div> */}
