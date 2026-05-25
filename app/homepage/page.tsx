@@ -64,7 +64,7 @@ export default function Home() {
       <img
         src="/assets/template/border-tl.webp"
         alt="br"
-        className="absolute top-0 left-0 w-[75%] h-auto md:h-[38%] md:w-auto"
+        className="absolute top-0 left-0 w-[60%] h-auto md:h-[28%] md:w-auto"
       />
       <img
         src="/assets/template/logos.webp"
@@ -89,7 +89,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center w-[80%] h-[80%] pt-[4rem] pb-[4rem]">
+      <div className="relative z-10 flex flex-col items-center justify-center w-[80%] h-[80%] pt-[8rem] pb-[4rem]">
         <img
           src="/assets/template/coming-soon.webp"
           alt="OWEEK 2026"
@@ -149,7 +149,19 @@ export default function Home() {
                   </div>
                 </div>
               ))}
+            </div>
           </div>
+        <div className="w-screen backdrop-blur-sm bg-white/10 flex flex-col items-center justify-center py-8 gap-8">
+          <img
+            src="/assets/template/timeline-title.webp"
+            alt="OWEEK 2026 Timeline Title"
+            className="w-full max-w-lg h-auto"
+          />
+          <img
+            src="/assets/template/timelineOweek.webp"
+            alt="OWEEK 2026 Timeline"
+            className="w-full max-w-4xl h-auto"
+          />
         </div>
       </div>
     </div>
