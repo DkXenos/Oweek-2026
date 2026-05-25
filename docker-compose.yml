@@ -1,19 +1,36 @@
 version: '3.8'
+
 services:
+  # 1. SERVER DATABASE (PostgreSQL)
   db:
-    image: postgres:17
+    image: postgres:17-alpine
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password_rahasia
       POSTGRES_DB: magnify_db
+      # Menggunakan password default jika tidak ada di .env (aman untuk testing lokal)
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-password_rahasia}
     ports:
       - "5435:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    restart: unless-stopped
 
+  # 2. SERVER WEB (Next.js CMS)
   web:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
     environment:
-      - DATABASE_URL=postgresql://postgres:password_rahasia@db:5432/magnify_db
+      # URL mengarah ke container 'db' di atas, bukan DBngin localhost
+      - DATABASE_URL=postgresql://postgres:${DB_PASSWORD:-password_rahasia}@db:5432/magnify_db
+      # Otomatis mengambil hash bcrypt dari file .env kamu
+      - ADMIN_PASSWORD_HASH=${ADMIN_PASSWORD_HASH}
     depends_on:
       - db
+    restart: unless-stopped
+
+# Menyimpan data database agar tidak hilang saat Docker dimatikan
+volumes:
+  db-data:
