@@ -69,7 +69,7 @@ export default function Home() {
       <img
         src="/assets/template/logos.webp"
         alt="br"
-        className="absolute top-0 h-[10%] w-auto z-20"
+        className="absolute top-0 h-[8%] w-auto z-20"
       />
       <div className="fixed inset-0 z-10 pointer-events-none">
         <LightRays
