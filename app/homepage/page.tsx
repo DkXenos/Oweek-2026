@@ -67,7 +67,7 @@ export default function Home() {
         className="absolute top-0 left-0 w-[60%] h-auto md:h-[28%] md:w-auto"
       />
       <img
-        src="/assets/template/logos.webp"
+        src="/assets/template/logos_updated.webp"
         alt="br"
         className="absolute top-0 h-[8%] w-auto z-20"
       />
