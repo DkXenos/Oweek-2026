@@ -155,13 +155,20 @@ export default function Home() {
           <img
             src="/assets/template/timeline-title.webp"
             alt="OWEEK 2026 Timeline Title"
-            className="w-full max-w-lg h-auto"
+            className="w-[80%] max-w-lg h-auto"
           />
           <img
-            src="/assets/template/timelineOweek.webp"
+            src="/assets/template/timeline-oweek-revised.webp"
             alt="OWEEK 2026 Timeline"
             className="w-full max-w-4xl h-auto"
           />
+        </div>
+        <div className="w-screen backdrop-blur-sm bg-white/10 flex flex-row items-center justify-center py-6 gap-4 md:gap-8 flex-wrap font-inter mt-4">
+          <span className="text-sm md:text-lg font-semibold text-gray-200 tracking-wide">Line OA: @829hzswf</span>
+          <span className="hidden md:inline text-gray-400">|</span>
+          <span className="text-sm md:text-lg font-semibold text-gray-200 tracking-wide">Instagram: @oweekucs</span>
+          <span className="hidden md:inline text-gray-400">|</span>
+          <span className="text-sm md:text-lg font-semibold text-gray-200 tracking-wide">Email: oweek@ciputra.ac.id</span>
         </div>
       </div>
     </div>
