@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import NavButton from "../components/button";
 // import GlassSurface from "@/components/GlassSurface";
 import LightRays from "../../components/LightRays";
 
@@ -15,7 +16,9 @@ const BACKGROUND_IMAGES = [
 ];
 
 export default function Home() {
-  const [backgroundImage, setBackgroundImage] = useState("/assets/template/bg-scaled.webp");
+  const [backgroundImage, setBackgroundImage] = useState(
+    "/assets/template/bg-scaled.webp",
+  );
   const [mounted, setMounted] = useState(false);
   const targetDateStr = "2026-08-17";
   const targetTimeStr = "17:00";
@@ -29,7 +32,9 @@ export default function Home() {
   // countdown logic
   useEffect(() => {
     setMounted(true);
-    setBackgroundImage(BACKGROUND_IMAGES[Math.floor(Math.random() * BACKGROUND_IMAGES.length)]);
+    setBackgroundImage(
+      BACKGROUND_IMAGES[Math.floor(Math.random() * BACKGROUND_IMAGES.length)],
+    );
     const interval = setInterval(() => {
       const now = new Date().getTime();
       const difference = targetDate - now;
@@ -102,7 +107,7 @@ export default function Home() {
         />
         <div className="relative mt-3 p-6 md:p-10 flex justify-center w-screen">
           {/* <div className="absolute inset-y-0 w-screen bg-[#ff7100] -z-10 w-full mb-[1.5rem] mt-[1.5rem]"></div> */}
-         
+
           <div className="relative z-10 grid grid-cols-2 md:flex gap-4 md:gap-8 justify-center font-bold font-inter w-full max-w-[20rem] md:max-w-none">
             {mounted &&
               [
@@ -149,8 +154,8 @@ export default function Home() {
                   </div>
                 </div>
               ))}
-            </div>
           </div>
+        </div>
         <div className="w-screen backdrop-blur-sm bg-white/10 flex flex-col items-center justify-center py-8 gap-8">
           <img
             src="/assets/template/timeline-title.webp"
@@ -164,11 +169,18 @@ export default function Home() {
           />
         </div>
         <div className="w-screen backdrop-blur-sm bg-white/10 flex flex-row items-center justify-center py-6 gap-4 md:gap-8 flex-wrap font-inter mt-4">
-          <span className="text-sm md:text-lg font-semibold text-gray-200 tracking-wide">Line OA: @829hzswf</span>
+          <span className="text-sm md:text-lg font-semibold text-gray-200 tracking-wide">
+            Line OA: @829hzswf
+          </span>
           <span className="hidden md:inline text-gray-400">|</span>
-          <span className="text-sm md:text-lg font-semibold text-gray-200 tracking-wide">Instagram: @oweekucs</span>
+          <span className="text-sm md:text-lg font-semibold text-gray-200 tracking-wide">
+            Instagram: @oweekucs
+          </span>
           <span className="hidden md:inline text-gray-400">|</span>
-          <span className="text-sm md:text-lg font-semibold text-gray-200 tracking-wide">Email: oweek@ciputra.ac.id</span>
+          <span className="text-sm md:text-lg font-semibold text-gray-200 tracking-wide">
+            Email: oweek@ciputra.ac.id
+          </span>
+          
         </div>
       </div>
     </div>
