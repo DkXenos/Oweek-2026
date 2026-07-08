@@ -1,0 +1,57 @@
+.navbar{
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(0deg, #F6E393, #EDB43B) ;
+    z-index: 999;
+    padding: 0 1.5rem;
+}
+
+.logo{
+    display: flex;
+    z-index: 1;
+}
+
+.buttons{
+    display: inline-flex;
+    gap: 1.25rem;
+    z-index: 1;
+}
+
+.logo-universitas{
+    width: 6.5rem;
+    height: auto;
+}
+
+.logo-magnify{
+    width: 3.8rem;
+    height: auto;
+    margin-left: -1rem;
+}
+
+.decoration{
+    z-index: 0;
+    width: auto;
+    height: 4rem;
+    position: absolute;
+}
+
+#bottom-decor1{
+    left: 3rem;
+    top: 1rem;
+}
+#top-decor1{
+    left: 24rem;
+    bottom: 1rem;
+}
+#bottom-decor2{
+    left: 45rem;
+    top: 1rem;
+}
+#top-decor2{
+    left: 65rem;
+    bottom: 1rem;
+}

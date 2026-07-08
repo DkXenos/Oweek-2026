@@ -58,7 +58,7 @@ export default function Home() {
 
   return (
     <div
-      className="relative min-h-screen text-gray-200 flex flex-col items-center justify-center pb-[6rem] pt-[4rem] overflow-x-hidden bg-cover bg-center bg-no-repeat"
+      className="absolute top-20 min-h-screen text-gray-200 flex flex-col items-center justify-center pb-[6rem] pt-[4rem] overflow-x-hidden bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url('${backgroundImage}')` }}
     >
       <img
