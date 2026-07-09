@@ -168,18 +168,29 @@ export default function Home() {
             className="w-full max-w-4xl h-auto"
           />
         </div>
-        <div className="w-screen backdrop-blur-sm bg-white/10 flex flex-row items-center justify-center py-6 gap-4 md:gap-8 flex-wrap font-inter mt-4">
-          <span className="text-sm md:text-lg font-semibold text-gray-200 tracking-wide">
+        <div className="w-screen backdrop-blur-sm bg-white/10 flex flex-col items-center justify-center font-inter mt-4">
+          {/* <img
+            src="/assets/template/communication-chanel-title.png"
+            alt="OWEEK 2026 Timeline Title"
+            className="w-[80%] max-w-lg h-auto mt-[-67px] mb-[-100px]"
+          /> */}
+          <h1 className="text-[2.5rem] mt-4 font-semibold text-2xl py-2">
+            <b>OFFICIAL COMMUNICATION CHANEL</b>
+          </h1>
+          <div className="flex flex-row py-6 gap-4 md:gap-8 flex-wrap">
+            <span className="text-sm md:text-lg font-semibold text-gray-200 tracking-wide">
             Line OA: @829hzswf
-          </span>
-          <span className="hidden md:inline text-gray-400">|</span>
-          <span className="text-sm md:text-lg font-semibold text-gray-200 tracking-wide">
-            Instagram: @oweekucs
-          </span>
-          <span className="hidden md:inline text-gray-400">|</span>
-          <span className="text-sm md:text-lg font-semibold text-gray-200 tracking-wide">
-            Email: oweek@ciputra.ac.id
-          </span>
+            </span>
+            <span className="hidden md:inline text-gray-400">|</span>
+            <span className="text-sm md:text-lg font-semibold text-gray-200 tracking-wide">
+              Instagram: @oweekucs
+            </span>
+            <span className="hidden md:inline text-gray-400">|</span>
+            <span className="text-sm md:text-lg font-semibold text-gray-200 tracking-wide">
+              Email: oweek@ciputra.ac.id
+            </span>
+          </div>
+          
           
         </div>
       </div>
