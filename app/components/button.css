@@ -27,12 +27,12 @@
     width: var(--button-size);
     height: 2.5rem;
     
-    background: linear-gradient(90deg, #FBF7EC, #E5A82F) padding-box, 
+    background: linear-gradient(90deg, #FBF7EE, #FFED8F) padding-box, 
                 linear-gradient(90deg, #E5A82F, #F8E89B, #E5A82F) border-box;
-    border: 0.15rem solid transparent;
+    border: 0.25rem solid transparent;
     border-radius: 25px;
 
-    font-family: 'Poppins';
+    font-family: 'Poppins-Bold';
     /* font-weight: 700; */
     font-size: 1rem;
     color: #A255BB;
