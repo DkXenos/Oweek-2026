@@ -9,6 +9,20 @@ export default function Mascots() {
         <img src="/assets/about/bush-right.png" alt="" className="bush-right" />
       </div>
 
+      {/* balloons hang from the top corners, just inside the pillars */}
+      <div className="baloon-layer">
+        <img
+          src="/assets/about/baloon-left.png"
+          alt=""
+          className="baloon-left"
+        />
+        <img
+          src="/assets/about/baloon-right.png"
+          alt=""
+          className="baloon-right"
+        />
+      </div>
+
       <img
         src="/assets/about/pillar-left-bottom.png"
         alt=""
