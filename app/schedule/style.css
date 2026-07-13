@@ -1,0 +1,159 @@
+.background{
+    position: relative;
+    width: 100%;
+    /* padding-bottom: 60%; */
+    background: linear-gradient(180deg, #DCAEEB, #63B3F5, #B4D7F5, #FFED8F);
+    overflow: hidden;
+}
+
+.layer{
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+.layer-0{ z-index: 0; }
+.layer-1{ z-index: 1; }
+.layer-2{ z-index: 2; }
+.layer-3{ z-index: 3; }
+.layer-4{ z-index: 4; }
+.layer-5{ z-index: 5; }
+.layer-6{ z-index: 6; }
+.layer-7{ z-index: 7; }
+.layer-8{ z-index: 8; }
+
+/* layer 0 background..................................................................................................................... */
+.clouds-background{
+    width: 100%;
+    height: auto;
+    margin-top: -5rem;
+}
+
+/* layer 1 firework..................................................................................................................... */
+.layer-1 img{
+    position: inherit;
+}
+.firework-left{
+    top: 5rem;
+    left: 3rem;
+}
+.firework-right{
+    right: 4rem;
+}
+
+/* layer 2 trees..................................................................................................................... */
+.layer-2{
+    display: flex;
+    justify-content: space-around;
+    bottom: -2rem;
+    gap: 5rem;
+}
+
+/* layer 3 pillars..................................................................................................................... */
+.layer-3{
+    /* position: relative; */
+    display: flex;
+    justify-content: space-between;
+    /* height: ; */
+    right: 0.1rem;
+}
+
+/* layer 4 circle..................................................................................................................... */
+.layer-4{
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+.layer-4 img{
+    width: 60%;
+    height: auto;
+}
+
+/* layer 5 castle/ferris-wheel..................................................................................................................... */
+.castle-center{ /* kalau ferris-wheel namanya .ferris-wheel{ } */
+    width: 65%; /* kalau ferris-wheel 50% */
+    height: auto;
+    /* margin-bottom: -2.1rem; */ /* kalau ferris-wheel pakai margin bottom */
+}
+
+.layer-5{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+}
+
+/* .layer-5 .bush{
+    position: inherit;
+    bottom: -1rem;
+}
+
+.bush-left{
+    left: 25%;
+}
+
+.bush-right{
+    right: 25%;
+} */
+
+/* layer 6 schedule banners..................................................................................................................... */
+.layer-6{
+    position: relative;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+    /* position: absolute; */
+    /* top: 4rem; */
+}
+
+.schedule-text{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.schedule-banner{
+    width: 40rem;
+    height: auto;
+}
+
+.banners{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.banners img{
+    width: clamp(8rem, 28%, 19rem);
+    height: auto;
+    transition: transform 0.2s ease; 
+}
+
+.banners img:hover{
+    transform: scale(1.05) translateY(-1rem);
+}
+
+/* layer 7 triangle flag..................................................................................................................... */
+.layer-7{
+    display: flex;
+    justify-content: space-between;
+    top: -3rem;
+}
+
+/* layer 8 cups..................................................................................................................... */
+.layer-8{
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cup-left{
+    margin-left: -5rem;
+}
+
+.cup-right{
+    margin-right: -5rem;
+}
