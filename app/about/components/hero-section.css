@@ -54,7 +54,14 @@
     display: block;
 }
 
-@media (max-width: 3840px) and (max-height: 2160px) {}
+@media (max-width: 3840px) and (max-height: 2160px) {
+    .tentang-desc {
+        width: 140rem;
+        height: auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
 @media (max-width: 2850px) and (max-height: 1800px) {}
 @media (max-width: 2560px) and (max-height: 1600px) {}
 @media (max-width: 2560px) and (max-height: 1352px) {}
