@@ -46,6 +46,25 @@
     display: block;
 }
 
+/* mobile-only pots pinned to the bottom corners; hidden on desktop */
+.pot-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 6;
+    pointer-events: none;
+}
+
+.pot-left,
+.pot-right {
+    display: block;
+}
+
 /* pillars sit above the bushes (5) and the title (3) */
 .mascots-pillar-left {
     position: absolute;
@@ -262,7 +281,70 @@
 @media (max-width: 720px) and (max-height: 540px) and (orientation: landscape) {}
 @media (max-width: 540px) and (max-height: 720px) and (orientation: portrait) {}
 @media (max-width: 459px) and (max-height: 841px) and (orientation: portrait) {}
-@media (max-width: 440px) and (max-height: 956px) and (orientation: portrait) {}
+@media (max-width: 440px) and (max-height: 956px) and (orientation: portrait) {
+    .mascots-pillar-left {
+        content: url("/assets/about-mobile/botpillar-l.png");
+    }
+
+    .mascots-pillar-right {
+        content: url("/assets/about-mobile/botpillar-r.png");
+    }
+
+    /* the crossover bushes are replaced by the corner pots on mobile */
+    .bush-left,
+    .bush-right {
+        display: none;
+    }
+
+    .pot-layer {
+        display: flex;
+    }
+
+    .pot-left {
+        width: 8rem;
+        height: auto;
+    }
+
+    .pot-right {
+        width: 8rem;
+        height: auto;
+    }
+
+    .baloon-left {
+        width: 6rem;
+        height: auto;
+        margin-top: 3rem;
+        margin-left: 3rem;
+    }
+
+    .baloon-right {
+        width: 8rem;
+        height: auto;
+        margin-top: -3rem;
+        margin-right: 3rem;
+    }
+
+    .mascot-ring {
+        width: 20rem;
+        height: auto;
+    }
+
+    .mascots-img {
+        content: url("/assets/about-mobile/mascots.png");
+        width: 18rem;
+        height: auto;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+    }
+    .mascot-wrapper{
+        margin-bottom: 3rem;
+        margin-top: 3rem;
+    }
+    .fireworks-bottom{
+        margin-bottom: 3rem;
+        width: 100%;
+    }
+}
 @media (max-width: 430px) and (max-height: 932px) and (orientation: portrait) {}
 @media (max-width: 414px) and (max-height: 896px) and (orientation: portrait) {}
 @media (max-width: 393px) and (max-height: 873px) and (orientation: portrait) {}

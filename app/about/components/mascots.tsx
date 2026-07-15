@@ -9,6 +9,12 @@ export default function Mascots() {
         <img src="/assets/about/bush-right.png" alt="" className="bush-right" />
       </div>
 
+      {/* mobile-only pots anchored to the bottom corners of the section */}
+      <div className="pot-layer">
+        <img src="/assets/about-mobile/pot-l.png" alt="" className="pot-left" />
+        <img src="/assets/about-mobile/pot-r.png" alt="" className="pot-right" />
+      </div>
+
       {/* balloons hang from the top corners, just inside the pillars */}
       <div className="baloon-layer">
         <img

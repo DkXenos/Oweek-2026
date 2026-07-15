@@ -63,7 +63,23 @@ export default function Navbar(){
                 >
                     <Button />
                 </div>
+                <img
+                    src="/assets/navbar/nav-kiri.png"
+                    alt=""
+                    className="decor-kiri"
+                />
+                <img
+                    src="/assets/navbar/nav-kanan.png"
+                    alt=""
+                    className="decor-kanan"
+                />
             </div>
+            {open && (
+                <div
+                    className="navbar-backdrop"
+                    onClick={() => setOpen(false)}
+                />
+            )}
         </>
     );
 }

@@ -58,6 +58,29 @@
     bottom: 1rem;
 }
 
+/* bunting decorations that hang off the bottom edge of the fixed bar.
+   position: absolute against the fixed navbar → they don't grow the page. */
+.decor-kiri,
+.decor-kanan{
+    position: absolute;
+    top: 100%;
+    height: auto;
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+
+/* transparent full-screen catcher: tap anywhere outside the open menu to close it. */
+.navbar-backdrop{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 998;
+}
+
 /* mobile hamburger toggle — hidden on desktop, shown inside the mobile media query.
    the three bars morph into an X when .open is present. */
 .navbar-toggle{
@@ -69,9 +92,11 @@
     width: 2.75rem;
     height: 2.75rem;
     padding: 0;
-    border: none;
+    border: 0.2rem solid transparent;
     border-radius: 50%;
-    background: linear-gradient(180deg, #b57ce0 0%, #9a54cf 100%);
+    background:
+        linear-gradient(180deg, #b57ce0 0%, #9a54cf 100%) padding-box,
+        linear-gradient(180deg, #E8AA2E 0%, #F8E89B 50%, #ECB23A 100%) border-box;
     box-shadow: 0 0.25rem 0.5rem rgba(109, 68, 152, 0.35);
     cursor: pointer;
     z-index: 2;
@@ -127,6 +152,19 @@
 @media (max-width: 1528px) and (max-height: 732px) {
 }
 @media (max-width: 1512px) and (max-height: 982px) {
+    .decor-kiri{
+    left: 0;
+    width: 14rem;
+    margin-top: 0rem;
+    z-index: 0;
+}
+
+.decor-kanan{
+    right: 0;
+    width: 14rem;
+    margin-top: 0rem;
+    z-index: 0;
+}
 }
 @media (max-width: 1440px) and (max-height: 641px) {
 }
@@ -175,7 +213,9 @@
         background-size: cover;
         background-position: center;
     }
-
+    .logo{
+        margin-left: -2rem;
+    }
     .decoration{
         height: 1.5rem;
     }
@@ -202,6 +242,14 @@
 
     .navbar-toggle{
         display: flex;
+    }
+
+    .decor-kiri{
+        width: 9rem;
+    }
+
+    .decor-kanan{
+        width: 9rem;
     }
 
     .buttons{

@@ -34,7 +34,7 @@ yarn-error.log*
 .env*
 
 #responsive
-RESPONSIVE.md
+# RESPONSIVE.md
 
 # vercel
 .vercel
