@@ -66,16 +66,6 @@ export default function Schedule(){
                         alt="" 
                         className="castle-center"
                     />
-                    {/* <img 
-                        src="/assets/schedule/bush-left.png" 
-                        alt="" 
-                        className="bush bush-left"
-                    />
-                    <img 
-                        src="/assets/schedule/bush-right.png" 
-                        alt="" 
-                        className="bush bush-right"
-                    /> */}
                 </div>
 
                 {/* layer schedule and banner(6)---------------------------------------------------------------------------------------------------- */}
@@ -93,7 +83,7 @@ export default function Schedule(){
                 </div>
 
                 {/* layer triangle flag(7)---------------------------------------------------------------------------------------------------- */}
-                <div className="layer layer-7">
+                {/* <div className="layer layer-7">
                     <img 
                         src="/assets/schedule/triangle-flag-left.png" 
                         alt="" 
@@ -104,7 +94,7 @@ export default function Schedule(){
                         alt="" 
                         className="triagnle-flag-right"
                     />
-                </div>
+                </div> */}
 
                 {/* layer cup (8)---------------------------------------------------------------------------------------------------- */}
                 <div className="layer layer-8">
