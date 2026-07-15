@@ -1,6 +1,12 @@
+"use client";
+
+import { useState } from "react";
+import { createPortal } from "react-dom";
 import "./mascots.css";
 
 export default function Mascots() {
+  const [popupOpen, setPopupOpen] = useState(false);
+
   return (
     <section className="mascots-container">
       {/* bushes straddle the hero/mascots boundary (crossover layer) */}
@@ -67,9 +73,36 @@ export default function Mascots() {
             src="/assets/about/mascots.png"
             alt="The university's mascots"
             className="mascots-img"
+            onClick={() => setPopupOpen(true)}
           />
         </div>
       </div>
+
+      {popupOpen &&
+        createPortal(
+          <div
+            className="mascot-popup-overlay"
+            onClick={() => setPopupOpen(false)}
+          >
+            <div
+              className="mascot-popup-content"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* desktop assets swap to the about-mobile pair on phones (CSS) */}
+              <img src="/assets/about/yucca.png" alt="Yucca" className="popup-yucca" />
+              <img src="/assets/about/ccc.png" alt="Chap, Chip & Chup" className="popup-ccc" />
+
+              <button
+                className="mascot-popup-close"
+                onClick={() => setPopupOpen(false)}
+                aria-label="Close"
+              >
+                ✕
+              </button>
+            </div>
+          </div>,
+          document.body
+        )}
     </section>
   );
 }
