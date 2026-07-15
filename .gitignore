@@ -43,6 +43,6 @@ RESPONSIVE.md
 *.tsbuildinfo
 next-env.d.ts
 
-data-template.ts
-temp-schedule.tsx
-temp-schedule.css
+# data-template.ts
+# temp-schedule.tsx
+# temp-schedule.css
