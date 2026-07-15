@@ -102,16 +102,28 @@
     position: relative;
     margin-top: 4rem;
     margin-bottom: 6rem;
+    /* position: absolute; */
+    /* top: 4rem; */
 }
 
 .schedule-text{
     display: flex;
     justify-content: center;
+    margin-bottom: 4rem;
 }
 
 .schedule-banner{
     width: 40rem;
     height: auto;
+}
+
+.banners{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .banners img{

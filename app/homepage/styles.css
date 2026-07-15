@@ -418,6 +418,9 @@
     margin-bottom: 5.5rem;
   }
 }
+@media (max-width: 1512) and (max-height: 981){
+  
+}
 @media (max-width: 1512px) and (max-height: 827px) {
 }
 @media (max-width: 1440px) and (max-height: 641px) {

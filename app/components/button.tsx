@@ -49,6 +49,21 @@ export default function Button() {
         </button>
       </Link>
 
+      <Link href="/schedule-temp">
+        <button>
+          <div className="container">
+            <img 
+              src="/assets/template/button-decor.png" 
+              alt="" 
+              className="button-img"
+            />
+            <div className="button-box">
+              <span>SCHEDULE</span>
+            </div>
+          </div>
+        </button>
+      </Link>
+
       {/* <Link href="/rules">
         <button>
           <div className="container">
