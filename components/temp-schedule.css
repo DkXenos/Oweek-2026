@@ -144,6 +144,8 @@
         width: 150rem;
         padding: 1.6rem;
         margin-top: 5rem;
+        margin-left: 8rem;
+        margin-right: 8rem;
     }
     .schedule-card-gap {
         padding: 0.6rem;
@@ -215,8 +217,10 @@
 @media (max-width: 1528px) and (max-height: 732px) {}
 @media (max-width: 1512px) and (max-height: 982px) {
     .schedule-card {
-        width: 80rem;
+        width: 60rem;
         padding: 0.9rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
     }
     .schedule-card-gap {
         padding: 0.35rem;
@@ -298,8 +302,10 @@
 @media (max-width: 459px) and (max-height: 841px) and (orientation: portrait) {}
 @media (max-width: 440px) and (max-height: 956px) and (orientation: portrait) {
     .schedule-card {
-        width: 19rem;
+        width: 18rem;
         padding: 0.5rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
     }
     .schedule-card-gap {
         padding: 0.2rem;
