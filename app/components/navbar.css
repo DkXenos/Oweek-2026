@@ -179,6 +179,19 @@
 @media (max-width: 1180px) and (max-height: 820px) {
 }
 @media (max-width: 1024px) and (max-height: 1366px) and (orientation: portrait) {
+        .decor-kiri{
+    left: 0;
+    width: 14rem;
+    margin-top: 0rem;
+    z-index: 0;
+}
+
+.decor-kanan{
+    right: 0;
+    width: 14rem;
+    margin-top: 0rem;
+    z-index: 0;
+}
 }
 @media (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
 }
