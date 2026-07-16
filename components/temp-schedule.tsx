@@ -64,8 +64,6 @@ export default function TempSchedule() {
               </div>
             </div>
 
-            {/* decorative scroll indicator on the right edge */}
-            <span className="schedule-scrolltrack" aria-hidden="true" />
           </div>
         </div>
       </div>
