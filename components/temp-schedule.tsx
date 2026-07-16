@@ -43,7 +43,7 @@ export default function TempSchedule() {
         <div className="schedule-card-gap">
           <div className="schedule-card-inner">
             <div className="schedule-heading">
-              <h2 className="schedule-day">{day.judul}</h2>
+              <h2 className="schedule-day text-center">{day.judul}</h2>
               {/* <p className="schedule-subtitle">-</p> */}
             </div>
 

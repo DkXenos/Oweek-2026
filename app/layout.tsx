@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Magnify",
+  title: "2026",
   description: "Orientation Week Universitas Ciputra Surabaya 2026",
   icons: {
     icon: "/assets/template/oweek-logo.png",
