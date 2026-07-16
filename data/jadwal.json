@@ -1,0 +1,170 @@
+[
+  {
+    "day": "Day 1",
+    "date": "17 Agustus 2026",
+    "details": {
+      "title": "UPACARA & PEMBUKAAN & SEMINAR PILLARS OF ENTREPRENEURSHIP",
+      "location": "UC Plaza & Universitas Ciputra Surabaya",
+      "time": "06.30-13.00 WIB",
+      "dresscode": "DO",
+      "dresscodeDoImage": "/assets/jadwal/uploads/day-1-do-1784098814855.jpg",
+      "dresscodeDontImage": "/assets/jadwal/uploads/day-1-dont-1784098814857.jpg"
+    },
+    "items": [
+      {
+        "time": "07.00",
+        "activity": "Syalala Syilili"
+      },
+      {
+        "time": "08.00",
+        "activity": "Snack Time"
+      },
+      {
+        "time": "09.00",
+        "activity": "Opening Ceremony"
+      },
+      {
+        "time": "10.30",
+        "activity": "Campus Tour"
+      },
+      {
+        "time": "12.00",
+        "activity": "Lunch Break"
+      },
+      {
+        "time": "13.30",
+        "activity": "Faculty Session"
+      },
+      {
+        "time": "15.00",
+        "activity": "Team Building"
+      }
+    ]
+  },
+  {
+    "day": "Day 2",
+    "date": "18 Agustus 2026",
+    "details": {
+      "title": "SEMINAR INSPIRASI & STUDENT ACTIVITY EXPO",
+      "location": "Universitas Ciputra Surabaya",
+      "time": "07.00-15.30 WIB",
+      "dresscode": "Casual Rapi",
+      "dresscodeDoImage": "",
+      "dresscodeDontImage": ""
+    },
+    "items": [
+      {
+        "time": "07.00",
+        "activity": "Absensi"
+      },
+      {
+        "time": "08.00",
+        "activity": "Seminar Inspirasi"
+      },
+      {
+        "time": "10.00",
+        "activity": "Snack Time"
+      },
+      {
+        "time": "10.30",
+        "activity": "Student Activity Expo"
+      },
+      {
+        "time": "12.00",
+        "activity": "Lunch Break"
+      },
+      {
+        "time": "13.30",
+        "activity": "Games & Challenge"
+      },
+      {
+        "time": "15.30",
+        "activity": "Reflection Session"
+      }
+    ]
+  },
+  {
+    "day": "Day 3",
+    "date": "19 Agustus 2026",
+    "details": {
+      "title": "FINAL BRIEFING & CLOSING CELEBRATION",
+      "location": "Universitas Ciputra Surabaya",
+      "time": "07.00-16.00 WIB",
+      "dresscode": "OWeek Attributes",
+      "dresscodeDoImage": "",
+      "dresscodeDontImage": ""
+    },
+    "items": [
+      {
+        "time": "07.00",
+        "activity": "Absensi"
+      },
+      {
+        "time": "08.00",
+        "activity": "Final Briefing"
+      },
+      {
+        "time": "09.30",
+        "activity": "Snack Time"
+      },
+      {
+        "time": "10.00",
+        "activity": "Performance Preparation"
+      },
+      {
+        "time": "12.00",
+        "activity": "Lunch Break"
+      },
+      {
+        "time": "14.00",
+        "activity": "Closing Celebration"
+      },
+      {
+        "time": "16.00",
+        "activity": "Dismissal"
+      }
+    ]
+  },
+  {
+    "day": "Pra-Oweek",
+    "date": "16 Agustus 2026",
+    "details": {
+      "title": "PRA-OWEEK BRIEFING",
+      "location": "Universitas Ciputra Surabaya",
+      "time": "07.00-16.00 WIB",
+      "dresscode": "Bebas Rapi",
+      "dresscodeDoImage": "",
+      "dresscodeDontImage": ""
+    },
+    "items": [
+      {
+        "time": "07.00",
+        "activity": "Absensi"
+      },
+      {
+        "time": "08.00",
+        "activity": "Final Briefing"
+      },
+      {
+        "time": "09.30",
+        "activity": "Snack Time"
+      },
+      {
+        "time": "10.00",
+        "activity": "Performance Preparation"
+      },
+      {
+        "time": "12.00",
+        "activity": "Lunch Break"
+      },
+      {
+        "time": "14.00",
+        "activity": "Closing Celebration"
+      },
+      {
+        "time": "16.00",
+        "activity": "Dismissal"
+      }
+    ]
+  }
+]

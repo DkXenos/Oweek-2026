@@ -1,0 +1,82 @@
+.login-admin-page {
+  min-height: calc(100svh - 5rem);
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+  background:
+    linear-gradient(180deg, rgba(220, 174, 235, 0.9), rgba(99, 179, 245, 0.88) 48%, rgba(255, 237, 143, 0.95)),
+    #b4d7f5;
+}
+
+.login-admin-card {
+  width: min(100%, 28rem);
+  border: 0.25rem solid transparent;
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 251, 232, 0.97), rgba(255, 237, 143, 0.94)) padding-box,
+    linear-gradient(180deg, #f8e89b, #e5a82f, #a255bb) border-box;
+  box-shadow: 0 22px 48px rgba(90, 42, 119, 0.2);
+  padding: clamp(1.25rem, 5vw, 2rem);
+}
+
+.login-kicker {
+  margin: 0 0 0.35rem;
+  font-family: "Poppins-semibold", sans-serif;
+  color: #7d3d9f;
+  text-align: center;
+}
+
+.login-admin-card h1 {
+  margin: 0 0 1.5rem;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: clamp(1.8rem, 8vw, 2.5rem);
+  text-align: center;
+  color: #a255bb;
+}
+
+.login-error {
+  margin: 0 0 1rem;
+  border-radius: 8px;
+  background: rgba(232, 103, 153, 0.16);
+  padding: 0.75rem;
+  color: #8b1746;
+  font-family: "Poppins-semibold", sans-serif;
+  text-align: center;
+}
+
+.login-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.login-form label {
+  display: grid;
+  gap: 0.45rem;
+  font-family: "Poppins-semibold", sans-serif;
+  color: #4f3470;
+}
+
+.login-form input {
+  min-height: 2.8rem;
+  border: 2px solid rgba(162, 85, 187, 0.26);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+  padding: 0 0.85rem;
+  color: #4f3470;
+  outline: none;
+}
+
+.login-form input:focus {
+  border-color: #a255bb;
+}
+
+.login-form button {
+  min-height: 3rem;
+  border: 0;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #dbacea, #a869d1);
+  color: #fcf5d6;
+  cursor: pointer;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 1rem;
+}
