@@ -2543,5 +2543,133 @@
         width: 0.3rem;
     }
 }
-@media (max-width: 360px) and (max-height: 740px) and (orientation: portrait) {}
-@media (max-width: 344px) and (max-height: 882px) and (orientation: portrait) {}
+@media (max-width: 360px) and (max-height: 740px) and (orientation: portrait) {
+    .schedule-card {
+        width: 17rem;
+        padding: 0.5rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    .schedule-card-gap {
+        padding: 0.2rem;
+    }
+    .schedule-card-inner {
+        padding-top: 1.8rem;
+        padding-right: 1.6rem;
+        padding-bottom: 2rem;
+        padding-left: 1.6rem;
+        gap: 1.4rem;
+    }
+    .schedule-heading {
+        gap: 0.3rem;
+    }
+    .schedule-day {
+        font-size: 1rem;
+    }
+    .schedule-subtitle {
+        font-size: 0.8rem;
+    }
+    .schedule-title {
+        font-size: 1.3rem;
+    }
+    .schedule-detail-list {
+        gap: 0.9rem;
+    }
+    .schedule-detail-row {
+        gap: 0.7rem;
+    }
+    .schedule-dot {
+        width: 0.8rem;
+        height: 0.8rem;
+        margin-top: 0.35rem;
+    }
+    .schedule-detail-text {
+        font-size: 0.7rem;
+    }
+    .schedule-nav {
+        width: 3.2rem;
+        height: 3.2rem;
+        padding: 0.35rem;
+    }
+    .schedule-nav-icon {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+    .schedule-prev {
+        margin-left: 0.4rem;
+    }
+    .schedule-next {
+        margin-right: 0.4rem;
+    }
+    .schedule-scrolltrack {
+        top: 1rem;
+        bottom: 1rem;
+        right: 0.5rem;
+        width: 0.3rem;
+    }
+}
+@media (max-width: 344px) and (max-height: 882px) and (orientation: portrait) {
+    .schedule-card {
+        width: 17rem;
+        padding: 0.5rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    .schedule-card-gap {
+        padding: 0.2rem;
+    }
+    .schedule-card-inner {
+        padding-top: 1.8rem;
+        padding-right: 1.6rem;
+        padding-bottom: 2rem;
+        padding-left: 1.6rem;
+        gap: 1.4rem;
+    }
+    .schedule-heading {
+        gap: 0.3rem;
+    }
+    .schedule-day {
+        font-size: 1rem;
+    }
+    .schedule-subtitle {
+        font-size: 0.8rem;
+    }
+    .schedule-title {
+        font-size: 1.3rem;
+    }
+    .schedule-detail-list {
+        gap: 0.9rem;
+    }
+    .schedule-detail-row {
+        gap: 0.7rem;
+    }
+    .schedule-dot {
+        width: 0.8rem;
+        height: 0.8rem;
+        margin-top: 0.35rem;
+    }
+    .schedule-detail-text {
+        font-size: 0.7rem;
+    }
+    .schedule-nav {
+        width: 3.2rem;
+        height: 3.2rem;
+        padding: 0.35rem;
+    }
+    .schedule-nav-icon {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+    .schedule-prev {
+        margin-left: 0.4rem;
+    }
+    .schedule-next {
+        margin-right: 0.4rem;
+    }
+    .schedule-scrolltrack {
+        top: 1rem;
+        bottom: 1rem;
+        right: 0.5rem;
+        width: 0.3rem;
+    }
+}
