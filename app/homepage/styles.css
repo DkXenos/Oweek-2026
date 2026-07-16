@@ -426,6 +426,85 @@
 @media (max-width: 1440px) and (max-height: 641px) {
 }
 @media (max-width: 1366px) and (max-height: 1024px) {
+  .homepage-container {
+    margin-bottom: 0rem;
+  }
+  .magnify-title {
+    width: 41rem;
+    height: auto;
+    margin-top: 0;
+  }
+  .hero-content {
+    gap: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .firework-top {
+    width: 91rem;
+    height: auto;
+  }
+
+  .castle-center {
+    width: 67rem;
+    height: auto;
+  }
+
+  .circle-bg {
+    width: 55rem;
+    height: auto;
+  }
+
+  .countdown-row {
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+  }
+
+  .countdown-frame {
+    width: 13rem;
+  }
+
+  .countdown-value {
+    font-size: 8rem;
+  }
+
+  .countdown-label {
+    width: 13rem;
+    margin-top: 1.75rem;
+    padding-top: 0.55rem;
+    padding-right: 0;
+    padding-bottom: 0.55rem;
+    padding-left: 0;
+    font-size: 1.35rem;
+    border: 0.35rem solid transparent;
+  }
+
+  .mascot-lefttop {
+    width: 8rem;
+    height: auto;
+    margin-left: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .mascot-leftbottom {
+    width: 12rem;
+    height: auto;
+    margin-left: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .mascot-righttop {
+    width: 8rem;
+    height: auto;
+    margin-right: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .mascot-rightbottom {
+    width: 8rem;
+    height: auto;
+    margin-right: 3rem;
+    margin-bottom: 5.5rem;
+  }
 }
 @media (max-width: 1366px) and (max-height: 768px) {
 }
@@ -434,6 +513,85 @@
 @media (max-width: 1280px) and (max-height: 853px) {
 }
 @media (max-width: 1180px) and (max-height: 820px) {
+  .homepage-container {
+    margin-bottom: 0rem;
+  }
+  .magnify-title {
+    width: 36rem;
+    height: auto;
+    margin-top: 0;
+  }
+  .hero-content {
+    gap: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .firework-top {
+    width: 91rem;
+    height: auto;
+  }
+
+  .castle-center {
+    width: 67rem;
+    height: auto;
+  }
+
+  .circle-bg {
+    width: 45rem;
+    height: auto;
+  }
+
+  .countdown-row {
+    gap: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  .countdown-frame {
+    width: 10rem;
+  }
+
+  .countdown-value {
+    font-size: 7rem;
+  }
+
+  .countdown-label {
+    width: 10rem;
+    margin-top: 1.75rem;
+    padding-top: 0.55rem;
+    padding-right: 0;
+    padding-bottom: 0.55rem;
+    padding-left: 0;
+    font-size: 1.35rem;
+    border: 0.35rem solid transparent;
+  }
+
+  .mascot-lefttop {
+    width: 8rem;
+    height: auto;
+    margin-left: .5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .mascot-leftbottom {
+    width: 12rem;
+    height: auto;
+    margin-left: 0rem;
+    margin-bottom: 3rem;
+  }
+
+  .mascot-righttop {
+    width: 9rem;
+    height: auto;
+    margin-right: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .mascot-rightbottom {
+    width: 9rem;
+    height: auto;
+    margin-right: 1rem;
+    margin-bottom: 5.5rem;
+  }
 }
 @media (max-width: 1024px) and (max-height: 1366px) and (orientation: portrait) {
   .border-l {
@@ -538,6 +696,85 @@
   }
 }
 @media (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
+  .homepage-container {
+    margin-bottom: 0rem;
+  }
+  .magnify-title {
+    width: 30rem;
+    height: auto;
+    margin-top: 0;
+  }
+  .hero-content {
+    gap: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .firework-top {
+    width: 91rem;
+    height: auto;
+  }
+
+  .castle-center {
+    width: 47rem;
+    height: auto;
+  }
+
+  .circle-bg {
+    width: 45rem;
+    height: auto;
+  }
+
+  .countdown-row {
+    gap: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  .countdown-frame {
+    width: 9rem;
+  }
+
+  .countdown-value {
+    font-size: 5.5rem;
+  }
+
+  .countdown-label {
+    width: 8rem;
+    margin-top: 1.75rem;
+    padding-top: 0.45rem;
+    padding-right: 0;
+    padding-bottom: 0.45rem;
+    padding-left: 0;
+    font-size: 1rem;
+    border: 0.35rem solid transparent;
+  }
+
+  .mascot-lefttop {
+    width: 8rem;
+    height: auto;
+    margin-left: .5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .mascot-leftbottom {
+    width: 10rem;
+    height: auto;
+    margin-left: 0rem;
+    margin-bottom: 3rem;
+  }
+
+  .mascot-righttop {
+    width: 9rem;
+    height: auto;
+    margin-right: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .mascot-rightbottom {
+    width: 9rem;
+    height: auto;
+    margin-right: 1rem;
+    margin-bottom: 5.5rem;
+  }
 }
 @media (max-width: 1024px) and (max-height: 600px) {
 }
