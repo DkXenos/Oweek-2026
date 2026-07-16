@@ -47,7 +47,9 @@ export default function TempSchedule() {
               {/* <p className="schedule-subtitle">-</p> */}
             </div>
 
-            <h3 className="schedule-title">{day.title}</h3>
+            {day.title && day.title.trim() !== "" && (
+              <h3 className="schedule-title">{day.title}</h3>
+            )}
 
             <div className="schedule-detail-list">
               <div className="schedule-detail-row">
