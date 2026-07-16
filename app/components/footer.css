@@ -426,7 +426,54 @@
 }
 @media (max-width: 375px) and (max-height: 667px) and (orientation: portrait) {
 }
-@media (max-width: 360px) and (max-height: 740px) and (orientation: portrait) {
+@media (max-width: 360px) and (max-height: 780px) and (orientation: portrait) {
+    .footer {
+        padding-top: 2.5rem;
+        padding-right: 1.5rem;
+        padding-bottom: 2.5rem;
+        padding-left: 1rem;
+        margin-top: 0rem;
+    }
+
+    .bushes {
+        width: 100%;
+    }
+
+    .bushes-layer {
+        margin-top: -2rem;
+    }
+
+    .pedestal {
+        width: 25rem;
+    }
+
+    .pedestal-layer {
+        margin-top: -1.25rem;
+    }
+
+    .footer-magnify {
+        width: 5rem;
+    }
+
+    .footer-logos {
+        gap: 0.35rem;
+    }
+
+    .logo-uc {
+        height: 2rem;
+    }
+
+    .logo-oweek {
+        height: 2rem;
+    }
+
+    .footer-contact {
+        gap: 0.3rem;
+    }
+
+    .contact-line {
+        font-size: 0.55rem;
+    }
 }
 @media (max-width: 344px) and (max-height: 882px) and (orientation: portrait) {
 }
