@@ -85,24 +85,24 @@ export default function Home() {
         <div className="mascot-layer">
           <div className="mascot-col-left">
             <img
-              src="/assets/homepage/mascot-lefttop.png"
+              src="/assets/homepage/ccclt.png"
               alt=""
               className="mascot-lefttop"
             />
             <img
-              src="/assets/homepage/mascot-leftbottom.png"
+              src="/assets/homepage/yuccanew.png"
               alt=""
               className="mascot-leftbottom"
             />
           </div>
           <div className="mascot-col-right">
             <img
-              src="/assets/homepage/mascot-righttop.png"
+              src="/assets/homepage/cccrt.png"
               alt=""
               className="mascot-righttop"
             />
             <img
-              src="/assets/homepage/mascot-rightbottom.png"
+              src="/assets/homepage/cccrb.png"
               alt=""
               className="mascot-rightbottom"
             />
