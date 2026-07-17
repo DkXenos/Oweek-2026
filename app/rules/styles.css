@@ -128,6 +128,7 @@
 
     transition: .25s;
     top: 13rem;
+    padding: 0 5rem;
 }
 
 .dropdown-btn:hover{
@@ -153,39 +154,50 @@
     width: 100%;
     height: 15rem;
 
+    padding-right: 12px;
+    box-sizing: border-box;
+
     background: linear-gradient(130deg,#A767D1,#DCAEEB);
 
     border: 3px solid #F3C347;
     border-radius: 24px;
-
-    overflow-y: auto;
-    overflow-x: hidden;
-
-    scrollbar-gutter: stable;
-
-    animation: dropdown .2s ease;
-
-    
 }
 
-.dropdown-menu::-webkit-scrollbar{
+.dropdown-scroll{
+    height:15rem;
+    overflow-y:auto;
+    padding-right:16px;
+    box-sizing:border-box;
+}
+
+.dropdown-scroll::-webkit-scrollbar{
     width:8px;
 }
 
-.dropdown-menu::-webkit-scrollbar-track{
+.dropdown-scroll::-webkit-scrollbar-track{
     background:#ba80da;
     border-radius:999px;
 
     margin:14px 4px;
 }
 
-.dropdown-menu::-webkit-scrollbar-thumb{
+.dropdown-scroll::-webkit-scrollbar-thumb{
     background:#F9EBBD;
     border-radius:999px;
 }
 
-.dropdown-menu::-webkit-scrollbar-thumb:hover{
+.dropdown-scroll::-webkit-scrollbar-thumb:hover{
     background:#fff3c8;
+}
+
+.dropdown-title{
+    display:block;
+
+    max-width:calc(100% - 70px);
+
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
 }
 
 .dropdown-item{
@@ -244,6 +256,27 @@
 
     font-size: 22px;
     line-height: 2;
+    font-family: var(--font-poppins), sans-serif;
+}
+
+.text-content::-webkit-scrollbar{
+    width:8px;
+}
+
+.text-content::-webkit-scrollbar-track{
+    background:#F9EBBD;
+    border-radius:999px;
+
+    margin:14px 4px;
+}
+
+.text-content::-webkit-scrollbar-thumb{
+    background:#f3c146;
+    border-radius:999px;
+}
+
+.text-content::-webkit-scrollbar-thumb:hover{
+    background:#f8d86f;
 }
 
 .list1 {

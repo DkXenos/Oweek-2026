@@ -2,60 +2,7 @@
 
 import "./styles.css";
 import { useState, useRef, useEffect } from "react";
-
-const rules = [
-  {
-    title: "Pasal I (Ruang Lingkup)",
-    content: (
-      <>
-        <ol className="list1">
-          <li>
-            Yang termasuk area O-Week dalam Universitas Ciputra meliputi:
-            <ol className="list2">
-              <li>UC Main Building</li>
-              <li>UC Tower (lantai 1 - 21)</li>
-              <li>UC Plaza</li>
-              <li>Corepreneur</li>
-            </ol>
-          </li>
-          <li>
-            Yang termasuk area cakupan Universitas Ciputra:
-            <ol>
-              <li>UC Main Building</li>
-              <li>UC Tower</li>
-              <li>UC Plaza</li>
-              <li>Corepreneur</li>
-              <li>UC Venture</li>
-              <li>UC Walk (Berkeley & Cornell)</li>
-              <li>UC Loop</li>
-              <li>Bukit UC</li>
-              <li>Parkiran UC, meliputi parkiran gedung dan parkiran lapangan</li>
-              <li>Lapangan Olahraga UC</li>
-            </ol>
-          </li>
-        </ol>
-      </>
-    ),
-  },
-  {
-    title: "Dress Code",
-    content: (
-      <>
-        <p>1. Menggunakan pakaian formal.</p>
-        <p>2. Menggunakan sepatu.</p>
-      </>
-    ),
-  },
-  {
-    title: "Attendance",
-    content: (
-      <>
-        <p>1. Presensi dilakukan melalui website.</p>
-        <p>2. Terlambat lebih dari 15 menit dianggap tidak hadir.</p>
-      </>
-    ),
-  },
-];
+import { rules } from './ruleData'
 
 export function RuleDropdown({
   selected,
@@ -93,7 +40,7 @@ export function RuleDropdown({
         className={`dropdown-btn ${open ? "active" : ""}`}
         onClick={() => setOpen((prev) => !prev)}
       >
-        <span>{selected.title}</span>
+        <span className="dropdown-title">{selected.title}</span>
 
         <img
           src="/assets/rules/dropdown-button.png"
@@ -104,18 +51,20 @@ export function RuleDropdown({
 
       {open && (
         <div className="dropdown-menu">
-          {rules.map((item) => (
-            <button
-              key={item.title}
-              className="dropdown-item"
-              onClick={() => {
-                setSelected(item);
-                setOpen(false);
-              }}
-            >
-              {item.title}
-            </button>
-          ))}
+          <div className="dropdown-scroll">
+            {rules.map((item) => (
+              <button
+                key={item.title}
+                className="dropdown-item"
+                onClick={() => {
+                  setSelected(item);
+                  setOpen(false);
+                }}
+              >
+                {item.title}
+              </button>
+            ))}
+          </div>
         </div>
       )}
     </div>
