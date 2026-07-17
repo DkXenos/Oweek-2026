@@ -70,7 +70,7 @@ export default function Mascots() {
             />
           </div>
           <img
-            src="/assets/about/mascots.png"
+            src="/assets/about/mascots-cropped.png"
             alt="The university's mascots"
             className="mascots-img"
             onClick={() => setPopupOpen(true)}
