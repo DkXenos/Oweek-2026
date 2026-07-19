@@ -1,7 +1,10 @@
 import ScheduleTemp from "../../components/temp-schedule";
 import "./style.css";
+import Banner from "./banner"
 
 export default function Schedule(){
+    
+
     return(
         <>
             <div className="background">
@@ -57,8 +60,14 @@ export default function Schedule(){
                 </div>
 
                 {/* layer circle (4)---------------------------------------------------------------------------------------------------- */}
-            
-
+                 <div className="layer layer-4">
+                    <img 
+                        src="/assets/homepage/circle-background.png" 
+                        alt="" 
+                        className="schedule-banner"
+                    />
+                </div>
+                
                 {/* layer ferris wheel(5)---------------------------------------------------------------------------------------------------- */}
                 <div className="layer layer-5">
                     <img 
@@ -77,24 +86,8 @@ export default function Schedule(){
                             className="schedule-banner"
                         />
                     </div>
-                    <div className="banners">
-                        <ScheduleTemp />
-                    </div>
+                    <Banner />
                 </div>
-
-                {/* layer triangle flag(7)---------------------------------------------------------------------------------------------------- */}
-                {/* <div className="layer layer-7">
-                    <img 
-                        src="/assets/schedule/triangle-flag-left.png" 
-                        alt="" 
-                        className="triangle-flag-left"
-                    />
-                    <img 
-                        src="/assets/schedule/triangle-flag-right.png" 
-                        alt="" 
-                        className="triagnle-flag-right"
-                    />
-                </div> */}
 
                 {/* layer cup (8)---------------------------------------------------------------------------------------------------- */}
                 <div className="layer layer-8">

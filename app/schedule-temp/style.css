@@ -32,11 +32,42 @@
 .layer-6 {
   z-index: 8;
 }
-.layer-7 {
-  z-index: 7;
-}
 .layer-8 {
   z-index: 6;
+}
+
+.layer-0 img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.layer-1 img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.layer-2 img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.layer-3 img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.layer-4 img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.layer-5 img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.layer-6 img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.layer-8 img {
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 /* layer 0 background..................................................................................................................... */
@@ -67,15 +98,6 @@
   bottom: -2rem;
   gap: 5rem;
 }
-.tree-left {
-  width: auto;
-  height: auto;
-}
-
-.tree-right {
-  width: auto;
-  height: auto;
-}
 
 /* layer 3 pillars..................................................................................................................... */
 .layer-3 {
@@ -84,7 +106,19 @@
   justify-content: space-between;
 }
 
-/* layer 5 castle/ferris-wheel..................................................................................................................... */
+/* layer 4 circle..................................................................................................................... */
+.layer-4 {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.layer-4 img {
+  width: 60%;
+  height: auto;
+}
+
+/* layer 5 castle..................................................................................................................... */
 .castle-center {
   width: 65%;
   height: auto;
@@ -99,30 +133,23 @@
 
 /* layer 6 schedule banners..................................................................................................................... */
 .layer-6 {
+  user-select: none;
   position: relative;
-  margin-top: 4rem;
-  margin-bottom: 6rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .schedule-text {
   display: flex;
   justify-content: center;
-  margin-bottom: 4rem;
 }
 
 .schedule-banner {
+  -webkit-user-drag: none;
   margin-bottom: 3rem;
-  width: 40rem;
+  width: 30rem;
   height: auto;
-}
-
-.banners {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* layer 8 cups..................................................................................................................... */
@@ -793,11 +820,11 @@
   /* layer 6 schedule banners..................................................................................................................... */
   .layer-6 {
     margin-top: 2rem;
-    margin-bottom: 10rem;
+    margin-bottom: 7rem;
   }
 
   .schedule-text {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
   }
 
   .schedule-banner {
@@ -2628,7 +2655,6 @@
     height: 9rem;
     margin-right: -3rem;
   }
-  
 }
 @media (max-width: 360px) and (max-height: 780px) and (orientation: portrait) {
   /* layer 1 firework..................................................................................................................... */

@@ -1,0 +1,97 @@
+.banner-container{
+    display: flex;
+    gap: 3rem;
+}
+
+.banners-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  height: 100%;
+  place-items: center;
+}
+
+.banners-box img{
+    -webkit-user-drag: none;
+    width: 85%;
+    height: auto;
+    transition: transform 0.2s ease; 
+}
+
+.banners-box img:hover{
+    transform: scale(1.05) translateY(-1rem);
+}
+
+.arrow-button img{
+    user-select: none;
+    -webkit-user-drag: none;
+    transition: transform 0.2s ease; 
+}
+
+.arrow-button img:hover{
+    transform: scale(1.2);
+}
+
+/* popup......................................................................................... */
+.popup-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+.popup-container{
+    position: fixed;
+    inset: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(0deg,#FEEFA5,#FBF7EE) padding-box,
+                linear-gradient(112deg, #FFD166 -1.5%, #F8E99D 114.63%) border-box;
+    width: 65rem;
+    height: 33rem;
+    border-radius: 5px;
+    border: 0.6rem solid transparent;
+    z-index: 11;
+}
+
+.popup-inner-shadow{
+    width: 100%;
+    height: 100%;
+    border-top: 0.4rem solid #F3BE43;
+    border-right: 0.4rem solid #F3BE43;
+}
+
+.popup-content{
+    width: 100%;
+    height: auto;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* .popup-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: #8a6a00;
+} */
+
+.close-button-container{
+    position: fixed;
+    inset: 0;
+    margin-top: auto;
+    margin-bottom: 6rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    height: fit-content;
+    z-index: 11;
+}
