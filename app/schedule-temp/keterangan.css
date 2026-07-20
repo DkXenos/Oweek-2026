@@ -1,0 +1,49 @@
+.keterangan-title{
+    font-family: "DM", serif;
+    color: #e0479e;
+    letter-spacing: 0.04em;
+    font-size: 3rem;
+    padding-bottom: 1rem;
+}
+
+.keterangan-subtitle{
+    padding-left: 3rem;
+    padding-right: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    font-size: 1.5rem;
+    color: #942580; 
+    margin-bottom: 1rem;
+}
+
+.keterangan-dot{
+    display: block;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #a767d1;
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.keterangan-detail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Poppins-Bold", sans-serif;
+    font-weight: 700;
+    color: #7b52a8;
+    line-height: 1.35;
+    gap: 1rem;
+}
+
+.keterangan-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    width: 16rem;
+}
