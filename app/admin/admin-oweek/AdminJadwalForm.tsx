@@ -8,6 +8,23 @@ type AdminJadwalFormProps = {
   action: (formData: FormData) => void;
 };
 
+// Waktu bisa satu baris atau beberapa baris. Di form, admin mengetik satu
+// waktu per baris. Simpan sebagai string kalau cuma satu baris, atau array
+// kalau lebih dari satu, supaya JSON tetap rapi.
+function timeToText(time: string | string[]): string {
+  return Array.isArray(time) ? time.join("\n") : time;
+}
+
+function textToTime(text: string): string | string[] {
+  const lines = text
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean);
+
+  if (lines.length <= 1) return lines[0] ?? "";
+  return lines;
+}
+
 function createEmptyDay(): JadwalDay {
   // Template day baru. Path gambar sengaja kosong karena gambar diatur
   // melalui form upload, bukan dari form data utama.
@@ -22,7 +39,7 @@ function createEmptyDay(): JadwalDay {
       dresscodeDoImage: "",
       dresscodeDontImage: "",
     },
-    items: [{ time: "", activity: "" }],
+    items: [],
   };
 }
 
@@ -45,22 +62,6 @@ export default function AdminJadwalForm({
 
   const removeDay = (dayIndex: number) => {
     setJadwal((current) => current.filter((_, index) => index !== dayIndex));
-  };
-
-  const addRundownItem = (dayIndex: number) => {
-    const day = jadwal[dayIndex];
-    updateDay(dayIndex, {
-      ...day,
-      items: [...day.items, { time: "", activity: "" }],
-    });
-  };
-
-  const removeRundownItem = (dayIndex: number, itemIndex: number) => {
-    const day = jadwal[dayIndex];
-    updateDay(dayIndex, {
-      ...day,
-      items: day.items.filter((_, index) => index !== itemIndex),
-    });
   };
 
   return (
@@ -111,7 +112,7 @@ export default function AdminJadwalForm({
                   onChange={(event) =>
                     updateDay(dayIndex, { ...day, date: event.target.value })
                   }
-                  placeholder="17 Agustus 2026"
+                  placeholder="Minggu, 17 Agustus 2026"
                   required
                 />
               </label>
@@ -127,7 +128,6 @@ export default function AdminJadwalForm({
                       details: { ...day.details, title: event.target.value },
                     })
                   }
-                  required
                 />
               </label>
 
@@ -146,19 +146,21 @@ export default function AdminJadwalForm({
                 />
               </label>
 
-              <label className="admin-field">
-                <span>Waktu</span>
-                <input
-                  type="text"
-                  value={day.details.time}
+              <label className="admin-field admin-field-wide">
+                <span>Waktu (satu baris per waktu)</span>
+                <textarea
+                  rows={3}
+                  value={timeToText(day.details.time)}
                   onChange={(event) =>
                     updateDay(dayIndex, {
                       ...day,
-                      details: { ...day.details, time: event.target.value },
+                      details: {
+                        ...day.details,
+                        time: textToTime(event.target.value),
+                      },
                     })
                   }
-                  placeholder="06.30-13.00 WIB"
-                  required
+                  placeholder={"Sesi 1 07.30-12.15 WIB\nSesi 2 12.15-17.00 WIB"}
                 />
               </label>
 
@@ -173,67 +175,8 @@ export default function AdminJadwalForm({
                       details: { ...day.details, dresscode: event.target.value },
                     })
                   }
-                  required
                 />
               </label>
-            </div>
-
-            <div className="admin-rundown">
-              <div className="admin-rundown-title">
-                <h3>Rundown</h3>
-                <button
-                  className="admin-small-button"
-                  type="button"
-                  onClick={() => addRundownItem(dayIndex)}
-                >
-                  Tambah Rundown
-                </button>
-              </div>
-
-              {day.items.map((item, itemIndex) => (
-                <div
-                  className="admin-rundown-row"
-                  key={`${day.day}-${itemIndex}`}
-                >
-                  <input
-                    type="text"
-                    value={item.time}
-                    onChange={(event) => {
-                      const items = day.items.map((currentItem, index) =>
-                        index === itemIndex
-                          ? { ...currentItem, time: event.target.value }
-                          : currentItem,
-                      );
-                      updateDay(dayIndex, { ...day, items });
-                    }}
-                    placeholder="07.00"
-                    required
-                  />
-                  <input
-                    type="text"
-                    value={item.activity}
-                    onChange={(event) => {
-                      const items = day.items.map((currentItem, index) =>
-                        index === itemIndex
-                          ? { ...currentItem, activity: event.target.value }
-                          : currentItem,
-                      );
-                      updateDay(dayIndex, { ...day, items });
-                    }}
-                    placeholder="Absensi"
-                    required
-                  />
-                  <button
-                    className="admin-icon-button"
-                    type="button"
-                    onClick={() => removeRundownItem(dayIndex, itemIndex)}
-                    disabled={day.items.length === 1}
-                    aria-label="Hapus rundown"
-                  >
-                    X
-                  </button>
-                </div>
-              ))}
             </div>
           </section>
         ))}

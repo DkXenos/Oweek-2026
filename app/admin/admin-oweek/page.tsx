@@ -33,7 +33,7 @@ async function requireAdmin() {
   // Semua server action admin memanggil guard ini agar tidak bisa ditembak
   // langsung tanpa cookie session yang valid.
   if (!verifyAdminSessionToken(token)) {
-    redirect("/login-admin");
+    redirect("/admin/login-admin");
   }
 }
 
@@ -48,13 +48,13 @@ async function updateJadwalAction(formData: FormData) {
     const raw = String(formData.get("jadwalJson") || "[]");
     const jadwal = JSON.parse(raw) as unknown;
     await saveJadwal(jadwal);
-    revalidatePath("/jadwal");
+    revalidatePath("/schedule-temp");
   } catch (error) {
     const message = error instanceof Error ? error.message : "Jadwal gagal disimpan.";
-    redirect(`/admin-oweek?error=${encodeURIComponent(message)}`);
+    redirect(`/admin/admin-oweek?error=${encodeURIComponent(message)}`);
   }
 
-  redirect("/admin-oweek?status=saved");
+  redirect("/admin/admin-oweek?status=saved");
 }
 
 function slugifyFilePart(value: string) {
@@ -122,13 +122,13 @@ async function uploadDresscodeAction(formData: FormData) {
     });
 
     await saveJadwal(updatedJadwal);
-    revalidatePath("/jadwal");
+    revalidatePath("/schedule-temp");
   } catch (error) {
     const message = error instanceof Error ? error.message : "Upload gambar gagal.";
-    redirect(`/admin-oweek?error=${encodeURIComponent(message)}`);
+    redirect(`/admin/admin-oweek?error=${encodeURIComponent(message)}`);
   }
 
-  redirect("/admin-oweek?status=uploaded");
+  redirect("/admin/admin-oweek?status=uploaded");
 }
 
 async function logoutAction() {
@@ -136,7 +136,7 @@ async function logoutAction() {
 
   const cookieStore = await cookies();
   cookieStore.delete(ADMIN_COOKIE_NAME);
-  redirect("/login-admin");
+  redirect("/admin/login-admin");
 }
 
 export default async function AdminPage({ searchParams }: AdminPageProps) {
@@ -151,7 +151,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
         <header className="admin-header">
           <h1 id="admin-title">Admin Jadwal</h1>
           <div className="admin-actions">
-            <Link className="admin-link" href="/jadwal">
+            <Link className="admin-link" href="/schedule-temp">
               Lihat Jadwal
             </Link>
             <form action={logoutAction}>

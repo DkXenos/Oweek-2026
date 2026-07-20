@@ -166,7 +166,7 @@ export default function JadwalViewer({ schedule }: JadwalViewerProps) {
               <section className="jadwal-rundown-section" aria-label="Rundown">
                 <h3>Rundown</h3>
                 <ol className="jadwal-list">
-                  {popupDay.items.map((item) => (
+                  {(popupDay.items ?? []).map((item) => (
                     <li key={`${popupDay.day}-${item.time}-${item.activity}`}>
                       <time>{item.time}</time>
                       <span>{item.activity}</span>

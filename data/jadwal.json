@@ -1,170 +1,104 @@
 [
   {
-    "day": "Day 1",
-    "date": "17 Agustus 2026",
+    "day": "PRA OWEEK",
+    "date": "Rabu, 14 Agustus 2026",
     "details": {
-      "title": "UPACARA & PEMBUKAAN & SEMINAR PILLARS OF ENTREPRENEURSHIP",
-      "location": "UC Plaza & Universitas Ciputra Surabaya",
-      "time": "06.30-13.00 WIB",
-      "dresscode": "DO",
-      "dresscodeDoImage": "/assets/jadwal/uploads/day-1-do-1784098814855.jpg",
-      "dresscodeDontImage": "/assets/jadwal/uploads/day-1-dont-1784098814857.jpg"
-    },
-    "items": [
-      {
-        "time": "07.00",
-        "activity": "Syalala Syilili"
-      },
-      {
-        "time": "08.00",
-        "activity": "Snack Time"
-      },
-      {
-        "time": "09.00",
-        "activity": "Opening Ceremony"
-      },
-      {
-        "time": "10.30",
-        "activity": "Campus Tour"
-      },
-      {
-        "time": "12.00",
-        "activity": "Lunch Break"
-      },
-      {
-        "time": "13.30",
-        "activity": "Faculty Session"
-      },
-      {
-        "time": "15.00",
-        "activity": "Team Building"
-      }
-    ]
-  },
-  {
-    "day": "Day 2",
-    "date": "18 Agustus 2026",
-    "details": {
-      "title": "SEMINAR INSPIRASI & STUDENT ACTIVITY EXPO",
-      "location": "Universitas Ciputra Surabaya",
-      "time": "07.00-15.30 WIB",
-      "dresscode": "Casual Rapi",
+      "title": "",
+      "location": "Online (Zoom)",
+      "time": [
+        "Kloter 1 : 07:00 - 10.45 WIB",
+        "Kloter 2 : 13:00 - 16:45 WIB"
+      ],
+      "dresscode": "",
       "dresscodeDoImage": "",
       "dresscodeDontImage": ""
     },
-    "items": [
-      {
-        "time": "07.00",
-        "activity": "Absensi"
-      },
-      {
-        "time": "08.00",
-        "activity": "Seminar Inspirasi"
-      },
-      {
-        "time": "10.00",
-        "activity": "Snack Time"
-      },
-      {
-        "time": "10.30",
-        "activity": "Student Activity Expo"
-      },
-      {
-        "time": "12.00",
-        "activity": "Lunch Break"
-      },
-      {
-        "time": "13.30",
-        "activity": "Games & Challenge"
-      },
-      {
-        "time": "15.30",
-        "activity": "Reflection Session"
-      }
-    ]
+    "items": []
   },
   {
-    "day": "Day 3",
-    "date": "19 Agustus 2026",
+    "day": "INDEPENDENCE DAY",
+    "date": "Minggu, 17 Agustus 2026",
     "details": {
-      "title": "FINAL BRIEFING & CLOSING CELEBRATION",
+      "title": "UPACARA BENDERA & OPENING CEREMONY & SEMINAR 5E & TM SELLING",
       "location": "Universitas Ciputra Surabaya",
-      "time": "07.00-16.00 WIB",
-      "dresscode": "OWeek Attributes",
+      "time": [
+        "06.30 - 08.05 WIB (Upacara Bendera)",
+        "08.05 - 09:48 WIB (Opening Ceremony)",
+        "09:48 - 13.32 WIB (Seminar 5E)",
+        "14:20 - 16.47 WIB (TM SELLING)"
+      ],
+      "dresscode": "",
       "dresscodeDoImage": "",
       "dresscodeDontImage": ""
     },
-    "items": [
-      {
-        "time": "07.00",
-        "activity": "Absensi"
-      },
-      {
-        "time": "08.00",
-        "activity": "Final Briefing"
-      },
-      {
-        "time": "09.30",
-        "activity": "Snack Time"
-      },
-      {
-        "time": "10.00",
-        "activity": "Performance Preparation"
-      },
-      {
-        "time": "12.00",
-        "activity": "Lunch Break"
-      },
-      {
-        "time": "14.00",
-        "activity": "Closing Celebration"
-      },
-      {
-        "time": "16.00",
-        "activity": "Dismissal"
-      }
-    ]
+    "items": []
   },
   {
-    "day": "Pra-Oweek",
-    "date": "16 Agustus 2026",
+    "day": "DAY 1",
+    "date": "Senin, 31 Agustus 2026",
     "details": {
-      "title": "PRA-OWEEK BRIEFING",
-      "location": "Universitas Ciputra Surabaya",
-      "time": "07.00-16.00 WIB",
-      "dresscode": "Bebas Rapi",
+      "title": "WE SEE THE LIGHT (TALKSHOW & SHOWCASE SELLING)",
+      "location": "Hall Sekolah Ciputra Surabaya",
+      "time": [
+        "Sesi 1 7.30-12.15 WIB",
+        "Sesi 2 12.15-17.00 WIB"
+      ],
+      "dresscode": "",
       "dresscodeDoImage": "",
       "dresscodeDontImage": ""
     },
-    "items": [
-      {
-        "time": "07.00",
-        "activity": "Absensi"
-      },
-      {
-        "time": "08.00",
-        "activity": "Final Briefing"
-      },
-      {
-        "time": "09.30",
-        "activity": "Snack Time"
-      },
-      {
-        "time": "10.00",
-        "activity": "Performance Preparation"
-      },
-      {
-        "time": "12.00",
-        "activity": "Lunch Break"
-      },
-      {
-        "time": "14.00",
-        "activity": "Closing Celebration"
-      },
-      {
-        "time": "16.00",
-        "activity": "Dismissal"
-      }
-    ]
+    "items": []
+  },
+  {
+    "day": "DAY 2",
+    "date": "Selasa, 1 September 2026",
+    "details": {
+      "title": "WHERE MAGIC FINDS YOU (STUDENT DEVELOPMENT PROGRAM & ORMAWA FEST)",
+      "location": "Universitas Ciputra Surabaya",
+      "time": "07.00 - 17.00 WIB",
+      "dresscode": "",
+      "dresscodeDoImage": "",
+      "dresscodeDontImage": ""
+    },
+    "items": []
+  },
+  {
+    "day": "DAY 3",
+    "date": "Rabu, 2 September 2026",
+    "details": {
+      "title": "INTO THE EVER AFTER (PRA-LDK & ORMAWA FEST)",
+      "location": "Universitas Ciputra Surabaya",
+      "time": "07.00 - 15.30 WIB",
+      "dresscode": "",
+      "dresscodeDoImage": "",
+      "dresscodeDontImage": ""
+    },
+    "items": []
+  },
+  {
+    "day": "DAY 4",
+    "date": "Kamis, 3 September 2026",
+    "details": {
+      "title": "SYMBIOTIC PALLETE FOR INFINITE FLAVOURS (SELLING DAY)",
+      "location": "Ciputra World Mall Surabaya",
+      "time": "08.30 - 21.00 WIB",
+      "dresscode": "",
+      "dresscodeDoImage": "",
+      "dresscodeDontImage": ""
+    },
+    "items": []
+  },
+  {
+    "day": "DAY 5",
+    "date": "Jumat, 4 September 2026",
+    "details": {
+      "title": "THE GOLDEN EPILOGUE (SIDANG SENAT & CLOSING)",
+      "location": "Ciputra World Mall Surabaya",
+      "time": "14.00 - 21.10 WIB",
+      "dresscode": "",
+      "dresscodeDoImage": "",
+      "dresscodeDontImage": ""
+    },
+    "items": []
   }
 ]

@@ -9,7 +9,8 @@ export type JadwalItem = {
 export type JadwalDetails = {
   title: string;
   location: string;
-  time: string;
+  // Satu baris waktu, atau beberapa baris waktu (mis. "Sesi 1 ...", "Sesi 2 ...").
+  time: string | string[];
   dresscode: string;
   dresscodeDoImage?: string;
   dresscodeDontImage?: string;
@@ -19,7 +20,9 @@ export type JadwalDay = {
   day: string;
   date: string;
   details: JadwalDetails;
-  items: JadwalItem[];
+  // Rundown opsional. Modul jadwal publik tidak menampilkannya, tetapi field
+  // ini dipertahankan agar data lama tetap valid.
+  items?: JadwalItem[];
 };
 
 // Semua fitur jadwal membaca/menulis satu file ini.
@@ -39,17 +42,24 @@ function assertJadwal(value: unknown): asserts value is JadwalDay[] {
       typeof (day as JadwalDay).date !== "string" ||
       typeof (day as JadwalDay).details !== "object" ||
       !(day as JadwalDay).details ||
-      !Array.isArray((day as JadwalDay).items)
+      (
+        typeof (day as JadwalDay).items !== "undefined" &&
+        !Array.isArray((day as JadwalDay).items)
+      )
     ) {
       throw new Error("Format hari jadwal tidak valid.");
     }
 
     const details = (day as JadwalDay).details;
+    const timeIsValid =
+      typeof details.time === "string" ||
+      (Array.isArray(details.time) &&
+        details.time.every((entry) => typeof entry === "string"));
 
     if (
       typeof details.title !== "string" ||
       typeof details.location !== "string" ||
-      typeof details.time !== "string" ||
+      !timeIsValid ||
       typeof details.dresscode !== "string" ||
       (
         typeof details.dresscodeDoImage !== "undefined" &&
@@ -63,7 +73,7 @@ function assertJadwal(value: unknown): asserts value is JadwalDay[] {
       throw new Error("Format detail keterangan jadwal tidak valid.");
     }
 
-    for (const item of (day as JadwalDay).items) {
+    for (const item of (day as JadwalDay).items ?? []) {
       if (
         !item ||
         typeof item !== "object" ||
@@ -95,15 +105,18 @@ export function jadwalToEditableText(jadwal: JadwalDay[]) {
   // JSON -> textarea admin.
   return jadwal
     .map((day) => {
-      const items = day.items
+      const items = (day.items ?? [])
         .map((item) => `${item.time} : ${item.activity}`)
         .join("\n");
+      const timeText = Array.isArray(day.details.time)
+        ? day.details.time.join(" | ")
+        : day.details.time;
       return [
         day.day,
         day.date,
         `Keterangan: ${day.details.title}`,
         `Lokasi: ${day.details.location}`,
-        `Waktu: ${day.details.time}`,
+        `Waktu: ${timeText}`,
         `Dresscode: ${day.details.dresscode}`,
         `Gambar Do: ${day.details.dresscodeDoImage || "-"}`,
         `Gambar Don't: ${day.details.dresscodeDontImage || "-"}`,

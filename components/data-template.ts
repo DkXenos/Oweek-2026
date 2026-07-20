@@ -1,75 +1,39 @@
-// Schedule data — one entry per day. The component maps over this array and the
-// left/right nav buttons cycle through it. Add/edit days here only.
+// Display model for the schedule card. The source of truth now lives in
+// `data/jadwal.json` (edited via the admin at /admin/admin-oweek). The public
+// page reads that JSON with `getJadwal()` and maps each entry to a `ScheduleDay`
+// here, so the component stays decoupled from the raw JSON shape.
+
+import type { JadwalDay } from "@/lib/jadwal";
 
 export interface ScheduleDay {
-  /** the day number shown as "DAY 1", "DAY 2", … */
+  /** position in the list, used only as a stable key */
   index: number;
+  /** the big heading on the card (e.g. "DAY 1", "PRA OWEEK") — from JadwalDay.day */
   judul: string;
-  /** the event title (the large heading on the card) */
+  /** the event title (the large sub-heading on the card) — from details.title */
   title: string;
   /** calendar date line */
   date: string;
   /** venue line */
   location: string;
-  /** time-range line */
+  /** time-range line(s) — a single string or several stacked lines */
   time: string | string[];
+  /** dresscode "Do" image path served statically from /public (may be empty) */
+  dresscodeDoImage?: string;
+  /** dresscode "Don't" image path served statically from /public (may be empty) */
+  dresscodeDontImage?: string;
 }
 
-export const scheduleDays: ScheduleDay[] = [
-  {
-    index: 0,
-    judul: "PRA OWEEK",
-    title: "",
-    date: "Rabu, 14 Agustus 2026",
-    location: "Online (Zoom)",
-    time: ["Kloter 1 : 07:00 - 10.45 WIB", "Kloter 2 : 13:00 - 16:45 WIB"],
-  },
-  {
-    index: 1,
-    judul: "INDEPENDENCE DAY",
-    title: "UPACARA BENDERA & OPENING CEREMONY & SEMINAR 5E & TM SELLING",
-    date: "Minggu, 17 Agustus 2026",
-    location: "Universitas Ciputra Surabaya",
-    time: ["06.30 - 08.05 WIB (Upacara Bendera)", "08.05 - 09:48 WIB (Opening Ceremony)", "09:48 - 13.32 WIB (Seminar 5E)", "14:20 - 16.47 WIB (TM SELLING)"]
-  },
-  {
-    index: 2,
-    judul: "DAY 1",
-    title: "WE SEE THE LIGHT (TALKSHOW & SHOWCASE SELLING)",
-    date: "Senin, 31 Agustus 2026",
-    location: "Hall Sekolah Ciputra Surabaya",
-    time: ["Sesi 1 7.30-12.15 WIB", "Sesi 2 12.15-17.00 WIB"],
-  },
-  {
-    index: 3,
-    judul: "DAY 2",
-    title: "WHERE MAGIC FINDS YOU (STUDENT DEVELOPMENT PROGRAM & ORMAWA FEST)",
-    date: "Selasa, 1 September 2026",
-    location: "Universitas Ciputra Surabaya",
-    time: "07.00 - 17.00 WIB",
-  },
-  {
-    index: 4,
-    judul: "DAY 3",
-    title: "INTO THE EVER AFTER (PRA-LDK & ORMAWA FEST)",
-    date: "Rabu, 2 September 2026",
-    location: "Universitas Ciputra Surabaya",
-    time: "07.00 - 15.30 WIB",
-  },
-  {
-    index: 5,
-    judul: "DAY 4",
-    title: "SYMBIOTIC PALLETE FOR INFINITE FLAVOURS (SELLING DAY)",
-    date: "Kamis, 3 September 2026",
-    location: "Ciputra World Mall Surabaya",
-    time: "08.30 - 21.00 WIB",
-  },
-  {
-    index: 6,
-    judul: "DAY 5",
-    title: "THE GOLDEN EPILOGUE  (SIDANG SENAT & CLOSING)",
-    date: "Jumat, 4 September 2026 ",
-    location: "Ciputra World Mall Surabaya",
-    time: "14.00 - 21.10 WIB",
-  },
-];
+/** Map the admin JSON (JadwalDay[]) into the display model the card expects. */
+export function toScheduleDays(jadwal: JadwalDay[]): ScheduleDay[] {
+  return jadwal.map((day, index) => ({
+    index,
+    judul: day.day,
+    title: day.details.title,
+    date: day.date,
+    location: day.details.location,
+    time: day.details.time,
+    dresscodeDoImage: day.details.dresscodeDoImage || "",
+    dresscodeDontImage: day.details.dresscodeDontImage || "",
+  }));
+}

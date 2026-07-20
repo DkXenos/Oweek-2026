@@ -22,7 +22,7 @@ async function loginAction(formData: FormData) {
   const credentials = getAdminCredentials();
 
   if (username !== credentials.username || password !== credentials.password) {
-    redirect("/login-admin?error=1");
+    redirect("/admin/login-admin?error=1");
   }
 
   const cookieStore = await cookies();
@@ -35,7 +35,7 @@ async function loginAction(formData: FormData) {
     maxAge: 60 * 60 * 8,
   });
 
-  redirect("/admin-oweek");
+  redirect("/admin/admin-oweek");
 }
 
 export default async function LoginAdminPage({ searchParams }: LoginPageProps) {

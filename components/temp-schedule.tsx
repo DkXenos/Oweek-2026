@@ -1,16 +1,33 @@
 "use client";
 
 import { useState } from "react";
-import { scheduleDays } from "./data-template";
+import type { ScheduleDay } from "./data-template";
 import "./temp-schedule.css";
 
-export default function TempSchedule() {
-  const [index, setIndex] = useState(0);
-  const total = scheduleDays.length;
-  const day = scheduleDays[index];
+type TempScheduleProps = {
+  days: ScheduleDay[];
+};
 
-  const goPrev = () => setIndex((i) => (i - 1 + total) % total);
-  const goNext = () => setIndex((i) => (i + 1) % total);
+export default function TempSchedule({ days }: TempScheduleProps) {
+  const [index, setIndex] = useState(0);
+  const [showDresscode, setShowDresscode] = useState(false);
+  const total = days.length;
+
+  if (total === 0) return null;
+
+  const safeIndex = index % total;
+  const day = days[safeIndex];
+
+  const goPrev = () => {
+    setShowDresscode(false);
+    setIndex((i) => (i - 1 + total) % total);
+  };
+  const goNext = () => {
+    setShowDresscode(false);
+    setIndex((i) => (i + 1) % total);
+  };
+
+  const hasDresscode = Boolean(day.dresscodeDoImage || day.dresscodeDontImage);
 
   return (
     <div className="schedule-container">
@@ -75,6 +92,15 @@ export default function TempSchedule() {
               )}
             </div>
 
+            {hasDresscode && (
+              <button
+                type="button"
+                className="schedule-dresscode-button"
+                onClick={() => setShowDresscode(true)}
+              >
+                Lihat Dresscode
+              </button>
+            )}
           </div>
         </div>
       </div>
@@ -101,6 +127,57 @@ export default function TempSchedule() {
           </svg>
         </span>
       </button>
+
+      {hasDresscode && showDresscode && (
+        <div
+          className="schedule-dresscode-overlay"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`Dresscode ${day.judul}`}
+          onClick={() => setShowDresscode(false)}
+        >
+          <div
+            className="schedule-dresscode-modal"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="schedule-dresscode-close"
+              onClick={() => setShowDresscode(false)}
+              aria-label="Tutup"
+            >
+              ×
+            </button>
+            <h3 className="schedule-dresscode-title">Dresscode {day.judul}</h3>
+            <div className="schedule-dresscode-grid">
+              {day.dresscodeDoImage ? (
+                <figure className="schedule-dresscode-figure">
+                  <img
+                    src={day.dresscodeDoImage}
+                    alt={`Dresscode Do ${day.judul}`}
+                    className="schedule-dresscode-image"
+                  />
+                  <figcaption className="schedule-dresscode-caption schedule-dresscode-do">
+                    DO
+                  </figcaption>
+                </figure>
+              ) : null}
+              {day.dresscodeDontImage ? (
+                <figure className="schedule-dresscode-figure">
+                  <img
+                    src={day.dresscodeDontImage}
+                    alt={`Dresscode Don't ${day.judul}`}
+                    className="schedule-dresscode-image"
+                  />
+                  <figcaption className="schedule-dresscode-caption schedule-dresscode-dont">
+                    DON&apos;T
+                  </figcaption>
+                </figure>
+              ) : null}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
