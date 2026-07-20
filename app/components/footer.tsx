@@ -38,7 +38,7 @@ export default function Footer() {
       {/* in-flow content row: logos anchored left, contact anchored right */}
       <div className="footer-content">
         <div className="footer-logos">
-          <img src="/assets/footer/logo-uc.png" alt="Universitas Ciputra" className="logo-uc" />
+          <img src="/assets/footer/hd-uc.png" alt="Universitas Ciputra" className="logo-uc" />
           <img src="/assets/footer/logo-oweek.png" alt="OWeek" className="logo-oweek" />
         </div>
 

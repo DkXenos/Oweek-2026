@@ -1,226 +1,676 @@
 /* overflow stays visible so the bush crossover can straddle up over the hero */
 .mascots-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    overflow: visible;
-    z-index: 20;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: visible;
+  z-index: 20;
 }
 
 .bush-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    z-index: 5;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 5;
+  pointer-events: none;
 }
 
 .bush-left,
 .bush-right {
-    display: block;
+  display: block;
 }
 
 .baloon-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    z-index: 2;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .baloon-left,
 .baloon-right {
-    display: block;
+  display: block;
+}
+
+/* mobile-only pots pinned to the bottom corners; hidden on desktop */
+.pot-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 6;
+  pointer-events: none;
+}
+
+.pot-left,
+.pot-right {
+  display: block;
 }
 
 /* pillars sit above the bushes (5) and the title (3) */
 .mascots-pillar-left {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: auto;
-    z-index: 6;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: auto;
+  z-index: 6;
+  pointer-events: none;
 }
 
 .mascots-pillar-right {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: auto;
-    z-index: 6;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
+  z-index: 6;
+  pointer-events: none;
 }
 
 .fireworks-bottom-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    z-index: 1;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .fireworks-bottom {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .mascots-title {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: auto;
-    z-index: 3;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: 3;
 }
 
 .mascots-content {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    flex: 1 1 auto;
-    z-index: 3;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex: 1 1 auto;
+  z-index: 3;
 }
 
 .mascot-wrapper {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .mascot-ring-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .mascot-ring {
-    display: block;
+  display: block;
 }
 
 .mascots-img {
-    position: relative;
-    display: block;
-    z-index: 2;
+  position: relative;
+  display: block;
+  z-index: 2;
+  cursor: pointer;
 }
 
-@media (max-width: 3840px) and (max-height: 2160px) {}
-@media (max-width: 2850px) and (max-height: 1800px) {}
-@media (max-width: 2560px) and (max-height: 1600px) {}
-@media (max-width: 2560px) and (max-height: 1352px) {}
-@media (max-width: 2560px) and (max-height: 1140px) {}
-@media (max-width: 1920px) and (max-height: 1080px) {}
-@media (max-width: 1900px) and (max-height: 1920px) {}
-@media (max-width: 1900px) and (max-height: 1200px) {}
-@media (max-width: 1728px) and (max-height: 1117px) {}
-@media (max-width: 1538px) and (max-height: 2048px) {}
-@media (max-width: 1528px) and (max-height: 732px) {}
-@media (max-width: 1512px) and (max-height: 982px) {
+/* popup: blurred full-screen overlay with a vertical stack of the two cards */
+.mascot-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(20, 10, 40, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 2000;
+}
+
+.mascot-popup-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: auto;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+}
+
+/* size by viewport height so yucca fills ~72% on open and ccc peeks below */
+.popup-yucca,
+.popup-ccc {
+  display: block;
+  flex-shrink: 0;
+  width: auto;
+}
+
+.mascot-popup-close {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #7a3fb0;
+  line-height: 1;
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.25);
+  transition: transform 0.15s ease;
+}
+
+.mascot-popup-close:hover {
+  transform: scale(1.08);
+}
+
+@media (max-width: 3840px) and (max-height: 2160px) {
+  .bush-left {
+    width: 30rem;
+    height: auto;
+    margin-top: -20rem;
+  }
+
+  .bush-right {
+    width: 30rem;
+    height: auto;
+    margin-top: -20rem;
+  }
+
+  .baloon-left {
+    width: 35rem;
+    height: auto;
+    margin-top: 4rem;
+    margin-left: 9rem;
+  }
+
+  .baloon-right {
+    width: 35rem;
+    height: auto;
+    margin-top: -5rem;
+    margin-right: 9rem;
+  }
+
+  .mascot-ring {
+    width: 100rem;
+    height: auto;
+  }
+
+  .mascots-img {
+    width: 130rem;
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+  .mascot-wrapper {
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+  }
+  .fireworks-bottom {
+    margin-bottom: 5rem;
+    width: 100%;
+  }
+
+  .mascot-popup-content {
+    gap: 3rem;
+  }
+  .mascot-popup-close {
+    width: 8rem;
+    height: 8rem;
+    font-size: 4rem;
+    margin-top: 2rem;
+  }
+  .popup-yucca,
+  .popup-ccc {
+    height: 72vh;
+    max-width: 92vw;
+  }
+}
+@media (max-width: 2850px) and (max-height: 1800px) {
+}
+@media (max-width: 2560px) and (max-height: 1600px) {
+}
+@media (max-width: 2560px) and (max-height: 1352px) {
+}
+@media (max-width: 2560px) and (max-height: 1140px) {
+}
+@media (max-width: 1920px) and (max-height: 1080px) {
     .bush-left {
-        width: 10rem;
-        height: auto;
-        margin-top: -5rem;
-    }
+    width: 10rem;
+    height: auto;
+    margin-top: -5rem;
+  }
 
-    .bush-right {
-        width: 11rem;
-        height: auto;
-        margin-top: -5.5rem;
-    }
+  .bush-right {
+    width: 11rem;
+    height: auto;
+    margin-top: -5.5rem;
+  }
 
-    .baloon-left {
-        width: 11rem;
-        height: auto;
-        margin-top: 4rem;
-        margin-left: 9rem;
-    }
+  .baloon-left {
+    width: 11rem;
+    height: auto;
+    margin-top: 4rem;
+    margin-left: 9rem;
+  }
 
-    .baloon-right {
-        width: 15rem;
-        height: auto;
-        margin-top: -5rem;
-        margin-right: 9rem;
-    }
+  .baloon-right {
+    width: 15rem;
+    height: auto;
+    margin-top: -5rem;
+    margin-right: 9rem;
+  }
 
-    .mascot-ring {
-        width: 42rem;
-        height: auto;
-    }
+  .mascot-ring {
+    width: 42rem;
+    height: auto;
+  }
 
-    .mascots-img {
-        width: 50rem;
-        height: auto;
-        margin-top: 2rem;
-        margin-bottom: 4rem;
-    }
-    .mascot-wrapper{
-        margin-bottom: 5rem;
-        margin-top: 5rem;
-    }
-    .fireworks-bottom{
-        margin-bottom: 5rem;
-        width: 100%;
-    }
+  .mascots-img {
+    width: 50rem;
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+  .mascot-wrapper {
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+  }
+  .fireworks-bottom {
+    margin-bottom: 5rem;
+    width: 100%;
+  }
+
+  .mascot-popup-content {
+    gap: 2rem;
+  }
+  .mascot-popup-close {
+    width: 5rem;
+    height: 5rem;
+    font-size: 2.4rem;
+    margin-top: 1.5rem;
+  }
+  .popup-yucca,
+  .popup-ccc {
+    height: 72vh;
+    max-width: 92vw;
+  }
 }
-@media (max-width: 1440px) and (max-height: 641px) {}
-@media (max-width: 1366px) and (max-height: 1024px) {}
-@media (max-width: 1366px) and (max-height: 768px) {}
-@media (max-width: 1333px) and (max-height: 632px) {}
-@media (max-width: 1280px) and (max-height: 853px) {}
-@media (max-width: 1180px) and (max-height: 820px) {}
-@media (max-width: 1024px) and (max-height: 1366px) and (orientation: portrait) {}
-@media (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {}
-@media (max-width: 1024px) and (max-height: 600px) {}
-@media (max-width: 956px) and (max-height: 440px) and (orientation: landscape) {}
-@media (max-width: 932px) and (max-height: 430px) {}
-@media (max-width: 912px) and (max-height: 1368px) and (orientation: portrait) {}
-@media (max-width: 853px) and (max-height: 1280px) and (orientation: portrait) {}
-@media (max-width: 844px) and (max-height: 390px) {}
-@media (max-width: 820px) and (max-height: 1180px) {}
-@media (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {}
-@media (max-width: 740px) and (max-height: 360px) and (orientation: landscape) {}
-@media (max-width: 720px) and (max-height: 540px) and (orientation: landscape) {}
-@media (max-width: 540px) and (max-height: 720px) and (orientation: portrait) {}
-@media (max-width: 459px) and (max-height: 841px) and (orientation: portrait) {}
-@media (max-width: 440px) and (max-height: 956px) and (orientation: portrait) {}
-@media (max-width: 430px) and (max-height: 932px) and (orientation: portrait) {}
-@media (max-width: 414px) and (max-height: 896px) and (orientation: portrait) {}
-@media (max-width: 393px) and (max-height: 873px) and (orientation: portrait) {}
-@media (max-width: 390px) and (max-height: 844px) and (orientation: portrait) {}
-@media (max-width: 375px) and (max-height: 667px) and (orientation: portrait) {}
-@media (max-width: 360px) and (max-height: 740px) and (orientation: portrait) {}
-@media (max-width: 344px) and (max-height: 882px) and (orientation: portrait) {}
+@media (max-width: 1900px) and (max-height: 1920px) {
+}
+@media (max-width: 1900px) and (max-height: 1200px) {
+}
+@media (max-width: 1728px) and (max-height: 1117px) {
+    .bush-left {
+    width: 10rem;
+    height: auto;
+    margin-top: -5rem;
+  }
+
+  .bush-right {
+    width: 11rem;
+    height: auto;
+    margin-top: -5.5rem;
+  }
+
+  .baloon-left {
+    width: 11rem;
+    height: auto;
+    margin-top: 4rem;
+    margin-left: 9rem;
+  }
+
+  .baloon-right {
+    width: 15rem;
+    height: auto;
+    margin-top: -5rem;
+    margin-right: 9rem;
+  }
+
+  .mascot-ring {
+    width: 42rem;
+    height: auto;
+  }
+
+  .mascots-img {
+    width: 50rem;
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+  .mascot-wrapper {
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+  }
+  .fireworks-bottom {
+    margin-bottom: 5rem;
+    width: 100%;
+  }
+
+  .mascot-popup-content {
+    gap: 2rem;
+  }
+  .mascot-popup-close {
+    width: 5rem;
+    height: 5rem;
+    font-size: 2.4rem;
+    margin-top: 1.5rem;
+  }
+  .popup-yucca,
+  .popup-ccc {
+    height: 72vh;
+    max-width: 92vw;
+  }
+}
+@media (max-width: 1538px) and (max-height: 2048px) {
+}
+@media (max-width: 1528px) and (max-height: 732px) {
+}
+@media (max-width: 1512px) and (max-height: 982px) {
+  .bush-left {
+    width: 10rem;
+    height: auto;
+    margin-top: -5rem;
+  }
+
+  .bush-right {
+    width: 11rem;
+    height: auto;
+    margin-top: -5.5rem;
+  }
+
+  .baloon-left {
+    width: 11rem;
+    height: auto;
+    margin-top: 4rem;
+    margin-left: 9rem;
+  }
+
+  .baloon-right {
+    width: 15rem;
+    height: auto;
+    margin-top: -5rem;
+    margin-right: 9rem;
+  }
+
+  .mascot-ring {
+    width: 42rem;
+    height: auto;
+  }
+
+  .mascots-img {
+    width: 50rem;
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+  .mascot-wrapper {
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+  }
+  .fireworks-bottom {
+    margin-bottom: 5rem;
+    width: 100%;
+  }
+
+  .mascot-popup-content {
+    gap: 2rem;
+  }
+  .mascot-popup-close {
+    width: 5rem;
+    height: 5rem;
+    font-size: 2.4rem;
+    margin-top: 1.5rem;
+  }
+  .popup-yucca,
+  .popup-ccc {
+    height: 72vh;
+    max-width: 92vw;
+  }
+}
+@media (max-width: 1440px) and (max-height: 641px) {
+}
+@media (max-width: 1366px) and (max-height: 1024px) {
+    .bush-left {
+    width: 10rem;
+    height: auto;
+    margin-top: -5rem;
+  }
+
+  .bush-right {
+    width: 11rem;
+    height: auto;
+    margin-top: -5.5rem;
+  }
+
+  .baloon-left {
+    width: 11rem;
+    height: auto;
+    margin-top: 4rem;
+    margin-left: 9rem;
+  }
+
+  .baloon-right {
+    width: 15rem;
+    height: auto;
+    margin-top: -5rem;
+    margin-right: 9rem;
+  }
+
+  .mascot-ring {
+    width: 42rem;
+    height: auto;
+  }
+
+  .mascots-img {
+    width: 50rem;
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+  .mascot-wrapper {
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+  }
+  .fireworks-bottom {
+    margin-bottom: 5rem;
+    width: 100%;
+  }
+
+  .mascot-popup-content {
+    gap: 2rem;
+  }
+  .mascot-popup-close {
+    width: 5rem;
+    height: 5rem;
+    font-size: 2.4rem;
+    margin-top: 1.5rem;
+  }
+  .popup-yucca,
+  .popup-ccc {
+    height: 72vh;
+    max-width: 92vw;
+  }
+}
+@media (max-width: 1366px) and (max-height: 768px) {
+}
+@media (max-width: 1333px) and (max-height: 632px) {
+}
+@media (max-width: 1280px) and (max-height: 853px) {
+}
+@media (max-width: 1180px) and (max-height: 820px) {
+}
+@media (max-width: 1024px) and (max-height: 1366px) and (orientation: portrait) {
+}
+@media (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
+}
+@media (max-width: 1024px) and (max-height: 600px) {
+}
+@media (max-width: 956px) and (max-height: 440px) and (orientation: landscape) {
+}
+@media (max-width: 932px) and (max-height: 430px) {
+}
+@media (max-width: 912px) and (max-height: 1368px) and (orientation: portrait) {
+}
+@media (max-width: 853px) and (max-height: 1280px) and (orientation: portrait) {
+}
+@media (max-width: 844px) and (max-height: 390px) {
+}
+@media (max-width: 820px) and (max-height: 1180px) {
+}
+@media (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+}
+@media (max-width: 740px) and (max-height: 360px) and (orientation: landscape) {
+}
+@media (max-width: 720px) and (max-height: 540px) and (orientation: landscape) {
+}
+@media (max-width: 540px) and (max-height: 720px) and (orientation: portrait) {
+}
+@media (max-width: 459px) and (max-height: 841px) and (orientation: portrait) {
+}
+@media (max-width: 440px) and (max-height: 956px) and (orientation: portrait) {
+  .mascots-pillar-left {
+    content: url("/assets/about-mobile/botpillar-l.png");
+  }
+
+  .mascots-pillar-right {
+    content: url("/assets/about-mobile/botpillar-r.png");
+  }
+
+  /* the crossover bushes are replaced by the corner pots on mobile */
+  .bush-left,
+  .bush-right {
+    display: none;
+  }
+
+  .pot-layer {
+    display: flex;
+  }
+
+  .pot-left {
+    width: 8rem;
+    height: auto;
+  }
+
+  .pot-right {
+    width: 8rem;
+    height: auto;
+  }
+
+  .baloon-left {
+    width: 6rem;
+    height: auto;
+    margin-top: 3rem;
+    margin-left: 3rem;
+  }
+
+  .baloon-right {
+    width: 8rem;
+    height: auto;
+    margin-top: -3rem;
+    margin-right: 3rem;
+  }
+
+  .mascot-ring {
+    width: 20rem;
+    height: auto;
+  }
+
+  .mascots-img {
+    content: url("/assets/about-mobile/mascots.png");
+    width: 18rem;
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+  .mascot-wrapper {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+  .fireworks-bottom {
+    margin-bottom: 3rem;
+    width: 100%;
+  }
+
+  .mascot-popup-content {
+    gap: 1.5rem;
+  }
+  .popup-yucca {
+    content: url("/assets/about-mobile/yucca.png");
+  }
+  .popup-ccc {
+    content: url("/assets/about-mobile/ccc.png");
+  }
+  .mascot-popup-close {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+  }
+  .popup-yucca,
+  .popup-ccc {
+    width: 100%;
+  }
+}
+@media (max-width: 430px) and (max-height: 932px) and (orientation: portrait) {
+}
+@media (max-width: 414px) and (max-height: 896px) and (orientation: portrait) {
+}
+@media (max-width: 393px) and (max-height: 873px) and (orientation: portrait) {
+}
+@media (max-width: 390px) and (max-height: 844px) and (orientation: portrait) {
+}
+@media (max-width: 375px) and (max-height: 667px) and (orientation: portrait) {
+}
+@media (max-width: 360px) and (max-height: 740px) and (orientation: portrait) {
+}
+@media (max-width: 344px) and (max-height: 882px) and (orientation: portrait) {
+}

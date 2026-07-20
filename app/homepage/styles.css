@@ -1,240 +1,320 @@
 .homepage-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 
 .gradient-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    background: linear-gradient(
-        180deg,
-        #dcaeeb 0%,
-        #63b3f5 34%,
-        #b4d7f5 62%,
-        #ffed8f 100%
-    );
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: linear-gradient(
+    180deg,
+    #dcaeeb 0%,
+    #63b3f5 34%,
+    #b4d7f5 62%,
+    #ffed8f 100%
+  );
 }
 
 .clouds-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-    pointer-events: none;
+  content: url("/assets/homepage/clouds-background.png");
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .firework-top {
-    position: absolute;
-    top: 0;
-    z-index: 1;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .circle-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .circle-bg {
-    display: block;
-    filter:
-        drop-shadow(0 0 0.5rem rgba(167, 103, 209, 0.55))
-        drop-shadow(0 0 1rem rgba(148, 37, 128, 0.35));
+  display: block;
+  filter: drop-shadow(0 0 0.5rem rgba(167, 103, 209, 0.55))
+    drop-shadow(0 0 1rem rgba(148, 37, 128, 0.35));
 }
 
 .border-l {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: auto;
-    z-index: 2;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: auto;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .border-r {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: auto;
-    z-index: 2;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .hero {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    flex: 1 1 auto;
-    min-height: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
 }
 
 .mascot-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    z-index: 4;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 4;
+  pointer-events: none;
 }
 
 .mascot-col-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
 .mascot-col-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .castle-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    z-index: 2;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .castle-center {
-    display: block;
+  display: block;
 }
 
 .hero-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 80%;
-    margin-top: auto;
-    margin-bottom: auto;
-    z-index: 3;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80%;
+  margin-top: auto;
+  margin-bottom: auto;
+  z-index: 3;
 }
 
 .title-slot {
-    flex: 1 1 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .magnify-title {
-    position: relative;
-    z-index: 3;
+  position: relative;
+  z-index: 3;
 }
 
 .countdown-container {
-    position: relative;
-    flex: 1 1 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    z-index: 3;
+  position: relative;
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 3;
 }
 
 .countdown-row {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .countdown-unit {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .countdown-frame {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .countdown-frame-img {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .countdown-value {
-    position: absolute;
-    font-family: "DM", serif;
-    font-weight: 700;
-    background: linear-gradient(180deg, #a767d1 0%, #942580 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    line-height: 1;
+  position: absolute;
+  font-family: "DM", serif;
+  font-weight: 700;
+  background: linear-gradient(180deg, #a767d1 0%, #942580 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  line-height: 1;
 }
 
 .countdown-label {
-    background:
-        linear-gradient(#fffaf6, #fffaf6) padding-box,
-        linear-gradient(180deg, #fd9ed4 0%, #eb6ea1 100%) border-box;
-    border: 0.15rem solid transparent;
-    border-radius: 9999px;
-    font-family: "Poppins-Bold", sans-serif;
-    font-weight: 700;
-    text-align: center;
-    letter-spacing: 0.05em;
-    box-shadow: 0 0.5rem 0.5rem rgba(109, 68, 152, 0.2);
+  background:
+    linear-gradient(#fffaf6, #fffaf6) padding-box,
+    linear-gradient(180deg, #fd9ed4 0%, #eb6ea1 100%) border-box;
+  border: 0.15rem solid transparent;
+  border-radius: 9999px;
+  font-family: "Poppins-Bold", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.05em;
+  box-shadow: 0 0.5rem 0.5rem rgba(109, 68, 152, 0.2);
 }
 
 .countdown-label-text {
-    background: linear-gradient(180deg, #a767d1 0%, #942580 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+  background: linear-gradient(180deg, #a767d1 0%, #942580 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 @media (max-width: 3840px) and (max-height: 2160px) {
+  .homepage-container {
+    margin-bottom: 0rem;
+  }
+  .magnify-title {
+    width: 75rem;
+    height: auto;
+    margin-top: 0;
+  }
+  .hero-content {
+    gap: 6rem;
+    margin-top: 10rem;
+    margin-bottom: 7rem;
+  }
+  .firework-top {
+    width: 130rem;
+    height: auto;
+  }
+
+  .castle-center {
+    width: 120rem;
+    height: auto;
+  }
+
+  .circle-bg {
+    width: 105rem;
+    height: auto;
+  }
+
+  .countdown-row {
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+  }
+
+  .countdown-frame {
+    width: 30rem;
+  }
+
+  .countdown-value {
+    font-size: 19rem;
+  }
+
+  .countdown-label {
+    width: 20rem;
+    margin-top: 1.75rem;
+    padding-top: 0.55rem;
+    padding-right: 0;
+    padding-bottom: 0.55rem;
+    padding-left: 0;
+    font-size: 3rem;
+    border: 0.35rem solid transparent;
+  }
+
+  .mascot-lefttop {
+    width: 25rem;
+    height: auto;
+    margin-left: 5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .mascot-leftbottom {
+    width: 40rem;
+    height: auto;
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .mascot-righttop {
+    width: 28rem;
+    height: auto;
+    margin-right: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  .mascot-rightbottom {
+    width: 28rem;
+    height: auto;
+    margin-right: 10rem;
+    margin-bottom: 15rem;
+  }
 }
 @media (max-width: 2850px) and (max-height: 1800px) {
 }
@@ -243,8 +323,166 @@
 @media (max-width: 2560px) and (max-height: 1352px) {
 }
 @media (max-width: 2560px) and (max-height: 1140px) {
+  .homepage-container {
+    margin-bottom: 0rem;
+  }
+  .magnify-title {
+    width: 61rem;
+    height: auto;
+    margin-top: 0;
+  }
+  .hero-content {
+    gap: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .firework-top {
+    width: 91rem;
+    height: auto;
+  }
+
+  .castle-center {
+    width: 67rem;
+    height: auto;
+  }
+
+  .circle-bg {
+    width: 75rem;
+    height: auto;
+  }
+
+  .countdown-row {
+    gap: 2.5rem;
+    margin-bottom: 8rem;
+  }
+
+  .countdown-frame {
+    width: 18rem;
+  }
+
+  .countdown-value {
+    font-size: 10rem;
+  }
+
+  .countdown-label {
+    width: 16rem;
+    margin-top: 1.75rem;
+    padding-top: 0.55rem;
+    padding-right: 0;
+    padding-bottom: 0.55rem;
+    padding-left: 0;
+    font-size: 1.75rem;
+    border: 0.35rem solid transparent;
+  }
+
+  .mascot-lefttop {
+    width: 15rem;
+    height: auto;
+    margin-left: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .mascot-leftbottom {
+    width: 20rem;
+    height: auto;
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .mascot-righttop {
+    width: 15rem;
+    height: auto;
+    margin-right: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  .mascot-rightbottom {
+    width: 14rem;
+    height: auto;
+    margin-right: 5rem;
+    margin-bottom: 3rem;
+  }
 }
 @media (max-width: 1920px) and (max-height: 1080px) {
+  .homepage-container {
+    margin-bottom: 0rem;
+  }
+  .magnify-title {
+    width: 41rem;
+    height: auto;
+    margin-top: 0;
+  }
+  .hero-content {
+    gap: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .firework-top {
+    width: 91rem;
+    height: auto;
+  }
+
+  .castle-center {
+    width: 67rem;
+    height: auto;
+  }
+
+  .circle-bg {
+    width: 55rem;
+    height: auto;
+  }
+
+  .countdown-row {
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+  }
+
+  .countdown-frame {
+    width: 13rem;
+  }
+
+  .countdown-value {
+    font-size: 8rem;
+  }
+
+  .countdown-label {
+    width: 13rem;
+    margin-top: 1.75rem;
+    padding-top: 0.55rem;
+    padding-right: 0;
+    padding-bottom: 0.55rem;
+    padding-left: 0;
+    font-size: 1.35rem;
+    border: 0.35rem solid transparent;
+  }
+
+  .mascot-lefttop {
+    width: 8rem;
+    height: auto;
+    margin-left: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .mascot-leftbottom {
+    width: 15rem;
+    height: auto;
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .mascot-righttop {
+    width: 10rem;
+    height: auto;
+    margin-right: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  .mascot-rightbottom {
+    width: 9rem;
+    height: auto;
+    margin-right: 5rem;
+    margin-bottom: 5.5rem;
+  }
 }
 @media (max-width: 1900px) and (max-height: 1920px) {
 }
@@ -255,95 +493,255 @@
 @media (max-width: 1538px) and (max-height: 2048px) {
 }
 @media (max-width: 1528px) and (max-height: 732px) {
+  .homepage-container {
+    margin-bottom: 0rem;
+  }
+  .magnify-title {
+    width: 41rem;
+    height: auto;
+    margin-top: 0;
+  }
+  .hero-content {
+    gap: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .firework-top {
+    width: 91rem;
+    height: auto;
+  }
+
+  .castle-center {
+    width: 67rem;
+    height: auto;
+  }
+
+  .circle-bg {
+    width: 55rem;
+    height: auto;
+  }
+
+  .countdown-row {
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+  }
+
+  .countdown-frame {
+    width: 13rem;
+  }
+
+  .countdown-value {
+    font-size: 8rem;
+  }
+
+  .countdown-label {
+    width: 13rem;
+    margin-top: 1.75rem;
+    padding-top: 0.55rem;
+    padding-right: 0;
+    padding-bottom: 0.55rem;
+    padding-left: 0;
+    font-size: 1.35rem;
+    border: 0.35rem solid transparent;
+  }
+
+  .mascot-lefttop {
+    width: 8rem;
+    height: auto;
+    margin-left: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .mascot-leftbottom {
+    width: 15rem;
+    height: auto;
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .mascot-righttop {
+    width: 10rem;
+    height: auto;
+    margin-right: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  .mascot-rightbottom {
+    width: 9rem;
+    height: auto;
+    margin-right: 5rem;
+    margin-bottom: 5.5rem;
+  }
 }
 
 @media (max-width: 1512px) and (max-height: 982px) {
-    .homepage-container{
-        margin-bottom: 0rem;
-    }
-    .magnify-title {
-        width: 41rem;
-        height: auto;
-        margin-top: 0;
-    }
-    .hero-content{
-        gap: 3rem;
-        margin-top: 3rem;
-        margin-bottom: 3rem;
-    }
-    .firework-top {
-        width: 91rem;
-        height: auto;
-    }
+  .homepage-container {
+    margin-bottom: 0rem;
+  }
+  .magnify-title {
+    width: 41rem;
+    height: auto;
+    margin-top: 0;
+  }
+  .hero-content {
+    gap: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .firework-top {
+    width: 91rem;
+    height: auto;
+  }
 
-    .castle-center {
-        width: 67rem;
-        height: auto;
-    }
+  .castle-center {
+    width: 67rem;
+    height: auto;
+  }
 
-    .circle-bg {
-        width: 55rem;
-        height: auto;
-    }
+  .circle-bg {
+    width: 55rem;
+    height: auto;
+  }
 
-    .countdown-row {
-        gap: 2.5rem;
-        margin-bottom: 5rem;
-    }
+  .countdown-row {
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+  }
 
-    .countdown-frame {
-        width: 13rem;
-    }
+  .countdown-frame {
+    width: 13rem;
+  }
 
-    .countdown-value {
-        font-size: 8rem;
-    }
+  .countdown-value {
+    font-size: 8rem;
+  }
 
-    .countdown-label {
-        width: 13rem;
-        margin-top: 1.75rem;
-        padding-top: 0.55rem;
-        padding-right: 0;
-        padding-bottom: 0.55rem;
-        padding-left: 0;
-        font-size: 1.35rem;
-        border: 0.35rem solid transparent;
-    }
+  .countdown-label {
+    width: 13rem;
+    margin-top: 1.75rem;
+    padding-top: 0.55rem;
+    padding-right: 0;
+    padding-bottom: 0.55rem;
+    padding-left: 0;
+    font-size: 1.35rem;
+    border: 0.35rem solid transparent;
+  }
 
-    .mascot-lefttop {
-        width: 8rem;
-        height: auto;
-        margin-left: 3.5rem;
-        margin-bottom: 0.5rem;
-    }
+  .mascot-lefttop {
+    width: 8rem;
+    height: auto;
+    margin-left: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
 
-    .mascot-leftbottom {
-        width: 15rem;
-        height: auto;
-        margin-left: 3rem;
-        margin-bottom: 3rem;
-    }
+  .mascot-leftbottom {
+    width: 15rem;
+    height: auto;
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+  }
 
-    .mascot-righttop {
-        width: 10rem;
-        height: auto;
-        margin-right: 5rem;
-        margin-bottom: 3rem;
-    }
+  .mascot-righttop {
+    width: 10rem;
+    height: auto;
+    margin-right: 5rem;
+    margin-bottom: 3rem;
+  }
 
-    .mascot-rightbottom {
-        width: 9rem;
-        height: auto;
-        margin-right: 5rem;
-        margin-bottom: 5.5rem;
-    }
+  .mascot-rightbottom {
+    width: 9rem;
+    height: auto;
+    margin-right: 5rem;
+    margin-bottom: 5.5rem;
+  }
+}
+@media (max-width: 1512) and (max-height: 981){
+  
 }
 @media (max-width: 1512px) and (max-height: 827px) {
-    
 }
 @media (max-width: 1440px) and (max-height: 641px) {
 }
 @media (max-width: 1366px) and (max-height: 1024px) {
+  .homepage-container {
+    margin-bottom: 0rem;
+  }
+  .magnify-title {
+    width: 41rem;
+    height: auto;
+    margin-top: 0;
+  }
+  .hero-content {
+    gap: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .firework-top {
+    width: 91rem;
+    height: auto;
+  }
+
+  .castle-center {
+    width: 67rem;
+    height: auto;
+  }
+
+  .circle-bg {
+    width: 55rem;
+    height: auto;
+  }
+
+  .countdown-row {
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+  }
+
+  .countdown-frame {
+    width: 13rem;
+  }
+
+  .countdown-value {
+    font-size: 8rem;
+  }
+
+  .countdown-label {
+    width: 13rem;
+    margin-top: 1.75rem;
+    padding-top: 0.55rem;
+    padding-right: 0;
+    padding-bottom: 0.55rem;
+    padding-left: 0;
+    font-size: 1.35rem;
+    border: 0.35rem solid transparent;
+  }
+
+  .mascot-lefttop {
+    width: 8rem;
+    height: auto;
+    margin-left: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .mascot-leftbottom {
+    width: 12rem;
+    height: auto;
+    margin-left: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .mascot-righttop {
+    width: 8rem;
+    height: auto;
+    margin-right: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .mascot-rightbottom {
+    width: 8rem;
+    height: auto;
+    margin-right: 3rem;
+    margin-bottom: 5.5rem;
+  }
 }
 @media (max-width: 1366px) and (max-height: 768px) {
 }
@@ -352,10 +750,268 @@
 @media (max-width: 1280px) and (max-height: 853px) {
 }
 @media (max-width: 1180px) and (max-height: 820px) {
+  .homepage-container {
+    margin-bottom: 0rem;
+  }
+  .magnify-title {
+    width: 36rem;
+    height: auto;
+    margin-top: 0;
+  }
+  .hero-content {
+    gap: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .firework-top {
+    width: 91rem;
+    height: auto;
+  }
+
+  .castle-center {
+    width: 67rem;
+    height: auto;
+  }
+
+  .circle-bg {
+    width: 45rem;
+    height: auto;
+  }
+
+  .countdown-row {
+    gap: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  .countdown-frame {
+    width: 10rem;
+  }
+
+  .countdown-value {
+    font-size: 7rem;
+  }
+
+  .countdown-label {
+    width: 10rem;
+    margin-top: 1.75rem;
+    padding-top: 0.55rem;
+    padding-right: 0;
+    padding-bottom: 0.55rem;
+    padding-left: 0;
+    font-size: 1.35rem;
+    border: 0.35rem solid transparent;
+  }
+
+  .mascot-lefttop {
+    width: 8rem;
+    height: auto;
+    margin-left: .5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .mascot-leftbottom {
+    width: 12rem;
+    height: auto;
+    margin-left: 0rem;
+    margin-bottom: 3rem;
+  }
+
+  .mascot-righttop {
+    width: 9rem;
+    height: auto;
+    margin-right: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .mascot-rightbottom {
+    width: 9rem;
+    height: auto;
+    margin-right: 1rem;
+    margin-bottom: 5.5rem;
+  }
 }
 @media (max-width: 1024px) and (max-height: 1366px) and (orientation: portrait) {
+  .border-l {
+    content: url("/assets/homepage/mborder-l.png");
+  }
+  .border-r {
+    content: url("/assets/homepage/mborder-r.png");
+  }
+  .clouds-bg{
+        content: url("/assets/homepage/mbg.png");
+    }
+  .firework-top {
+    content: url("/assets/homepage/firework-mobile.png");
+  }
+
+  .circle-layer {
+    align-items: flex-end;
+  }
+
+  .homepage-container {
+    margin-bottom: 0rem;
+  }
+  .magnify-title { 
+    width: 35rem;
+    height: auto;
+    margin-top: 0;
+  }
+  .hero-content {
+    gap: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .firework-top {
+    width: 21rem;
+    height: auto;
+  }
+
+  .castle-center {
+    width: 55rem;
+    height: auto;
+  }
+
+  .circle-bg {
+    width: 45rem;
+    height: auto;
+  }
+
+  .countdown-row {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+    margin-bottom: 5rem;
+  }
+
+  .countdown-frame {
+    width: 15rem;
+  }
+
+  .countdown-value {
+    font-size: 9rem;
+  }
+
+  .countdown-label {
+    width: 12.5rem;
+    margin-top: 0.4rem;
+    padding-top: 0.75rem;
+    padding-right: 0;
+    padding-bottom: 0.75rem;
+    padding-left: 0;
+    font-size: 1.5rem;
+    border: 0.2rem solid transparent;
+  }
+
+  .mascot-lefttop {
+    width: 9rem;
+    height: auto;
+    margin-left: 0.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .mascot-leftbottom {
+    width: 13rem;
+    height: auto;
+    margin-left: -0rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .mascot-righttop {
+    width: 10rem;
+    height: auto;
+    margin-right: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .mascot-rightbottom {
+    width: 10.5rem;
+    height: auto;
+    margin-right: 1rem;
+    margin-bottom: 5rem;
+  }
 }
 @media (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
+  .homepage-container {
+    margin-bottom: 0rem;
+  }
+  .magnify-title {
+    width: 30rem;
+    height: auto;
+    margin-top: 0;
+  }
+  .hero-content {
+    gap: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .firework-top {
+    width: 91rem;
+    height: auto;
+  }
+
+  .castle-center {
+    width: 47rem;
+    height: auto;
+  }
+
+  .circle-bg {
+    width: 45rem;
+    height: auto;
+  }
+
+  .countdown-row {
+    gap: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  .countdown-frame {
+    width: 9rem;
+  }
+
+  .countdown-value {
+    font-size: 5.5rem;
+  }
+
+  .countdown-label {
+    width: 8rem;
+    margin-top: 1.75rem;
+    padding-top: 0.45rem;
+    padding-right: 0;
+    padding-bottom: 0.45rem;
+    padding-left: 0;
+    font-size: 1rem;
+    border: 0.35rem solid transparent;
+  }
+
+  .mascot-lefttop {
+    width: 8rem;
+    height: auto;
+    margin-left: .5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .mascot-leftbottom {
+    width: 10rem;
+    height: auto;
+    margin-left: 0rem;
+    margin-bottom: 3rem;
+  }
+
+  .mascot-righttop {
+    width: 9rem;
+    height: auto;
+    margin-right: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .mascot-rightbottom {
+    width: 9rem;
+    height: auto;
+    margin-right: 1rem;
+    margin-bottom: 5.5rem;
+  }
 }
 @media (max-width: 1024px) and (max-height: 600px) {
 }
@@ -370,8 +1026,208 @@
 @media (max-width: 844px) and (max-height: 390px) {
 }
 @media (max-width: 820px) and (max-height: 1180px) {
+  .border-l {
+    content: url("/assets/homepage/mborder-l.png");
+  }
+  .border-r {
+    content: url("/assets/homepage/mborder-r.png");
+  }
+  .clouds-bg{
+        content: url("/assets/homepage/mbg.png");
+    }
+  .firework-top {
+    content: url("/assets/homepage/firework-mobile.png");
+  }
+
+  .circle-layer {
+    align-items: flex-end;
+  }
+
+  .homepage-container {
+    margin-bottom: 0rem;
+  }
+  .magnify-title { 
+    width: 30rem;
+    height: auto;
+    margin-top: 0;
+  }
+  .hero-content {
+    gap: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .firework-top {
+    width: 21rem;
+    height: auto;
+  }
+
+  .castle-center {
+    width: 55rem;
+    height: auto;
+  }
+
+  .circle-bg {
+    width: 45rem;
+    height: auto;
+  }
+
+  .countdown-row {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+    margin-bottom: 5rem;
+  }
+
+  .countdown-frame {
+    width: 12rem;
+  }
+
+  .countdown-value {
+    font-size: 7rem;
+  }
+
+  .countdown-label {
+    width: 9rem;
+    margin-top: 0.4rem;
+    padding-top: 0.45rem;
+    padding-right: 0;
+    padding-bottom: 0.45rem;
+    padding-left: 0;
+    font-size: 1rem;
+    border: 0.2rem solid transparent;
+  }
+
+  .mascot-lefttop {
+    width: 8rem;
+    height: auto;
+    margin-left: 0.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .mascot-leftbottom {
+    width: 12rem;
+    height: auto;
+    margin-left: -0rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .mascot-righttop {
+    width: 9rem;
+    height: auto;
+    margin-right: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .mascot-rightbottom {
+    width: 9.5rem;
+    height: auto;
+    margin-right: 1rem;
+    margin-bottom: 4rem;
+  }
 }
 @media (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+  .border-l {
+    content: url("/assets/homepage/mborder-l.png");
+  }
+  .border-r {
+    content: url("/assets/homepage/mborder-r.png");
+  }
+  .clouds-bg{
+        content: url("/assets/homepage/mbg.png");
+    }
+  .firework-top {
+    content: url("/assets/homepage/firework-mobile.png");
+  }
+
+  .circle-layer {
+    align-items: flex-end;
+  }
+
+  .homepage-container {
+    margin-bottom: 0rem;
+  }
+  .magnify-title { 
+    width: 30rem;
+    height: auto;
+    margin-top: 0;
+  }
+  .hero-content {
+    gap: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .firework-top {
+    width: 21rem;
+    height: auto;
+  }
+
+  .castle-center {
+    width: 55rem;
+    height: auto;
+  }
+
+  .circle-bg {
+    width: 45rem;
+    height: auto;
+  }
+
+  .countdown-row {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+    margin-bottom: 5rem;
+  }
+
+  .countdown-frame {
+    width: 10rem;
+  }
+
+  .countdown-value {
+    font-size: 6rem;
+  }
+
+  .countdown-label {
+    width: 7.5rem;
+    margin-top: 0.4rem;
+    padding-top: 0.35rem;
+    padding-right: 0;
+    padding-bottom: 0.35rem;
+    padding-left: 0;
+    font-size: 1rem;
+    border: 0.2rem solid transparent;
+  }
+
+  .mascot-lefttop {
+    width: 8rem;
+    height: auto;
+    margin-left: 0.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .mascot-leftbottom {
+    width: 12rem;
+    height: auto;
+    margin-left: -0rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .mascot-righttop {
+    width: 9rem;
+    height: auto;
+    margin-right: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .mascot-rightbottom {
+    width: 9.5rem;
+    height: auto;
+    margin-right: 1rem;
+    margin-bottom: 4rem;
+  }
 }
 @media (max-width: 740px) and (max-height: 360px) and (orientation: landscape) {
 }
@@ -382,8 +1238,208 @@
 @media (max-width: 459px) and (max-height: 841px) and (orientation: portrait) {
 }
 @media (max-width: 440px) and (max-height: 956px) and (orientation: portrait) {
+  .border-l {
+    content: url("/assets/homepage/mborder-l.png");
+  }
+  .border-r {
+    content: url("/assets/homepage/mborder-r.png");
+  }
+  .clouds-bg{
+        content: url("/assets/homepage/mbg.png");
+    }
+  .firework-top {
+    content: url("/assets/homepage/firework-mobile.png");
+  }
+
+  .circle-layer {
+    align-items: flex-end;
+  }
+
+  .homepage-container {
+    margin-bottom: 0rem;
+  }
+  .magnify-title {
+    width: 20rem;
+    height: auto;
+    margin-top: 0;
+  }
+  .hero-content {
+    gap: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .firework-top {
+    width: 21rem;
+    height: auto;
+  }
+
+  .castle-center {
+    width: 47rem;
+    height: auto;
+  }
+
+  .circle-bg {
+    width: 25rem;
+    height: auto;
+  }
+
+  .countdown-row {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+    margin-bottom: 5rem;
+  }
+
+  .countdown-frame {
+    width: 8rem;
+  }
+
+  .countdown-value {
+    font-size: 5.6rem;
+  }
+
+  .countdown-label {
+    width: 7rem;
+    margin-top: 0.4rem;
+    padding-top: 0.45rem;
+    padding-right: 0;
+    padding-bottom: 0.45rem;
+    padding-left: 0;
+    font-size: 0.9rem;
+    border: 0.2rem solid transparent;
+  }
+
+  .mascot-lefttop {
+    width: 4.5rem;
+    height: auto;
+    margin-left: 0.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .mascot-leftbottom {
+    width: 6rem;
+    height: auto;
+    margin-left: -0rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .mascot-righttop {
+    width: 5rem;
+    height: auto;
+    margin-right: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .mascot-rightbottom {
+    width: 5.5rem;
+    height: auto;
+    margin-right: 1rem;
+    margin-bottom: 2.5rem;
+  }
 }
 @media (max-width: 430px) and (max-height: 932px) and (orientation: portrait) {
+  .border-l {
+    content: url("/assets/homepage/mborder-l.png");
+  }
+  .border-r {
+    content: url("/assets/homepage/mborder-r.png");
+  }
+  .clouds-bg{
+        content: url("/assets/homepage/mbg.png");
+    }
+  .firework-top {
+    content: url("/assets/homepage/firework-mobile.png");
+  }
+
+  .circle-layer {
+    align-items: flex-end;
+  }
+
+  .homepage-container {
+    margin-bottom: 0rem;
+  }
+  .magnify-title {
+    width: 20rem;
+    height: auto;
+    margin-top: 0;
+  }
+  .hero-content {
+    gap: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .firework-top {
+    width: 21rem;
+    height: auto;
+  }
+
+  .castle-center {
+    width: 47rem;
+    height: auto;
+  }
+
+  .circle-bg {
+    width: 25rem;
+    height: auto;
+  }
+
+  .countdown-row {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+    margin-bottom: 5rem;
+  }
+
+  .countdown-frame {
+    width: 8rem;
+  }
+
+  .countdown-value {
+    font-size: 5.6rem;
+  }
+
+  .countdown-label {
+    width: 7rem;
+    margin-top: 0.4rem;
+    padding-top: 0.45rem;
+    padding-right: 0;
+    padding-bottom: 0.45rem;
+    padding-left: 0;
+    font-size: 0.9rem;
+    border: 0.2rem solid transparent;
+  }
+
+  .mascot-lefttop {
+    width: 4.5rem;
+    height: auto;
+    margin-left: 0.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .mascot-leftbottom {
+    width: 6rem;
+    height: auto;
+    margin-left: -0rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .mascot-righttop {
+    width: 5rem;
+    height: auto;
+    margin-right: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .mascot-rightbottom {
+    width: 5.5rem;
+    height: auto;
+    margin-right: 1rem;
+    margin-bottom: 2.5rem;
+  }
 }
 @media (max-width: 414px) and (max-height: 896px) and (orientation: portrait) {
 }
