@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { scheduleDays } from "../app/about/components/data-template";
+import { scheduleDays } from "./data-template";
 import "./temp-schedule.css";
 
 export default function TempSchedule() {
@@ -43,11 +43,13 @@ export default function TempSchedule() {
         <div className="schedule-card-gap">
           <div className="schedule-card-inner">
             <div className="schedule-heading">
-              <h2 className="schedule-day">DAY {day.day}</h2>
-              <p className="schedule-subtitle">Keterangan</p>
+              <h2 className="schedule-day text-center">{day.judul}</h2>
+              {/* <p className="schedule-subtitle">-</p> */}
             </div>
 
-            <h3 className="schedule-title">{day.title}</h3>
+            {day.title && day.title.trim() !== "" && (
+              <h3 className="schedule-title">{day.title}</h3>
+            )}
 
             <div className="schedule-detail-list">
               <div className="schedule-detail-row">
@@ -58,10 +60,19 @@ export default function TempSchedule() {
                 <span className="schedule-dot" />
                 <span className="schedule-detail-text">{day.location}</span>
               </div>
-              <div className="schedule-detail-row">
-                <span className="schedule-dot" />
-                <span className="schedule-detail-text">{day.time}</span>
-              </div>
+              {Array.isArray(day.time) ? (
+                day.time.map((t, idx) => (
+                  <div key={idx} className="schedule-detail-row">
+                    <span className="schedule-dot" />
+                    <span className="schedule-detail-text">{t}</span>
+                  </div>
+                ))
+              ) : (
+                <div className="schedule-detail-row">
+                  <span className="schedule-dot" />
+                  <span className="schedule-detail-text">{day.time}</span>
+                </div>
+              )}
             </div>
 
           </div>

@@ -1,7 +1,10 @@
 // Schedule data — one entry per day. The component maps over this array and the
 // left/right nav buttons cycle through it. Add/edit days here only.
 
+import { ReactNode } from "react";
+
 export interface ScheduleDay {
+  judul?: ReactNode;
   /** the day number shown as "DAY 1", "DAY 2", … */
   day: number;
   /** the event title (the large heading on the card) */
