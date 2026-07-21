@@ -23,15 +23,13 @@
   z-index: 1;
 }
 
-.logo-universitas {
-  width: 6.5rem;
-  height: auto;
-}
-
+/* both logos share one square box so they render 1:1 at identical size;
+   object-fit keeps each source image's own ratio inside that box. */
+.logo-universitas,
 .logo-magnify {
   width: 3.8rem;
-  height: auto;
-  margin-left: -1rem;
+  height: 3.8rem;
+  object-fit: contain;
 }
 
 .decoration {
