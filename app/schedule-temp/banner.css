@@ -24,6 +24,10 @@
   transform: scale(1.05) translateY(-1rem);
 }
 
+.arrow-button {
+  z-index: 8;
+}
+
 .arrow-button img {
   user-select: none;
   -webkit-user-drag: none;
@@ -31,6 +35,7 @@
 }
 
 .arrow-button img:hover {
+  z-index: 8;
   transform: scale(1.2);
 }
 
