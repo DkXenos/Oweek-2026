@@ -33,9 +33,16 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+#responsive
+RESPONSIVE.md
+
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# data-template.ts
+# temp-schedule.tsx
+# temp-schedule.css

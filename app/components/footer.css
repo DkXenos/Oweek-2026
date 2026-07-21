@@ -1,0 +1,855 @@
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: visible;
+  z-index: 100;
+  background: linear-gradient(180deg, #ffa3da 0%, #e86799 100%);
+}
+
+.footer-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bushes-layer,
+.pedestal-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+.bushes-layer {
+  z-index: 11;
+}
+
+.pedestal-layer {
+  z-index: 10;
+}
+
+.bushes {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.pedestal {
+  display: block;
+  height: auto;
+}
+
+.footer-magnify-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.footer-magnify {
+  display: block;
+  height: auto;
+}
+
+.footer-content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 3;
+}
+
+.footer-logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo-uc,
+.logo-oweek {
+  display: block;
+  width: auto;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.contact-line {
+  color: #ffffff;
+  font-family: "Poppins-SemiBold", sans-serif;
+  text-align: right;
+}
+
+.contact-label {
+  font-weight: 700;
+}
+
+.contact-value {
+  font-weight: 400;
+}
+
+@media (max-width: 3840px) and (max-height: 2160px) {
+  .footer {
+    padding-top: 7rem;
+    padding-right: 4rem;
+    padding-bottom: 8rem;
+    padding-left: 4rem;
+    margin-top: 0rem;
+  }
+
+  .bushes {
+    width: 100%;
+  }
+
+  .bushes-layer {
+    margin-top: -17rem;
+  }
+
+  .pedestal {
+    width: 110rem;
+  }
+
+  .pedestal-layer {
+    margin-top: -2.5rem;
+  }
+
+  .footer-magnify {
+    width: 40rem;
+  }
+
+  .footer-logos {
+    gap: 4rem;
+  }
+
+  .logo-uc {
+    height: 15rem;
+  }
+
+  .logo-oweek {
+    height: 15rem;
+  }
+
+  .footer-contact {
+    gap: 0.35rem;
+  }
+
+  .contact-line {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 2850px) and (max-height: 1800px) {
+}
+@media (max-width: 2560px) and (max-height: 1600px) {
+  .footer {
+    padding-top: 10rem;
+    padding-right: 4rem;
+    padding-bottom: 7rem;
+    padding-left: 4rem;
+    margin-top: 0rem;
+  }
+
+  .bushes {
+    width: 100%;
+  }
+
+  .bushes-layer {
+    margin-top: -7rem;
+  }
+
+  .pedestal {
+    width: 100rem;
+  }
+
+  .pedestal-layer {
+    margin-top: -2.5rem;
+  }
+
+  .footer-magnify {
+    width: 30rem;
+  }
+
+  .footer-logos {
+    gap: 1.5rem;
+  }
+
+  .logo-uc {
+    height: 10rem;
+  }
+
+  .logo-oweek {
+    height: 10rem;
+  }
+
+  .footer-contact {
+    gap: 0.35rem;
+  }
+
+  .contact-line {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 2560px) and (max-height: 1352px) {
+}
+@media (max-width: 2560px) and (max-height: 1140px) {
+  .footer {
+    padding-top: 10rem;
+    padding-right: 4rem;
+    padding-bottom: 7rem;
+    padding-left: 4rem;
+    margin-top: 0rem;
+  }
+
+  .bushes {
+    width: 100%;
+  }
+
+  .bushes-layer {
+    margin-top: -7rem;
+  }
+
+  .pedestal {
+    width: 100rem;
+  }
+
+  .pedestal-layer {
+    margin-top: -2.5rem;
+  }
+
+  .footer-magnify {
+    width: 30rem;
+  }
+
+  .footer-logos {
+    gap: 1.5rem;
+  }
+
+  .logo-uc {
+    height: 10rem;
+  }
+
+  .logo-oweek {
+    height: 10rem;
+  }
+
+  .footer-contact {
+    gap: 0.35rem;
+  }
+
+  .contact-line {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 1920px) and (max-height: 1080px) {
+  .footer {
+    padding-top: 5rem;
+    padding-right: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 4rem;
+    margin-top: 0rem;
+  }
+
+  .bushes {
+    width: 100%;
+  }
+
+  .bushes-layer {
+    margin-top: -7rem;
+  }
+
+  .pedestal {
+    width: 50rem;
+  }
+
+  .pedestal-layer {
+    margin-top: -2.5rem;
+  }
+
+  .footer-magnify {
+    width: 18rem;
+  }
+
+  .footer-logos {
+    gap: 1.5rem;
+  }
+
+  .logo-uc {
+    height: 5.5rem;
+  }
+
+  .logo-oweek {
+    height: 5.5rem;
+  }
+
+  .footer-contact {
+    gap: 0.35rem;
+  }
+
+  .contact-line {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 1900px) and (max-height: 1920px) {
+}
+@media (max-width: 1900px) and (max-height: 1200px) {
+}
+@media (max-width: 1728px) and (max-height: 1117px) {
+}
+@media (max-width: 1538px) and (max-height: 2048px) {
+}
+@media (max-width: 1528px) and (max-height: 732px) {
+}
+
+@media (max-width: 1512px) and (max-height: 982px) {
+  .footer {
+    padding-top: 2.5rem;
+    padding-right: 4rem;
+    padding-bottom: 2rem;
+    padding-left: 4rem;
+    margin-top: 0rem;
+  }
+
+  .bushes {
+    width: 100%;
+  }
+
+  .bushes-layer {
+    margin-top: -7rem;
+  }
+
+  .pedestal {
+    width: 50rem;
+  }
+
+  .pedestal-layer {
+    margin-top: -2.5rem;
+  }
+
+  .footer-magnify {
+    width: 18rem;
+  }
+
+  .footer-logos {
+    gap: 1.5rem;
+  }
+
+  .logo-uc {
+    height: 5.5rem;
+  }
+
+  .logo-oweek {
+    height: 5.5rem;
+  }
+
+  .footer-contact {
+    gap: 0.35rem;
+  }
+
+  .contact-line {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 1440px) and (max-height: 641px) {
+}
+@media (max-width: 1366px) and (max-height: 1024px) {
+  .footer {
+    padding-top: 3.5rem;
+    padding-right: 4rem;
+    padding-bottom: 3rem;
+    padding-left: 4rem;
+    margin-top: 0rem;
+  }
+
+  .bushes {
+    width: 100%;
+  }
+
+  .bushes-layer {
+    margin-top: -5rem;
+  }
+
+  .pedestal {
+    width: 50rem;
+  }
+
+  .pedestal-layer {
+    margin-top: -2.5rem;
+  }
+
+  .footer-magnify {
+    width: 22rem;
+  }
+
+  .footer-logos {
+    gap: 1.5rem;
+  }
+
+  .logo-uc {
+    height: 5.5rem;
+  }
+
+  .logo-oweek {
+    height: 5.5rem;
+  }
+
+  .footer-contact {
+    gap: 0.35rem;
+  }
+
+  .contact-line {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 1366px) and (max-height: 768px) {
+}
+@media (max-width: 1333px) and (max-height: 632px) {
+}
+@media (max-width: 1280px) and (max-height: 853px) {
+}
+@media (max-width: 1180px) and (max-height: 820px) {
+}
+@media (max-width: 1024px) and (max-height: 1366px) and (orientation: portrait) {
+  .footer {
+    padding-top: 2.5rem;
+    padding-right: 4rem;
+    padding-bottom: 2rem;
+    padding-left: 4rem;
+    margin-top: 0rem;
+  }
+
+  .bushes {
+    width: 100%;
+  }
+
+  .bushes-layer {
+    margin-top: -5rem;
+  }
+
+  .pedestal {
+    width: 50rem;
+  }
+
+  .pedestal-layer {
+    margin-top: -2.5rem;
+  }
+
+  .footer-magnify {
+    width: 18rem;
+  }
+
+  .footer-logos {
+    gap: 1.5rem;
+  }
+
+  .logo-uc {
+    height: 5.5rem;
+  }
+
+  .logo-oweek {
+    height: 5.5rem;
+  }
+
+  .footer-contact {
+    gap: 0.35rem;
+  }
+
+  .contact-line {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
+}
+@media (max-width: 1024px) and (max-height: 600px) {
+}
+@media (max-width: 956px) and (max-height: 440px) and (orientation: landscape) {
+}
+@media (max-width: 932px) and (max-height: 430px) {
+}
+@media (max-width: 912px) and (max-height: 1368px) and (orientation: portrait) {
+}
+@media (max-width: 853px) and (max-height: 1280px) and (orientation: portrait) {
+}
+@media (max-width: 844px) and (max-height: 390px) {
+}
+@media (max-width: 820px) and (max-height: 1180px) {
+  .footer {
+    padding-top: 2.5rem;
+    padding-right: 4rem;
+    padding-bottom: 2rem;
+    padding-left: 4rem;
+    margin-top: 0rem;
+  }
+
+  .bushes {
+    width: 100%;
+  }
+
+  .bushes-layer {
+    margin-top: -5rem;
+  }
+
+  .pedestal {
+    width: 50rem;
+  }
+
+  .pedestal-layer {
+    margin-top: -2.5rem;
+  }
+
+  .footer-magnify {
+    width: 18rem;
+  }
+
+  .footer-logos {
+    gap: 1.5rem;
+  }
+
+  .logo-uc {
+    height: 4.5rem;
+  }
+
+  .logo-oweek {
+    height: 4.5rem;
+  }
+
+  .footer-contact {
+    gap: 0.35rem;
+  }
+
+  .contact-line {
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+  .footer {
+    padding-top: 2.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 1rem;
+    margin-top: 0rem;
+  }
+
+  .bushes {
+    width: 100%;
+  }
+
+  .bushes-layer {
+    margin-top: -3rem;
+  }
+
+  .pedestal {
+    width: 40rem;
+  }
+
+  .pedestal-layer {
+    margin-top: -1.25rem;
+  }
+
+  .footer-magnify {
+    width: 16rem;
+  }
+
+  .footer-logos {
+    gap: 0.35rem;
+  }
+
+  .logo-uc {
+    height: 5rem;
+  }
+
+  .logo-oweek {
+    height: 5rem;
+  }
+
+  .footer-contact {
+    gap: 0.3rem;
+  }
+
+  .contact-line {
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 740px) and (max-height: 360px) and (orientation: landscape) {
+}
+@media (max-width: 720px) and (max-height: 540px) and (orientation: landscape) {
+}
+@media (max-width: 540px) and (max-height: 720px) and (orientation: portrait) {
+  .footer {
+    padding-top: 2.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 1rem;
+    margin-top: 0rem;
+  }
+
+  .bushes {
+    width: 100%;
+  }
+
+  .bushes-layer {
+    margin-top: -2rem;
+  }
+
+  .pedestal {
+    width: 25rem;
+  }
+
+  .pedestal-layer {
+    margin-top: -1.25rem;
+  }
+
+  .footer-magnify {
+    width: 10rem;
+  }
+
+  .footer-logos {
+    gap: 0.35rem;
+  }
+
+  .logo-uc {
+    height: 3rem;
+  }
+
+  .logo-oweek {
+    height: 3rem;
+  }
+
+  .footer-contact {
+    gap: 0.3rem;
+  }
+
+  .contact-line {
+    font-size: 0.55rem;
+  }
+}
+@media (max-width: 459px) and (max-height: 841px) and (orientation: portrait) {
+  .footer {
+    padding-top: 2.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 1rem;
+    margin-top: 0rem;
+  }
+
+  .bushes {
+    width: 100%;
+  }
+
+  .bushes-layer {
+    margin-top: -2rem;
+  }
+
+  .pedestal {
+    width: 25rem;
+  }
+
+  .pedestal-layer {
+    margin-top: -1.25rem;
+  }
+
+  .footer-magnify {
+    width: 8rem;
+  }
+
+  .footer-logos {
+    gap: 0.35rem;
+  }
+
+  .logo-uc {
+    height: 3rem;
+  }
+
+  .logo-oweek {
+    height: 3rem;
+  }
+
+  .footer-contact {
+    gap: 0.3rem;
+  }
+
+  .contact-line {
+    font-size: 0.55rem;
+  }
+}
+@media (max-width: 440px) and (max-height: 956px) and (orientation: portrait) {
+  .footer {
+    padding-top: 2.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 1rem;
+    margin-top: 0rem;
+  }
+
+  .bushes {
+    width: 100%;
+  }
+
+  .bushes-layer {
+    margin-top: -2rem;
+  }
+
+  .pedestal {
+    width: 25rem;
+  }
+
+  .pedestal-layer {
+    margin-top: -1.25rem;
+  }
+
+  .footer-magnify {
+    width: 8rem;
+  }
+
+  .footer-logos {
+    gap: 0.35rem;
+  }
+
+  .logo-uc {
+    height: 3rem;
+  }
+
+  .logo-oweek {
+    height: 3rem;
+  }
+
+  .footer-contact {
+    gap: 0.3rem;
+  }
+
+  .contact-line {
+    font-size: 0.55rem;
+  }
+}
+@media (max-width: 430px) and (max-height: 932px) and (orientation: portrait) {
+}
+@media (max-width: 414px) and (max-height: 896px) and (orientation: portrait) {
+}
+@media (max-width: 393px) and (max-height: 873px) and (orientation: portrait) {
+}
+@media (max-width: 390px) and (max-height: 844px) and (orientation: portrait) {
+}
+@media (max-width: 375px) and (max-height: 667px) and (orientation: portrait) {
+}
+@media (max-width: 360px) and (max-height: 780px) and (orientation: portrait) {
+  .footer {
+    padding-top: 2.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 1rem;
+    margin-top: 0rem;
+  }
+
+  .bushes {
+    width: 100%;
+  }
+
+  .bushes-layer {
+    margin-top: -2rem;
+  }
+
+  .pedestal {
+    width: 25rem;
+  }
+
+  .pedestal-layer {
+    margin-top: -1.25rem;
+  }
+
+  .footer-magnify {
+    width: 5rem;
+  }
+
+  .footer-logos {
+    gap: 0.35rem;
+  }
+
+  .logo-uc {
+    height: 2rem;
+  }
+
+  .logo-oweek {
+    height: 2rem;
+  }
+
+  .footer-contact {
+    gap: 0.3rem;
+  }
+
+  .contact-line {
+    font-size: 0.55rem;
+  }
+}
+@media (max-width: 344px) and (max-height: 882px) and (orientation: portrait) {
+  .footer {
+    padding-top: 2.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 1rem;
+    margin-top: 0rem;
+  }
+
+  .bushes {
+    width: 100%;
+  }
+
+  .bushes-layer {
+    margin-top: -2rem;
+  }
+
+  .pedestal {
+    width: 25rem;
+  }
+
+  .pedestal-layer {
+    margin-top: -1.25rem;
+  }
+
+  .footer-magnify {
+    width: 5rem;
+  }
+
+  .footer-logos {
+    gap: 0.35rem;
+  }
+
+  .logo-uc {
+    height: 2rem;
+  }
+
+  .logo-oweek {
+    height: 2rem;
+  }
+
+  .footer-contact {
+    gap: 0.3rem;
+  }
+
+  .contact-line {
+    font-size: 0.45rem;
+  }
+}

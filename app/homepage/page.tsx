@@ -1,24 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import NavButton from "../components/button";
-// import GlassSurface from "@/components/GlassSurface";
-import LightRays from "../../components/LightRays";
+import "./styles.css";
 
-const BACKGROUND_IMAGES = [
-  "/assets/background-carousel/photo_1.webp",
-  "/assets/background-carousel/photo_2.webp",
-  "/assets/background-carousel/photo_3.webp",
-  "/assets/background-carousel/photo_4.webp",
-  "/assets/background-carousel/photo_5.webp",
-  "/assets/background-carousel/photo_6.webp",
-  "/assets/background-carousel/photo_7.webp",
-];
+const COUNTDOWN_UNITS = ["DAYS", "HOURS", "MINUTES", "SECONDS"] as const;
 
 export default function Home() {
-  const [backgroundImage, setBackgroundImage] = useState(
-    "/assets/template/bg-scaled.webp",
-  );
   const [mounted, setMounted] = useState(false);
   const targetDateStr = "2026-08-17";
   const targetTimeStr = "17:00";
@@ -29,12 +16,10 @@ export default function Home() {
     minutes: 0,
     seconds: 0,
   });
+
   // countdown logic
   useEffect(() => {
     setMounted(true);
-    setBackgroundImage(
-      BACKGROUND_IMAGES[Math.floor(Math.random() * BACKGROUND_IMAGES.length)],
-    );
     const interval = setInterval(() => {
       const now = new Date().getTime();
       const difference = targetDate - now;
@@ -56,141 +41,93 @@ export default function Home() {
     return () => clearInterval(interval);
   }, [targetDate]);
 
+  const values = [timeLeft.days, timeLeft.hours, timeLeft.minutes, timeLeft.seconds];
+
   return (
-    <div
-      className="absolute min-h-screen text-gray-200 flex flex-col items-center justify-center pb-[6rem] pt-[4rem] overflow-x-hidden bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url('${backgroundImage}')` }}
-    >
+    <div className="homepage-container">
+      <div className="gradient-bg" />
       <img
-        src="/assets/template/border-br.webp"
-        alt="bl"
-        className="absolute bottom-0 right-0 w-auto h-[25%] md:h-[38%]"
+        src="/assets/homepage/clouds-background.png"
+        alt=""
+        className="clouds-bg"
       />
       <img
-        src="/assets/template/border-tl.webp"
-        alt="br"
-        className="absolute top-0 left-0 w-[60%] h-auto md:h-[28%] md:w-auto"
+        src="/assets/homepage/firework-top.png"
+        alt=""
+        className="firework-top"
       />
-      <img
-        src="/assets/template/logos_updated.webp"
-        alt="br"
-        className="absolute top-0 h-[8%] w-auto z-20"
-      />
-      <div className="fixed inset-0 z-10 pointer-events-none">
-        <LightRays
-          raysOrigin="top-center" //#ff9a00
-          raysColor="#ffffff"
-          raysSpeed={1}
-          lightSpread={0.5}
-          rayLength={3}
-          followMouse={true}
-          mouseInfluence={0.1}
-          noiseAmount={0}
-          distortion={0}
-          className="custom-rays"
-          pulsating={false}
-          fadeDistance={1}
-          saturation={0.5}
+
+      {/* centered decorative circle; flex layer centers it, sits behind the castle */}
+      <div className="circle-layer">
+        <img
+          src="/assets/homepage/circle-background.png"
+          alt=""
+          className="circle-bg"
         />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center w-[80%] h-[80%] pt-[8rem] pb-[4rem]">
+      <div className="pillar-container">
         <img
-          src="/assets/template/coming-soon.webp"
-          alt="OWEEK 2026"
-          className="mb-2q w-full max-w-2xl h-auto"
+          src="/assets/homepage/border-left.png"
+          alt=""
+          className="border-l"
         />
         <img
-          src="/assets/template/oweek-title.webp"
-          alt="OWEEK 2026"
-          className="mb-0 w-full max-w-5xl h-auto"
+          src="/assets/homepage/border-right.png"
+          alt=""
+          className="border-r"
         />
-        <div className="relative mt-3 p-6 md:p-10 flex justify-center w-screen">
-          {/* <div className="absolute inset-y-0 w-screen bg-[#ff7100] -z-10 w-full mb-[1.5rem] mt-[1.5rem]"></div> */}
+      </div>
 
-          <div className="relative z-10 grid grid-cols-2 md:flex gap-4 md:gap-8 justify-center font-bold font-inter w-full max-w-[20rem] md:max-w-none">
-            {mounted &&
-              [
-                {
-                  label: "HARI",
-                  value: String(timeLeft.days).padStart(2, "0"),
-                },
-                {
-                  label: "JAM",
-                  value: String(timeLeft.hours).padStart(2, "0"),
-                },
-                {
-                  label: "MENIT",
-                  value: String(timeLeft.minutes).padStart(2, "0"),
-                },
-                {
-                  label: "DETIK",
-                  value: String(timeLeft.seconds).padStart(2, "0"),
-                },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-center gap-2 md:gap-4 w-full md:w-[190px]"
-                >
-                  {/* <GlassSurface
-                    width="100%"
-                    height="100%"
-                    borderRadius={30}
-                    className="flex items-center justify-center bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_0_rgba(255,255,255,0.1)] aspect-[3/4] md:h-[240px]"
-                  > */}
-                  <div className="relative flex items-center justify-center bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_0_rgba(255,255,255,0.1)] aspect-[3/4] md:h-[240px] w-full rounded-[30px] overflow-hidden">
-                    <div className="absolute inset-0 bg-[#ff9a00] opacity-50 rounded-[inherit] pointer-events-none"></div>
-                    <span className="text-5xl sm:text-6xl md:text-8xl font-bold text-gray-200 drop-shadow-md z-10">
-                      {item.value}
-                    </span>
-                  </div>
-                  {/* </GlassSurface> */}
-
-                  <div className="px-4 py-2 md:px-12 md:py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg mt-2 w-full text-center relative overflow-hidden">
-                    <div className="absolute inset-0 bg-[#ff9a00] opacity-50 pointer-events-none"></div>
-                    <span className="text-lg md:text-2xl font-bold text-gray-300 tracking-wider relative z-10">
-                      {item.label}
-                    </span>
-                  </div>
-                </div>
-              ))}
+      {/* hero fills the space above the footer; castle + mascots anchor to ITS
+          bottom edge, which is the footer's top edge */}
+      <div className="hero">
+        <div className="mascot-layer">
+          <div className="mascot-col-left">
+            <img
+              src="/assets/homepage/ccclt.png"
+              alt=""
+              className="mascot-lefttop"
+            />
+            <img
+              src="/assets/homepage/yuccanew.png"
+              alt=""
+              className="mascot-leftbottom"
+            />
+          </div>
+          <div className="mascot-col-right">
+            <img
+              src="/assets/homepage/cccrt.png"
+              alt=""
+              className="mascot-righttop"
+            />
+            <img
+              src="/assets/homepage/cccrb.png"
+              alt=""
+              className="mascot-rightbottom"
+            />
           </div>
         </div>
-        <div className="w-screen backdrop-blur-sm bg-white/10 flex flex-col items-center justify-center py-8 gap-8">
+
+        <div className="castle-layer">
           <img
-            src="/assets/template/timeline-title.webp"
-            alt="OWEEK 2026 Timeline Title"
-            className="w-[80%] max-w-lg h-auto"
-          />
-          <img
-            src="/assets/template/timeline-oweek-revised.webp"
-            alt="OWEEK 2026 Timeline"
-            className="w-full max-w-4xl h-auto"
+            src="/assets/homepage/home-castle-center.png"
+            alt=""
+            className="castle-center"
           />
         </div>
-        <div className="w-screen backdrop-blur-sm bg-white/10 flex flex-col items-center justify-center font-inter mt-4">
-          {/* <img
-            src="/assets/template/communication-chanel-title.png"
-            alt="OWEEK 2026 Timeline Title"
-            className="w-[80%] max-w-lg h-auto mt-[-67px] mb-[-100px]"
-          /> */}
-          <h1 className=" text-[1.5rem] md:text-[2rem] text-center mt-4 font-semibold text-2xl py-2 px-2">
-            <b>OFFICIAL COMMUNICATION CHANEL</b>
-          </h1>
-          <div className="flex flex-row pt-2 pb-6 gap-4 md:gap-8 flex-wrap justify-center ">
-            <span className="text-sm md:text-lg font-semibold text-gray-200 tracking-wide">
+        <div className="w-screen backdrop-blur-sm bg-white/10 flex flex-row items-center justify-center py-6 gap-4 md:gap-8 flex-wrap font-inter mt-4">
+          <span className="text-sm md:text-lg font-semibold text-gray-200 tracking-wide">
             Line OA: @829hzswf
-            </span>
-            <span className="hidden md:inline text-gray-400">|</span>
-            <span className="text-sm md:text-lg font-semibold text-gray-200 tracking-wide">
-              Instagram: @oweekucs
-            </span>
-            <span className="hidden md:inline text-gray-400">|</span>
-            <span className="text-sm md:text-lg font-semibold text-gray-200 tracking-wide">
-              Email: oweek@ciputra.ac.id
-            </span>
-          </div>
-          
+          </span>
+          <span className="hidden md:inline text-gray-400">|</span>
+          <span className="text-sm md:text-lg font-semibold text-gray-200 tracking-wide">
+            Instagram: @oweekucs
+          </span>
+          <span className="hidden md:inline text-gray-400">|</span>
+          <span className="text-sm md:text-lg font-semibold text-gray-200 tracking-wide">
+            Email: oweek@ciputra.ac.id
+          </span>
           
         </div>
       </div>

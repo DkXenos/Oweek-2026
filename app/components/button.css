@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+:root{
+    --button-size: 7.5rem; /*tiap naik 1rem turunin button-image-position 0.125rem*/
+    --button-image-position: 0.875rem;
+}
+
 .container{
     display: flex;
     align-items: start;
@@ -7,8 +14,32 @@
 
 .button-img{
     z-index: 0;
-    width: 5rem;
-    position: relative;
-    margin-bottom: -0.5rem;
+    width: var(--button-size);
+    position: absolute;
+    top: var(--button-image-position);
+}
+
+.button-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: var(--button-size);
+    height: 2.5rem;
     
+    background: linear-gradient(90deg, #FBF7EE, #FFED8F) padding-box, 
+                linear-gradient(90deg, #E5A82F, #F8E89B, #E5A82F) border-box;
+    border: 0.25rem solid transparent;
+    border-radius: 25px;
+
+    font-family: 'Poppins-Bold';
+    /* font-weight: 700; */
+    font-size: 1rem;
+    color: #A255BB;
+}
+
+.button-box:hover {
+    background: linear-gradient(90deg, #DBACEA, #A869D1) padding-box, 
+                linear-gradient(90deg, #E5A82F, #F8E89B, #E5A82F) border-box;
+    color: #FCF5D6;
 }
