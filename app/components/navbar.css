@@ -26,6 +26,8 @@
 
 .logo-universitas,
 .logo-magnify {
+  display: block;
+  flex: 0 0 auto;
   width: 4rem;
   height: 4rem;
   aspect-ratio: 1 / 1;
@@ -271,7 +273,7 @@
     background-position: center;
   }
   .logo {
-    margin-left: -2rem;
+    margin-left: -1rem;
   }
   .decoration {
     height: 1.5rem;

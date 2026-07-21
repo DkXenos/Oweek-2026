@@ -39,7 +39,7 @@ export default function Footer() {
       <div className="footer-content">
         <div className="footer-logos">
           <img src="/assets/footer/hd-uc.png" alt="Universitas Ciputra" className="logo-uc" />
-          <img src="/assets/footer/logo-oweek.png" alt="OWeek" className="logo-oweek" />
+          <img src="/assets/footer/logo-oweek-hd.png" alt="OWeek" className="logo-oweek" />
         </div>
 
         <div className="footer-contact">
