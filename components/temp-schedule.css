@@ -68,6 +68,35 @@
     border-radius: 1.8rem;
 }
 
+/* ── day slides: all days overlap in one grid cell ───────────────────────────
+   the grid row is sized by the tallest day, so the card height (and therefore
+   the nav-button position and the whole layer-6 block) never changes when you
+   switch days. `gap: inherit` chains the per-breakpoint gap of
+   .schedule-card-inner down to each slide, so no media query needs editing. */
+.schedule-slides {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    gap: inherit;
+}
+
+.schedule-slide {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: inherit;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.schedule-slide.is-active {
+    visibility: visible;
+    opacity: 1;
+}
+
 /* ── heading block: DAY (serif, pink) + Keterangan (sans, purple) ────────── */
 .schedule-heading {
     display: flex;

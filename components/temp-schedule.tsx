@@ -7,7 +7,6 @@ import "./temp-schedule.css";
 export default function TempSchedule() {
   const [index, setIndex] = useState(0);
   const total = scheduleDays.length;
-  const day = scheduleDays[index];
 
   const goPrev = () => setIndex((i) => (i - 1 + total) % total);
   const goNext = () => setIndex((i) => (i + 1) % total);
@@ -42,39 +41,50 @@ export default function TempSchedule() {
       <div className="schedule-card">
         <div className="schedule-card-gap">
           <div className="schedule-card-inner">
-            <div className="schedule-heading">
-              <h2 className="schedule-day text-center">{day.judul}</h2>
-              {/* <p className="schedule-subtitle">-</p> */}
-            </div>
-
-            {day.title && day.title.trim() !== "" && (
-              <h3 className="schedule-title">{day.title}</h3>
-            )}
-
-            <div className="schedule-detail-list">
-              <div className="schedule-detail-row">
-                <span className="schedule-dot" />
-                <span className="schedule-detail-text">{day.date}</span>
-              </div>
-              <div className="schedule-detail-row">
-                <span className="schedule-dot" />
-                <span className="schedule-detail-text">{day.location}</span>
-              </div>
-              {Array.isArray(day.time) ? (
-                day.time.map((t, idx) => (
-                  <div key={idx} className="schedule-detail-row">
-                    <span className="schedule-dot" />
-                    <span className="schedule-detail-text">{t}</span>
+            {/* every day is rendered stacked in one grid cell so the card keeps
+                the height of the tallest day — switching days never resizes it */}
+            <div className="schedule-slides">
+              {scheduleDays.map((day, i) => (
+                <div
+                  key={day.index}
+                  className={`schedule-slide${i === index ? " is-active" : ""}`}
+                  aria-hidden={i !== index}
+                >
+                  <div className="schedule-heading">
+                    <h2 className="schedule-day text-center">{day.judul}</h2>
+                    {/* <p className="schedule-subtitle">-</p> */}
                   </div>
-                ))
-              ) : (
-                <div className="schedule-detail-row">
-                  <span className="schedule-dot" />
-                  <span className="schedule-detail-text">{day.time}</span>
-                </div>
-              )}
-            </div>
 
+                  {day.title && day.title.trim() !== "" && (
+                    <h3 className="schedule-title">{day.title}</h3>
+                  )}
+
+                  <div className="schedule-detail-list">
+                    <div className="schedule-detail-row">
+                      <span className="schedule-dot" />
+                      <span className="schedule-detail-text">{day.date}</span>
+                    </div>
+                    <div className="schedule-detail-row">
+                      <span className="schedule-dot" />
+                      <span className="schedule-detail-text">{day.location}</span>
+                    </div>
+                    {Array.isArray(day.time) ? (
+                      day.time.map((t, idx) => (
+                        <div key={idx} className="schedule-detail-row">
+                          <span className="schedule-dot" />
+                          <span className="schedule-detail-text">{t}</span>
+                        </div>
+                      ))
+                    ) : (
+                      <div className="schedule-detail-row">
+                        <span className="schedule-dot" />
+                        <span className="schedule-detail-text">{day.time}</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
