@@ -1,5 +1,4 @@
-import "./schedule-button.css";
-import Link from 'next/link'
+import "./popup-button.css";
 
 export default function ScheduleButton() {
   return (

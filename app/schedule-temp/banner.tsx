@@ -1,9 +1,9 @@
 "use client";
 
 import "./banner.css";
-import ScheduleButton from "./schedule-button";
+import ScheduleButton from "./popup/popup-button";
 import Keterangan from "./keterangan"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Banner(){
     const images = [
@@ -16,21 +16,52 @@ export default function Banner(){
     ]
 
     const [page, setPage] = useState(0);
-    const imagesPerPage = 3;
-    const pageCount = Math.ceil(images.length / imagesPerPage);
-    const visibleImages = images.slice(page * imagesPerPage, page * imagesPerPage + imagesPerPage);
+    const imagePerPage = 3;
+    const pageCount = Math.ceil(images.length / imagePerPage);
+    const visibleImage = images.slice(page * imagePerPage, page * imagePerPage + imagePerPage);
 
-    const prevPage = () => setPage((current) => Math.max(current - 1, 0));
     const nextPage = () => setPage((current) => Math.min(current + 1, pageCount - 1));
+    const prevPage = () => setPage((current) => Math.max(current - 1, 0));
 
     const [isOpen, setIsOpen] = useState(false);
-    const openPopup = () => setIsOpen(true);
-    const closePopup = () => setIsOpen(false);
+    const [selectedImageId, setSelectedImageId] = useState<string | null>(null);
+
+    const openPopup = (imageId: string) => {
+        setSelectedImageId(imageId);
+        setIsOpen(true);
+    };
+
+    const closePopup = () => {
+        setIsOpen(false);
+        setSelectedImageId(null);
+    };
+
+    useEffect(() => {
+        if (!isOpen) return;
+
+        const originalBodyOverflow = document.body.style.overflow;
+        const originalHtmlOverflow = document.documentElement.style.overflow;
+        const originalBodyPaddingRight = document.body.style.paddingRight;
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+        document.body.style.overflow = "hidden";
+        document.documentElement.style.overflow = "hidden";
+
+        if (scrollbarWidth > 0) {
+            document.body.style.paddingRight = `${scrollbarWidth}px`;
+        }
+
+        return () => {
+            document.body.style.overflow = originalBodyOverflow;
+            document.documentElement.style.overflow = originalHtmlOverflow;
+            document.body.style.paddingRight = originalBodyPaddingRight;
+        };
+    }, [isOpen]);
 
     return(
         <>
             <div className="banner-container">
-                <button className="arrow-button button-left-container" onClick={prevPage} disabled={page === 0}>
+                <button className="arrow-button button-left-container" onClick={prevPage} disabled={page === 0}> 
                     <img 
                         src="/assets/schedule/button-arrow-left.svg" 
                         alt="" 
@@ -38,8 +69,8 @@ export default function Banner(){
                     />
                 </button>
                 <div className="banners-box">
-                    {visibleImages.map((image) => (
-                        <img onClick={openPopup} key={image.id} src={image.src} alt="" className={`banner-`+ image.id}/>
+                    {visibleImage.map((image) => (
+                        <img onClick={() => openPopup(image.id)} key={image.id} src={image.src} alt="" className={`banner-`+ image.id}/>
                     ))}
                 </div>
                 <button className="arrow-button button-right-container" onClick={nextPage} disabled={page === pageCount - 1}>
@@ -53,16 +84,15 @@ export default function Banner(){
  
             {isOpen && (
                 <>
-                    <div className="popup-backdrop" onClick={closePopup}>
+                    <div className="popup-backdrop">
                         <div className="popup-container">
                             <div className="popup-inner-shadow">
                                 <div className="popup-navbar">
                                     <ScheduleButton /> 
-                                    
                                 </div>
                                 <div className="popup-text-body">
                                     {/* keterangan temporary*/}
-                                    <Keterangan />
+                                    <Keterangan selectedImageId={selectedImageId ?? "1"} />
                                 </div>
                             </div>
                         </div>
@@ -72,7 +102,7 @@ export default function Banner(){
                                 alt="" 
                                 className="close-button"
                             /> */}
-                            <svg xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108" fill="none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108" fill="none" onClick={closePopup}>
                                 <rect x="-2.67442" y="2.67442" width="102.651" height="102.651" rx="50.4574" transform="matrix(-1 0 0 1 102.651 0)" fill="url(#paint0_linear_316_6730)" stroke="url(#paint1_linear_316_6730)" strokeWidth="5.34884"/>
                                 <line x1="37.9689" y1="35.1453" x2="72.1863" y2="71.2201" stroke="#A767D1" strokeWidth="8.52368" strokeLinecap="round"/>
                                 <line x1="4.26184" y1="-4.26184" x2="53.9833" y2="-4.26184" transform="matrix(-0.688181 0.725539 0.725539 0.688181 77.5776 34.9861)" stroke="#A767D1" strokeWidth="8.52368" strokeLinecap="round"/>

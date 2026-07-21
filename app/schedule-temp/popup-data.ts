@@ -2,10 +2,14 @@ export const scheduleKeterangan = [
     {
         index: 0,
         title: "PRA OWEEK",
-        subtitle: "UPACARA BENDERA & OPENING CEREMONY & SEMINAR 5E & TM SELLING",
+        subtitle: " ",
         date: "Rabu, 14 Agustus 2026",
         location: "UC Plaza & Universitas Ciputra Surabaya",
-        time: ["Kloter 1 : 07:00 - 10.45 WIB", "Kloter 2 : 13:00 - 16:45 WIB dwaadaw wdawdw dawdawdw dawdaw"]
+        time: ["Kloter 1 : 07:00 - 10.45 WIB", "Kloter 2 : 13:00 - 16:45 WIB"],
+        image: ["/assets/schedule/template-schedule.jpg", "/assets/schedule/template-schedule.jpg"],
+        atasan: ["Kemeja Putih", "Atasan Batik"],
+        celana: ["Jeans Hitam", "Jeans Hitam"],
+        sepatu: ["Sepatu Hitam", "Sepatu Sneakers"]
     },
     {
         index: 1,
@@ -13,7 +17,47 @@ export const scheduleKeterangan = [
         subtitle: "UPACARA BENDERA & OPENING CEREMONY & SEMINAR 5E & TM SELLING",
         date: "Minggu, 17 Agustus 2026",
         location: "Universitas Ciputra Surabaya",
-        time: ["06.30 - 08.05 WIB (Upacara Bendera)", "08.05 - 09:48 WIB (Opening Ceremony)", "09:48 - 13.32 WIB (Seminar 5E)", "14:20 - 16.47 WIB (TM SELLING)"]
+        time: ["06.30 - 08.05 WIB (Upacara Bendera)", "08.05 - 09:48 WIB (Opening Ceremony)", "09:48 - 13.32 WIB (Seminar 5E)", "14:20 - 16.47 WIB (TM SELLING)"],
+        image: ["/assets/schedule/template-schedule.jpg", "/assets/schedule/template-schedule.jpg"],
+        atasan: ["Kemeja Putih", "Atasan Batik"],
+        celana: ["Jeans Hitam", "Jeans Hitam"],
+        sepatu: ["Sepatu Hitam", "Sepatu Sneakers"]
+    },
+    {
+        index: 2,
+        title: "INDEPENDENCE DAY",
+        subtitle: "UPACARA BENDERA & OPENING CEREMONY & SEMINAR 5E & TM SELLING",
+        date: "Minggu, 17 Agustus 2026",
+        location: "Universitas Ciputra Surabaya",
+        time: ["06.30 - 08.05 WIB (Upacara Bendera)", "08.05 - 09:48 WIB (Opening Ceremony)", "09:48 - 13.32 WIB (Seminar 5E)", "14:20 - 16.47 WIB (TM SELLING)"],
+        image: ["/assets/schedule/template-schedule.jpg", "/assets/schedule/template-schedule.jpg"],
+        atasan: ["Kemeja Putih", "Atasan Batik"],
+        celana: ["Jeans Hitam", "Jeans Hitam"],
+        sepatu: ["Sepatu Hitam", "Sepatu Sneakers"]
+    },
+    {
+        index: 3,
+        title: "INDEPENDENCE DAY",
+        subtitle: "UPACARA BENDERA & OPENING CEREMONY & SEMINAR 5E & TM SELLING",
+        date: "Minggu, 17 Agustus 2026",
+        location: "Universitas Ciputra Surabaya",
+        time: ["06.30 - 08.05 WIB (Upacara Bendera)", "08.05 - 09:48 WIB (Opening Ceremony)", "09:48 - 13.32 WIB (Seminar 5E)", "14:20 - 16.47 WIB (TM SELLING)"],
+        image: ["/assets/schedule/template-schedule.jpg", "/assets/schedule/template-schedule.jpg"],
+        atasan: ["Kemeja Putih", "Atasan Batik"],
+        celana: ["Jeans Hitam", "Jeans Hitam"],
+        sepatu: ["Sepatu Hitam", "Sepatu Sneakers"]
+    },
+    {
+        index: 4,
+        title: "INDEPENDENCE DAY",
+        subtitle: "UPACARA BENDERA & OPENING CEREMONY & SEMINAR 5E & TM SELLING",
+        date: "Minggu, 17 Agustus 2026",
+        location: "Universitas Ciputra Surabaya",
+        time: ["06.30 - 08.05 WIB (Upacara Bendera)", "08.05 - 09:48 WIB (Opening Ceremony)", "09:48 - 13.32 WIB (Seminar 5E)", "14:20 - 16.47 WIB (TM SELLING)"],
+        image: ["/assets/schedule/template-schedule.jpg", "/assets/schedule/template-schedule.jpg"],
+        atasan: ["Kemeja Putih", "Atasan Batik"],
+        celana: ["Jeans Hitam", "Jeans Hitam"],
+        sepatu: ["Sepatu Hitam", "Sepatu Sneakers"]
     }
 ]
 

@@ -1,10 +1,9 @@
 import { scheduleKeterangan } from "./popup-data";
-import { useState } from "react";
 import "./keterangan.css";
 
-export default function keterangan(){
-    const [index, setIndex] = useState(0);
-    const day = scheduleKeterangan[index];
+export default function keterangan({ selectedImageId = "1" }: { selectedImageId?: string }){
+    const selectedIndex = Math.max(0, Math.min(scheduleKeterangan.length - 1, Number(selectedImageId || "1") - 1));
+    const day = scheduleKeterangan[selectedIndex];
 
     return(
         <>
@@ -34,6 +33,31 @@ export default function keterangan(){
                         <span className="keterangan-detail-text">{day.time}</span>
                     </div>
                 )}
+            </div>
+            <h2 className="keterangan-dresscode-title">Dresscode</h2>
+            <div className="keterangan-dresscode-box">
+                <div className="keterangan-dresscode-do">
+                    <h3 className="dresscode-text-do dresscode-text">DO</h3>
+                    <div className="image-box">
+                        <img src={day.image?.at(0)} alt="" />
+                    </div>
+                    <div className="dresscode-detail">
+                        <p className="dresscode-text">{day.atasan?.at(0)}</p>
+                        <p className="dresscode-text">{day.celana?.at(0)}</p>
+                        <p className="dresscode-text">{day.sepatu?.at(0)}</p>
+                    </div>
+                </div>
+                <div className="keterangan-dresscode-dont">
+                    <h3 className="dresscode-text-dont dresscode-text">DON'T</h3>
+                    <div className="image-box">
+                        <img src={day.image?.at(1)} alt="" />
+                    </div>
+                    <div className="dresscode-detail">
+                        <p className="dresscode-text">{day.atasan?.at(1)}</p>
+                        <p className="dresscode-text">{day.celana?.at(1)}</p>
+                        <p className="dresscode-text">{day.sepatu?.at(1)}</p>
+                    </div>
+                </div>
             </div>
         </>
     )

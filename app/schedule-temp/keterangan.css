@@ -47,3 +47,50 @@
     gap: 1rem;
     width: 16rem;
 }
+
+.keterangan-dresscode-title{
+    font-family: "Poppins-bold";
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    color: #F338AC;
+}
+
+.keterangan-dresscode-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 7rem;
+}
+
+.dresscode-text{
+    font-family: "Poppins";
+    font-weight: 400;
+    color: #A767D1;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.image-box{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.image-box img{
+    width: 18rem;
+    height: auto;
+}
+/* 
+.dresscode-detail p{
+    display: flex;
+    justify-content: center;
+    font-family: "Poppins";
+    font-weight: 400;
+    color: #A767D1;
+} */
