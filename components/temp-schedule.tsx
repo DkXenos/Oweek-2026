@@ -55,61 +55,64 @@ export default function TempSchedule({ days }: TempScheduleProps) {
         </span>
       </button>
 
-      {/* card: thick gold frame → cream gap → thin gold line → content */}
       <div className="schedule-card">
         <div className="schedule-card-gap">
           <div className="schedule-card-inner">
             {/* every day is rendered stacked in one grid cell so the card keeps
                 the height of the tallest day — switching days never resizes it */}
             <div className="schedule-slides">
-              {scheduleDays.map((day, i) => (
+              {days.map((d, i) => (
                 <div
-                  key={day.index}
-                  className={`schedule-slide${i === index ? " is-active" : ""}`}
-                  aria-hidden={i !== index}
+                  key={d.index}
+                  className={`schedule-slide${i === safeIndex ? " is-active" : ""}`}
+                  aria-hidden={i !== safeIndex}
                 >
                   <div className="schedule-heading">
-                    <h2 className="schedule-day text-center">{day.judul}</h2>
+                    <h2 className="schedule-day text-center">{d.judul}</h2>
                     {/* <p className="schedule-subtitle">-</p> */}
                   </div>
 
-                  {day.title && day.title.trim() !== "" && (
-                    <h3 className="schedule-title">{day.title}</h3>
+                  {d.title && d.title.trim() !== "" && (
+                    <h3 className="schedule-title">{d.title}</h3>
                   )}
 
-            <div className="schedule-detail-list">
-              <div className="schedule-detail-row">
-                <span className="schedule-dot" />
-                <span className="schedule-detail-text">{day.date}</span>
-              </div>
-              <div className="schedule-detail-row">
-                <span className="schedule-dot" />
-                <span className="schedule-detail-text">{day.location}</span>
-              </div>
-              {Array.isArray(day.time) ? (
-                day.time.map((t, idx) => (
-                  <div key={idx} className="schedule-detail-row">
-                    <span className="schedule-dot" />
-                    <span className="schedule-detail-text">{t}</span>
+                  <div className="schedule-detail-list">
+                    <div className="schedule-detail-row">
+                      <span className="schedule-dot" />
+                      <span className="schedule-detail-text">{d.date}</span>
+                    </div>
+                    <div className="schedule-detail-row">
+                      <span className="schedule-dot" />
+                      <span className="schedule-detail-text">{d.location}</span>
+                    </div>
+                    {Array.isArray(d.time) ? (
+                      d.time.map((t, idx) => (
+                        <div key={idx} className="schedule-detail-row">
+                          <span className="schedule-dot" />
+                          <span className="schedule-detail-text">{t}</span>
+                        </div>
+                      ))
+                    ) : (
+                      <div className="schedule-detail-row">
+                        <span className="schedule-dot" />
+                        <span className="schedule-detail-text">{d.time}</span>
+                      </div>
+                    )}
                   </div>
-                ))
-              ) : (
-                <div className="schedule-detail-row">
-                  <span className="schedule-dot" />
-                  <span className="schedule-detail-text">{day.time}</span>
-                </div>
-              )}
-            </div>
 
-            {hasDresscode && (
-              <button
-                type="button"
-                className="schedule-dresscode-button"
-                onClick={() => setShowDresscode(true)}
-              >
-                Lihat Dresscode
-              </button>
-            )}
+                  {Boolean(d.dresscodeDoImage || d.dresscodeDontImage) && (
+                    <button
+                      type="button"
+                      className="schedule-dresscode-button"
+                      onClick={() => setShowDresscode(true)}
+                      tabIndex={i === safeIndex ? 0 : -1}
+                    >
+                      Lihat Dresscode
+                    </button>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
