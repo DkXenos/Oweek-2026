@@ -15,6 +15,15 @@ function timeToText(time: string | string[]): string {
   return Array.isArray(time) ? time.join("\n") : time;
 }
 
+// Selama diedit, waktu disimpan apa adanya sebagai teks (spasi/baris kosong
+// tetap utuh). Konversi ke string/array baru dilakukan saat form dikirim.
+function toEditableDay(day: JadwalDay): JadwalDay {
+  return {
+    ...day,
+    details: { ...day.details, time: timeToText(day.details.time) },
+  };
+}
+
 function textToTime(text: string): string | string[] {
   const lines = text
     .split("\n")
@@ -47,7 +56,18 @@ export default function AdminJadwalForm({
   initialJadwal,
   action,
 }: AdminJadwalFormProps) {
-  const [jadwal, setJadwal] = useState<JadwalDay[]>(initialJadwal);
+  const [jadwal, setJadwal] = useState<JadwalDay[]>(() =>
+    initialJadwal.map(toEditableDay),
+  );
+
+  // Bentuk final yang dikirim ke server action.
+  const jadwalForSubmit = jadwal.map((day) => ({
+    ...day,
+    details: {
+      ...day.details,
+      time: textToTime(timeToText(day.details.time)),
+    },
+  }));
 
   const updateDay = (dayIndex: number, nextDay: JadwalDay) => {
     // Update satu day tanpa mengubah day lain.
@@ -69,7 +89,11 @@ export default function AdminJadwalForm({
       {/* Server action menerima JSON dari state form ini.
           Field gambar Do/Don't tetap tersimpan di state, tetapi tidak
           ditampilkan agar admin tidak merusak path secara manual. */}
-      <input type="hidden" name="jadwalJson" value={JSON.stringify(jadwal)} />
+      <input
+        type="hidden"
+        name="jadwalJson"
+        value={JSON.stringify(jadwalForSubmit)}
+      />
 
       <p className="admin-help">
         Edit data jadwal lewat field terpisah. Path gambar Do/Don&apos;t
@@ -78,7 +102,10 @@ export default function AdminJadwalForm({
 
       <div className="admin-day-list">
         {jadwal.map((day, dayIndex) => (
-          <section className="admin-day-panel" key={`${day.day}-${dayIndex}`}>
+          // Key WAJIB tidak ikut berubah saat field diedit. Kalau key memakai
+          // day.day, tiap ketikan bikin React unmount panel lama dan mount
+          // panel baru, jadi input kehilangan fokus setelah 1 huruf.
+          <section className="admin-day-panel" key={dayIndex}>
             <header className="admin-day-header">
               <h2>{day.day || `Day ${dayIndex + 1}`}</h2>
               <button
