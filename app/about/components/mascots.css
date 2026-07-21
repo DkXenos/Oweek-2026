@@ -183,6 +183,13 @@
   overflow-y: auto;
   padding-top: 4vh;
   padding-bottom: 4vh;
+  /* scroll still works, the bar just isn't drawn */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.mascot-popup-content::-webkit-scrollbar {
+  display: none;
 }
 
 /* size by viewport height so yucca fills ~72% on open and ccc peeks below */
@@ -466,7 +473,7 @@
   }
   .popup-yucca,
   .popup-ccc {
-    height: 72vh;
+    height: auto;
     max-width: 92vw;
   }
 }
@@ -596,7 +603,7 @@
   }
   .popup-yucca,
   .popup-ccc {
-    height: 72vh;
+    height: auto;
     max-width: 92vw;
   }
 }
