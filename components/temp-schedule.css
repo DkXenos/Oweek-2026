@@ -12,8 +12,14 @@
     margin-top: -7rem;
 }
 
-/* ── nav buttons: gold gradient ring, cream inner face, purple chevron ───── */
+/* ── nav buttons: gold gradient ring, cream inner face, purple chevron ─────
+   pinned to the viewport edges at mid-height, so they hold their position no
+   matter how tall the card grows for a given day. left/right: 0 combined with
+   the per-breakpoint margin-left/margin-right already on .schedule-prev /
+   .schedule-next keeps the edge inset scaling — no media query needs editing. */
 .schedule-nav {
+    position: fixed;
+    top: 50%;
     display: flex;
     flex-shrink: 0;
     justify-content: center;
@@ -23,11 +29,21 @@
     border-radius: 50%;
     background: linear-gradient(145deg, #e8aa2e 0%, #f8e89b 50%, #ecb23a 100%);
     box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.18);
+    transform: translateY(-50%);
     transition: transform 0.15s ease;
+    z-index: 90; /* below the navbar (999) and the footer (100) */
 }
 
 .schedule-nav:hover {
-    transform: scale(1.08);
+    transform: translateY(-50%) scale(1.08);
+}
+
+.schedule-prev {
+    left: 0;
+}
+
+.schedule-next {
+    right: 0;
 }
 
 .schedule-nav-face {
@@ -66,35 +82,6 @@
     background: linear-gradient(180deg, #fbf7ee 0%, #ffed8f 100%);
     border: 0.15rem solid #ecb23a;
     border-radius: 1.8rem;
-}
-
-/* ── day slides: all days overlap in one grid cell ───────────────────────────
-   the grid row is sized by the tallest day, so the card height (and therefore
-   the nav-button position and the whole layer-6 block) never changes when you
-   switch days. `gap: inherit` chains the per-breakpoint gap of
-   .schedule-card-inner down to each slide, so no media query needs editing. */
-.schedule-slides {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    width: 100%;
-    gap: inherit;
-}
-
-.schedule-slide {
-    grid-column: 1;
-    grid-row: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: inherit;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-}
-
-.schedule-slide.is-active {
-    visibility: visible;
-    opacity: 1;
 }
 
 /* ── heading block: DAY (serif, pink) + Keterangan (sans, purple) ────────── */
