@@ -23,7 +23,7 @@ export default function HeroSection() {
       {/* in-flow content; flex centers the tentang frame in the section */}
       <div className="hero-content">
         <img
-          src="/assets/about/tentang-desc.png"
+          src="/assets/about/tentang-desc-hd.png"
           alt="Tentang Orientation Week"
           className="tentang-desc"
         />
