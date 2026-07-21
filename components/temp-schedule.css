@@ -150,6 +150,108 @@
     line-height: 1.35;
 }
 
+/* ── dresscode: button on the card + fixed popup with Do/Don't images ────── */
+.schedule-dresscode-button {
+    cursor: pointer;
+    border: none;
+    border-radius: 999px;
+    padding: 0.6em 1.6em;
+    font-family: "Poppins-Bold", sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #fbf7ee;
+    background: linear-gradient(145deg, #c93f92 0%, #a767d1 100%);
+    box-shadow: 0 0.3rem 0.9rem rgba(0, 0, 0, 0.2);
+    transition: transform 0.15s ease;
+}
+
+.schedule-dresscode-button:hover {
+    transform: scale(1.05);
+}
+
+.schedule-dresscode-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: rgba(40, 12, 48, 0.6);
+    backdrop-filter: blur(2px);
+}
+
+.schedule-dresscode-modal {
+    position: relative;
+    width: min(90vw, 70rem);
+    max-height: 88vh;
+    overflow-y: auto;
+    padding: 2.5rem;
+    border-radius: 1.6rem;
+    border: 0.15rem solid #ecb23a;
+    background: linear-gradient(180deg, #fbf7ee 0%, #ffed8f 100%);
+    box-shadow: 0 1.2rem 3rem rgba(0, 0, 0, 0.35);
+}
+
+.schedule-dresscode-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.2rem;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    font-size: 2.4rem;
+    line-height: 1;
+    color: #7b52a8;
+}
+
+.schedule-dresscode-title {
+    margin-bottom: 1.5rem;
+    font-family: "DM", serif;
+    text-align: center;
+    color: #c93f92;
+    font-size: 2.6rem;
+}
+
+.schedule-dresscode-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.schedule-dresscode-figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    flex: 1 1 22rem;
+    max-width: 30rem;
+}
+
+.schedule-dresscode-image {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    border: 0.15rem solid #ecb23a;
+    object-fit: contain;
+}
+
+.schedule-dresscode-caption {
+    font-family: "Poppins-Bold", sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 0.08em;
+}
+
+.schedule-dresscode-do {
+    color: #2e9e5b;
+}
+
+.schedule-dresscode-dont {
+    color: #d23b3b;
+}
+
 /* ── decorative scroll indicator pinned to the card's right edge ─────────── */
 .schedule-scrolltrack {
     position: absolute;
