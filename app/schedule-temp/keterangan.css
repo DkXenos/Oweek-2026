@@ -37,6 +37,7 @@
     color: #7b52a8;
     line-height: 1.35;
     gap: 1rem;
+    margin-left: 1rem;
 }
 
 .keterangan-item{
@@ -66,11 +67,9 @@
 
 .dresscode-text{
     font-family: "Poppins";
-    font-weight: 400;
     color: #A767D1;
     display: flex;
     justify-content: center;
-    
 }
 
 .image-box{
@@ -86,11 +85,3 @@
     width: 18rem;
     height: auto;
 }
-/* 
-.dresscode-detail p{
-    display: flex;
-    justify-content: center;
-    font-family: "Poppins";
-    font-weight: 400;
-    color: #A767D1;
-} */

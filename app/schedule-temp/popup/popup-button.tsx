@@ -1,31 +1,38 @@
 import "./popup-button.css";
 
-export default function ScheduleButton() {
+type PopupTab = "keterangan" | "penugasan" | "ketentuan";
+
+interface ScheduleButtonProps {
+  selectedTab: PopupTab;
+  onSelectTab: (tab: PopupTab) => void;
+}
+
+export default function ScheduleButton({ selectedTab, onSelectTab }: ScheduleButtonProps) {
   return (
     <>
-        <button>
-          <div className="container">
-            <div className="schedule-button-box">
-              <span>KETERANGAN</span>
-            </div>
+      <button type="button" onClick={() => onSelectTab("keterangan")}> 
+        <div className="container">
+          <div className={`schedule-button-box ${selectedTab === "keterangan" ? "active" : ""}`}>
+            <span>KETERANGAN</span>
           </div>
-        </button>
-      
-        <button>
-          <div className="container">
-            <div className="schedule-button-box">
-              <span>PENUGASAN</span>
-            </div>
-          </div>
-        </button>
+        </div>
+      </button>
 
-        <button>
-          <div className="container">
-            <div className="schedule-button-box">
-              <span>KETENTUAN</span>
-            </div>
+      <button type="button" onClick={() => onSelectTab("penugasan")}> 
+        <div className="container">
+          <div className={`schedule-button-box ${selectedTab === "penugasan" ? "active" : ""}`}>
+            <span>PENUGASAN</span>
           </div>
-        </button>
+        </div>
+      </button>
+
+      <button type="button" onClick={() => onSelectTab("ketentuan")}> 
+        <div className="container">
+          <div className={`schedule-button-box ${selectedTab === "ketentuan" ? "active" : ""}`}>
+            <span>KETENTUAN</span>
+          </div>
+        </div>
+      </button>
     </>
   );
 }

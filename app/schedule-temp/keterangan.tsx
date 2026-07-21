@@ -1,8 +1,8 @@
 import { scheduleKeterangan } from "./popup-data";
 import "./keterangan.css";
 
-export default function keterangan({ selectedImageId = "1" }: { selectedImageId?: string }){
-    const selectedIndex = Math.max(0, Math.min(scheduleKeterangan.length - 1, Number(selectedImageId || "1") - 1));
+export default function keterangan({ selectedImageId = "0" }: { selectedImageId?: string }){
+    const selectedIndex = Math.max(0, Math.min(scheduleKeterangan.length - 1, Number(selectedImageId || "0")));
     const day = scheduleKeterangan[selectedIndex];
 
     return(

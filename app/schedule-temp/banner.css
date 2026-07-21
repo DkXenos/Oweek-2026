@@ -1,9 +1,11 @@
-.banner-container{
-    display: flex;
-    gap: 3rem;
+.banner-container {
+  z-index: 8;
+  display: flex;
+  gap: 3rem;
 }
 
 .banners-box {
+  z-index: 8;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
@@ -11,102 +13,102 @@
   place-items: center;
 }
 
-.banners-box img{
-    -webkit-user-drag: none;
-    width: 85%;
-    height: auto;
-    transition: transform 0.2s ease; 
+.banners-box img {
+  -webkit-user-drag: none;
+  width: 85%;
+  height: auto;
+  transition: transform 0.2s ease;
 }
 
-.banners-box img:hover{
-    transform: scale(1.05) translateY(-1rem);
+.banners-box img:hover {
+  transform: scale(1.05) translateY(-1rem);
 }
 
-.arrow-button img{
-    user-select: none;
-    -webkit-user-drag: none;
-    transition: transform 0.2s ease; 
+.arrow-button img {
+  user-select: none;
+  -webkit-user-drag: none;
+  transition: transform 0.2s ease;
 }
 
-.arrow-button img:hover{
-    transform: scale(1.2);
+.arrow-button img:hover {
+  transform: scale(1.2);
 }
 
 /* popup......................................................................................... */
 .popup-backdrop {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 10;
-    /* overflow: hidden; */
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2000;
 }
 
-.popup-container{
-    position: fixed;
-    inset: 0;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
-    background: linear-gradient(0deg,#FEEFA5,#FBF7EE) padding-box,
-                linear-gradient(112deg, #FFD166 -1.5%, #F8E99D 114.63%) border-box;
-    width: 65rem;
-    height: 33rem;
-    border-radius: 5px;
-    border: 0.6rem solid transparent;
-    z-index: 11;
+.popup-container {
+  position: fixed;
+  inset: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background:
+    linear-gradient(0deg, #feefa5, #fbf7ee) padding-box,
+    linear-gradient(112deg, #ffd166 -1.5%, #f8e99d 114.63%) border-box;
+  width: 65rem;
+  height: 33rem;
+  border-radius: 5px;
+  border: 0.6rem solid transparent;
+  z-index: 2001;
 }
 
-.popup-inner-shadow{
-    width: 100%;
-    height: 100%;
-    border-top: 0.4rem solid #F3BE43;
-    border-right: 0.4rem solid #F3BE43;
+.popup-inner-shadow {
+  width: 100%;
+  height: 100%;
+  border-top: 0.4rem solid #f3be43;
+  border-right: 0.4rem solid #f3be43;
 }
 
-.popup-navbar{
-    width: 100%;
-    height: auto;
-    padding: 3rem;
-    display: flex;
-    justify-content: space-evenly;
-    margin-left: auto;
-    margin-right: auto;
+.popup-navbar {
+  width: 100%;
+  height: auto;
+  padding: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.close-button-container{
-    position: fixed;
-    inset: 0;
-    margin-top: auto;
-    margin-bottom: 6rem;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-    height: fit-content;
-    z-index: 11;
+.close-button-container {
+  position: fixed;
+  inset: 0;
+  margin-top: auto;
+  margin-bottom: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  height: fit-content;
+  z-index: 2002;
 }
 
-.close-button-container svg{
-    transition: transform 0.2s ease; 
+.close-button-container svg {
+  transition: transform 0.2s ease;
 }
 
-.close-button-container svg:hover{
-    transform: scale(1.1);
+.close-button-container svg:hover {
+  transform: scale(1.1);
 }
 
-.popup-text-body{
-    width: 100%;
-    height: 20rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    display: flex;
-    align-items: center;
-    overflow-y: auto;
-    flex-direction: column;
-    position: absolute;
-    scrollbar-color: #C79751 #DCAEEB;
-    scroll-margin-right: 2rem;
-    scrollbar-width: thin;
-    border-right: 3rem solid transparent;
-    border-left: 3rem solid transparent;
+.popup-text-body {
+  width: 100%;
+  height: 20rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  display: flex;
+  align-items: center;
+  overflow-y: auto;
+  flex-direction: column;
+  position: absolute;
+  scrollbar-color: #c79751 #dcaeeb;
+  scroll-margin-right: 2rem;
+  scrollbar-width: thin;
+  border-right: 3rem solid transparent;
+  border-left: 5rem solid transparent;
 }
