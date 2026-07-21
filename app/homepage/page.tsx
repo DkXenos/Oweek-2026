@@ -116,19 +116,39 @@ export default function Home() {
             className="castle-center"
           />
         </div>
-        <div className="w-screen backdrop-blur-sm bg-white/10 flex flex-row items-center justify-center py-6 gap-4 md:gap-8 flex-wrap font-inter mt-4">
-          <span className="text-sm md:text-lg font-semibold text-gray-200 tracking-wide">
-            Line OA: @829hzswf
-          </span>
-          <span className="hidden md:inline text-gray-400">|</span>
-          <span className="text-sm md:text-lg font-semibold text-gray-200 tracking-wide">
-            Instagram: @oweekucs
-          </span>
-          <span className="hidden md:inline text-gray-400">|</span>
-          <span className="text-sm md:text-lg font-semibold text-gray-200 tracking-wide">
-            Email: oweek@ciputra.ac.id
-          </span>
-          
+
+        {/* the two in-flow assets share an 80%-tall centered block, 50% each,
+            so they fill it evenly with no gap in the middle */}
+        <div className="hero-content">
+          <div className="title-slot">
+            <img
+              src="/assets/homepage/magnify-title.png"
+              alt="Welcome to Magnify"
+              className="magnify-title"
+            />
+          </div>
+
+          <div className="countdown-container">
+            <div className="countdown-row">
+            {COUNTDOWN_UNITS.map((label, i) => (
+              <div className="countdown-unit" key={label}>
+                <div className="countdown-frame">
+                  <img
+                    src="/assets/homepage/countdown-border.png"
+                    alt=""
+                    className="countdown-frame-img"
+                  />
+                  <span className="countdown-value">
+                    {mounted ? String(values[i]).padStart(2, "0") : "00"}
+                  </span>
+                </div>
+                <div className="countdown-label">
+                  <span className="countdown-label-text">{label}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+          </div>
         </div>
       </div>
     </div>
