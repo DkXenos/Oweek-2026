@@ -51,6 +51,22 @@ export const dropIn = (delay: number, y = -90): Variants => ({
   },
 });
 
+/**
+ * Spins in fast and decelerates into place, like a wheel that's been given a
+ * shove. EASE_OUT is heavily front-loaded, so most of the 300° is covered in
+ * the first third of the duration and it coasts to a near-stop — which is what
+ * lets the slow idle spin pick up afterwards without a visible seam.
+ */
+export const spinIn = (delay: number, from = -300): Variants => ({
+  hidden: { opacity: 0, scale: 0.7, rotate: from },
+  show: {
+    opacity: 1,
+    scale: 1,
+    rotate: 0,
+    transition: { duration: 1.6, delay, ease: EASE_OUT },
+  },
+});
+
 /** Springy pop — for the ring and the mascots themselves. */
 export const popIn = (delay: number, from = 0.82): Variants => ({
   hidden: { opacity: 0, scale: from },

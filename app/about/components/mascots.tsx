@@ -8,11 +8,13 @@ import {
   useInView,
   useReducedMotion,
 } from "motion/react";
-import { dropIn, fadeUp, popIn, slideX } from "./anim";
+import { dropIn, fadeUp, popIn, slideX, spinIn } from "./anim";
 import "./mascots.css";
 
-// how long the reveal choreography runs before the idle loops take over
-const REVEAL_MS = 1500;
+// How long the reveal choreography runs before the idle loops take over.
+// Must outlast the slowest entrance — the ring, at 0.4s delay + 1.6s spin —
+// otherwise the handoff interrupts its deceleration partway through.
+const REVEAL_MS = 2100;
 
 export default function Mascots() {
   const [popupOpen, setPopupOpen] = useState(false);
@@ -188,9 +190,13 @@ export default function Mascots() {
               className="mascot-ring"
               loading="lazy"
               decoding="async"
-              variants={popIn(0.4, 0.7)}
+              variants={spinIn(0.4)}
               initial={init}
-              animate={idle ? { opacity: 1, scale: 1, rotate: 360 } : state}
+              animate={
+                idle
+                  ? { opacity: 1, rotate: 360, scale: [1, 1.025, 1] }
+                  : state
+              }
               transition={
                 idle
                   ? {
@@ -198,6 +204,11 @@ export default function Mascots() {
                         duration: 100,
                         repeat: Infinity,
                         ease: "linear",
+                      },
+                      scale: {
+                        duration: 6,
+                        repeat: Infinity,
+                        ease: "easeInOut",
                       },
                     }
                   : undefined
