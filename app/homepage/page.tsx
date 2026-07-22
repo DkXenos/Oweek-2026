@@ -283,9 +283,15 @@ export default function Home() {
       />
 
       {/* centered decorative circle; flex layer centers it, sits behind the castle */}
-      <div className="circle-layer">
+      <motion.div className="circle-layer"
+      {...anim(
+        {opacity: 0},
+        {opacity: 1},
+        {duration: 1.5, ease: EASE_OUT}
+      )}
+      >
         <motion.img
-          src="/assets/homepage/circle-background.png"
+          src="/assets/homepage/sun-asset.png"
           alt=""
           className="circle-bg"
           loading="lazy"
@@ -301,7 +307,7 @@ export default function Home() {
             },
           )}
         />
-      </div>
+      </motion.div>
 
       <div className="pillar-container">
         <motion.img
