@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import useMedia from "react-use/lib/useMedia";
 import {
   motion,
   AnimatePresence,
@@ -84,7 +85,11 @@ const MOTES = [
 
 export default function Home() {
   const [introDone, setIntroDone] = useState(false);
+  const [inView, setInView] = useState(true);
+  const rootRef = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
+  // thin out the particle layers on phones/tablets, where fill rate is scarcest
+  const lite = useMedia("(max-width: 900px)", false);
   const targetDateStr = "2026-08-17";
   const targetTimeStr = "17:00";
   const targetDate = new Date(`${targetDateStr}T${targetTimeStr}:00`).getTime();
@@ -131,7 +136,22 @@ export default function Home() {
     return () => clearTimeout(t);
   }, [reduced]);
 
-  const idle = introDone && !reduced;
+  // stop every loop once the hero scrolls away — otherwise ~35 animations keep
+  // burning frames and battery for the whole rest of the page
+  useEffect(() => {
+    const el = rootRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") return;
+    const io = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { rootMargin: "150px" },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  const idle = introDone && inView && !reduced;
+  const meteors = lite ? METEORS.slice(0, 4) : METEORS;
+  const motes = lite ? MOTES.filter((_, i) => i % 2 === 0) : MOTES;
 
   /**
    * Builds the motion props for an asset: an entrance tween that, once the
@@ -156,44 +176,16 @@ export default function Home() {
   const values = [timeLeft.days, timeLeft.hours, timeLeft.minutes, timeLeft.seconds];
 
   return (
-    <div className="homepage-container">
+    <div className="homepage-container" ref={rootRef}>
       <motion.div
         className="gradient-bg"
         {...anim({ opacity: 0 }, { opacity: 1 }, { duration: 0.9 })}
       />
 
-      {/* slow breathing light over the sky */}
-      <motion.div
-        className="sky-glow"
-        {...anim(
-          { opacity: 0 },
-          { opacity: 0.55 },
-          { duration: 1.4, delay: 0.3 },
-          { opacity: [0.4, 0.7, 0.4], scale: [1, 1.06, 1] },
-          {
-            opacity: { duration: 9, repeat: Infinity, ease: "easeInOut" },
-            scale: { duration: 9, repeat: Infinity, ease: "easeInOut" },
-          },
-        )}
-      />
-
-      {/* wide colour band drifting across the sky, slower than anything else */}
-      <motion.div
-        className="aurora"
-        aria-hidden
-        {...anim(
-          { opacity: 0, x: "-40%" },
-          { opacity: 1, x: "-40%" },
-          { duration: 1.6, delay: 0.6 },
-          { x: ["-40%", "140%"] },
-          { x: { duration: 34, repeat: Infinity, ease: "linear" } },
-        )}
-      />
-
       {/* meteor shower across the upper sky, behind the castle and pillars */}
       {idle && (
         <div className="meteor-layer" aria-hidden>
-          {METEORS.map((m, i) => (
+          {meteors.map((m, i) => (
             <div
               key={i}
               className="meteor"
@@ -235,7 +227,7 @@ export default function Home() {
       {/* slow-rising light motes; start only once the entrance has settled */}
       {idle && (
         <div className="motes-layer" aria-hidden>
-          {MOTES.map((m, i) => (
+          {motes.map((m, i) => (
             <motion.span
               key={i}
               className="mote"
@@ -272,8 +264,6 @@ export default function Home() {
           { opacity: 0, scale: 1.06 },
           { opacity: 1, scale: 1 },
           { duration: 1.2, ease: EASE_OUT },
-          { scale: [1, 1.03, 1] },
-          { scale: { duration: 18, repeat: Infinity, ease: "easeInOut" } },
         )}
       />
 
