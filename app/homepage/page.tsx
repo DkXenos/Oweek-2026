@@ -18,21 +18,69 @@ const INTRO_MS = 1800;
 
 const EASE_OUT = [0.22, 1, 0.36, 1] as const;
 
-// countdown cards flip in one after another, left to right
+// countdown cards resolve one after another, left to right
 const rowVariants = {
   hidden: {},
-  show: { transition: { delayChildren: 0.95, staggerChildren: 0.14 } },
+  show: { transition: { delayChildren: 0.95, staggerChildren: 0.16 } },
 };
 
-const cardVariants = {
+// within a card: the frame flips first, then the label follows
+const unitVariants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.42 } },
+};
+
+const frameVariants = {
   hidden: { opacity: 0, rotateY: -100, y: 24 },
   show: {
     opacity: 1,
     rotateY: 0,
     y: 0,
-    transition: { duration: 0.75, ease: EASE_OUT },
+    transition: { duration: 0.7, ease: EASE_OUT },
   },
 };
+
+// slides down out from beneath the frame; the slot clips its travel
+const labelVariants = {
+  hidden: { opacity: 0, y: "-220%" },
+  show: {
+    opacity: 1,
+    y: "0%",
+    transition: { duration: 0.5, ease: EASE_OUT },
+  },
+};
+
+/**
+ * Meteors. `len` is in vmax and the travel below is a multiple of each
+ * streak's own width, so the whole shower scales with the viewport without
+ * any breakpoint work. `gap` is the pause between passes — varied and long
+ * enough that they read as occasional, not as rain.
+ */
+const METEORS = [
+  { top: -6, left: 4, len: 16, angle: 29, dur: 1.7, delay: 0.4, gap: 7.5 },
+  { top: 8, left: -12, len: 21, angle: 32, dur: 2.1, delay: 3.2, gap: 11 },
+  { top: -10, left: 38, len: 14, angle: 27, dur: 1.5, delay: 6.1, gap: 9 },
+  { top: 22, left: 12, len: 18, angle: 34, dur: 1.9, delay: 9.4, gap: 13 },
+  { top: -4, left: 62, len: 22, angle: 30, dur: 2.2, delay: 4.8, gap: 15 },
+  { top: 15, left: 48, len: 13, angle: 28, dur: 1.4, delay: 12.6, gap: 10.5 },
+  { top: 30, left: -8, len: 17, angle: 33, dur: 1.8, delay: 15.3, gap: 12 },
+];
+
+// asset-free drifting light motes; fixed values so SSR and client match
+const MOTES = [
+  { left: 6, bottom: 12, size: 7, rise: 190, drift: 26, dur: 13, delay: 0, peak: 0.55 },
+  { left: 14, bottom: 4, size: 4, rise: 240, drift: -18, dur: 17, delay: 2.4, peak: 0.4 },
+  { left: 22, bottom: 26, size: 9, rise: 160, drift: 32, dur: 11, delay: 5.1, peak: 0.5 },
+  { left: 31, bottom: 8, size: 5, rise: 210, drift: -24, dur: 15, delay: 1.2, peak: 0.45 },
+  { left: 39, bottom: 20, size: 6, rise: 175, drift: 20, dur: 12.5, delay: 6.8, peak: 0.6 },
+  { left: 47, bottom: 2, size: 8, rise: 260, drift: -30, dur: 18, delay: 3.6, peak: 0.35 },
+  { left: 55, bottom: 16, size: 4, rise: 200, drift: 22, dur: 14, delay: 8.2, peak: 0.5 },
+  { left: 63, bottom: 30, size: 7, rise: 150, drift: -16, dur: 10.5, delay: 4.4, peak: 0.55 },
+  { left: 71, bottom: 6, size: 5, rise: 230, drift: 28, dur: 16, delay: 0.8, peak: 0.4 },
+  { left: 79, bottom: 22, size: 9, rise: 170, drift: -26, dur: 12, delay: 7.5, peak: 0.5 },
+  { left: 87, bottom: 10, size: 6, rise: 220, drift: 18, dur: 15.5, delay: 2.9, peak: 0.45 },
+  { left: 94, bottom: 28, size: 4, rise: 185, drift: -20, dur: 13.5, delay: 5.7, peak: 0.55 },
+];
 
 export default function Home() {
   const [introDone, setIntroDone] = useState(false);
@@ -129,6 +177,91 @@ export default function Home() {
         )}
       />
 
+      {/* wide colour band drifting across the sky, slower than anything else */}
+      <motion.div
+        className="aurora"
+        aria-hidden
+        {...anim(
+          { opacity: 0, x: "-40%" },
+          { opacity: 1, x: "-40%" },
+          { duration: 1.6, delay: 0.6 },
+          { x: ["-40%", "140%"] },
+          { x: { duration: 34, repeat: Infinity, ease: "linear" } },
+        )}
+      />
+
+      {/* meteor shower across the upper sky, behind the castle and pillars */}
+      {idle && (
+        <div className="meteor-layer" aria-hidden>
+          {METEORS.map((m, i) => (
+            <div
+              key={i}
+              className="meteor"
+              style={{
+                top: `${m.top}%`,
+                left: `${m.left}%`,
+                transform: `rotate(${m.angle}deg)`,
+              }}
+            >
+              <motion.div
+                className="meteor-streak"
+                style={{ width: `${m.len}vmax` }}
+                initial={{ x: "-100%", opacity: 0 }}
+                animate={{
+                  x: ["-100%", "380%"],
+                  opacity: [0, 1, 1, 0],
+                }}
+                transition={{
+                  duration: m.dur,
+                  delay: m.delay,
+                  repeat: Infinity,
+                  repeatDelay: m.gap,
+                  ease: "easeIn",
+                  opacity: {
+                    duration: m.dur,
+                    delay: m.delay,
+                    repeat: Infinity,
+                    repeatDelay: m.gap,
+                    times: [0, 0.12, 0.7, 1],
+                    ease: "linear",
+                  },
+                }}
+              />
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* slow-rising light motes; start only once the entrance has settled */}
+      {idle && (
+        <div className="motes-layer" aria-hidden>
+          {MOTES.map((m, i) => (
+            <motion.span
+              key={i}
+              className="mote"
+              style={{
+                left: `${m.left}%`,
+                bottom: `${m.bottom}%`,
+                width: m.size,
+                height: m.size,
+              }}
+              initial={{ opacity: 0, y: 0, x: 0 }}
+              animate={{
+                opacity: [0, m.peak, m.peak, 0],
+                y: [0, -m.rise],
+                x: [0, m.drift, 0],
+              }}
+              transition={{
+                duration: m.dur,
+                delay: m.delay,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+          ))}
+        </div>
+      )}
+
       <motion.img
         src="/assets/homepage/clouds-background.png"
         alt=""
@@ -154,11 +287,8 @@ export default function Home() {
           { opacity: 0, scale: 0.94 },
           { opacity: 1, scale: 1 },
           { duration: 0.9, delay: 0.35, ease: EASE_OUT },
-          { opacity: [0.7, 1, 0.85, 1], scale: [1, 1.02, 1] },
-          {
-            opacity: { duration: 5, repeat: Infinity, ease: "easeInOut" },
-            scale: { duration: 7, repeat: Infinity, ease: "easeInOut" },
-          },
+          { scale: [1, 1.02, 1] },
+          { scale: { duration: 7, repeat: Infinity, ease: "easeInOut" } },
         )}
       />
 
@@ -337,9 +467,12 @@ export default function Home() {
                   <motion.div
                     className="countdown-unit"
                     key={label}
-                    variants={cardVariants}
+                    variants={unitVariants}
                   >
-                    <div className="countdown-frame">
+                    <motion.div
+                      className="countdown-frame"
+                      variants={frameVariants}
+                    >
                       <img
                         src="/assets/homepage/countdown-border.png"
                         alt=""
@@ -363,9 +496,14 @@ export default function Home() {
                           {display}
                         </motion.span>
                       </AnimatePresence>
-                    </div>
-                    <div className="countdown-label">
-                      <span className="countdown-label-text">{label}</span>
+                    </motion.div>
+                    <div className="countdown-label-slot">
+                      <motion.div
+                        className="countdown-label"
+                        variants={labelVariants}
+                      >
+                        <span className="countdown-label-text">{label}</span>
+                      </motion.div>
                     </div>
                   </motion.div>
                 );

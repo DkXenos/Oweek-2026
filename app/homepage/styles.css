@@ -43,6 +43,89 @@
   pointer-events: none;
 }
 
+/* wide diffuse colour band that drifts across the sky */
+.aurora {
+  position: absolute;
+  top: -15%;
+  left: 0;
+  width: 55%;
+  height: 75%;
+  background: linear-gradient(
+    105deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(214, 170, 255, 0.3) 32%,
+    rgba(150, 210, 255, 0.32) 62%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  filter: blur(50px);
+  mix-blend-mode: screen;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* meteor shower. the layer is absolute + pointer-events:none so it can never
+   touch layout, and it fades out before it reaches the countdown */
+.meteor-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 55%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 55%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* wrapper carries the position and the fall angle; the streak inside only
+   translates along that rotated axis, so the two never fight */
+.meteor {
+  position: absolute;
+  transform-origin: left center;
+}
+
+.meteor-streak {
+  height: 2px;
+  border-radius: 9999px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 245, 214, 0.45) 55%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+  box-shadow: 0 0 8px 1px rgba(255, 255, 255, 0.55);
+}
+
+/* slow-rising light motes */
+.motes-layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.mote {
+  position: absolute;
+  display: block;
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 244, 200, 0.6) 45%,
+    rgba(255, 255, 255, 0) 72%
+  );
+}
+
 .clouds-bg {
   content: url("/assets/homepage/clouds-background.png");
 
@@ -238,6 +321,14 @@
   line-height: 1;
   backface-visibility: hidden;
   will-change: transform, opacity;
+}
+
+/* clips the label's travel so it reads as sliding out from under the frame.
+   the negative margin keeps the drop shadow from being cropped */
+.countdown-label-slot {
+  overflow: hidden;
+  padding-bottom: 1.25rem;
+  margin-bottom: -1.25rem;
 }
 
 .countdown-label {
