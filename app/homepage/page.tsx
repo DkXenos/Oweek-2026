@@ -21,13 +21,13 @@ const EASE_OUT = [0.22, 1, 0.36, 1] as const;
 // countdown cards resolve one after another, left to right
 const rowVariants = {
   hidden: {},
-  show: { transition: { delayChildren: 0.95, staggerChildren: 0.16 } },
+  show: { transition: { delayChildren: 0.7, staggerChildren: 0.12 } },
 };
 
-// within a card: the frame flips first, then the label follows
+// within a card: the frame flips first, then the label follows close behind
 const unitVariants = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.42 } },
+  show: { transition: { staggerChildren: 0.22 } },
 };
 
 const frameVariants = {
@@ -36,7 +36,7 @@ const frameVariants = {
     opacity: 1,
     rotateY: 0,
     y: 0,
-    transition: { duration: 0.7, ease: EASE_OUT },
+    transition: { duration: 0.6, ease: EASE_OUT },
   },
 };
 
@@ -46,7 +46,7 @@ const labelVariants = {
   show: {
     opacity: 1,
     y: "0%",
-    transition: { duration: 0.5, ease: EASE_OUT },
+    transition: { duration: 0.42, ease: EASE_OUT },
   },
 };
 
