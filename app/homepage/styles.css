@@ -24,6 +24,25 @@
   );
 }
 
+/* soft breathing light over the sky, behind everything */
+.sky-glow {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 100%;
+  height: 85%;
+  background: radial-gradient(
+    ellipse 55% 60% at 50% 40%,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 237, 143, 0.22) 40%,
+    rgba(255, 255, 255, 0) 72%
+  );
+  mix-blend-mode: screen;
+  transform-origin: 50% 30%;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .clouds-bg {
   content: url("/assets/homepage/clouds-background.png");
 
@@ -181,12 +200,15 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  /* depth for the cards flipping in left-to-right */
+  perspective: 1400px;
 }
 
 .countdown-unit {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transform-style: preserve-3d;
 }
 
 .countdown-frame {
@@ -194,6 +216,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* separate, tighter depth for the digit flip on each tick */
+  perspective: 700px;
 }
 
 .countdown-frame-img {
@@ -212,6 +236,8 @@
   -webkit-text-fill-color: transparent;
   color: transparent;
   line-height: 1;
+  backface-visibility: hidden;
+  will-change: transform, opacity;
 }
 
 .countdown-label {
