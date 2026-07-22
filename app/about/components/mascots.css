@@ -44,6 +44,8 @@
 .baloon-left,
 .baloon-right {
   display: block;
+  /* swing from where they're tethered at the top, not from their middle */
+  transform-origin: 50% 0%;
 }
 
 /* mobile-only pots pinned to the bottom corners; hidden on desktop */
