@@ -323,6 +323,50 @@
   will-change: transform, opacity;
 }
 
+/* shine sweep. the layer is masked by the artwork's own alpha, so the
+   highlight only ever appears on the asset and never as a bare rectangle */
+.shine {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.shine-frame {
+  -webkit-mask-image: url("/assets/homepage/countdown-border.png");
+  mask-image: url("/assets/homepage/countdown-border.png");
+}
+
+.shine-title {
+  -webkit-mask-image: url("/assets/homepage/magnify-title.png");
+  mask-image: url("/assets/homepage/magnify-title.png");
+}
+
+.shine-bar {
+  position: absolute;
+  top: -25%;
+  left: 0;
+  width: 40%;
+  height: 150%;
+  background: linear-gradient(
+    105deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  mix-blend-mode: screen;
+}
+
+/* wraps the title so the shine has a box to sit in; shrinks to the image */
+.title-shine-wrap {
+  position: relative;
+  display: inline-flex;
+}
+
 /* clips the label's travel so it reads as sliding out from under the frame.
    the negative margin keeps the drop shadow from being cropped */
 .countdown-label-slot {

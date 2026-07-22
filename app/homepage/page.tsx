@@ -437,20 +437,40 @@ export default function Home() {
             so they fill it evenly with no gap in the middle */}
         <div className="hero-content">
           <div className="title-slot">
-            <motion.img
-              src="/assets/homepage/magnify-title.png"
-              alt="Welcome to Magnify"
-              className="magnify-title"
-              decoding="async"
-              fetchPriority="high"
-              {...anim(
-                { opacity: 0, y: -34, scale: 0.82 },
-                { opacity: 1, y: 0, scale: 1 },
-                { duration: 0.9, delay: 0.5, ease: EASE_OUT },
-                { scale: [1, 1.018, 1] },
-                { scale: { duration: 6, repeat: Infinity, ease: "easeInOut" } },
+            <div className="title-shine-wrap">
+              <motion.img
+                src="/assets/homepage/magnify-title.png"
+                alt="Welcome to Magnify"
+                className="magnify-title"
+                decoding="async"
+                fetchPriority="high"
+                {...anim(
+                  { opacity: 0, y: -34, scale: 0.82 },
+                  { opacity: 1, y: 0, scale: 1 },
+                  { duration: 0.9, delay: 0.5, ease: EASE_OUT },
+                  { scale: [1, 1.018, 1] },
+                  {
+                    scale: { duration: 6, repeat: Infinity, ease: "easeInOut" },
+                  },
+                )}
+              />
+              {idle && (
+                <div className="shine shine-title" aria-hidden>
+                  <motion.div
+                    className="shine-bar"
+                    initial={{ x: "-150%" }}
+                    animate={{ x: "400%" }}
+                    transition={{
+                      duration: 1.5,
+                      delay: 2.4,
+                      repeat: Infinity,
+                      repeatDelay: 9,
+                      ease: "easeInOut",
+                    }}
+                  />
+                </div>
               )}
-            />
+            </div>
           </div>
 
           <div className="countdown-container">
@@ -479,6 +499,24 @@ export default function Home() {
                         decoding="async"
                         className="countdown-frame-img"
                       />
+                      {/* sheen travels across the cards left to right, echoing
+                          the order they flipped in */}
+                      {idle && (
+                        <div className="shine shine-frame" aria-hidden>
+                          <motion.div
+                            className="shine-bar"
+                            initial={{ x: "-150%" }}
+                            animate={{ x: "400%" }}
+                            transition={{
+                              duration: 1.1,
+                              delay: 1.2 + i * 0.18,
+                              repeat: Infinity,
+                              repeatDelay: 6.5,
+                              ease: "easeInOut",
+                            }}
+                          />
+                        </div>
+                      )}
                       {/* each new value flips in as the old one flips away */}
                       <AnimatePresence initial={false}>
                         <motion.span
