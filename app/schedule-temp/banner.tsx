@@ -11,15 +11,38 @@ export default function Banner(){
         {id: '2', src:"assets/schedule/banner-right.png"},
         {id: '3', src:"assets/schedule/banner-right.png"},
         {id: '4', src:"assets/schedule/banner-mid.png"},
-        {id: '5', src:"assets/schedule/banner-left.png"}
+        {id: '5', src:"assets/schedule/banner-left.png"},
+        {id: '6', src:"assets/schedule/banner-mid.png"}
     ];
 
     const [page, setPage] = useState(0);
     const [isOpen, setIsOpen] = useState(false);
     const [selectedImageId, setSelectedImageId] = useState<string | null>(null);
-    const imagePerPage = 3;
+    const [imagePerPage, setImagePerPage] = useState(3);
+
+    useEffect(() => {
+        const updateImagePerPage = () => {
+            if (window.innerWidth < 768) {
+                setImagePerPage(1);
+            } else if (window.innerWidth < 1024) {
+                setImagePerPage(2);
+            } else {
+                setImagePerPage(3);
+            }
+        };
+
+        updateImagePerPage();
+        window.addEventListener("resize", updateImagePerPage);
+
+        return () => window.removeEventListener("resize", updateImagePerPage);
+    }, []);
+
     const pageCount = Math.ceil(images.length / imagePerPage);
     const visibleImage = images.slice(page * imagePerPage, page * imagePerPage + imagePerPage);
+
+    useEffect(() => {
+        setPage((current) => Math.min(current, Math.max(0, pageCount - 1)));
+    }, [pageCount]);
 
     const nextPage = () => setPage((current) => Math.min(current + 1, pageCount - 1));
     const prevPage = () => setPage((current) => Math.max(current - 1, 0));
@@ -46,7 +69,14 @@ export default function Banner(){
                 </button>
                 <div className="banners-box">
                     {visibleImage.map((image) => (
-                        <img onClick={() => openPopup(image.id)} key={image.id} src={image.src} alt="" className={`banner-`+ image.id}/>
+                        <div key={image.id} className={`banner-box-` + image.id + ` banner-boxes`}>
+                            <img 
+                                onClick={() => openPopup(image.id)} 
+                                key={image.id} 
+                                src={image.src} 
+                                alt="" className={`banner-`+ image.id}
+                            />
+                        </div>
                     ))}
                 </div>
                 <button className="arrow-button button-right-container" onClick={nextPage} disabled={page === pageCount - 1}>

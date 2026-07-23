@@ -6,7 +6,7 @@ export const scheduleKeterangan = [
         date: "Rabu, 14 Agustus 2026",
         location: "UC Plaza & Universitas Ciputra Surabaya",
         time: ["Kloter 1 : 07:00 - 10.45 WIB", "Kloter 2 : 13:00 - 16:45 WIB"],
-        image: ["/assets/schedule/template-schedule.jpg", "/assets/schedule/template-schedule.jpg"],
+        image: ["/assets/schedule/template-schedule.jpg", "/assets/schedule/template-schedule.jpg"], // nanti pakai image do dan image dont, jangan iamge saja
         atasan: ["Kemeja Putih", "Atasan Batik"],
         celana: ["Jeans Hitam", "Jeans Hitam"],
         sepatu: ["Sepatu Hitam", "Sepatu Sneakers"]

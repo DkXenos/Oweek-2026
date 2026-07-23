@@ -1,87 +1,339 @@
-.keterangan-title{
-    font-family: "DM", serif;
-    color: #e0479e;
-    letter-spacing: 0.04em;
-    font-size: 3rem;
-    padding-bottom: 1rem;
+.keterangan-title {
+  font-family: "DM", serif;
+  color: #e0479e;
+  letter-spacing: 0.04em;
+  font-size: 3rem;
+  padding-bottom: 1rem;
 }
 
-.keterangan-subtitle{
+.keterangan-subtitle {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  font-size: 1.5rem;
+  color: #942580;
+  margin-bottom: 1rem;
+}
+
+.keterangan-dot {
+  display: block;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #a767d1;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.keterangan-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins-Bold", sans-serif;
+  font-weight: 700;
+  color: #7b52a8;
+  line-height: 1.35;
+  gap: 1rem;
+  margin-left: 1rem;
+}
+
+.keterangan-detail-text {
+  font-size: 1.5rem;
+}
+
+.keterangan-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 16rem;
+}
+
+.keterangan-dresscode-title {
+  font-family: "Poppins-bold";
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  color: #f338ac;
+}
+
+.keterangan-dresscode-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 7rem;
+}
+
+.dresscode-text {
+  font-size: 1rem;
+  font-family: "Poppins";
+  color: #a767d1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-box {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  height: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.image-box img {
+  width: 18rem;
+  height: auto;
+}
+
+@media (max-width: 3840px) and (max-height: 2160px) {
+  .keterangan-title {
+    font-size: 8rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
     padding-left: 3rem;
     padding-right: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.04em;
-    font-size: 1.5rem;
-    color: #942580; 
+    font-size: 3.5rem;
     margin-bottom: 1rem;
-}
+  }
 
-.keterangan-dot{
-    display: block;
-    flex-shrink: 0;
-    border-radius: 50%;
-    background: #a767d1;
-    width: 1.4rem;
-    height: 1.4rem;
-}
+  .keterangan-dot {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
 
-.keterangan-detail{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: "Poppins-Bold", sans-serif;
-    font-weight: 700;
-    color: #7b52a8;
-    line-height: 1.35;
-    gap: 1rem;
+  .keterangan-detail {
+    gap: 2rem;
     margin-left: 1rem;
-}
+  }
 
-.keterangan-item{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
+  .keterangan-detail-text {
+    font-size: 2rem;
+  }
+
+  .keterangan-item {
     gap: 1rem;
-    width: 16rem;
-}
+    width: 34rem;
+  }
 
-.keterangan-dresscode-title{
-    font-family: "Poppins-bold";
-    font-weight: 600;
-    font-size: 1.25rem;
-    margin-top: 3rem;
-    margin-bottom: 1.5rem;
-    color: #F338AC;
-}
+  .keterangan-dresscode-title {
+    font-size: 3.5rem;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+  }
 
-.keterangan-dresscode-box{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 7rem;
-}
+  .dresscode-text {
+    font-size: 2.75rem;
+  }
 
-.dresscode-text{
-    font-family: "Poppins";
-    color: #A767D1;
-    display: flex;
-    justify-content: center;
-}
+  .keterangan-dresscode-box {
+    gap: 9rem;
+  }
 
-.image-box{
-    display: flex;
-    justify-content: center;
-    width: fit-content;
-    height: auto;
+  .image-box {
     margin-top: 1rem;
     margin-bottom: 1rem;
-}
+  }
 
-.image-box img{
-    width: 18rem;
+  .image-box img {
+    width: 40rem;
     height: auto;
+  }
+}
+@media (max-width: 2850px) and (max-height: 1800px) {
+}
+@media (max-width: 2560px) and (max-height: 1600px) {
+}
+@media (max-width: 2560px) and (max-height: 1352px) {
+}
+@media (max-width: 2560px) and (max-height: 1140px) {
+}
+@media (max-width: 1920px) and (max-height: 1080px) {
+}
+@media (max-width: 1900px) and (max-height: 1920px) {
+}
+@media (max-width: 1900px) and (max-height: 1200px) {
+}
+@media (max-width: 1728px) and (max-height: 1117px) {
+}
+@media (max-width: 1538px) and (max-height: 2048px) {
+}
+@media (max-width: 1528px) and (max-height: 732px) {
+}
+@media (max-width: 1512px) and (max-height: 982px) {
+}
+@media (max-width: 1440px) and (max-height: 641px) {
+}
+@media (max-width: 1366px) and (max-height: 1024px) {
+}
+@media (max-width: 1366px) and (max-height: 768px) {
+}
+@media (max-width: 1333px) and (max-height: 632px) {
+}
+@media (max-width: 1280px) and (max-height: 853px) {
+}
+@media (max-width: 1180px) and (max-height: 820px) {
+}
+@media (max-width: 1024px) and (max-height: 1366px) and (orientation: portrait) {
+  .keterangan-title {
+    font-size: 3.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .keterangan-detail {
+    gap: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 1.4rem;
+  }
+
+  .keterangan-item {
+    gap: 0.8rem;
+    width: 18rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.7rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.4rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 3rem;
+  }
+
+  .image-box {
+    width: 17rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
+}
+@media (max-width: 1024px) and (max-height: 600px) {
+}
+@media (max-width: 956px) and (max-height: 440px) and (orientation: landscape) {
+}
+@media (max-width: 932px) and (max-height: 430px) {
+}
+@media (max-width: 912px) and (max-height: 1368px) and (orientation: portrait) {
+}
+@media (max-width: 853px) and (max-height: 1280px) and (orientation: portrait) {
+}
+@media (max-width: 844px) and (max-height: 390px) {
+}
+@media (max-width: 820px) and (max-height: 1180px) {
+}
+@media (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+}
+@media (max-width: 740px) and (max-height: 360px) and (orientation: landscape) {
+}
+@media (max-width: 720px) and (max-height: 540px) and (orientation: landscape) {
+}
+@media (max-width: 540px) and (max-height: 720px) and (orientation: portrait) {
+}
+@media (max-width: 459px) and (max-height: 841px) and (orientation: portrait) {
+}
+@media (max-width: 440px) and (max-height: 956px) and (orientation: portrait) {
+}
+@media (max-width: 430px) and (max-height: 932px) and (orientation: portrait) {
+  .keterangan-title {
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  .keterangan-detail {
+    gap: 0.7rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 0.7rem;
+  }
+
+  .keterangan-item {
+    gap: 0.8rem;
+    width: 10.5rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .dresscode-text {
+    font-size: 1rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 2rem;
+    flex-direction: column;
+  }
+
+  .image-box {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 414px) and (max-height: 896px) and (orientation: portrait) {
+}
+@media (max-width: 393px) and (max-height: 873px) and (orientation: portrait) {
+}
+@media (max-width: 390px) and (max-height: 844px) and (orientation: portrait) {
+}
+@media (max-width: 375px) and (max-height: 667px) and (orientation: portrait) {
+}
+@media (max-width: 360px) and (max-height: 740px) and (orientation: portrait) {
+}
+@media (max-width: 344px) and (max-height: 882px) and (orientation: portrait) {
 }
