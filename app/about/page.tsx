@@ -5,7 +5,6 @@ import "./styles.css";
 export default function About() {
   return (
     <div className="about-container">
-      {/* one continuous gradient + pattern overlay spans both sections */}
       <div className="about-gradient-bg" />
       <img
         src="/assets/about/bg-overlay.png"
