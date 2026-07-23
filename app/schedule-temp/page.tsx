@@ -1,9 +1,10 @@
+//backup branch
+
 import ScheduleTemp from "../../components/temp-schedule";
 import "./style.css";
 import Banner from "./banner"
 
-export default function Schedule(){
-    
+export default function Schedule(){    
 
     return(
         <>
