@@ -17,7 +17,7 @@
   place-items: center;
 }
 
-.banner-boxes{
+.banner-boxes {
   width: 100%;
   height: auto;
 }
@@ -134,27 +134,27 @@
 
 @media (max-width: 3840px) and (max-height: 2160px) {
   .banner-container {
-    gap: 3rem;
+    gap: 4rem;
   }
 
   .banners-box {
-    gap: 5rem;
-    width: 100%;
+    gap: 3rem;
+    width: 95%;
     height: 100%;
   }
 
   .banner-boxes {
-    width: 45rem;
+    width: 47rem;
     height: auto;
   }
 
   .banners-boxes img {
-    width: 45rem;
+    width: 20rem;
     height: auto;
   }
 
   .arrow-button img {
-    width: 15rem;
+    width: 12rem;
     height: auto;
   }
 
@@ -201,12 +201,276 @@
   }
 }
 @media (max-width: 2850px) and (max-height: 1800px) {
+  .banner-container {
+    gap: 2rem;
+  }
+
+  .banners-box {
+    gap: 3rem;
+    width: 95%;
+    height: 100%;
+  }
+
+  .banner-boxes {
+    width: 37rem;
+    height: auto;
+  }
+
+  .banners-boxes img {
+    width: 20rem;
+    height: auto;
+  }
+
+  .arrow-button img {
+    width: 12rem;
+    height: auto;
+  }
+
+  /* popup......................................................................................... */
+  .popup-container {
+    width: 140rem;
+    height: 75rem;
+    border: 1.4rem solid transparent;
+  }
+
+  .popup-inner-shadow {
+    width: 100%;
+    height: 100%;
+    border-top: 1.1rem solid #f3be43;
+    border-right: 1.1rem solid #f3be43;
+  }
+
+  .popup-navbar {
+    width: 100%;
+    height: auto;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    padding-right: 6rem;
+    padding-left: 6rem;
+    gap: 0rem;
+  }
+
+  .close-button-container {
+    margin-bottom: 4rem;
+  }
+
+  .close-button-container svg {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .popup-text-body {
+    width: 100%;
+    height: 48rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-right: 8rem solid transparent;
+    border-left: 8rem solid transparent;
+  }
 }
 @media (max-width: 2560px) and (max-height: 1600px) {
+  .banner-container {
+    gap: 2rem;
+  }
+
+  .banners-box {
+    gap: 3rem;
+    width: 95%;
+    height: 100%;
+  }
+
+  .banner-boxes {
+    width: 34rem;
+    height: auto;
+  }
+
+  .banners-boxes img {
+    width: 20rem;
+    height: auto;
+  }
+
+  .arrow-button img {
+    width: 9rem;
+    height: auto;
+  }
+
+  /* popup......................................................................................... */
+  .popup-container {
+    width: 128rem;
+    height: 66rem;
+    border: 1.4rem solid transparent;
+  }
+
+  .popup-inner-shadow {
+    width: 100%;
+    height: 100%;
+    border-top: 1.1rem solid #f3be43;
+    border-right: 1.1rem solid #f3be43;
+  }
+
+  .popup-navbar {
+    width: 100%;
+    height: auto;
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+    padding-right: 6rem;
+    padding-left: 6rem;
+    gap: 0rem;
+  }
+
+  .close-button-container {
+    margin-bottom: 4rem;
+  }
+
+  .close-button-container svg {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .popup-text-body {
+    width: 100%;
+    height: 40rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-right: 8rem solid transparent;
+    border-left: 8rem solid transparent;
+  }
 }
 @media (max-width: 2560px) and (max-height: 1352px) {
+  .banner-container {
+    gap: 1rem;
+  }
+
+  .banners-box {
+    gap: 3rem;
+    width: 95%;
+    height: 100%;
+  }
+
+  .banner-boxes {
+    width: 31rem;
+    height: auto;
+  }
+
+  .banners-boxes img {
+    width: 20rem;
+    height: auto;
+  }
+
+  .arrow-button img {
+    width: 9rem;
+    height: auto;
+  }
+
+  /* popup......................................................................................... */
+  .popup-container {
+    width: 126rem;
+    height: 57rem;
+    border: 1.3rem solid transparent;
+  }
+
+  .popup-inner-shadow {
+    width: 100%;
+    height: 100%;
+    border-top: 1rem solid #f3be43;
+    border-right: 1rem solid #f3be43;
+  }
+
+  .popup-navbar {
+    width: 100%;
+    height: auto;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    padding-right: 5rem;
+    padding-left: 5rem;
+    gap: 0rem;
+  }
+
+  .close-button-container {
+    margin-bottom: 3.5rem;
+  }
+
+  .close-button-container svg {
+    width: 9rem;
+    height: 9rem;
+  }
+
+  .popup-text-body {
+    width: 100%;
+    height: 40rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-right: 8rem solid transparent;
+    border-left: 8rem solid transparent;
+  }
 }
 @media (max-width: 2560px) and (max-height: 1140px) {
+  .banner-container {
+    gap: 1rem;
+  }
+
+  .banners-box {
+    gap: 3rem;
+    width: 95%;
+    height: 100%;
+  }
+
+  .banner-boxes {
+    width: 31rem;
+    height: auto;
+  }
+
+  .banners-boxes img {
+    width: 20rem;
+    height: auto;
+  }
+
+  .arrow-button img {
+    width: 9rem;
+    height: auto;
+  }
+
+  /* popup......................................................................................... */
+  .popup-container {
+    width: 126rem;
+    height: 57rem;
+    border: 1.3rem solid transparent;
+  }
+
+  .popup-inner-shadow {
+    width: 100%;
+    height: 100%;
+    border-top: 1rem solid #f3be43;
+    border-right: 1rem solid #f3be43;
+  }
+
+  .popup-navbar {
+    width: 100%;
+    height: auto;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    padding-right: 5rem;
+    padding-left: 5rem;
+    gap: 0rem;
+  }
+
+  .close-button-container {
+    margin-bottom: 3.5rem;
+  }
+
+  .close-button-container svg {
+    width: 9rem;
+    height: 9rem;
+  }
+
+  .popup-text-body {
+    width: 100%;
+    height: 40rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-right: 8rem solid transparent;
+    border-left: 8rem solid transparent;
+  }
 }
 @media (max-width: 1920px) and (max-height: 1080px) {
 }
@@ -249,7 +513,6 @@
     width: 19rem;
     height: auto;
   }
-
 
   .arrow-button img {
     width: 6.2rem;
