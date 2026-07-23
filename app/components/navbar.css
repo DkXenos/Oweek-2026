@@ -14,6 +14,7 @@
 
 .logo {
   display: flex;
+  align-items: center;
   z-index: 1;
 }
 
@@ -23,15 +24,18 @@
   z-index: 1;
 }
 
-.logo-universitas {
-  width: 6.5rem;
-  height: auto;
+.logo-universitas,
+.logo-magnify {
+  display: block;
+  flex: 0 0 auto;
+  width: 4rem;
+  height: 4rem;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
 }
 
 .logo-magnify {
-  width: 3.8rem;
-  height: auto;
-  margin-left: -1rem;
+  margin-left: 0.5rem;
 }
 
 .decoration {
@@ -269,7 +273,7 @@
     background-position: center;
   }
   .logo {
-    margin-left: -2rem;
+    margin-left: -1rem;
   }
   .decoration {
     height: 1.5rem;

@@ -1,0 +1,405 @@
+.jadwal-page {
+  position: relative;
+  min-height: calc(100vh - 5rem);
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(220, 174, 235, 0.9), rgba(99, 179, 245, 0.88) 45%, rgba(255, 237, 143, 0.92)),
+    #b4d7f5;
+  color: #5a2a77;
+}
+
+.jadwal-clouds {
+  position: absolute;
+  top: -4rem;
+  left: 0;
+  width: 100%;
+  min-width: 58rem;
+  opacity: 0.62;
+  pointer-events: none;
+}
+
+.jadwal-firework {
+  position: absolute;
+  top: 1.5rem;
+  right: clamp(1rem, 8vw, 7rem);
+  width: clamp(7rem, 14vw, 13rem);
+  opacity: 0.76;
+  pointer-events: none;
+}
+
+.jadwal-content {
+  position: relative;
+  z-index: 1;
+  width: min(68rem, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: clamp(3rem, 8vw, 6rem) 0;
+}
+
+.jadwal-kicker {
+  margin: 0 0 0.75rem;
+  text-align: center;
+  font-family: "Poppins-semibold", sans-serif;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  color: #fff8d8;
+  text-shadow: 0 2px 8px rgba(90, 42, 119, 0.28);
+}
+
+.jadwal-content h1 {
+  margin: 0 0 clamp(1.5rem, 4vw, 2.75rem);
+  text-align: center;
+  font-family: "Rech", "Poppins-Bold", sans-serif;
+  font-size: clamp(3rem, 9vw, 6.5rem);
+  line-height: 0.95;
+  color: #fff4ba;
+  text-shadow:
+    0 4px 0 #a255bb,
+    0 12px 24px rgba(90, 42, 119, 0.25);
+}
+
+.jadwal-carousel {
+  display: grid;
+  grid-template-columns: auto minmax(0, 28rem) auto;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.jadwal-day-card,
+.jadwal-modal {
+  border: 0.25rem solid transparent;
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 251, 232, 0.95), rgba(255, 237, 143, 0.92)) padding-box,
+    linear-gradient(180deg, #f8e89b, #e5a82f, #a255bb) border-box;
+  box-shadow: 0 18px 36px rgba(90, 42, 119, 0.18);
+  padding: clamp(1rem, 2.2vw, 1.5rem);
+}
+
+.jadwal-day-card {
+  display: grid;
+  justify-items: center;
+  gap: 0.55rem;
+  width: 100%;
+  min-height: 15rem;
+  border-radius: 8px;
+  cursor: pointer;
+  color: inherit;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.jadwal-day-card:hover {
+  transform: translateY(-0.35rem);
+  box-shadow: 0 24px 44px rgba(90, 42, 119, 0.24);
+}
+
+.jadwal-day-card strong {
+  width: 100%;
+  text-align: center;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: clamp(2.25rem, 5.8vw, 4.2rem);
+  line-height: 1;
+  color: #a255bb;
+  overflow-wrap: normal;
+  text-wrap: balance;
+}
+
+.jadwal-day-card strong.is-long {
+  font-size: clamp(2rem, 4.8vw, 3.4rem);
+  white-space: nowrap;
+}
+
+@media (max-width: 520px) {
+  .jadwal-day-card strong.is-long {
+    font-size: clamp(2.4rem, 12vw, 3.15rem);
+  }
+}
+
+.jadwal-day-card span:not(.jadwal-day-count) {
+  font-family: "Poppins-semibold", sans-serif;
+  font-size: clamp(1rem, 2.2vw, 1.35rem);
+  color: #7d3d9f;
+}
+
+.jadwal-day-card small {
+  align-self: end;
+  color: #4f3470;
+  font-family: "Poppins-semibold", sans-serif;
+  font-size: 0.86rem;
+}
+
+.jadwal-day-count {
+  border-radius: 999px;
+  background: rgba(162, 85, 187, 0.12);
+  padding: 0.3rem 0.75rem;
+  color: #7d3d9f;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 0.85rem;
+}
+
+.jadwal-nav-button {
+  min-width: 6.5rem;
+  min-height: 3rem;
+  border: 0.2rem solid transparent;
+  border-radius: 999px;
+  background:
+    linear-gradient(90deg, #fbf7ee, #ffed8f) padding-box,
+    linear-gradient(90deg, #e5a82f, #f8e89b, #e5a82f) border-box;
+  color: #a255bb;
+  cursor: pointer;
+  font-family: "Poppins-Bold", sans-serif;
+}
+
+.jadwal-nav-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.jadwal-dot-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.jadwal-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.68);
+  cursor: pointer;
+}
+
+.jadwal-dot.is-active {
+  background: #a255bb;
+}
+
+.jadwal-empty {
+  text-align: center;
+  color: #fff8d8;
+  font-family: "Poppins-Bold", sans-serif;
+}
+
+.jadwal-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  background: rgba(49, 31, 72, 0.58);
+  padding: 1rem;
+}
+
+.jadwal-modal {
+  position: relative;
+  width: min(42rem, 100%);
+  max-height: min(42rem, calc(100svh - 2rem));
+  overflow: hidden;
+  border-width: 0.35rem;
+  background:
+    linear-gradient(135deg, rgba(255, 250, 246, 0.98), rgba(255, 244, 172, 0.96)) padding-box,
+    linear-gradient(180deg, #ffc74f, #e5a82f) border-box;
+  padding: clamp(1rem, 3vw, 1.35rem);
+}
+
+.jadwal-modal h2 {
+  margin: 1.1rem auto 1.2rem;
+  max-width: 28rem;
+  text-align: center;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: clamp(1.05rem, 3vw, 1.55rem);
+  line-height: 1.35;
+  color: #ff3ca8;
+}
+
+.jadwal-modal-close {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  z-index: 2;
+  width: 2.15rem;
+  height: 2.15rem;
+  border: 0;
+  border-radius: 999px;
+  background: #a255bb;
+  color: #fff8d8;
+  cursor: pointer;
+  font-family: "Poppins-Bold", sans-serif;
+}
+
+.jadwal-modal-scroll {
+  max-height: min(31rem, calc(100svh - 10rem));
+  overflow-y: auto;
+  padding: 0.2rem clamp(0.65rem, 2vw, 1.25rem) 1rem;
+  scrollbar-color: #c889db transparent;
+  scrollbar-width: thin;
+}
+
+.jadwal-modal-scroll::-webkit-scrollbar {
+  width: 0.45rem;
+}
+
+.jadwal-modal-scroll::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: #c889db;
+}
+
+.jadwal-modal-section-title {
+  margin: 0.8rem 0 0;
+  text-align: center;
+  color: #c889db;
+  font-family: "Poppins-Bold", sans-serif;
+}
+
+.jadwal-info-list {
+  display: grid;
+  gap: 0.7rem;
+  width: min(20rem, 100%);
+  margin: 0 auto 2rem;
+  padding: 0;
+  list-style: none;
+  color: #a869d1;
+  font-family: "Poppins-semibold", sans-serif;
+}
+
+.jadwal-info-list li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.7rem;
+  align-items: start;
+}
+
+.jadwal-info-dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-top: 0.42rem;
+  border-radius: 999px;
+  background: #b464d5;
+}
+
+.jadwal-dresscode,
+.jadwal-rundown-section {
+  width: min(28rem, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.jadwal-dresscode h3,
+.jadwal-rundown-section h3 {
+  margin: 0 0 0.65rem;
+  color: #ff3ca8;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 0.95rem;
+}
+
+.jadwal-dresscode p {
+  margin: 0 0 1rem;
+  color: #a869d1;
+  font-family: "Poppins-semibold", sans-serif;
+}
+
+.jadwal-dresscode-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  text-align: center;
+}
+
+.jadwal-dresscode-column {
+  display: grid;
+  gap: 0.65rem;
+  align-content: start;
+}
+
+.jadwal-dresscode-column h4 {
+  margin: 0;
+  color: #a255bb;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 1rem;
+}
+
+.jadwal-dresscode-image {
+  display: block;
+  width: 100%;
+  max-height: 30rem;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.jadwal-dresscode-placeholder {
+  border: 0.12rem dashed rgba(168, 105, 209, 0.45);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.38);
+  padding: 1rem;
+  color: #a869d1;
+  font-family: "Poppins-semibold", sans-serif;
+}
+
+.jadwal-rundown-section {
+  margin-top: 2rem;
+}
+
+.jadwal-list {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.jadwal-list li {
+  display: grid;
+  grid-template-columns: 4.25rem minmax(0, 1fr);
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 2.4rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.42);
+  padding: 0.45rem 0.65rem;
+  font-family: "Poppins-semibold", sans-serif;
+  font-size: 0.95rem;
+}
+
+.jadwal-list time {
+  color: #7d3d9f;
+  font-variant-numeric: tabular-nums;
+}
+
+.jadwal-list span {
+  color: #4f3470;
+}
+
+@media (max-width: 860px) {
+  .jadwal-carousel {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .jadwal-day-card {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    min-height: 13rem;
+  }
+
+  .jadwal-nav-button {
+    grid-row: 2;
+    width: 100%;
+  }
+}
+
+@media (max-width: 460px) {
+  .jadwal-modal {
+    padding: 0.75rem;
+  }
+
+  .jadwal-dresscode-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .jadwal-list li {
+    grid-template-columns: 3.8rem minmax(0, 1fr);
+    gap: 0.55rem;
+    font-size: 0.86rem;
+  }
+}

@@ -1,10 +1,14 @@
 import ScheduleTemp from "../../components/temp-schedule";
+import { toScheduleDays } from "../../components/data-template";
+import { getJadwal } from "../../lib/jadwal";
 import "./style.css";
 import Banner from "./banner"
 
-export default function Schedule(){
-    
+// Always read the latest JSON that the admin writes, not a cached build.
+export const dynamic = "force-dynamic";
 
+export default async function Schedule(){
+    const days = toScheduleDays(await getJadwal());
     return(
         <>
             <div className="background">
@@ -85,6 +89,9 @@ export default function Schedule(){
                             alt="" 
                             className="schedule-banner"
                         />
+                    </div>
+                    <div className="banners">
+                        <ScheduleTemp days={days} />
                     </div>
                     <Banner />
                 </div>

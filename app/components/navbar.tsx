@@ -36,12 +36,12 @@ export default function Navbar(){
                 />
                 <div className="logo">
                     <img
-                        src="/assets/template/logo-universitas1.png"
+                        src="/assets/navbar/uc-logo.png"
                         alt="Logo Universitas"
                         className="logo-universitas"
                     />
                     <img
-                        src="/assets/template/logo-magnify.svg"
+                        src="/assets/navbar/magnify-new.png"
                         alt="Logo Magnify"
                         className="logo-magnify"
                     />

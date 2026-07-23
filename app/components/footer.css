@@ -165,6 +165,53 @@
 @media (max-width: 2850px) and (max-height: 1800px) {
 }
 @media (max-width: 2560px) and (max-height: 1600px) {
+  .footer {
+    padding-top: 10rem;
+    padding-right: 4rem;
+    padding-bottom: 7rem;
+    padding-left: 4rem;
+    margin-top: 0rem;
+  }
+
+  .bushes {
+    width: 100%;
+  }
+
+  .bushes-layer {
+    margin-top: -7rem;
+  }
+
+  .pedestal {
+    width: 100rem;
+  }
+
+  .pedestal-layer {
+    margin-top: -2.5rem;
+  }
+
+  .footer-magnify {
+    width: 30rem;
+  }
+
+  .footer-logos {
+    gap: 1.5rem;
+  }
+
+  .logo-uc {
+    height: 10rem;
+  }
+
+  .logo-oweek {
+    height: 10rem;
+  }
+
+  .footer-contact {
+    gap: 0.35rem;
+  }
+
+  .contact-line {
+    font-size: 2rem;
+  }
 }
 @media (max-width: 2560px) and (max-height: 1352px) {
 }
