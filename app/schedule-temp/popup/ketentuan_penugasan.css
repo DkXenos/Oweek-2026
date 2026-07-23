@@ -123,7 +123,7 @@
   }
 }
 @media (max-width: 2560px) and (max-height: 1140px) {
-    .popup-title {
+  .popup-title {
     font-size: 3.3rem;
     margin-top: 0.5rem;
     margin-bottom: 1rem;
@@ -144,30 +144,258 @@
   }
 }
 @media (max-width: 1920px) and (max-height: 1080px) {
+  .popup-title {
+    font-size: 3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-text-box {
+    gap: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .popup-dot {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .content-text {
+    font-size: 1.8rem;
+  }
 }
 @media (max-width: 1900px) and (max-height: 1920px) {
+  .popup-title {
+    font-size: 3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-text-box {
+    gap: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .popup-dot {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .content-text {
+    font-size: 1.8rem;
+  }
 }
 @media (max-width: 1900px) and (max-height: 1200px) {
+  .popup-title {
+    font-size: 3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-text-box {
+    gap: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .popup-dot {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .content-text {
+    font-size: 1.8rem;
+  }
 }
 @media (max-width: 1728px) and (max-height: 1117px) {
+  .popup-title {
+    font-size: 2.6rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-text-box {
+    gap: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .popup-dot {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .content-text {
+    font-size: 1.8rem;
+  }
 }
 @media (max-width: 1538px) and (max-height: 2048px) {
 }
 @media (max-width: 1528px) and (max-height: 732px) {
+  .popup-title {
+    font-size: 2.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-text-box {
+    gap: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .popup-dot {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .content-text {
+    font-size: 1.5rem;
+  }
 }
 @media (max-width: 1512px) and (max-height: 982px) {
+  .popup-title {
+    font-size: 2.1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-text-box {
+    gap: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .popup-dot {
+    width: 1.4  rem;
+    height: 1.4rem;
+  }
+
+  .content-text {
+    font-size: 1.6rem;
+  }
 }
 @media (max-width: 1440px) and (max-height: 641px) {
+  .popup-title {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-text-box {
+    gap: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .popup-dot {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .content-text {
+    font-size: 1.4rem;
+  }
 }
 @media (max-width: 1366px) and (max-height: 1024px) {
+  .popup-title {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-text-box {
+    gap: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .popup-dot {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .content-text {
+    font-size: 1.4rem;
+  }
 }
 @media (max-width: 1366px) and (max-height: 768px) {
+  .popup-title {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-text-box {
+    gap: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .popup-dot {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .content-text {
+    font-size: 1.4rem;
+  }
 }
 @media (max-width: 1333px) and (max-height: 632px) {
+  .popup-title {
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-text-box {
+    gap: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .popup-dot {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .content-text {
+    font-size: 1.2rem;
+  }
 }
 @media (max-width: 1280px) and (max-height: 853px) {
+  .popup-title {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-text-box {
+    gap: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .popup-dot {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .content-text {
+    font-size: 1.4rem;
+  }
 }
 @media (max-width: 1180px) and (max-height: 820px) {
+  .popup-title {
+    font-size: 1.7rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-text-box {
+    gap: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .popup-dot {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .content-text {
+    font-size: 1.3rem;
+  }
 }
 @media (max-width: 1024px) and (max-height: 1366px) and (orientation: portrait) {
   .popup-title {
