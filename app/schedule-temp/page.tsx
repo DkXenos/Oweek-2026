@@ -90,9 +90,7 @@ export default async function Schedule(){
                             className="schedule-banner"
                         />
                     </div>
-                    <div className="banners">
-                        <ScheduleTemp days={days} />
-                    </div>
+                    
                     <Banner />
                 </div>
 
