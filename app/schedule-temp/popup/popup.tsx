@@ -48,8 +48,15 @@ export default function Popup({ selectedImageId, onClose }: PopupProps) {
   };
 
   return (
-    <div className="popup-backdrop">
-      <div className="popup-container">
+    <div
+      className="popup-backdrop"
+      onClick={(event) => {
+        if (event.target === event.currentTarget) {
+          onClose();
+        }
+      }}
+    >
+      <div className="popup-container" onClick={(event) => event.stopPropagation()}>
         <div className="popup-inner-shadow">
           <div className="popup-navbar">
             <ScheduleButton selectedTab={activeTab} onSelectTab={setActiveTab} />
@@ -57,8 +64,18 @@ export default function Popup({ selectedImageId, onClose }: PopupProps) {
           <div className="popup-text-body">{renderContent()}</div>
         </div>
       </div>
-      <div className="close-button-container">
-        <svg xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108" fill="none" onClick={onClose}>
+      <div className="close-button-container" onClick={(event) => event.stopPropagation()}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="108"
+          height="108"
+          viewBox="0 0 108 108"
+          fill="none"
+          onClick={(event) => {
+            event.stopPropagation();
+            onClose();
+          }}
+        >
           <rect
             x="-2.67442"
             y="2.67442"
