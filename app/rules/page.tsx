@@ -2,7 +2,7 @@
 
 import "./styles.css";
 import { useState, useRef, useEffect } from "react";
-import { rules } from './ruleData'
+import rules from './rulesData'
 
 export function RuleDropdown({
   selected,
@@ -34,13 +34,15 @@ export function RuleDropdown({
     };
   }, []);
 
+
   return (
     <div className="dropdown" ref={dropdownRef}>
       <button
         className={`dropdown-btn ${open ? "active" : ""}`}
         onClick={() => setOpen((prev) => !prev)}
       >
-        <span className="dropdown-title">{selected.title}</span>
+        <p className="filler">p</p>
+        <span className="dropdown-title">{selected.pasal} - {selected.category}</span>
 
         <img
           src="/assets/rules/dropdown-button.png"
@@ -54,14 +56,14 @@ export function RuleDropdown({
           <div className="dropdown-scroll">
             {rules.map((item) => (
               <button
-                key={item.title}
+                key={item.id}
                 className="dropdown-item"
                 onClick={() => {
                   setSelected(item);
                   setOpen(false);
                 }}
               >
-                {item.title}
+                {item.pasal} - {item.category}
               </button>
             ))}
           </div>
@@ -73,6 +75,9 @@ export function RuleDropdown({
 
 export default function Rules() {
   const [selected, setSelected] = useState(rules[0]);
+  const hasChild = selected.description.some(
+    (section) => section.details.length > 0 && section.details[0] !== ""
+  );
   return (
     <div className="rules-container">
       <div className="gradient-bg" />
@@ -107,6 +112,32 @@ export default function Rules() {
         <img src="/assets/rules/carousel.png" alt="" />
       </div>
 
+      <div className="decor-left">
+        <img
+          src="/assets/rules/cap.png"
+          alt=""
+          className="cap"
+        />
+        <img
+          src="/assets/rules/flower-pot.png"
+          alt=""
+          className="flower-pot"
+        />
+      </div>
+
+      <div className="decor-right">
+        <img
+          src="/assets/rules/cip.png"
+          alt=""
+          className="cip"
+        />
+        <img
+          src="/assets/rules/cup.png"
+          alt=""
+          className="cup"
+        />
+      </div>
+
       <div className="rules-title">
         <img src="/assets/rules/rules-title.png" alt="" />
       </div>
@@ -117,17 +148,72 @@ export default function Rules() {
       />
 
       <div className="rules-box">
-
-        <img
-          src="/assets/rules/text-box.png"
-          alt=""
-          className="text-box"
-        />
-
         <div className="text-content">
-          {selected.content}
-        </div>
+          <ol className="parent-list">
+            {selected.description.map((section, index) => {
+              const hasHeading = section.heading.trim() !== "";
+              const hasDetails =
+                section.details.length > 0 && section.details[0] !== "";
 
+              return hasHeading ? (
+                <li
+                  key={index}
+                  className={hasChild ? "parent-bold" : "parent-normal"}
+                >
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: section.heading,
+                    }}
+                  />
+
+                  {hasDetails && (
+                    <ol className="child-list" type="a">
+                      {section.details.map((detail, i) => (
+                        <li
+                          key={i}
+                          dangerouslySetInnerHTML={{
+                            __html: detail,
+                          }}
+                        />
+                      ))}
+                    </ol>
+                  )}
+
+                  {section.notes && (
+                    <p
+                      className="rule-note"
+                      dangerouslySetInnerHTML={{
+                        __html: section.notes,
+                      }}
+                    />
+                  )}
+                </li>
+              ) : (
+                section.details.map((detail, i) => (
+                  <li
+                    key={`${index}-${i}`}
+                    className={hasChild ? "parent-bold" : "parent-normal"}
+                  >
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: detail,
+                      }}
+                    />
+
+                    {section.notes && i === section.details.length - 1 && (
+                      <p
+                        className="rule-note"
+                        dangerouslySetInnerHTML={{
+                          __html: section.notes,
+                        }}
+                      />
+                    )}
+                  </li>
+                ))
+              );
+            })}
+          </ol>
+        </div>
       </div>
     </div>
   );
