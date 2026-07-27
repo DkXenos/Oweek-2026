@@ -2,8 +2,8 @@ import { createHmac, timingSafeEqual } from "crypto";
 
 export const ADMIN_COOKIE_NAME = "oweek_session";
 
-const DEFAULT_ADMIN_USERNAME = "admin";
-const DEFAULT_ADMIN_PASSWORD = "admin123";
+const DEFAULT_ADMIN_USERNAME = "adminoweekuc26";
+const DEFAULT_ADMIN_PASSWORD = "adminpassword123";
 
 function getAdminSecret() {
   // Untuk production, isi ADMIN_SESSION_SECRET di environment.
