@@ -1,6 +1,14 @@
+import ScheduleTemp from "../../components/temp-schedule";
+import { toScheduleDays } from "../../components/data-template";
+import { getJadwal } from "../../lib/jadwal";
 import "./style.css";
+import Banner from "./banner"
 
-export default function Schedule(){
+// Always read the latest JSON that the admin writes, not a cached build.
+export const dynamic = "force-dynamic";
+
+export default async function Schedule(){
+    const days = toScheduleDays(await getJadwal());
     return(
         <>
             <div className="background">
@@ -56,14 +64,14 @@ export default function Schedule(){
                 </div>
 
                 {/* layer circle (4)---------------------------------------------------------------------------------------------------- */}
-                <div className="layer layer-4">
+                 <div className="layer layer-4">
                     <img 
                         src="/assets/homepage/circle-background.png" 
                         alt="" 
                         className="schedule-banner"
                     />
                 </div>
-
+                
                 {/* layer ferris wheel(5)---------------------------------------------------------------------------------------------------- */}
                 <div className="layer layer-5">
                     <img 
@@ -71,16 +79,6 @@ export default function Schedule(){
                         alt="" 
                         className="castle-center"
                     />
-                    {/* <img 
-                        src="/assets/schedule/bush-left.png" 
-                        alt="" 
-                        className="bush bush-left"
-                    />
-                    <img 
-                        src="/assets/schedule/bush-right.png" 
-                        alt="" 
-                        className="bush bush-right"
-                    /> */}
                 </div>
 
                 {/* layer schedule and banner(6)---------------------------------------------------------------------------------------------------- */}
@@ -92,37 +90,8 @@ export default function Schedule(){
                             className="schedule-banner"
                         />
                     </div>
-                    <div className="banners">
-                        <img 
-                            src="/assets/schedule/banner-left.png" 
-                            alt="" 
-                            className="banner-left"
-                        />
-                        <img 
-                            src="/assets/schedule/banner-mid.png" 
-                            alt="" 
-                            className="banner-mid"
-                        />
-                        <img 
-                            src="/assets/schedule/banner-right.png" 
-                            alt="" 
-                            className="banner-right"
-                        />
-                    </div>
-                </div>
-
-                {/* layer triangle flag(7)---------------------------------------------------------------------------------------------------- */}
-                <div className="layer layer-7">
-                    <img 
-                        src="/assets/schedule/triangle-flag-left.png" 
-                        alt="" 
-                        className="triangle-flag-left"
-                    />
-                    <img 
-                        src="/assets/schedule/triangle-flag-right.png" 
-                        alt="" 
-                        className="triagnle-flag-right"
-                    />
+                    
+                    <Banner />
                 </div>
 
                 {/* layer cup (8)---------------------------------------------------------------------------------------------------- */}
@@ -140,5 +109,5 @@ export default function Schedule(){
                 </div>
             </div> 
         </>
-    );
+    )
 }

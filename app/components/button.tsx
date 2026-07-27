@@ -34,7 +34,7 @@ export default function Button() {
         </button>
       </Link>
 
-      <Link href="/schedule">
+      {/* <Link href="/schedule">
         <button>
           <div className="container">
             <img 
@@ -47,9 +47,9 @@ export default function Button() {
             </div>
           </div>
         </button>
-      </Link>
+      </Link> */}
 
-      <Link href="/schedule-temp">
+      <Link href="/schedule">
         <button>
           <div className="container">
             <img 
@@ -58,7 +58,7 @@ export default function Button() {
               className="button-img"
             />
             <div className="button-box">
-              <span>SCHEDULE-TEMP</span>
+              <span>SCHEDULE</span>
             </div>
           </div>
         </button>
