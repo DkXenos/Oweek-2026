@@ -86,6 +86,24 @@
   font-family: "Poppins-semibold", sans-serif;
 }
 
+.admin-notice {
+  margin: 0 0 1rem;
+  border: 2px solid #e5a82f;
+  border-radius: 8px;
+  background: rgba(255, 244, 200, 0.92);
+  padding: 0.85rem 1rem;
+  color: #6b4a10;
+  font-family: "Poppins-semibold", sans-serif;
+  line-height: 1.5;
+}
+
+.admin-notice code {
+  padding: 0.05rem 0.35rem;
+  border-radius: 4px;
+  background: rgba(162, 85, 187, 0.14);
+  font-family: Consolas, "Courier New", monospace;
+}
+
 .admin-day-list {
   display: grid;
   gap: 1rem;

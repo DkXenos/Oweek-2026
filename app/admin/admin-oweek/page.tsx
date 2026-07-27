@@ -45,7 +45,16 @@ async function updateScheduleAction(formData: FormData) {
     // Halaman publik /schedule dirender ulang agar perubahan langsung terlihat.
     revalidatePath("/schedule");
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Data gagal disimpan.";
+    const code = (error as NodeJS.ErrnoException)?.code;
+    // Di server yang sudah dideploy (mis. Vercel) filesystem read-only, jadi
+    // fs.writeFile gagal dengan EROFS/EACCES. Beri arahan yang jelas, bukan
+    // pesan error mentah.
+    const message =
+      code === "EROFS" || code === "EACCES"
+        ? "Menyimpan tidak tersedia di situs yang sudah dideploy (filesystem server read-only). Klik Download JSON, lalu commit file data/schedule-data.json ke repo dan deploy ulang."
+        : error instanceof Error
+          ? error.message
+          : "Data gagal disimpan.";
     redirect(`/admin/admin-oweek?error=${encodeURIComponent(message)}`);
   }
 
@@ -65,6 +74,8 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
 
   const params = await searchParams;
   const scheduleData = await getScheduleData();
+  // Di deployment (Vercel) menyimpan ke file tidak akan permanen.
+  const isDeployed = !!process.env.VERCEL;
 
   return (
     <main className="admin-page">
@@ -82,6 +93,16 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
             </form>
           </div>
         </header>
+
+        {isDeployed ? (
+          <p className="admin-notice">
+            Kamu sedang di situs yang sudah dideploy. Perubahan di sini{" "}
+            <strong>tidak tersimpan permanen</strong> karena filesystem server
+            read-only. Untuk mengubah jadwal: edit di sini lalu klik{" "}
+            <strong>Download JSON</strong>, commit file{" "}
+            <code>data/schedule-data.json</code> ke repo, dan deploy ulang.
+          </p>
+        ) : null}
 
         {params?.status === "saved" ? (
           <p className="admin-message">Data berhasil disimpan.</p>

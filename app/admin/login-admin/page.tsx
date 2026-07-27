@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import {
   ADMIN_COOKIE_NAME,
   createAdminSessionToken,
-  getAdminCredentials,
+  verifyAdminCredentials,
 } from "@/lib/admin-auth";
 import "./styles.css";
 
@@ -18,10 +18,10 @@ async function loginAction(formData: FormData) {
 
   const username = String(formData.get("username") || "");
   const password = String(formData.get("password") || "");
-  // Kredensial bisa diubah lewat .env tanpa perlu mengubah code.
-  const credentials = getAdminCredentials();
+  // Kredensial disimpan di .env (username + bcrypt hash), bukan di source code.
+  const isValid = await verifyAdminCredentials(username, password);
 
-  if (username !== credentials.username || password !== credentials.password) {
+  if (!isValid) {
     redirect("/admin/login-admin?error=1");
   }
 
