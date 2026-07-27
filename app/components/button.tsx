@@ -64,7 +64,7 @@ export default function Button() {
         </button>
       </Link>
 
-      {/* <Link href="/rules">
+      <Link href="/rules">
         <button>
           <div className="container">
             <img 
@@ -77,7 +77,7 @@ export default function Button() {
             </div>
           </div>
         </button>
-      </Link> */}
+      </Link>
     </>
   );
 }
