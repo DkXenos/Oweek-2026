@@ -75,6 +75,41 @@
   },
   {
     "keterangan": {
+      "title": "MATRIKULASI & INDUSTRY VISIT",
+      "subtitle": "test subjudul",
+      "date": "hari, tanggal bulan tahun",
+      "location": "Universitas Ciputra Surabaya",
+      "time": [
+        "00.00 - 00.00 WIB"
+      ],
+      "dresscodeDoImage": "/assets/schedule/template-schedule.jpg",
+      "dresscodeDontImage": "/assets/schedule/template-schedule.jpg",
+      "do": [
+        "baju do",
+        "baju do",
+        "baju do"
+      ],
+      "dont": [
+        "baju dont",
+        "baju dont",
+        "baju dont"
+      ]
+    },
+    "penugasan": {
+      "title": "tugas matrikulasi",
+      "content": [
+        "matrikulasi"
+      ]
+    },
+    "ketentuan": {
+      "title": "ketentuan matrikulasi",
+      "content": [
+        "matrikulasi"
+      ]
+    }
+  },
+  {
+    "keterangan": {
       "title": "DAY 1",
       "subtitle": "WE SEE THE LIGHT (TALKSHOW & SHOWCASE SELLING)",
       "date": "Senin, 31 Agustus 2026",
