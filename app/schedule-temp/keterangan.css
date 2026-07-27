@@ -1,0 +1,2398 @@
+.keterangan-title {
+  font-family: "DM", serif;
+  color: #e0479e;
+  letter-spacing: 0.04em;
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+
+.keterangan-subtitle {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  font-size: 1.5rem;
+  color: #942580;
+  margin-bottom: 1rem;
+}
+
+.keterangan-dot {
+  display: block;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #a767d1;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.keterangan-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins-Bold", sans-serif;
+  font-weight: 700;
+  color: #7b52a8;
+  line-height: 1.35;
+  gap: 1rem;
+  margin-left: 1rem;
+}
+
+.keterangan-detail-text {
+  font-size: 1.5rem;
+}
+
+.keterangan-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 16rem;
+}
+
+.keterangan-dresscode-title {
+  font-family: "Poppins-bold";
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  color: #f338ac;
+}
+
+.keterangan-dresscode-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 7rem;
+  margin-bottom: 2rem;
+}
+
+.dresscode-text {
+  font-size: 1rem;
+  font-family: "Poppins";
+  color: #a767d1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-box {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  height: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.image-box img {
+  width: 18rem;
+  height: auto;
+}
+
+@media (max-width: 3840px) and (max-height: 2160px) {
+  .keterangan-title {
+    font-size: 8rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .keterangan-detail {
+    gap: 2rem;
+    margin-left: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 2rem;
+  }
+
+  .keterangan-item {
+    gap: 1rem;
+    width: 34rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 3.5rem;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+  }
+
+  .dresscode-text {
+    font-size: 2.75rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 9rem;
+  }
+
+  .image-box {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 40rem;
+    height: auto;
+  }
+}
+@media (max-width: 2850px) and (max-height: 1800px) {
+  .keterangan-title {
+    font-size: 8rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .keterangan-detail {
+    gap: 2rem;
+    margin-left: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 2.4rem;
+  }
+
+  .keterangan-item {
+    gap: 1rem;
+    width: 34rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 3.5rem;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+  }
+
+  .dresscode-text {
+    font-size: 2.75rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 9rem;
+  }
+
+  .image-box {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 40rem;
+    height: auto;
+  }
+}
+@media (max-width: 2560px) and (max-height: 1600px) {
+  .keterangan-title {
+    font-size: 8rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .keterangan-detail {
+    gap: 2rem;
+    margin-left: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 2rem;
+  }
+
+  .keterangan-item {
+    gap: 1rem;
+    width: 34rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 3.5rem;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+  }
+
+  .dresscode-text {
+    font-size: 2.5rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 9rem;
+  }
+
+  .image-box {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 40rem;
+    height: auto;
+  }
+}
+@media (max-width: 2560px) and (max-height: 1352px) {
+  .keterangan-title {
+    font-size: 7rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .keterangan-detail {
+    gap: 2rem;
+    margin-left: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 2rem;
+  }
+
+  .keterangan-item {
+    gap: 1rem;
+    width: 34rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 3rem;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+  }
+
+  .dresscode-text {
+    font-size: 2.25rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 9rem;
+  }
+
+  .image-box {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 40rem;
+    height: auto;
+  }
+}
+@media (max-width: 2560px) and (max-height: 1140px) {
+  .keterangan-title {
+    font-size: 6.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 2.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .keterangan-detail {
+    gap: 2rem;
+    margin-left: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 2rem;
+  }
+
+  .keterangan-item {
+    gap: 1rem;
+    width: 34rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 3rem;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+  }
+
+  .dresscode-text {
+    font-size: 2.25rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 9rem;
+  }
+
+  .image-box {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 40rem;
+    height: auto;
+  }
+}
+@media (max-width: 1920px) and (max-height: 1080px) {
+  .keterangan-title {
+    font-size: 5.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .keterangan-detail {
+    gap: 2rem;
+    margin-left: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 1.7rem;
+  }
+
+  .keterangan-item {
+    gap: 1rem;
+    width: 30rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 2.5rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.8rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 9rem;
+  }
+
+  .image-box {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 27rem;
+    height: auto;
+  }
+}
+@media (max-width: 1900px) and (max-height: 1920px) {
+  .keterangan-title {
+    font-size: 5.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .keterangan-detail {
+    gap: 2rem;
+    margin-left: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 1.7rem;
+  }
+
+  .keterangan-item {
+    gap: 1rem;
+    width: 30rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 2.5rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.8rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 9rem;
+  }
+
+  .image-box {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 27rem;
+    height: auto;
+  }
+}
+@media (max-width: 1900px) and (max-height: 1200px) {
+  .keterangan-title {
+    font-size: 5.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .keterangan-detail {
+    gap: 2rem;
+    margin-left: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 1.7rem;
+  }
+
+  .keterangan-item {
+    gap: 1rem;
+    width: 30rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 2.5rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.8rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 9rem;
+  }
+
+  .image-box {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 27rem;
+    height: auto;
+  }
+}
+@media (max-width: 1728px) and (max-height: 1117px) {
+  .keterangan-title {
+    font-size: 5rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .keterangan-detail {
+    gap: 2rem;
+    margin-left: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 1.5rem;
+  }
+
+  .keterangan-item {
+    gap: 1rem;
+    width: 27rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 2.3rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.7rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 9rem;
+  }
+
+  .image-box {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 27rem;
+    height: auto;
+  }
+}
+@media (max-width: 1538px) and (max-height: 2048px) {
+  .keterangan-title {
+    font-size: 4rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .keterangan-detail {
+    gap: 2rem;
+    margin-left: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 1.2rem;
+  }
+
+  .keterangan-item {
+    gap: 1rem;
+    width: 21rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.8rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.3rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 9rem;
+  }
+
+  .image-box {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 18rem;
+    height: auto;
+  }
+}
+@media (max-width: 1528px) and (max-height: 732px) {
+  .keterangan-title {
+    font-size: 4rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .keterangan-detail {
+    gap: 2rem;
+    margin-left: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 1.3rem;
+  }
+
+  .keterangan-item {
+    gap: 1rem;
+    width: 23rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.9rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.4rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 9rem;
+  }
+
+  .image-box {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 21rem;
+    height: auto;
+  }
+}
+@media (max-width: 1512px) and (max-height: 982px) {
+  .keterangan-title {
+    font-size: 4rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .keterangan-detail {
+    gap: 2rem;
+    margin-left: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 1.3rem;
+  }
+
+  .keterangan-item {
+    gap: 1rem;
+    width: 23rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.9rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.4rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 9rem;
+  }
+
+  .image-box {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 21rem;
+    height: auto;
+  }
+}
+@media (max-width: 1440px) and (max-height: 641px) {
+  .keterangan-title {
+    font-size: 3.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+
+  .keterangan-detail {
+    gap: 2rem;
+    margin-left: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 1.2rem;
+  }
+
+  .keterangan-item {
+    gap: 1rem;
+    width: 21rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.9rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.3rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 9rem;
+  }
+
+  .image-box {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 19rem;
+    height: auto;
+  }
+}
+@media (max-width: 1366px) and (max-height: 1024px) {
+  .keterangan-title {
+    font-size: 3.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+
+  .keterangan-detail {
+    gap: 1.7rem;
+    margin-left: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 1.2rem;
+  }
+
+  .keterangan-item {
+    gap: 1rem;
+    width: 21rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.9rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.3rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 9rem;
+  }
+
+  .image-box {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 19rem;
+    height: auto;
+  }
+}
+@media (max-width: 1366px) and (max-height: 768px) {
+  .keterangan-title {
+    font-size: 3.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+
+  .keterangan-detail {
+    gap: 1.7rem;
+    margin-left: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 1.2rem;
+  }
+
+  .keterangan-item {
+    gap: 1rem;
+    width: 21rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.9rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.3rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 9rem;
+  }
+
+  .image-box {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 17rem;
+    height: auto;
+  }
+}
+@media (max-width: 1333px) and (max-height: 632px) {
+  .keterangan-title {
+    font-size: 3rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .keterangan-detail {
+    gap: 1.4rem;
+    margin-left: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 1rem;
+  }
+
+  .keterangan-item {
+    gap: 1rem;
+    width: 18rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.6rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.1rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 9rem;
+  }
+
+  .image-box {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 17rem;
+    height: auto;
+  }
+}
+@media (max-width: 1280px) and (max-height: 853px) {
+  .keterangan-title {
+    font-size: 3.3rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .keterangan-detail {
+    gap: 1.4rem;
+    margin-left: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 1.1rem;
+  }
+
+  .keterangan-item {
+    gap: 1rem;
+    width: 19rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.7rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.2rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 9rem;
+  }
+
+  .image-box {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 16rem;
+    height: auto;
+  }
+}
+@media (max-width: 1180px) and (max-height: 820px) {
+  .keterangan-title {
+    font-size: 3rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .keterangan-detail {
+    gap: 1.3rem;
+    margin-left: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 1.1rem;
+  }
+
+  .keterangan-item {
+    gap: 1rem;
+    width: 19rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.7rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.2rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 9rem;
+  }
+
+  .image-box {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 14rem;
+    height: auto;
+  }
+}
+@media (max-width: 1024px) and (max-height: 1366px) and (orientation: portrait) {
+  .keterangan-title {
+    font-size: 3.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .keterangan-detail {
+    gap: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 1.4rem;
+  }
+
+  .keterangan-item {
+    gap: 0.8rem;
+    width: 18rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.7rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.4rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 3rem;
+  }
+
+  .image-box {
+    width: 17rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
+  .keterangan-title {
+    font-size: 3.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .keterangan-detail {
+    gap: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 1.2rem;
+  }
+
+  .keterangan-item {
+    gap: 0.8rem;
+    width: 16rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.7rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.2rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 3rem;
+  }
+
+  .image-box {
+    width: 15rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 1024px) and (max-height: 600px) {
+  .keterangan-title {
+    font-size: 3rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
+  .keterangan-detail {
+    gap: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 1rem;
+  }
+
+  .keterangan-item {
+    gap: 0.8rem;
+    width: 14rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.1rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 3rem;
+  }
+
+  .image-box {
+    width: 13rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 956px) and (max-height: 440px) and (orientation: landscape) {
+  .keterangan-title {
+    font-size: 2.6rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
+  .keterangan-detail {
+    gap: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 0.9rem;
+  }
+
+  .keterangan-item {
+    gap: 0.8rem;
+    width: 14rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 5rem;
+  }
+
+  .image-box {
+    width: 13rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 932px) and (max-height: 430px) {
+  .keterangan-title {
+    font-size: 2.6rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
+  .keterangan-detail {
+    gap: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 0.9rem;
+  }
+
+  .keterangan-item {
+    gap: 0.8rem;
+    width: 14rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 5rem;
+  }
+
+  .image-box {
+    width: 13rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 912px) and (max-height: 1368px) and (orientation: portrait) {
+  .keterangan-title {
+    font-size: 3.9rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .keterangan-detail {
+    gap: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 1.3rem;
+  }
+
+  .keterangan-item {
+    gap: 0.8rem;
+    width: 18rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.7rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.4rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 5rem;
+  }
+
+  .image-box {
+    width: 13rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 853px) and (max-height: 1280px) and (orientation: portrait) {
+  .keterangan-title {
+    font-size: 3.9rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .keterangan-detail {
+    gap: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 1.3rem;
+  }
+
+  .keterangan-item {
+    gap: 0.8rem;
+    width: 18rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.7rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.4rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 5rem;
+  }
+
+  .image-box {
+    width: 13rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 844px) and (max-height: 390px) {
+  .keterangan-title {
+    font-size: 2.1rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
+  .keterangan-detail {
+    gap: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 1rem;
+  }
+
+  .keterangan-item {
+    gap: 0.8rem;
+    width: 15rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.1rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 5rem;
+  }
+
+  .image-box {
+    width: 12rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 820px) and (max-height: 1180px) {
+  .keterangan-title {
+    font-size: 2.9rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
+  .keterangan-detail {
+    gap: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 1rem;
+  }
+
+  .keterangan-item {
+    gap: 0.8rem;
+    width: 15rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.1rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 5rem;
+  }
+
+  .image-box {
+    width: 12rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+  .keterangan-title {
+    font-size: 2.9rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
+  .keterangan-detail {
+    gap: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 1rem;
+  }
+
+  .keterangan-item {
+    gap: 0.8rem;
+    width: 15rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.1rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 5rem;
+  }
+
+  .image-box {
+    width: 12rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 740px) and (max-height: 360px) and (orientation: landscape) {
+  .keterangan-title {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
+  .keterangan-detail {
+    gap: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 0.8rem;
+  }
+
+  .keterangan-item {
+    gap: 0.8rem;
+    width: 12rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 0.9rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 5rem;
+  }
+
+  .image-box {
+    width: 10rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 720px) and (max-height: 540px) and (orientation: landscape) {
+  .keterangan-title {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
+  .keterangan-detail {
+    gap: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 0.8rem;
+  }
+
+  .keterangan-item {
+    gap: 0.8rem;
+    width: 12rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 0.9rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 5rem;
+  }
+
+  .image-box {
+    width: 10rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 540px) and (max-height: 720px) and (orientation: portrait) {
+  .keterangan-title {
+    font-size: 2.3rem;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
+  .keterangan-detail {
+    gap: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 0.8rem;
+  }
+
+  .keterangan-item {
+    gap: 0.8rem;
+    width: 12rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.1rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 3rem;
+    flex-direction: column;
+  }
+
+  .image-box {
+    width: 14rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 459px) and (max-height: 841px) and (orientation: portrait) {
+  .keterangan-title {
+    font-size: 2.3rem;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
+  .keterangan-detail {
+    gap: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 0.8rem;
+  }
+
+  .keterangan-item {
+    gap: 0.8rem;
+    width: 12rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.1rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 3rem;
+    flex-direction: column;
+  }
+
+  .image-box {
+    width: 14rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 440px) and (max-height: 956px) and (orientation: portrait) {
+  .keterangan-title {
+    font-size: 2.3rem;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
+  .keterangan-detail {
+    gap: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 0.8rem;
+  }
+
+  .keterangan-item {
+    gap: 0.8rem;
+    width: 12rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.1rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 5rem;
+    flex-direction: column;
+  }
+
+  .image-box {
+    width: 14rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 430px) and (max-height: 932px) and (orientation: portrait) {
+  .keterangan-title {
+    font-size: 2.3rem;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
+  .keterangan-detail {
+    gap: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 0.8rem;
+  }
+
+  .keterangan-item {
+    gap: 0.8rem;
+    width: 11rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.1rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 5rem;
+    flex-direction: column;
+  }
+
+  .image-box {
+    width: 14rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 414px) and (max-height: 896px) and (orientation: portrait) {
+  .keterangan-title {
+    font-size: 2.3rem;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
+  .keterangan-detail {
+    gap: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 0.8rem;
+  }
+
+  .keterangan-item {
+    gap: 0.8rem;
+    width: 11rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.1rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 5rem;
+    flex-direction: column;
+  }
+
+  .image-box {
+    width: 14rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 393px) and (max-height: 873px) and (orientation: portrait) {
+  .keterangan-title {
+    font-size: 2.3rem;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
+  .keterangan-detail {
+    gap: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 0.8rem;
+  }
+
+  .keterangan-item {
+    gap: 0.8rem;
+    width: 11rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.1rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 5rem;
+    flex-direction: column;
+  }
+
+  .image-box {
+    width: 14rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 390px) and (max-height: 844px) and (orientation: portrait) {
+  .keterangan-title {
+    font-size: 2.3rem;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
+  .keterangan-detail {
+    gap: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 0.8rem;
+  }
+
+  .keterangan-item {
+    gap: 0.8rem;
+    width: 11rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1.1rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 5rem;
+    flex-direction: column;
+  }
+
+  .image-box {
+    width: 14rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 375px) and (max-height: 667px) and (orientation: portrait) {
+  .keterangan-title {
+    font-size: 2.1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
+  .keterangan-detail {
+    gap: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 0.8rem;
+  }
+
+  .keterangan-item {
+    gap: 0.8rem;
+    width: 11rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 5rem;
+    flex-direction: column;
+  }
+
+  .image-box {
+    width: 13rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 360px) and (max-height: 740px) and (orientation: portrait) {
+  .keterangan-title {
+    font-size: 2.1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
+  .keterangan-detail {
+    gap: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 0.8rem;
+  }
+
+  .keterangan-item {
+    gap: 0.8rem;
+    width: 11rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 5rem;
+    flex-direction: column;
+  }
+
+  .image-box {
+    width: 13rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 344px) and (max-height: 882px) and (orientation: portrait) {
+  .keterangan-title {
+    font-size: 2.1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+
+  .keterangan-subtitle {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .keterangan-dot {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
+  .keterangan-detail {
+    gap: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .keterangan-detail-text {
+    font-size: 0.8rem;
+  }
+
+  .keterangan-item {
+    gap: 0.8rem;
+    width: 11rem;
+  }
+
+  .keterangan-dresscode-title {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .dresscode-text {
+    font-size: 1rem;
+  }
+
+  .keterangan-dresscode-box {
+    gap: 5rem;
+    flex-direction: column;
+  }
+
+  .image-box {
+    width: 13rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -2,6 +2,7 @@ import ScheduleTemp from "../../components/temp-schedule";
 import { toScheduleDays } from "../../components/data-template";
 import { getJadwal } from "../../lib/jadwal";
 import "./style.css";
+import Banner from "./banner"
 
 // Always read the latest JSON that the admin writes, not a cached build.
 export const dynamic = "force-dynamic";
@@ -63,8 +64,14 @@ export default async function Schedule(){
                 </div>
 
                 {/* layer circle (4)---------------------------------------------------------------------------------------------------- */}
-            
-
+                 <div className="layer layer-4">
+                    <img 
+                        src="/assets/homepage/circle-background.png" 
+                        alt="" 
+                        className="schedule-banner"
+                    />
+                </div>
+                
                 {/* layer ferris wheel(5)---------------------------------------------------------------------------------------------------- */}
                 <div className="layer layer-5">
                     <img 
@@ -83,24 +90,9 @@ export default async function Schedule(){
                             className="schedule-banner"
                         />
                     </div>
-                    <div className="banners">
-                        <ScheduleTemp days={days} />
-                    </div>
+                    
+                    <Banner />
                 </div>
-
-                {/* layer triangle flag(7)---------------------------------------------------------------------------------------------------- */}
-                {/* <div className="layer layer-7">
-                    <img 
-                        src="/assets/schedule/triangle-flag-left.png" 
-                        alt="" 
-                        className="triangle-flag-left"
-                    />
-                    <img 
-                        src="/assets/schedule/triangle-flag-right.png" 
-                        alt="" 
-                        className="triagnle-flag-right"
-                    />
-                </div> */}
 
                 {/* layer cup (8)---------------------------------------------------------------------------------------------------- */}
                 <div className="layer layer-8">

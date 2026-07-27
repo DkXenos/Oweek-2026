@@ -114,6 +114,16 @@
     height: auto;
 }
 
+.banners {
+  display: flex;
+  /* justify-content: center; */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .banners img{
     width: clamp(8rem, 28%, 19rem);
     height: auto;
