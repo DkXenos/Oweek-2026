@@ -1,6 +1,4 @@
-import ScheduleTemp from "../../components/temp-schedule";
-import { toScheduleDays } from "../../components/data-template";
-import { getJadwal } from "../../lib/jadwal";
+import { getScheduleData } from "../../lib/schedule-data";
 import "./style.css";
 import Banner from "./banner"
 
@@ -8,7 +6,7 @@ import Banner from "./banner"
 export const dynamic = "force-dynamic";
 
 export default async function Schedule(){
-    const days = toScheduleDays(await getJadwal());
+    const scheduleData = await getScheduleData();
     return(
         <>
             <div className="background">
@@ -91,7 +89,7 @@ export default async function Schedule(){
                         />
                     </div>
                     
-                    <Banner />
+                    <Banner data={scheduleData} />
                 </div>
 
                 {/* layer cup (8)---------------------------------------------------------------------------------------------------- */}

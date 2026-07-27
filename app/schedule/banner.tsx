@@ -3,8 +3,9 @@
 import "./banner.css";
 import Popup from "./popup/popup";
 import { useEffect, useState } from "react";
+import type { ScheduleData } from "../../lib/schedule-data";
 
-export default function Banner(){
+export default function Banner({ data }: { data: ScheduleData }){
     const images = [
         {id: '0', src:"assets/schedule/banner-left.png"},
         {id: '1', src:"assets/schedule/banner-mid.png"},
@@ -88,7 +89,7 @@ export default function Banner(){
                 </button>
             </div>
  
-            {isOpen && <Popup selectedImageId={selectedImageId} onClose={closePopup} />}
+            {isOpen && <Popup data={data} selectedImageId={selectedImageId} onClose={closePopup} />}
         </>
     )
 }

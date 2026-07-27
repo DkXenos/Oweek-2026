@@ -1,61 +1,51 @@
-import { scheduleKeterangan } from "./popup-data";
+import type { KeteranganData } from "../../lib/schedule-data";
 import "./keterangan.css";
 
-export default function keterangan({ selectedImageId = "0" }: { selectedImageId?: string }){
-    const selectedIndex = Math.max(0, Math.min(scheduleKeterangan.length - 1, Number(selectedImageId || "0")));
-    const day = scheduleKeterangan[selectedIndex];
-
+export default function Keterangan({ data }: { data: KeteranganData }) {
     return(
         <>
-            <h1 className="keterangan-title">{day.title}</h1>
+            <h1 className="keterangan-title">{data.title}</h1>
             <div className="keterangan-detail">
-                {day.subtitle && day.subtitle.trim() !== "" && (
-                    <div className="keterangan-subtitle">{day.subtitle}</div>
+                {data.subtitle && data.subtitle.trim() !== "" && (
+                    <div className="keterangan-subtitle">{data.subtitle}</div>
                 )}
                 <div className="keterangan-item">
                     <span className="keterangan-dot" />
-                    <span className="keterangan-detail-text">{day.date}</span>
+                    <span className="keterangan-detail-text">{data.date}</span>
                 </div>
                 <div className="keterangan-item">
                     <span className="keterangan-dot" />
-                    <span className="keterangan-detail-text">{day.location}</span>
+                    <span className="keterangan-detail-text">{data.location}</span>
                 </div>
-                {Array.isArray(day.time) ? (
-                    day.time.map((time, id) => (
-                        <div key={id} className="keterangan-item">
-                            <span className="keterangan-dot" />
-                            <span className="keterangan-detail-text">{time}</span>
-                        </div>
-                    ))
-                ) : (
-                    <div className="keterangan-item">
+                {data.time.map((time, id) => (
+                    <div key={id} className="keterangan-item">
                         <span className="keterangan-dot" />
-                        <span className="keterangan-detail-text">{day.time}</span>
+                        <span className="keterangan-detail-text">{time}</span>
                     </div>
-                )}
+                ))}
             </div>
             <h2 className="keterangan-dresscode-title">Dresscode</h2>
             <div className="keterangan-dresscode-box">
                 <div className="keterangan-dresscode-do">
                     <h3 className="dresscode-text-do dresscode-text">DO</h3>
                     <div className="image-box">
-                        <img src={day.image?.at(0)} alt="" />
+                        <img src={data.dresscodeDoImage} alt="" />
                     </div>
                     <div className="dresscode-detail">
-                        <p className="dresscode-text">{day.atasan?.at(0)}</p>
-                        <p className="dresscode-text">{day.celana?.at(0)}</p>
-                        <p className="dresscode-text">{day.sepatu?.at(0)}</p>
+                        {data.do.map((text, id) => (
+                            <p key={id} className="dresscode-text">{text}</p>
+                        ))}
                     </div>
                 </div>
                 <div className="keterangan-dresscode-dont">
                     <h3 className="dresscode-text-dont dresscode-text">DON'T</h3>
                     <div className="image-box">
-                        <img src={day.image?.at(1)} alt="" />
+                        <img src={data.dresscodeDontImage} alt="" />
                     </div>
                     <div className="dresscode-detail">
-                        <p className="dresscode-text">{day.atasan?.at(1)}</p>
-                        <p className="dresscode-text">{day.celana?.at(1)}</p>
-                        <p className="dresscode-text">{day.sepatu?.at(1)}</p>
+                        {data.dont.map((text, id) => (
+                            <p key={id} className="dresscode-text">{text}</p>
+                        ))}
                     </div>
                 </div>
             </div>

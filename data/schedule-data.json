@@ -1,0 +1,252 @@
+[
+  {
+    "keterangan": {
+      "title": "PRA OWEEK",
+      "subtitle": " ",
+      "date": "Rabu, 14 Agustus 2026",
+      "location": "UC Plaza & Universitas Ciputra Surabaya",
+      "time": [
+        "Kloter 1 : 07.00 - 10.45 WIB",
+        "Kloter 2 : 13.00 - 16.45 WIB"
+      ],
+      "dresscodeDoImage": "/assets/schedule/template-schedule.jpg",
+      "dresscodeDontImage": "/assets/schedule/template-schedule.jpg",
+      "do": [
+        "Kemeja Putih",
+        "Jeans Hitam",
+        "Sepatu Hitam"
+      ],
+      "dont": [
+        "Atasan Batik",
+        "Jeans Hitam",
+        "Sepatu Sneakers"
+      ]
+    },
+    "penugasan": {
+      "title": "Refleksi Pribadi",
+      "content": [
+        "Trainee WAJIB membuat refleksi pribadi di buku penugasan O-Week dengan minimal 100 kata."
+      ]
+    },
+    "ketentuan": {
+      "title": "Ketentuan Zoom",
+      "content": [
+        "UC People WAJIB hadir 15 menit sebelum kegiatan dimulai. Setiap UC People yang join WAJIB rename dengan FORMAT sebagai berikut: (No Kelompok) - (Nama Kelompok) - (Nama Lengkap)"
+      ]
+    }
+  },
+  {
+    "keterangan": {
+      "title": "INDEPENDENCE DAY",
+      "subtitle": "UPACARA BENDERA & OPENING CEREMONY & SEMINAR 5E & TM SELLING",
+      "date": "Minggu, 17 Agustus 2026",
+      "location": "Universitas Ciputra Surabaya",
+      "time": [
+        "06.30 - 08.05 WIB (Upacara Bendera)",
+        "08.05 - 09.48 WIB (Opening Ceremony)",
+        "09.48 - 13.32 WIB (Seminar 5E)",
+        "14.20 - 16.47 WIB (TM SELLING)"
+      ],
+      "dresscodeDoImage": "/assets/schedule/template-schedule.jpg",
+      "dresscodeDontImage": "/assets/schedule/template-schedule.jpg",
+      "do": [
+        "Kemeja Putih",
+        "Jeans Hitam",
+        "Sepatu Hitam"
+      ],
+      "dont": [
+        "Atasan Batik",
+        "Jeans Hitam",
+        "Sepatu Sneakers"
+      ]
+    },
+    "penugasan": {
+      "title": "Refleksi Pribadi",
+      "content": [
+        "independence"
+      ]
+    },
+    "ketentuan": {
+      "title": "Ketentuan Parkir",
+      "content": [
+        "Independence day"
+      ]
+    }
+  },
+  {
+    "keterangan": {
+      "title": "DAY 1",
+      "subtitle": "WE SEE THE LIGHT (TALKSHOW & SHOWCASE SELLING)",
+      "date": "Senin, 31 Agustus 2026",
+      "location": "Hall Sekolah Ciputra Surabaya",
+      "time": [
+        "Sesi 1 : 07.30 - 12.15 WIB",
+        "Sesi 2 : 12.15 - 17.00 WIB"
+      ],
+      "dresscodeDoImage": "/assets/schedule/template-schedule.jpg",
+      "dresscodeDontImage": "/assets/schedule/template-schedule.jpg",
+      "do": [
+        "Kemeja Putih",
+        "Jeans Hitam",
+        "Sepatu Hitam"
+      ],
+      "dont": [
+        "Atasan Batik",
+        "Jeans Hitam",
+        "Sepatu Sneakers"
+      ]
+    },
+    "penugasan": {
+      "title": "Refleksi Pribadi",
+      "content": [
+        "day 1"
+      ]
+    },
+    "ketentuan": {
+      "title": "Ketentuan Parkir",
+      "content": [
+        "day 1"
+      ]
+    }
+  },
+  {
+    "keterangan": {
+      "title": "DAY 2",
+      "subtitle": "WHERE MAGIC FINDS YOU (STUDENT DEVELOPMENT PROGRAM & ORMAWA FEST)",
+      "date": "Selasa, 1 September 2026",
+      "location": "Universitas Ciputra Surabaya",
+      "time": [
+        "07.00 - 17.00 WIB"
+      ],
+      "dresscodeDoImage": "/assets/schedule/template-schedule.jpg",
+      "dresscodeDontImage": "/assets/schedule/template-schedule.jpg",
+      "do": [
+        "Kemeja Putih",
+        "Jeans Hitam",
+        "Sepatu Hitam"
+      ],
+      "dont": [
+        "Atasan Batik",
+        "Jeans Hitam",
+        "Sepatu Sneakers"
+      ]
+    },
+    "penugasan": {
+      "title": "Refleksi Pribadi",
+      "content": [
+        "day2"
+      ]
+    },
+    "ketentuan": {
+      "title": "Ketentuan Parkir",
+      "content": [
+        "day 2"
+      ]
+    }
+  },
+  {
+    "keterangan": {
+      "title": "DAY 3",
+      "subtitle": "INTO THE EVER AFTER (PRA-LDK & ORMAWA FEST)",
+      "date": "Rabu, 2 September 2026",
+      "location": "Universitas Ciputra Surabaya",
+      "time": [
+        "07.00 - 17.00 WIB"
+      ],
+      "dresscodeDoImage": "/assets/schedule/template-schedule.jpg",
+      "dresscodeDontImage": "/assets/schedule/template-schedule.jpg",
+      "do": [
+        "Kemeja Putih",
+        "Jeans Hitam",
+        "Sepatu Hitam"
+      ],
+      "dont": [
+        "Atasan Batik",
+        "Jeans Hitam",
+        "Sepatu Sneakers"
+      ]
+    },
+    "penugasan": {
+      "title": "Refleksi Pribadi",
+      "content": [
+        "day3"
+      ]
+    },
+    "ketentuan": {
+      "title": "Ketentuan Parkir",
+      "content": [
+        "day 3"
+      ]
+    }
+  },
+  {
+    "keterangan": {
+      "title": "DAY 4",
+      "subtitle": "SYMBIOTIC PALLETE FOR INFINITE FLAVOURS (SELLING DAY)",
+      "date": "Kamis, 3 September 2026",
+      "location": "Universitas Ciputra Surabaya",
+      "time": [
+        "07.00 - 17.00 WIB"
+      ],
+      "dresscodeDoImage": "/assets/schedule/template-schedule.jpg",
+      "dresscodeDontImage": "/assets/schedule/template-schedule.jpg",
+      "do": [
+        "Kemeja Putih",
+        "Jeans Hitam",
+        "Sepatu Hitam"
+      ],
+      "dont": [
+        "Atasan Batik",
+        "Jeans Hitam",
+        "Sepatu Sneakers"
+      ]
+    },
+    "penugasan": {
+      "title": "Refleksi Pribadi",
+      "content": [
+        "day4"
+      ]
+    },
+    "ketentuan": {
+      "title": "Ketentuan Parkir",
+      "content": [
+        "day 4"
+      ]
+    }
+  },
+  {
+    "keterangan": {
+      "title": "DAY 5",
+      "subtitle": "THE GOLDEN EPILOGUE (SIDANG SENAT & CLOSING)",
+      "date": "Jumat, 4 September 2026",
+      "location": "Universitas Ciputra Surabaya",
+      "time": [
+        "07.00 - 17.00 WIB"
+      ],
+      "dresscodeDoImage": "/assets/schedule/template-schedule.jpg",
+      "dresscodeDontImage": "/assets/schedule/template-schedule.jpg",
+      "do": [
+        "Kemeja Putih",
+        "Jeans Hitam",
+        "Sepatu Hitam"
+      ],
+      "dont": [
+        "Atasan Batik",
+        "Jeans Hitam",
+        "Sepatu Sneakers"
+      ]
+    },
+    "penugasan": {
+      "title": "Refleksi Pribadi",
+      "content": [
+        "day5"
+      ]
+    },
+    "ketentuan": {
+      "title": "Ketentuan Parkir",
+      "content": [
+        "day 5"
+      ]
+    }
+  }
+]

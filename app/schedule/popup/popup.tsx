@@ -5,16 +5,25 @@ import ScheduleButton from "./popup-button";
 import Keterangan from "../keterangan";
 import Penugasan from "./penugasan";
 import Ketentuan from "./ketentuan";
+import type { ScheduleData } from "../../../lib/schedule-data";
 
 type PopupTab = "keterangan" | "penugasan" | "ketentuan";
 
 interface PopupProps {
+  data: ScheduleData;
   selectedImageId: string | null;
   onClose: () => void;
 }
 
-export default function Popup({ selectedImageId, onClose }: PopupProps) {
+export default function Popup({ data, selectedImageId, onClose }: PopupProps) {
   const [activeTab, setActiveTab] = useState<PopupTab>("keterangan");
+
+  // Resolve entry berdasarkan banner yang diklik. Clamp agar index selalu valid.
+  const selectedIndex = Math.max(
+    0,
+    Math.min(data.length - 1, Number(selectedImageId ?? "0")),
+  );
+  const entry = data[selectedIndex];
 
   useEffect(() => {
     const originalBodyOverflow = document.body.style.overflow;
@@ -37,13 +46,14 @@ export default function Popup({ selectedImageId, onClose }: PopupProps) {
   }, []);
 
   const renderContent = () => {
+    if (!entry) return null;
     switch (activeTab) {
       case "penugasan":
-        return <Penugasan selectedImageId={selectedImageId ?? "0"} />;
+        return <Penugasan data={entry.penugasan} />;
       case "ketentuan":
-        return <Ketentuan selectedImageId={selectedImageId ?? "0"} />;
+        return <Ketentuan data={entry.ketentuan} />;
       default:
-        return <Keterangan selectedImageId={selectedImageId ?? "0"} />;
+        return <Keterangan data={entry.keterangan} />;
     }
   };
 
