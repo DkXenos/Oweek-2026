@@ -268,7 +268,7 @@ export default function Home() {
       />
 
       <motion.img
-        src="/assets/homepage/firework-top.png"
+        src="/assets/homepage/firework-top.webp"
         alt=""
         className="firework-top"
         loading="lazy"
@@ -311,7 +311,7 @@ export default function Home() {
 
       <div className="pillar-container">
         <motion.img
-          src="/assets/homepage/border-left.png"
+          src="/assets/homepage/border-left.webp"
           alt=""
           className="border-l"
           loading="lazy"
@@ -323,7 +323,7 @@ export default function Home() {
           )}
         />
         <motion.img
-          src="/assets/homepage/border-right.png"
+          src="/assets/homepage/border-right.webp"
           alt=""
           className="border-r"
           loading="lazy"
@@ -342,7 +342,7 @@ export default function Home() {
         <div className="mascot-layer">
           <div className="mascot-col-left">
             <motion.img
-              src="/assets/homepage/ccclt.png"
+              src="/assets/homepage/ccclt.webp"
               alt=""
               className="mascot-lefttop"
               loading="lazy"
@@ -359,7 +359,7 @@ export default function Home() {
               )}
             />
             <motion.img
-              src="/assets/homepage/yuccanew.png"
+              src="/assets/homepage/yuccanew.webp"
               alt=""
               className="mascot-leftbottom"
               loading="lazy"
@@ -378,7 +378,7 @@ export default function Home() {
           </div>
           <div className="mascot-col-right">
             <motion.img
-              src="/assets/homepage/cccrt.png"
+              src="/assets/homepage/cccrt.webp"
               alt=""
               className="mascot-righttop"
               loading="lazy"
@@ -395,7 +395,7 @@ export default function Home() {
               )}
             />
             <motion.img
-              src="/assets/homepage/cccrb.png"
+              src="/assets/homepage/cccrb.webp"
               alt=""
               className="mascot-rightbottom"
               loading="lazy"
@@ -490,7 +490,7 @@ export default function Home() {
                       variants={frameVariants}
                     >
                       <img
-                        src="/assets/homepage/countdown-border.png"
+                        src="/assets/homepage/countdown-border.webp"
                         alt=""
                         decoding="async"
                         className="countdown-frame-img"

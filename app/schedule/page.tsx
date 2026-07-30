@@ -52,12 +52,12 @@ export default async function Schedule(){
                 {/* layer pillar (3)---------------------------------------------------------------------------------------------------- */}
                 <div className="layer layer-3">
                     <img 
-                        src="/assets/homepage/border-left.png" 
+                        src="/assets/homepage/border-left.webp" 
                         alt="" 
                         className="pillar-left"
                     />
                     <img 
-                        src="/assets/homepage/border-right.png" 
+                        src="/assets/homepage/border-right.webp" 
                         alt="" 
                         className="pillar-right"
                     />

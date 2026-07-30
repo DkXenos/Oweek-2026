@@ -89,20 +89,20 @@ export default function Rules() {
       />
 
       <img
-        src="/assets/homepage/firework-top.png"
+        src="/assets/homepage/firework-top.webp"
         alt=""
         className="firework-top"
       />
 
       <div className="pillar-container">
         <img
-          src="/assets/homepage/border-left.png"
+          src="/assets/homepage/border-left.webp"
           alt=""
           className="border-l"
         />
 
         <img
-          src="/assets/homepage/border-right.png"
+          src="/assets/homepage/border-right.webp"
           alt=""
           className="border-r"
         />

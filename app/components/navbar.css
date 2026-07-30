@@ -268,7 +268,7 @@
 @media (max-width: 440px) and (max-height: 956px) and (orientation: portrait) {
   .navbar {
     background-color: #f5df8c;
-    background-image: url("/assets/homepage/navbar-bg.png");
+    background-image: url("/assets/homepage/navbar-bg.webp");
     background-size: cover;
     background-position: center;
   }
@@ -322,7 +322,7 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     background-color: #f5df8c;
-    background-image: url("/assets/homepage/navbar-bg.png");
+    background-image: url("/assets/homepage/navbar-bg.webp");
     background-size: cover;
     background-position: center;
     box-shadow: 0 0.5rem 0.75rem rgba(109, 68, 152, 0.25);
