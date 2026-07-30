@@ -6,7 +6,7 @@ export default function Button() {
     <>
       <Link href="/">
         <button>
-          <div className="container">
+          <div className="container nav-button">
             <img 
               src="/assets/template/button-decor.png" 
               alt="" 
@@ -21,7 +21,7 @@ export default function Button() {
       
       <Link href="/about">
         <button>
-          <div className="container">
+          <div className="container nav-button">
             <img 
               src="/assets/template/button-decor.png" 
               alt="" 
@@ -36,7 +36,7 @@ export default function Button() {
 
       {/* <Link href="/schedule">
         <button>
-          <div className="container">
+          <div className="container nav-button">
             <img 
               src="/assets/template/button-decor.png" 
               alt="" 
@@ -51,7 +51,7 @@ export default function Button() {
 
       <Link href="/schedule">
         <button>
-          <div className="container">
+          <div className="container nav-button">
             <img 
               src="/assets/template/button-decor.png" 
               alt="" 
@@ -66,7 +66,7 @@ export default function Button() {
 
       <Link href="/rules">
         <button>
-          <div className="container">
+          <div className="container nav-button">
             <img 
               src="/assets/template/button-decor.png" 
               alt="" 

@@ -8,9 +8,10 @@
     align-items: start;
     justify-content: center;
     flex-direction: column;
+}
 
+.nav-button{
     cursor: pointer;
-    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .button-img{
@@ -21,7 +22,9 @@
 
     -webkit-user-drag: none;
     user-select: none;
-    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+    /* No transform/filter here or on any ancestor: either one would turn that
+       element into this image's containing block and shift it on hover. */
+    transition: filter 0.25s ease;
 }
 
 .button-box{
@@ -45,7 +48,7 @@
     /* Clips the hover overlay to the rounded padding box. */
     position: relative;
     overflow: hidden;
-    transition: color 0.25s ease;
+    transition: color 0.25s ease, box-shadow 0.25s ease;
 }
 
 /* Gradients can't be interpolated, so the hover fill is a separate layer that
@@ -65,41 +68,29 @@
     position: relative;
 }
 
-/* Scoped to .container so the decor image counts as part of the hover target. */
-.container:hover .button-box,
-.container:focus-visible .button-box{
+/* Hover lives on the wrapper, not .button-box, so the decor image counts as
+   part of the same target and the two always light up together.
+   .nav-button keeps this off the popup tabs, which reuse .container. */
+.nav-button:hover .button-box,
+.nav-button:focus-visible .button-box{
     color: #FCF5D6;
+    box-shadow: 0 0 0.75rem rgba(168, 105, 209, 0.45);
 }
 
-.container:hover .button-box::before,
-.container:focus-visible .button-box::before{
+.nav-button:hover .button-box::before,
+.nav-button:focus-visible .button-box::before{
     opacity: 1;
 }
 
-.container:hover{
-    transform: translateY(-0.125rem);
-}
-
-.container:hover .button-img{
-    transform: translateY(-0.0625rem) scale(1.03);
-}
-
-.container:active{
-    transform: translateY(0);
-    transition-duration: 0.08s;
+.nav-button:hover .button-img,
+.nav-button:focus-visible .button-img{
+    filter: brightness(1.08);
 }
 
 @media (prefers-reduced-motion: reduce){
-    .container,
     .button-img,
     .button-box,
     .button-box::before{
         transition-duration: 0.01ms;
-    }
-
-    .container:hover,
-    .container:hover .button-img,
-    .container:active{
-        transform: none;
     }
 }
