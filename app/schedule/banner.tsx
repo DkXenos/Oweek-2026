@@ -7,14 +7,14 @@ import type { ScheduleData } from "../../lib/schedule-data";
 
 export default function Banner({ data }: { data: ScheduleData }) {
   const images = [
-    { id: "0", src: "assets/thumbnail/praoweek.png" },
-    { id: "1", src: "assets/thumbnail/upacarabendera.png" },
-    { id: "2", src: "assets/thumbnail/matrikulasi.png" },
-    { id: "3", src: "assets/thumbnail/day1.png" },
-    { id: "4", src: "assets/thumbnail/day2.png" },
-    { id: "5", src: "assets/thumbnail/day3.png" },
-    { id: "6", src: "assets/thumbnail/day4.png" },
-    { id: "7", src: "assets/thumbnail/day5.png" },
+    { id: "0", src: "/assets/thumbnail/praoweek.png" },
+    { id: "1", src: "/assets/thumbnail/upacarabendera.png" },
+    { id: "2", src: "/assets/thumbnail/matrikulasi.png" },
+    { id: "3", src: "/assets/thumbnail/day1.png" },
+    { id: "4", src: "/assets/thumbnail/day2.png" },
+    { id: "5", src: "/assets/thumbnail/day3.png" },
+    { id: "6", src: "/assets/thumbnail/day4.png" },
+    { id: "7", src: "/assets/thumbnail/day5.png" },
   ];
 
   const [page, setPage] = useState(0);
@@ -40,18 +40,17 @@ export default function Banner({ data }: { data: ScheduleData }) {
   }, []);
 
   const pageCount = Math.ceil(images.length / imagePerPage);
-  const visibleImage = images.slice(
-    page * imagePerPage,
-    page * imagePerPage + imagePerPage,
-  );
+  const firstVisible = page * imagePerPage;
+  const lastVisible = firstVisible + imagePerPage;
 
   useEffect(() => {
     setPage((current) => Math.min(current, Math.max(0, pageCount - 1)));
   }, [pageCount]);
 
-  const nextPage = () =>
-    setPage((current) => Math.min(current + 1, pageCount - 1));
-  const prevPage = () => setPage((current) => Math.max(current - 1, 0));
+  // Paging wraps: past the last page loops back to the first, and vice versa.
+  const nextPage = () => setPage((current) => (current + 1) % pageCount);
+  const prevPage = () =>
+    setPage((current) => (current - 1 + pageCount) % pageCount);
 
   const openPopup = (imageId: string) => {
     setSelectedImageId(imageId);
@@ -69,7 +68,7 @@ export default function Banner({ data }: { data: ScheduleData }) {
         <button
           className="arrow-button button-left-container"
           onClick={prevPage}
-          disabled={page === 0}
+          aria-label="Previous schedule page"
         >
           <img
             src="/assets/schedule/button-arrow-left.svg"
@@ -78,25 +77,34 @@ export default function Banner({ data }: { data: ScheduleData }) {
           />
         </button>
         <div className="banners-box">
-          {visibleImage.map((image) => (
-            <div
-              key={image.id}
-              className={`banner-box-` + image.id + ` banner-boxes`}
-            >
-              <img
-                onClick={() => openPopup(image.id)}
+          {/* Every thumbnail stays mounted so paging never remounts an <img>:
+              a fresh node would be empty (and its slot collapsed) until the
+              image finished loading. Off-page boxes are display:none, so they
+              take part in neither layout nor sizing, exactly as before. */}
+          {images.map((image, index) => {
+            const isVisible = index >= firstVisible && index < lastVisible;
+            return (
+              <div
                 key={image.id}
-                src={image.src}
-                alt=""
-                className={`banner-` + image.id}
-              />
-            </div>
-          ))}
+                className={`banner-box-` + image.id + ` banner-boxes`}
+                style={isVisible ? undefined : { display: "none" }}
+                aria-hidden={isVisible ? undefined : true}
+              >
+                <img
+                  onClick={() => openPopup(image.id)}
+                  src={image.src}
+                  alt=""
+                  className={`banner-` + image.id}
+                  fetchPriority={index < imagePerPage ? "high" : "low"}
+                />
+              </div>
+            );
+          })}
         </div>
         <button
           className="arrow-button button-right-container"
           onClick={nextPage}
-          disabled={page === pageCount - 1}
+          aria-label="Next schedule page"
         >
           <img
             src="/assets/schedule/button-arrow-right.svg"

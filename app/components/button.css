@@ -8,6 +8,9 @@
     align-items: start;
     justify-content: center;
     flex-direction: column;
+
+    cursor: pointer;
+    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .button-img{
@@ -15,6 +18,10 @@
     width: var(--button-size);
     position: absolute;
     top: var(--button-image-position);
+
+    -webkit-user-drag: none;
+    user-select: none;
+    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .button-box{
@@ -24,8 +31,8 @@
 
     width: var(--button-size);
     height: 2.5rem;
-    
-    background: linear-gradient(90deg, #FBF7EE, #FFED8F) padding-box, 
+
+    background: linear-gradient(90deg, #FBF7EE, #FFED8F) padding-box,
                 linear-gradient(90deg, #E5A82F, #F8E89B, #E5A82F) border-box;
     border: 0.25rem solid transparent;
     border-radius: 25px;
@@ -34,10 +41,65 @@
     /* font-weight: 700; */
     font-size: 1rem;
     color: #A255BB;
+
+    /* Clips the hover overlay to the rounded padding box. */
+    position: relative;
+    overflow: hidden;
+    transition: color 0.25s ease;
 }
 
-.button-box:hover {
-    background: linear-gradient(90deg, #DBACEA, #A869D1) padding-box, 
-                linear-gradient(90deg, #E5A82F, #F8E89B, #E5A82F) border-box;
+/* Gradients can't be interpolated, so the hover fill is a separate layer that
+   fades in. Inset 0 sits on the padding box, leaving the gradient border. */
+.button-box::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+
+    background: linear-gradient(90deg, #DBACEA, #A869D1);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.button-box span{
+    position: relative;
+}
+
+/* Scoped to .container so the decor image counts as part of the hover target. */
+.container:hover .button-box,
+.container:focus-visible .button-box{
     color: #FCF5D6;
+}
+
+.container:hover .button-box::before,
+.container:focus-visible .button-box::before{
+    opacity: 1;
+}
+
+.container:hover{
+    transform: translateY(-0.125rem);
+}
+
+.container:hover .button-img{
+    transform: translateY(-0.0625rem) scale(1.03);
+}
+
+.container:active{
+    transform: translateY(0);
+    transition-duration: 0.08s;
+}
+
+@media (prefers-reduced-motion: reduce){
+    .container,
+    .button-img,
+    .button-box,
+    .button-box::before{
+        transition-duration: 0.01ms;
+    }
+
+    .container:hover,
+    .container:hover .button-img,
+    .container:active{
+        transform: none;
+    }
 }
