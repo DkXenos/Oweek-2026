@@ -83,7 +83,7 @@ export default function Rules() {
       <div className="gradient-bg" />
 
       <img
-        src="/assets/homepage/clouds-background.png"
+        src="/assets/homepage/clouds-background.webp"
         alt=""
         className="clouds-bg"
       />

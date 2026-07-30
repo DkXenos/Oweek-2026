@@ -13,7 +13,7 @@ export default async function Schedule(){
                 {/* layer background (0)---------------------------------------------------------------------------------------------------- */}
                 <div className="layer layer-0">
                     <img 
-                        src="/assets/homepage/clouds-background.png" 
+                        src="/assets/homepage/clouds-background.webp" 
                         alt="" 
                         className="clouds-background"
                     />
@@ -73,7 +73,7 @@ export default async function Schedule(){
                 {/* layer ferris wheel(5)---------------------------------------------------------------------------------------------------- */}
                 <div className="layer layer-5">
                     <img 
-                        src="/assets/homepage/home-castle-center.png" 
+                        src="/assets/homepage/home-castle-center.webp" 
                         alt="" 
                         className="castle-center"
                     />

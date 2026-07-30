@@ -255,7 +255,7 @@ export default function Home() {
       )}
 
       <motion.img
-        src="/assets/homepage/clouds-background.png"
+        src="/assets/homepage/clouds-background.webp"
         alt=""
         className="clouds-bg"
         decoding="async"
@@ -291,7 +291,7 @@ export default function Home() {
       )}
       >
         <motion.img
-          src="/assets/homepage/sun-asset.png"
+          src="/assets/homepage/sun-asset.webp"
           alt=""
           className="circle-bg"
           loading="lazy"
@@ -416,7 +416,7 @@ export default function Home() {
 
         <div className="castle-layer">
           <motion.img
-            src="/assets/homepage/home-castle-center.png"
+            src="/assets/homepage/home-castle-center.webp"
             alt=""
             className="castle-center"
             decoding="async"

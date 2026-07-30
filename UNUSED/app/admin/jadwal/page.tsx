@@ -13,7 +13,7 @@ export default async function JadwalPage() {
   return (
     <main className="jadwal-page">
       <img
-        src="/assets/homepage/clouds-background.png"
+        src="/assets/homepage/clouds-background.webp"
         alt=""
         className="jadwal-clouds"
       />
