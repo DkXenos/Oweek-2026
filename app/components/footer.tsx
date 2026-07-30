@@ -29,7 +29,7 @@ export default function Footer() {
       {/* magnify title — dead-centered by its own flex layer */}
       <div className="footer-magnify-layer">
         <img
-          src="/assets/footer/magnify-title.png"
+          src="/assets/footer/magnify-title.webp"
           alt="Magnify"
           className="footer-magnify"
         />

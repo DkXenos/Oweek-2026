@@ -303,8 +303,8 @@
 }
 
 .shine-title {
-  -webkit-mask-image: url("/assets/homepage/magnify-title.png");
-  mask-image: url("/assets/homepage/magnify-title.png");
+  -webkit-mask-image: url("/assets/homepage/magnify-title.webp");
+  mask-image: url("/assets/homepage/magnify-title.webp");
 }
 
 .shine-bar {
