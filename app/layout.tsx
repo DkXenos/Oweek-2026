@@ -1,33 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import { Poppins } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
+// Only 400/600/700 are referenced anywhere in the stylesheets; the other six
+// weights were downloaded on every page load and never rendered.
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: [
-    "100",
-    "200",
-    "300",
-    "400",
-    "500",
-    "600",
-    "700",
-    "800",
-    "900",
-  ],
+  weight: ["400", "600", "700"],
   variable: "--font-poppins",
 });
 
@@ -47,7 +28,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} h-full antialiased`}
+      className={`${poppins.variable} h-full antialiased`}
     >
       <body
         className="min-h-full flex flex-col overflow-x-hidden pt-20"
