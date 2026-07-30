@@ -435,7 +435,7 @@ export default function Home() {
           <div className="title-slot">
             <div className="title-shine-wrap">
               <motion.img
-                src="/assets/homepage/magnify-title.webp"
+                src="/assets/homepage/magnify-title.png"
                 alt="Welcome to Magnify"
                 className="magnify-title"
                 decoding="async"
