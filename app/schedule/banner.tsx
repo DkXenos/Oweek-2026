@@ -40,8 +40,6 @@ export default function Banner({ data }: { data: ScheduleData }) {
   }, []);
 
   const pageCount = Math.ceil(images.length / imagePerPage);
-  const firstVisible = page * imagePerPage;
-  const lastVisible = firstVisible + imagePerPage;
 
   useEffect(() => {
     setPage((current) => Math.min(current, Math.max(0, pageCount - 1)));
@@ -77,29 +75,36 @@ export default function Banner({ data }: { data: ScheduleData }) {
           />
         </button>
         <div className="banners-box">
-          {/* Every thumbnail stays mounted so paging never remounts an <img>:
-              a fresh node would be empty (and its slot collapsed) until the
-              image finished loading. Off-page boxes are display:none, so they
-              take part in neither layout nor sizing, exactly as before. */}
-          {images.map((image, index) => {
-            const isVisible = index >= firstVisible && index < lastVisible;
-            return (
-              <div
-                key={image.id}
-                className={`banner-box-` + image.id + ` banner-boxes`}
-                style={isVisible ? undefined : { display: "none" }}
-                aria-hidden={isVisible ? undefined : true}
-              >
-                <img
-                  onClick={() => openPopup(image.id)}
-                  src={image.src}
-                  alt=""
-                  className={`banner-` + image.id}
-                  fetchPriority={index < imagePerPage ? "high" : "low"}
-                />
-              </div>
-            );
-          })}
+          <div
+            className="banner-track"
+            style={{ transform: `translateX(-${page * 100}%)` }}
+          >
+            {Array.from({ length: pageCount }, (_, pageIndex) => {
+              const pageImages = images.slice(
+                pageIndex * imagePerPage,
+                (pageIndex + 1) * imagePerPage,
+              );
+
+              return (
+                <div className={`banner-page banner-page-${pageIndex}`} key={`banner-page-${pageIndex}`}>
+                  {pageImages.map((image, index) => (
+                    <div
+                      key={image.id}
+                      className={`banner-box-` + image.id + ` banner-boxes`}
+                    >
+                      <img
+                        onClick={() => openPopup(image.id)}
+                        src={image.src}
+                        alt=""
+                        className={`banner-` + image.id}
+                        fetchPriority={index < imagePerPage ? "high" : "low"}
+                      />
+                    </div>
+                  ))}
+                </div>
+              );
+            })}
+          </div>
         </div>
         <button
           className="arrow-button button-right-container"
