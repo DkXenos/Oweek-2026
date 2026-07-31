@@ -9,7 +9,7 @@ export default function Banner({ data }: { data: ScheduleData }) {
   const images = [
     { id: "0", src: "/assets/thumbnail/praoweek.webp" },
     { id: "1", src: "/assets/thumbnail/upacarabendera.webp" },
-    { id: "2", src: "/assets/thumbnail/matrikulasi.webp" },
+    { id: "2", src: "/assets/thumbnail/matrikulasi.png" },
     { id: "3", src: "/assets/thumbnail/day1.webp" },
     { id: "4", src: "/assets/thumbnail/day2.webp" },
     { id: "5", src: "/assets/thumbnail/day3.webp" },
