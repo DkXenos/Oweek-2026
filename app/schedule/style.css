@@ -2074,15 +2074,15 @@
     width: 90%;
     height: auto;
   }
-  
+
   /* layer 6 schedule banners..................................................................................................................... */
   .layer-6 {
-    margin-top: 10rem;
-    margin-bottom: 15rem;
+    margin-top: 9rem;
+    margin-bottom: 12rem;
   }
 
   .schedule-text {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
   }
 
   .schedule-banner {
@@ -2146,20 +2146,24 @@
     height: 85%;
   }
 
-  /* layer 4 circle..................................................................................................................... */
+  /* layer 4 sun..................................................................................................................... */
+  .layer-4 {
+    bottom: -1rem;
+  }
+
   .layer-4 img {
-    width: 36rem;
+    width: 85%;
     height: auto;
   }
 
   /* layer 6 schedule banners..................................................................................................................... */
   .layer-6 {
-    margin-top: 2rem;
+    margin-top: 4rem;
     margin-bottom: 6rem;
   }
 
   .schedule-text {
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
   }
 
   .schedule-banner {
@@ -2219,20 +2223,24 @@
     height: 85%;
   }
 
-  /* layer 4 circle..................................................................................................................... */
+  /* layer 4 sun..................................................................................................................... */
+  .layer-4 {
+    bottom: 6rem;
+  }
+
   .layer-4 img {
-    width: 38rem;
+    width: 95%;
     height: auto;
   }
 
   /* layer 6 schedule banners..................................................................................................................... */
   .layer-6 {
-    margin-top: 10rem;
+    margin-top: 8rem;
     margin-bottom: 14rem;
   }
 
   .schedule-text {
-    margin-bottom: 5rem;
+    margin-bottom: 7rem;
   }
 
   .schedule-banner {
@@ -2296,25 +2304,29 @@
     height: 85%;
   }
 
-  /* layer 4 circle..................................................................................................................... */
+  /* layer 4 sun..................................................................................................................... */
+  .layer-4 {
+    bottom: 3rem;
+  }
+
   .layer-4 img {
-    width: 38rem;
+    width: 90%;
     height: auto;
   }
 
   /* layer 6 schedule banners..................................................................................................................... */
   .layer-6 {
-    margin-top: 6rem;
-    margin-bottom: 7rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
   }
 
   .schedule-text {
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
   }
 
   .schedule-banner {
     margin-bottom: 0rem;
-    width: 27rem;
+    width: 29rem;
     height: auto;
   }
 
@@ -2369,25 +2381,29 @@
     height: 85%;
   }
 
-  /* layer 4 circle..................................................................................................................... */
+  /* layer 4 sun..................................................................................................................... */
+  .layer-4 {
+    bottom: 1rem;
+  }
+
   .layer-4 img {
-    width: 36rem;
+    width: 90%;
     height: auto;
   }
 
   /* layer 6 schedule banners..................................................................................................................... */
   .layer-6 {
-    margin-top: 2rem;
+    margin-top: 4rem;
     margin-bottom: 6rem;
   }
 
   .schedule-text {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
   }
 
   .schedule-banner {
     margin-bottom: 0rem;
-    width: 21rem;
+    width: 22rem;
     height: auto;
   }
 
@@ -2409,15 +2425,15 @@
   .firework-left {
     width: auto;
     height: 11rem;
-    top: 3rem;
-    left: 5rem;
+    top: 2rem;
+    left: 3rem;
   }
 
   .firework-right {
     width: auto;
     height: 18rem;
-    right: 1rem;
-    top: 0rem;
+    right: -2rem;
+    top: -2rem;
   }
 
   /* layer 2 trees..................................................................................................................... */
@@ -2442,26 +2458,29 @@
     height: 85%;
   }
 
-  /* layer 4 circle..................................................................................................................... */
+  /* layer 4 sun..................................................................................................................... */
+  .layer-4 {
+    bottom: -1rem;
+  }
 
   .layer-4 img {
-    width: 35rem;
+    width: 90%;
     height: auto;
   }
 
   /* layer 6 schedule banners..................................................................................................................... */
   .layer-6 {
     margin-top: 3rem;
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
   }
 
   .schedule-text {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 
   .schedule-banner {
     margin-bottom: 0rem;
-    width: 25rem;
+    width: 23rem;
     height: auto;
   }
 
@@ -2513,9 +2532,13 @@
     content: url("/assets/about-mobile/toppillar-r.png");
   }
 
-  /* layer 4 circle..................................................................................................................... */
+  /* layer 4 sun..................................................................................................................... */
+  .layer-4 {
+    bottom: 3rem;
+  }
+
   .layer-4 img {
-    width: 28rem;
+    width: 100%;
     height: auto;
   }
 
@@ -2532,12 +2555,12 @@
   }
 
   .schedule-text {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
   }
 
   .schedule-banner {
     margin-bottom: 0rem;
-    width: 26rem;
+    width: 24rem;
     height: auto;
   }
 
@@ -2593,10 +2616,13 @@
     content: url("/assets/about-mobile/toppillar-r.png");
   }
 
-  /* layer 4 circle..................................................................................................................... */
+  /* layer 4 sun..................................................................................................................... */
+  .layer-4 {
+    bottom: 6rem;
+  }
 
   .layer-4 img {
-    width: 25rem;
+    width: 100%;
     height: auto;
   }
 
@@ -2609,16 +2635,16 @@
   /* layer 6 schedule banners..................................................................................................................... */
   .layer-6 {
     margin-top: 4rem;
-    margin-bottom: 6rem;
+    margin-bottom: 5rem;
   }
 
   .schedule-text {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 
   .schedule-banner {
     margin-bottom: 0rem;
-    width: 26rem;
+    width: 23rem;
     height: auto;
   }
 
@@ -2674,9 +2700,13 @@
     content: url("/assets/about-mobile/toppillar-r.png");
   }
 
-  /* layer 4 circle..................................................................................................................... */
+  /* layer 4 sun..................................................................................................................... */
+  .layer-4 {
+    bottom: 12rem;
+  }
+
   .layer-4 img {
-    width: 25rem;
+    width: 100%;
     height: auto;
   }
 
@@ -2688,12 +2718,12 @@
 
   /* layer 6 schedule banners..................................................................................................................... */
   .layer-6 {
-    margin-top: 6rem;
-    margin-bottom: 8rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
   }
 
   .schedule-text {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 
   .schedule-banner {
@@ -2754,9 +2784,13 @@
     content: url("/assets/about-mobile/toppillar-r.png");
   }
 
-  /* layer 4 circle..................................................................................................................... */
+  /* layer 4 sun..................................................................................................................... */
+  .layer-4 {
+    bottom: 11rem;
+  }
+
   .layer-4 img {
-    width: 25rem;
+    width: 100%;
     height: auto;
   }
 
@@ -2768,12 +2802,12 @@
 
   /* layer 6 schedule banners..................................................................................................................... */
   .layer-6 {
-    margin-top: 7rem;
-    margin-bottom: 7rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
   }
 
   .schedule-text {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 
   .schedule-banner {
@@ -2834,10 +2868,13 @@
     content: url("/assets/about-mobile/toppillar-r.png");
   }
 
-  /* layer 4 circle..................................................................................................................... */
+  /* layer 4 sun..................................................................................................................... */
+  .layer-4 {
+    bottom: 11rem;
+  }
 
   .layer-4 img {
-    width: 25rem;
+    width: 100%;
     height: auto;
   }
 
@@ -2849,12 +2886,12 @@
 
   /* layer 6 schedule banners..................................................................................................................... */
   .layer-6 {
-    margin-top: 7rem;
-    margin-bottom: 7rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
   }
 
   .schedule-text {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 
   .schedule-banner {
@@ -2915,10 +2952,13 @@
     content: url("/assets/about-mobile/toppillar-r.png");
   }
 
-  /* layer 4 circle..................................................................................................................... */
+  /* layer 4 sun..................................................................................................................... */
+  .layer-4 {
+    bottom: 8rem;
+  }
 
   .layer-4 img {
-    width: 23rem;
+    width: 100%;
     height: auto;
   }
 
@@ -2930,8 +2970,8 @@
 
   /* layer 6 schedule banners..................................................................................................................... */
   .layer-6 {
-    margin-top: 7rem;
-    margin-bottom: 7rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
   }
 
   .schedule-text {
@@ -2996,10 +3036,13 @@
     content: url("/assets/about-mobile/toppillar-r.png");
   }
 
-  /* layer 4 circle..................................................................................................................... */
+  /* layer 4 sun..................................................................................................................... */
+  .layer-4 {
+    bottom: 8rem;
+  }
 
   .layer-4 img {
-    width: 23rem;
+    width: 100%;
     height: auto;
   }
 
@@ -3016,7 +3059,7 @@
   }
 
   .schedule-text {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 
   .schedule-banner {
@@ -3077,10 +3120,13 @@
     content: url("/assets/about-mobile/toppillar-r.png");
   }
 
-  /* layer 4 circle..................................................................................................................... */
+  /* layer 4 sun..................................................................................................................... */
+  .layer-4 {
+    bottom: 8rem;
+  }
 
   .layer-4 img {
-    width: 23rem;
+    width: 100%;
     height: auto;
   }
 
@@ -3092,12 +3138,12 @@
 
   /* layer 6 schedule banners..................................................................................................................... */
   .layer-6 {
-    margin-top: 5rem;
-    margin-bottom: 6rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
   }
 
   .schedule-text {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 
   .schedule-banner {
@@ -3158,10 +3204,13 @@
     content: url("/assets/about-mobile/toppillar-r.png");
   }
 
-  /* layer 4 circle..................................................................................................................... */
+  /* layer 4 sun..................................................................................................................... */
+  .layer-4 {
+    bottom: 7rem;
+  }
 
   .layer-4 img {
-    width: 22rem;
+    width: 100%;
     height: auto;
   }
 
@@ -3173,12 +3222,12 @@
 
   /* layer 6 schedule banners..................................................................................................................... */
   .layer-6 {
-    margin-top: 4rem;
-    margin-bottom: 6rem;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
   }
 
   .schedule-text {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 
   .schedule-banner {
@@ -3239,10 +3288,13 @@
     content: url("/assets/about-mobile/toppillar-r.png");
   }
 
-  /* layer 4 circle..................................................................................................................... */
+  /* layer 4 sun..................................................................................................................... */
+  .layer-4 {
+    bottom: 11rem;
+  }
 
   .layer-4 img {
-    width: 21rem;
+    width: 100%;
     height: auto;
   }
 

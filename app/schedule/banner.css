@@ -2005,7 +2005,7 @@
   }
 
   .arrow-button img {
-    width: 5.5rem;
+    width: 5rem;
     height: auto;
   }
 
@@ -2053,22 +2053,35 @@
 }
 @media (max-width: 844px) and (max-height: 390px) {
   .banner-container {
+    padding-left: 5rem;
+    padding-right: 5rem;
     gap: 1rem;
   }
 
   .banners-box {
-    gap: 2.5rem;
-    width: 100%;
+    gap: 3rem;
+    width: 80%;
     height: 100%;
   }
 
+  .banner-page {
+    gap: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .banner-boxes {
-    width: 13rem;
+    max-width: 13rem;
+    height: 29rem;
+  }
+
+  .banners-boxes img {
+    width: 20rem;
     height: auto;
   }
 
   .arrow-button img {
-    width: 4.4rem;
+    width: 4rem;
     height: auto;
   }
 
@@ -2116,22 +2129,35 @@
 }
 @media (max-width: 820px) and (max-height: 1180px) {
   .banner-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
     gap: 1rem;
   }
 
   .banners-box {
-    gap: 2.5rem;
-    width: 100%;
+    gap: 3rem;
+    width: 80%;
     height: 100%;
   }
 
+  .banner-page {
+    gap: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .banner-boxes {
-    width: 14rem;
+    max-width: 16rem;
+    height: 29rem;
+  }
+
+  .banners-boxes img {
+    width: 20rem;
     height: auto;
   }
 
   .arrow-button img {
-    width: 4.4rem;
+    width: 5rem;
     height: auto;
   }
 
@@ -2179,22 +2205,35 @@
 }
 @media (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
   .banner-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
     gap: 1rem;
   }
 
   .banners-box {
-    gap: 2.5rem;
-    width: 100%;
+    gap: 3rem;
+    width: 80%;
     height: 100%;
   }
 
+  .banner-page {
+    gap: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .banner-boxes {
-    width: 17rem;
+    max-width: 16rem;
+    height: 34rem;
+  }
+
+  .banners-boxes img {
+    width: 20rem;
     height: auto;
   }
 
   .arrow-button img {
-    width: 7rem;
+    width: 5rem;
     height: auto;
   }
 
@@ -2242,22 +2281,35 @@
 }
 @media (max-width: 740px) and (max-height: 360px) and (orientation: landscape) {
   .banner-container {
+    padding-left: 7rem;
+    padding-right: 7rem;
     gap: 1rem;
   }
 
   .banners-box {
-    gap: 2.5rem;
-    width: 100%;
+    gap: 3rem;
+    width: 80%;
     height: 100%;
   }
 
+  .banner-page {
+    gap: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .banner-boxes {
-    width: 14rem;
+    max-width: 13rem;
+    height: 29rem;
+  }
+
+  .banners-boxes img {
+    width: 20rem;
     height: auto;
   }
 
   .arrow-button img {
-    width: 6rem;
+    width: 4rem;
     height: auto;
   }
 
@@ -2305,22 +2357,35 @@
 }
 @media (max-width: 720px) and (max-height: 540px) and (orientation: landscape) {
   .banner-container {
+    padding-left: 8rem;
+    padding-right: 8rem;
     gap: 1rem;
   }
 
   .banners-box {
-    gap: 2.5rem;
-    width: 100%;
+    gap: 3rem;
+    width: 80%;
     height: 100%;
   }
 
+  .banner-page {
+    gap: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .banner-boxes {
-    width: 14rem;
+    max-width: 13rem;
+    height: 29rem;
+  }
+
+  .banners-boxes img {
+    width: 20rem;
     height: auto;
   }
 
   .arrow-button img {
-    width: 6rem;
+    width: 4rem;
     height: auto;
   }
 
@@ -2368,22 +2433,35 @@
 }
 @media (max-width: 540px) and (max-height: 720px) and (orientation: portrait) {
   .banner-container {
+    padding-left: 5rem;
+    padding-right: 5rem;
     gap: 1rem;
   }
 
   .banners-box {
-    gap: 2.5rem;
-    width: 100%;
+    gap: 3rem;
+    width: 80%;
     height: 100%;
   }
 
+  .banner-page {
+    gap: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .banner-boxes {
-    width: 14rem;
+    max-width: 12rem;
+    height: 26rem;
+  }
+
+  .banners-boxes img {
+    width: 20rem;
     height: auto;
   }
 
   .arrow-button img {
-    width: 6rem;
+    width: 4rem;
     height: auto;
   }
 
@@ -2432,22 +2510,35 @@
 }
 @media (max-width: 459px) and (max-height: 841px) and (orientation: portrait) {
   .banner-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
     gap: 1rem;
   }
 
   .banners-box {
-    gap: 2.5rem;
-    width: 100%;
+    gap: 3rem;
+    width: 80%;
     height: 100%;
   }
 
+  .banner-page {
+    gap: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .banner-boxes {
-    width: 14rem;
+    max-width: 12rem;
+    height: 26rem;
+  }
+
+  .banners-boxes img {
+    width: 20rem;
     height: auto;
   }
 
   .arrow-button img {
-    width: 6rem;
+    width: 4.5rem;
     height: auto;
   }
 
@@ -2496,22 +2587,35 @@
 }
 @media (max-width: 440px) and (max-height: 956px) and (orientation: portrait) {
   .banner-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     gap: 1rem;
   }
 
   .banners-box {
-    gap: 2.5rem;
-    width: 100%;
+    gap: 3rem;
+    width: 80%;
     height: 100%;
   }
 
+  .banner-page {
+    gap: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .banner-boxes {
-    width: 14rem;
+    max-width: 13.5rem;
+    height: 31rem;
+  }
+
+  .banners-boxes img {
+    width: 20rem;
     height: auto;
   }
 
   .arrow-button img {
-    width: 6rem;
+    width: 4rem;
     height: auto;
   }
 
@@ -2560,27 +2664,35 @@
 }
 @media (max-width: 430px) and (max-height: 932px) and (orientation: portrait) {
   .banner-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
     gap: 1rem;
   }
 
   .banners-box {
-    gap: 5rem;
-    width: 100%;
+    gap: 3rem;
+    width: 80%;
     height: 100%;
   }
 
-  .banner-boxes {
-    width: 13rem;
-    height: auto;
+  .banner-page {
+    gap: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  .banners-box img {
-    width: 45rem;
+  .banner-boxes {
+    max-width: 13rem;
+    height: 28rem;
+  }
+
+  .banners-boxes img {
+    width: 20rem;
     height: auto;
   }
 
   .arrow-button img {
-    width: 6rem;
+    width: 4rem;
     height: auto;
   }
 
@@ -2629,27 +2741,35 @@
 }
 @media (max-width: 414px) and (max-height: 896px) and (orientation: portrait) {
   .banner-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
     gap: 1rem;
   }
 
   .banners-box {
-    gap: 5rem;
-    width: 100%;
+    gap: 3rem;
+    width: 80%;
     height: 100%;
   }
 
-  .banner-boxes {
-    width: 13rem;
-    height: auto;
+  .banner-page {
+    gap: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  .banners-box img {
-    width: 45rem;
+  .banner-boxes {
+    max-width: 13rem;
+    height: 28rem;
+  }
+
+  .banners-boxes img {
+    width: 20rem;
     height: auto;
   }
 
   .arrow-button img {
-    width: 6rem;
+    width: 4rem;
     height: auto;
   }
 
@@ -2698,27 +2818,35 @@
 }
 @media (max-width: 393px) and (max-height: 873px) and (orientation: portrait) {
   .banner-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
     gap: 1rem;
   }
 
   .banners-box {
-    gap: 5rem;
-    width: 100%;
+    gap: 3rem;
+    width: 80%;
     height: 100%;
   }
 
-  .banner-boxes {
-    width: 13rem;
-    height: auto;
+  .banner-page {
+    gap: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  .banners-box img {
-    width: 45rem;
+  .banner-boxes {
+    max-width: 13rem;
+    height: 23rem;
+  }
+
+  .banners-boxes img {
+    width: 20rem;
     height: auto;
   }
 
   .arrow-button img {
-    width: 6rem;
+    width: 4rem;
     height: auto;
   }
 
@@ -2767,27 +2895,35 @@
 }
 @media (max-width: 390px) and (max-height: 844px) and (orientation: portrait) {
   .banner-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
     gap: 1rem;
   }
 
   .banners-box {
-    gap: 5rem;
-    width: 100%;
+    gap: 3rem;
+    width: 80%;
     height: 100%;
   }
 
-  .banner-boxes {
-    width: 12.5rem;
-    height: auto;
+  .banner-page {
+    gap: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  .banners-box img {
-    width: 45rem;
+  .banner-boxes {
+    max-width: 13rem;
+    height: 23rem;
+  }
+
+  .banners-boxes img {
+    width: 20rem;
     height: auto;
   }
 
   .arrow-button img {
-    width: 6rem;
+    width: 4rem;
     height: auto;
   }
 
@@ -2836,27 +2972,35 @@
 }
 @media (max-width: 375px) and (max-height: 667px) and (orientation: portrait) {
   .banner-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
     gap: 1rem;
   }
 
   .banners-box {
-    gap: 5rem;
-    width: 100%;
+    gap: 3rem;
+    width: 80%;
     height: 100%;
   }
 
-  .banner-boxes {
-    width: 12.5rem;
-    height: auto;
+  .banner-page {
+    gap: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  .banners-box img {
-    width: 45rem;
+  .banner-boxes {
+    max-width: 13rem;
+    height: 23rem;
+  }
+
+  .banners-boxes img {
+    width: 20rem;
     height: auto;
   }
 
   .arrow-button img {
-    width: 6rem;
+    width: 3.5rem;
     height: auto;
   }
 
@@ -2905,27 +3049,35 @@
 }
 @media (max-width: 360px) and (max-height: 740px) and (orientation: portrait) {
   .banner-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
     gap: 1rem;
   }
 
   .banners-box {
-    gap: 5rem;
-    width: 100%;
+    gap: 3rem;
+    width: 80%;
     height: 100%;
   }
 
-  .banner-boxes {
-    width: 11.5rem;
-    height: auto;
+  .banner-page {
+    gap: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  .banners-box img {
-    width: 45rem;
+  .banner-boxes {
+    max-width: 13rem;
+    height: 21rem;
+  }
+
+  .banners-boxes img {
+    width: 20rem;
     height: auto;
   }
 
   .arrow-button img {
-    width: 6rem;
+    width: 3.5rem;
     height: auto;
   }
 
@@ -2974,27 +3126,35 @@
 }
 @media (max-width: 344px) and (max-height: 882px) and (orientation: portrait) {
   .banner-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
     gap: 1rem;
   }
 
   .banners-box {
-    gap: 5rem;
-    width: 100%;
+    gap: 3rem;
+    width: 80%;
     height: 100%;
   }
 
-  .banner-boxes {
-    width: 11rem;
-    height: auto;
+  .banner-page {
+    gap: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  .banners-box img {
-    width: 45rem;
+  .banner-boxes {
+    max-width: 14rem;
+    height: 21rem;
+  }
+
+  .banners-boxes img {
+    width: 20rem;
     height: auto;
   }
 
   .arrow-button img {
-    width: 6rem;
+    width: 2.5rem;
     height: auto;
   }
 
