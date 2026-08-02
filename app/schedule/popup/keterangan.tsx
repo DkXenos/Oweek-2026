@@ -1,4 +1,4 @@
-import type { KeteranganData } from "../../lib/schedule-data";
+import type { KeteranganData } from "../../../lib/schedule-data";
 import "./keterangan.css";
 
 export default function Keterangan({ data }: { data: KeteranganData }) {

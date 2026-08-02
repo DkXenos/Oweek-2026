@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import ScheduleButton from "./popup-button";
-import Keterangan from "../keterangan";
+import Keterangan from "./keterangan";
 import Penugasan from "./penugasan";
 import Ketentuan from "./ketentuan";
 import type { ScheduleData } from "../../../lib/schedule-data";

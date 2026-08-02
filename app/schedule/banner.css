@@ -6,6 +6,45 @@
   align-items: center;
 }
 
+.pagination-container {
+  position: relative;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pagination-dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: #b8b8b8;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+  /* border: 0.1rem solid #919191; */
+}
+
+.pagination-dot:hover,
+.pagination-dot:focus-visible {
+  transform: scale(1.3);
+}
+
+.pagination-dot.active {
+  background: #EA6C9E;
+  transform: scale(1.3);
+}
+
+.pagination-dot.active:hover,
+.pagination-dot.active:focus-visible {
+  transform: scale(1.4);
+}
+
 .banners-box {
   z-index: 8;
   display: flex;
@@ -185,6 +224,16 @@
     height: auto;
   }
 
+  .pagination-container {
+    gap: 3rem;
+    margin-top: 4rem;
+  }
+
+  .pagination-dot {
+    width: 4rem;
+    height: 4rem;
+  }
+
   /* popup......................................................................................... */
   .popup-container {
     width: 150rem;
@@ -259,6 +308,16 @@
   .arrow-button img {
     width: 10rem;
     height: auto;
+  }
+
+  .pagination-container {
+    gap: 3rem;
+    margin-top: 4rem;
+  }
+
+  .pagination-dot {
+    width: 3.5rem;
+    height: 3.5rem;
   }
 
   /* popup......................................................................................... */
@@ -337,6 +396,16 @@
     height: auto;
   }
 
+  .pagination-container {
+    gap: 3rem;
+    margin-top: 3.5rem;
+  }
+
+  .pagination-dot {
+    width: 3rem;
+    height: 3rem;
+  }
+
   /* popup......................................................................................... */
   .popup-container {
     width: 128rem;
@@ -411,6 +480,16 @@
   .arrow-button img {
     width: 9rem;
     height: auto;
+  }
+
+  .pagination-container {
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+
+  .pagination-dot {
+    width: 3rem;
+    height: 3rem;
   }
 
   /* popup......................................................................................... */
@@ -489,6 +568,16 @@
     height: auto;
   }
 
+  .pagination-container {
+    gap: 3rem;
+    margin-top: 2.5rem;
+  }
+
+  .pagination-dot {
+    width: 3rem;
+    height: 3rem;
+  }
+
   /* popup......................................................................................... */
   .popup-container {
     width: 126rem;
@@ -563,6 +652,16 @@
   .arrow-button img {
     width: 7rem;
     height: auto;
+  }
+
+  .pagination-container {
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .pagination-dot {
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
   /* popup......................................................................................... */
@@ -641,6 +740,16 @@
     height: auto;
   }
 
+  .pagination-container {
+    gap: 2rem;
+    margin-top: 3.5rem;
+  }
+
+  .pagination-dot {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
   /* popup......................................................................................... */
   .popup-container {
     width: 97rem;
@@ -717,6 +826,16 @@
     height: auto;
   }
 
+  .pagination-container {
+    gap: 2rem;
+    margin-top: 3.5rem;
+  }
+
+  .pagination-dot {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
   /* popup......................................................................................... */
   .popup-container {
     width: 97rem;
@@ -773,7 +892,7 @@
   }
 
   .banner-page {
-    gap: 2rem;
+    gap: 3rem;
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -791,6 +910,16 @@
   .arrow-button img {
     width: 7rem;
     height: auto;
+  }
+
+  .pagination-container {
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+
+  .pagination-dot {
+    width: 2.1rem;
+    height: 2.1rem;
   }
 
   /* popup......................................................................................... */
@@ -869,6 +998,16 @@
     height: auto;
   }
 
+  .pagination-container {
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .pagination-dot {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
   /* popup......................................................................................... */
   .popup-container {
     width: 78rem;
@@ -943,6 +1082,16 @@
   .arrow-button img {
     width: 5rem;
     height: auto;
+  }
+
+  .pagination-container {
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .pagination-dot {
+    width: 1.8rem;
+    height: 1.8rem;
   }
 
   /* popup......................................................................................... */
@@ -1021,6 +1170,16 @@
     height: auto;
   }
 
+  .pagination-container {
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .pagination-dot {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
   /* popup......................................................................................... */
   .popup-container {
     width: 78rem;
@@ -1095,6 +1254,16 @@
   .arrow-button img {
     width: 5rem;
     height: auto;
+  }
+
+  .pagination-container {
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .pagination-dot {
+    width: 1.6rem;
+    height: 1.6rem;
   }
 
   /* popup......................................................................................... */
@@ -1173,6 +1342,17 @@
     height: auto;
   }
 
+  .pagination-container {
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .pagination-dot {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+
   /* popup......................................................................................... */
   .popup-container {
     width: 67rem;
@@ -1247,6 +1427,16 @@
   .arrow-button img {
     width: 5rem;
     height: auto;
+  }
+
+  .pagination-container {
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .pagination-dot {
+    width: 1.6rem;
+    height: 1.6rem;
   }
 
   /* popup......................................................................................... */
@@ -1325,6 +1515,16 @@
     height: auto;
   }
 
+  .pagination-container {
+    gap: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .pagination-dot {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
   /* popup......................................................................................... */
   .popup-container {
     width: 69rem;
@@ -1401,6 +1601,16 @@
     height: auto;
   }
 
+  .pagination-container {
+    gap: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .pagination-dot {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
   /* popup......................................................................................... */
   .popup-container {
     width: 63rem;
@@ -1463,7 +1673,7 @@
   }
 
   .banner-boxes {
-    max-width: 17rem;
+    max-width: 15rem;
     height: 35rem;
   }
 
@@ -1475,6 +1685,16 @@
   .arrow-button img {
     width: 4.5rem;
     height: auto;
+  }
+
+  .pagination-container {
+    gap: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .pagination-dot {
+    width: 1.4rem;
+    height: 1.4rem;
   }
 
   /* popup......................................................................................... */
@@ -1539,7 +1759,7 @@
   }
 
   .banner-boxes {
-    max-width: 21rem;
+    max-width: 19rem;
     height: 42rem;
   }
 
@@ -1551,6 +1771,16 @@
   .arrow-button img {
     width: 5.5rem;
     height: auto;
+  }
+
+  .pagination-container {
+    gap: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .pagination-dot {
+    width: 1.7rem;
+    height: 1.7rem;
   }
 
   /* popup......................................................................................... */
@@ -1578,12 +1808,12 @@
   }
 
   .close-button-container {
-    margin-bottom: 4rem;
+    margin-bottom: 7rem;
   }
 
   .close-button-container svg {
-    width: 5rem;
-    height: 5rem;
+    width: 6rem;
+    height: 6rem;
   }
 
   .popup-text-body {
@@ -1627,6 +1857,16 @@
   .arrow-button img {
     width: 4.5rem;
     height: auto;
+  }
+
+  .pagination-container {
+    gap: 1.1rem;
+    margin-top: 1rem;
+  }
+
+  .pagination-dot {
+    width: 1.4rem;
+    height: 1.4rem;
   }
 
   /* popup......................................................................................... */
@@ -1705,6 +1945,16 @@
     height: auto;
   }
 
+  .pagination-container {
+    gap: 1.1rem;
+    margin-top: 1rem;
+  }
+
+  .pagination-dot {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
   /* popup......................................................................................... */
   .popup-container {
     width: 51rem;
@@ -1779,6 +2029,16 @@
   .arrow-button img {
     width: 4rem;
     height: auto;
+  }
+
+  .pagination-container {
+    gap: 1.1rem;
+    margin-top: 1rem;
+  }
+
+  .pagination-dot {
+    width: 1.2rem;
+    height: 1.2rem;
   }
 
   /* popup......................................................................................... */
@@ -1857,6 +2117,16 @@
     height: auto;
   }
 
+  .pagination-container {
+    gap: 1.1rem;
+    margin-top: 0.5rem;
+  }
+
+  .pagination-dot {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
   /* popup......................................................................................... */
   .popup-container {
     width: 49rem;
@@ -1931,6 +2201,16 @@
   .arrow-button img {
     width: 5.5rem;
     height: auto;
+  }
+
+  .pagination-container {
+    gap: 1.1rem;
+    margin-top: 1rem;
+  }
+
+  .pagination-dot {
+    width: 1.7rem;
+    height: 1.7rem;
   }
 
   /* popup......................................................................................... */
@@ -2009,6 +2289,16 @@
     height: auto;
   }
 
+  .pagination-container {
+    gap: 1.1rem;
+    margin-top: 1rem;
+  }
+
+  .pagination-dot {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+
   /* popup......................................................................................... */
   .popup-container {
     width: 45rem;
@@ -2083,6 +2373,16 @@
   .arrow-button img {
     width: 4rem;
     height: auto;
+  }
+
+  .pagination-container {
+    gap: 1.1rem;
+    margin-top: 1rem;
+  }
+
+  .pagination-dot {
+    width: 1.2rem;
+    height: 1.2rem;
   }
 
   /* popup......................................................................................... */
@@ -2161,6 +2461,16 @@
     height: auto;
   }
 
+  .pagination-container {
+    gap: 1.1rem;
+    margin-top: 1rem;
+  }
+
+  .pagination-dot {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
   /* popup......................................................................................... */
   .popup-container {
     width: 38rem;
@@ -2205,8 +2515,8 @@
 }
 @media (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
   .banner-container {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
     gap: 1rem;
   }
 
@@ -2235,6 +2545,16 @@
   .arrow-button img {
     width: 5rem;
     height: auto;
+  }
+
+  .pagination-container {
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .pagination-dot {
+    width: 1.3rem;
+    height: 1.3rem;
   }
 
   /* popup......................................................................................... */
@@ -2313,6 +2633,16 @@
     height: auto;
   }
 
+  .pagination-container {
+    gap: 0.9rem;
+    margin-top: 1rem;
+  }
+
+  .pagination-dot {
+    width: 1rem;
+    height: 1rem;
+  }
+
   /* popup......................................................................................... */
   .popup-container {
     width: 36rem;
@@ -2389,6 +2719,16 @@
     height: auto;
   }
 
+  .pagination-container {
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  .pagination-dot {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+
   /* popup......................................................................................... */
   .popup-container {
     width: 36rem;
@@ -2463,6 +2803,16 @@
   .arrow-button img {
     width: 4rem;
     height: auto;
+  }
+
+  .pagination-container {
+    gap: 0.7rem;
+    margin-top: 1rem;
+  }
+
+  .pagination-dot {
+    width: 0.9rem;
+    height: 0.9rem;
   }
 
   /* popup......................................................................................... */
@@ -2542,6 +2892,16 @@
     height: auto;
   }
 
+  .pagination-container {
+    gap: 0.7rem;
+    margin-top: 1rem;
+  }
+
+  .pagination-dot {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+
   /* popup......................................................................................... */
   .popup-container {
     width: 25rem;
@@ -2617,6 +2977,16 @@
   .arrow-button img {
     width: 4rem;
     height: auto;
+  }
+
+  .pagination-container {
+    gap: 0.7rem;
+    margin-top: 1rem;
+  }
+
+  .pagination-dot {
+    width: 0.9rem;
+    height: 0.9rem;
   }
 
   /* popup......................................................................................... */
@@ -2696,6 +3066,16 @@
     height: auto;
   }
 
+  .pagination-container {
+    gap: 0.7rem;
+    margin-top: 0.5rem;
+  }
+
+  .pagination-dot {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+
   /* popup......................................................................................... */
   .popup-container {
     width: 22rem;
@@ -2760,7 +3140,7 @@
 
   .banner-boxes {
     max-width: 13rem;
-    height: 28rem;
+    height: 25rem;
   }
 
   .banners-boxes img {
@@ -2771,6 +3151,16 @@
   .arrow-button img {
     width: 4rem;
     height: auto;
+  }
+
+  .pagination-container {
+    gap: 0.7rem;
+    margin-top: 0.3rem;
+  }
+
+  .pagination-dot {
+    width: 0.8rem;
+    height: 0.8rem;
   }
 
   /* popup......................................................................................... */
@@ -2850,6 +3240,16 @@
     height: auto;
   }
 
+  .pagination-container {
+    gap: 0.7rem;
+    margin-top: 0.5rem;
+  }
+
+  .pagination-dot {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
   /* popup......................................................................................... */
   .popup-container {
     width: 22rem;
@@ -2925,6 +3325,16 @@
   .arrow-button img {
     width: 4rem;
     height: auto;
+  }
+
+  .pagination-container {
+    gap: 0.7rem;
+    margin-top: 0.5rem;
+  }
+
+  .pagination-dot {
+    width: 0.8rem;
+    height: 0.8rem;
   }
 
   /* popup......................................................................................... */
@@ -3004,6 +3414,16 @@
     height: auto;
   }
 
+  .pagination-container {
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+  }
+
+  .pagination-dot {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
   /* popup......................................................................................... */
   .popup-container {
     width: 19rem;
@@ -3079,6 +3499,16 @@
   .arrow-button img {
     width: 3.5rem;
     height: auto;
+  }
+
+  .pagination-container {
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+  }
+
+  .pagination-dot {
+    width: 0.75rem;
+    height: 0.75rem;
   }
 
   /* popup......................................................................................... */
@@ -3157,6 +3587,17 @@
     width: 2.5rem;
     height: auto;
   }
+
+  .pagination-container {
+    gap: 0.55rem;
+    margin-top: 0.5rem;
+  }
+
+  .pagination-dot {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
 
   /* popup......................................................................................... */
   .popup-container {

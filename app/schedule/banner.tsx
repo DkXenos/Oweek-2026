@@ -39,7 +39,7 @@ export default function Banner({ data }: { data: ScheduleData }) {
     return () => window.removeEventListener("resize", updateImagePerPage);
   }, []);
 
-  const pageCount = Math.ceil(images.length / imagePerPage);
+  const pageCount = Math.max(1, Math.ceil(images.length / imagePerPage));
 
   useEffect(() => {
     setPage((current) => Math.min(current, Math.max(0, pageCount - 1)));
@@ -117,6 +117,25 @@ export default function Banner({ data }: { data: ScheduleData }) {
             className="button-right"
           />
         </button>
+      </div>
+
+      <div className="pagination-container" aria-label="Schedule pagination">
+        {Array.from({ length: pageCount }, (_, index) => (
+          <div
+            key={`pagination-dot-${index}`}
+            className={`pagination-dot${page === index ? " active" : ""}`}
+            onClick={() => setPage(index)}
+            role="button"
+            tabIndex={0}
+            aria-label={`Go to page ${index + 1}`}
+            aria-current={page === index ? "page" : undefined}
+            onKeyDown={(event) => {
+              if (event.key === "Enter" || event.key === " ") {
+                setPage(index);
+              }
+            }}
+          />
+        ))}
       </div>
 
       {isOpen && (

@@ -1,6 +1,6 @@
 import { getScheduleData } from "../../lib/schedule-data";
 import "./style.css";
-import Banner from "./banner"
+import Banner from "./banner";
 
 // Prerendered, not re-rendered per request. Admin edits stay visible because
 // the save action calls revalidatePath("/schedule"), which rebuilds this page
