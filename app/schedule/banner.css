@@ -78,6 +78,20 @@
   min-width: 0;
   display: flex;
   align-items: center;
+  opacity: 0;
+  animation: banner-item-appear 0.55s ease-out forwards;
+}
+
+.banner-boxes:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.banner-boxes:nth-child(2) {
+  animation-delay: 0.35s;
+}
+
+.banner-boxes:nth-child(3) {
+  animation-delay: 0.5s;
 }
 
 .banners-box img {
@@ -3597,7 +3611,6 @@
     width: 0.7rem;
     height: 0.7rem;
   }
-
 
   /* popup......................................................................................... */
   .popup-container {

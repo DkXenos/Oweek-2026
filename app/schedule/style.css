@@ -3,12 +3,23 @@
   width: 100%;
   background: linear-gradient(180deg, #dcaeeb, #63b3f5, #b4d7f5, #ffed8f);
   overflow: hidden;
+  opacity: 0;
+  animation: page-fade-in 0.9s ease-out forwards;
 }
 
 .layer {
   position: absolute;
   width: 100%;
   height: auto;
+}
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .layer-0 {
@@ -30,7 +41,7 @@
   z-index: 5;
 }
 .layer-6 {
-  /* z-index: 8; */
+  z-index: 8;
 }
 .layer-8 {
   z-index: 6;
@@ -85,10 +96,20 @@
 .firework-left {
   top: 5rem;
   left: 3rem;
+  opacity: 0;
+  transform: translateX(-3rem);
+  animation:
+    firework-enter-left 0.9s ease-out 0.8s forwards,
+    firework-float-left 8s ease-in-out 2.0s infinite;
 }
 
 .firework-right {
   right: 4rem;
+  opacity: 0;
+  transform: translateX(3rem);
+  animation:
+    firework-enter-right 0.9s ease-out 0.8s forwards,
+    firework-float-right 8s ease-in-out 2.0s infinite reverse;
 }
 
 /* layer 2 trees..................................................................................................................... */
@@ -97,6 +118,14 @@
   justify-content: space-around;
   bottom: -2rem;
   gap: 5rem;
+  opacity: 0;
+  transform: translateY(4rem);
+  animation: trees-rise-up 0.95s ease-out 0.5s forwards;
+}
+
+.tree-left,
+.tree-right {
+  opacity: 100%;
 }
 
 /* layer 3 pillars..................................................................................................................... */
@@ -104,6 +133,19 @@
   left: 0;
   display: flex;
   justify-content: space-between;
+  opacity: 0;
+  transform: translateX(0);
+  animation: pillars-slide-in 0.95s ease-out forwards;
+}
+
+.pillar-left {
+  transform: translateX(-3rem);
+  animation: left-pillar-slide 0.95s ease-out forwards;
+}
+
+.pillar-right {
+  transform: translateX(3rem);
+  animation: right-pillar-slide 0.95s ease-out forwards;
 }
 
 /* layer 4 sun..................................................................................................................... */
@@ -117,6 +159,119 @@
 .layer-4 img {
   width: 60%;
   height: auto;
+}
+
+/* Sun animation: rotate slowly (container) + subtle bob (image) to match homepage */
+.sun-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: center;
+  animation:
+    sun-rotate-start 1s ease-out forwards,
+    sun-rotate-loop 90s linear 1.5s infinite;
+}
+
+/* soft glow behind the sun, matches homepage styling */
+.sun-wrap::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 64%;
+  height: 64%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,237,143,0.6) 0%, rgba(167,103,209,0.08) 60%, rgba(148,37,128,0) 100%);
+  filter: blur(18px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.schedule-sun {
+  -webkit-user-drag: none;
+  width: 60%;
+  height: auto;
+  transform-origin: center;
+  animation: sun-bob 7s ease-in-out infinite;
+  filter: drop-shadow(0 0 0.5rem rgba(167, 103, 209, 0.55)) drop-shadow(0 0 1rem rgba(148, 37, 128, 0.35));
+}
+
+@keyframes sun-rotate-start {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes sun-rotate-loop {
+  from {
+    transform: rotate(30deg);
+  }
+  to {
+    transform: rotate(450deg);
+  }
+}
+
+@keyframes sun-bob {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes firework-float-left {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes firework-enter-left {
+  from {
+    opacity: 0;
+    transform: translateX(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes firework-enter-right {
+  from {
+    opacity: 0;
+    transform: translateX(3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes firework-float-right {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* layer 5 castle..................................................................................................................... */
@@ -145,6 +300,9 @@
   z-index: 8;
   display: flex;
   justify-content: center;
+  opacity: 0;
+  transform: scale(0.94);
+  animation: schedule-banner-scale 0.9s ease-out 0.35s forwards;
 }
 
 .schedule-banner {
@@ -153,6 +311,9 @@
   margin-bottom: 3rem;
   width: 30rem;
   height: auto;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: schedule-banner-fade-in 0.9s ease-out 0.45s forwards;
 }
 
 /* layer 8 cups..................................................................................................................... */
@@ -164,10 +325,113 @@
 
 .cup-left {
   margin-left: -5rem;
+  opacity: 0;
+  transform: translateX(-5rem);
+  animation: left-cup-slide 0.9s ease-out 0.6s forwards;
 }
 
 .cup-right {
   margin-right: -5rem;
+  opacity: 0;
+  transform: translateX(5rem);
+  animation: right-cup-slide 0.9s ease-out 0.6s forwards;
+}
+
+@keyframes pillars-slide-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes left-pillar-slide {
+  from {
+    transform: translateX(-6rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes right-pillar-slide {
+  from {
+    transform: translateX(6rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes left-cup-slide {
+  from {
+    transform: translateX(-5rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes right-cup-slide {
+  from {
+    transform: translateX(5rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes trees-rise-up {
+  from {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes schedule-banner-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes schedule-banner-fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes banner-item-appear {
+  from {
+    opacity: 0;
+    transform: translateX(-1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @media (max-width: 3840px) and (max-height: 2160px) {
@@ -205,17 +469,22 @@
   /* layer 3 pillars..................................................................................................................... */
   .layer-3 {
     width: auto;
-    height: 150%;
+    height: 120%;
     right: 0.1rem;
   }
 
   /* layer 4 sun..................................................................................................................... */
   .layer-4 {
-    bottom: -23rem;
+    bottom: 0rem;
+    height: 100%;
+  }
+
+  .sun-wrap{
+    width: 75%;
   }
 
   .layer-4 img {
-    width: 75%;
+    width: 100%;
     height: auto;
   }
 

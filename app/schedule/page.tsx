@@ -64,12 +64,14 @@ export default async function Schedule(){
                 </div>
 
                 {/* layer circle (4)---------------------------------------------------------------------------------------------------- */}
-                 <div className="layer layer-4">
-                    <img 
-                        src="/assets/homepage/sun-asset.webp" 
-                        alt="" 
-                        className="schedule-banner"
-                    />
+                <div className="layer layer-4">
+                    <div className="sun-wrap">
+                        <img
+                            src="/assets/homepage/sun-asset.webp"
+                            alt=""
+                            className="schedule-sun"
+                        />
+                    </div>
                 </div>
                 
                 {/* layer ferris wheel(5)---------------------------------------------------------------------------------------------------- */}

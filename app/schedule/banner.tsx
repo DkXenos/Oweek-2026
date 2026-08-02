@@ -86,17 +86,23 @@ export default function Banner({ data }: { data: ScheduleData }) {
               );
 
               return (
-                <div className={`banner-page banner-page-${pageIndex}`} key={`banner-page-${pageIndex}`}>
+                <div
+                  className={`banner-page banner-page-${pageIndex}${page === pageIndex ? " active" : ""}`}
+                  key={`banner-page-${pageIndex}`}
+                >
                   {pageImages.map((image, index) => (
                     <div
                       key={image.id}
-                      className={`banner-box-` + image.id + ` banner-boxes`}
+                      className={`banner-box-${image.id} banner-boxes`}
+                      style={{
+                        animationDelay: `${index * 0.15 + 0.15}s`,
+                      }}
                     >
                       <img
                         onClick={() => openPopup(image.id)}
                         src={image.src}
                         alt=""
-                        className={`banner-` + image.id}
+                        className={`banner-${image.id}`}
                         fetchPriority={index < imagePerPage ? "high" : "low"}
                       />
                     </div>
