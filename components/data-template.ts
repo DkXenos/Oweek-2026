@@ -40,6 +40,15 @@ export const scheduleDays: ScheduleDay[] = [
   },
   {
     index: 2,
+    judul: "MATRIKULASI & INDUSTRY VISIT & PRODI DAY",
+    title: "GLIMPSE OF TOMORROW",
+    date: "Senin 24 - Kamis 27 Agustus 2026",
+    location: "Menyesuaikan prodi masing masing",
+    time: [
+    ],
+  },
+  {
+    index: 3,
     judul: "DAY 1",
     title: "WE SEE THE LIGHT (TALKSHOW & SHOWCASE SELLING)",
     date: "Senin, 31 Agustus 2026",
@@ -51,7 +60,7 @@ export const scheduleDays: ScheduleDay[] = [
     ],
   },
   {
-    index: 3,
+    index: 4,
     judul: "DAY 2",
     title: "WHERE MAGIC FINDS YOU (STUDENT DEVELOPMENT PROGRAM & ORMAWA FEST)",
     date: "Selasa, 1 September 2026",
@@ -62,7 +71,7 @@ export const scheduleDays: ScheduleDay[] = [
     ],
   },
   {
-    index: 4,
+    index: 5,
     judul: "DAY 3",
     title: "INTO THE EVER AFTER (PRA-LDK & ORMAWA FEST)",
     date: "Rabu, 2 September 2026",
@@ -73,19 +82,26 @@ export const scheduleDays: ScheduleDay[] = [
     ],
   },
   {
-    index: 5,
+    index: 6,
     judul: "DAY 4",
     title: "SYMBIOTIC PALLETE FOR INFINITE FLAVOURS (SELLING DAY)",
     date: "Kamis, 3 September 2026",
     location: "Ciputra World Mall Surabaya",
-    time: ["08.30 - 21.00 WIB", "Dresscode: Kaos Universitas Ciputra, celana panjang gelap tidak sobek, name tag, bersepatu (warna bebas) serta menggunakan Atribut/Aksesoris (Sesuai dengan Main Ingredient)"],
+    time: [
+      "08.30 - 21.00 WIB",
+      "Dresscode: Kaos Universitas Ciputra, celana panjang gelap tidak sobek, name tag, bersepatu (warna bebas) serta menggunakan Atribut/Aksesoris (Sesuai dengan Main Ingredient)",
+    ],
   },
   {
-    index: 6,
+    index: 7,
     judul: "DAY 5",
     title: "THE GOLDEN EPILOGUE  (SIDANG SENAT & CLOSING)",
     date: "Jumat, 4 September 2026 ",
     location: "Ciputra World Mall Surabaya",
-    time: ["14.00 - 21.10 WIB", "Dresscode Laki-Laki : Kemeja Putih, Celana Panjang Hitam, Sepatu Bebas", "Dresscode Perempuan : Kemeja Putih, Celana Panjang Hitam / Rok Hitam Panjang (dibawah lutut), Sepatu Bebas"],
+    time: [
+      "14.00 - 21.10 WIB",
+      "Dresscode Laki-Laki : Kemeja Putih, Celana Panjang Hitam, Sepatu Bebas",
+      "Dresscode Perempuan : Kemeja Putih, Celana Panjang Hitam / Rok Hitam Panjang (dibawah lutut), Sepatu Bebas",
+    ],
   },
 ];
