@@ -47,8 +47,8 @@
         "09.48 - 13.32 WIB (Seminar 5E)",
         "14.20 - 16.47 WIB (TM SELLING)"
       ],
-      "dresscodeDoImage": "/assets/schedule/template-schedule.jpg",
-      "dresscodeDontImage": "/assets/schedule/template-schedule.jpg",
+      "dresscodeDoImage": "/assets/dresscode/17benar.webp",
+      "dresscodeDontImage": "/assets/dresscode/17salah.webp",
       "do": [
         "Kemeja Putih",
         "Jeans Hitam",
@@ -82,8 +82,8 @@
       "time": [
         "00.00 - 00.00 WIB"
       ],
-      "dresscodeDoImage": "/assets/schedule/template-schedule.jpg",
-      "dresscodeDontImage": "/assets/schedule/template-schedule.jpg",
+      "dresscodeDoImage": "/assets/dresscode/",
+      "dresscodeDontImage": "/assets/dresscode/",
       "do": [
         "baju do",
         "baju do",
@@ -118,8 +118,8 @@
         "Sesi 1 : 07.30 - 12.15 WIB",
         "Sesi 2 : 12.15 - 17.00 WIB"
       ],
-      "dresscodeDoImage": "/assets/schedule/template-schedule.jpg",
-      "dresscodeDontImage": "/assets/schedule/template-schedule.jpg",
+      "dresscodeDoImage": "/assets/dresscode/day1b.webp",
+      "dresscodeDontImage": "/assets/dresscode/day1s.webp",
       "do": [
         "Kemeja Putih",
         "Jeans Hitam",
@@ -153,8 +153,8 @@
       "time": [
         "07.00 - 17.00 WIB"
       ],
-      "dresscodeDoImage": "/assets/schedule/template-schedule.jpg",
-      "dresscodeDontImage": "/assets/schedule/template-schedule.jpg",
+      "dresscodeDoImage": "/assets/dresscode/day2b.webp",
+      "dresscodeDontImage": "/assets/dresscode/day2s.webp",
       "do": [
         "Kemeja Putih",
         "Jeans Hitam",
@@ -188,8 +188,8 @@
       "time": [
         "07.00 - 17.00 WIB"
       ],
-      "dresscodeDoImage": "/assets/schedule/template-schedule.jpg",
-      "dresscodeDontImage": "/assets/schedule/template-schedule.jpg",
+      "dresscodeDoImage": "/assets/dresscode/day3b.webp",
+      "dresscodeDontImage": "/assets/dresscode/day3s.webp",
       "do": [
         "Kemeja Putih",
         "Jeans Hitam",
@@ -223,8 +223,8 @@
       "time": [
         "07.00 - 17.00 WIB"
       ],
-      "dresscodeDoImage": "/assets/schedule/template-schedule.jpg",
-      "dresscodeDontImage": "/assets/schedule/template-schedule.jpg",
+      "dresscodeDoImage": "/assets/dresscode/day4b.webp",
+      "dresscodeDontImage": "/assets/dresscode/day4s.webp",
       "do": [
         "Kemeja Putih",
         "Jeans Hitam",
@@ -258,8 +258,8 @@
       "time": [
         "07.00 - 17.00 WIB"
       ],
-      "dresscodeDoImage": "/assets/schedule/template-schedule.jpg",
-      "dresscodeDontImage": "/assets/schedule/template-schedule.jpg",
+      "dresscodeDoImage": "/assets/dresscode/day5b.webp",
+      "dresscodeDontImage": "/assets/dresscode/day5s.webp",
       "do": [
         "Kemeja Putih",
         "Jeans Hitam",
