@@ -308,8 +308,8 @@ export default function AdminScheduleForm({
 
               <label className="admin-field admin-field-wide">
                 <span>
-                  Isi Ketentuan (satu baris = satu poin). Format: *tebal*,
-                  [LINK](https://...) = hyperlink
+                  Isi Ketentuan (satu baris = satu poin). Format: &quot;## JUDUL&quot; =
+                  sub-judul, *tebal*, [LINK](https://...) = hyperlink
                 </span>
                 <textarea
                   rows={4}
