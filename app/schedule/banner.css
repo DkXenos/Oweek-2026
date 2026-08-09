@@ -195,6 +195,9 @@
   display: flex;
   align-items: center;
   overflow-y: auto;
+  /* overflow-y: auto membuat sumbu X ikut auto; isi popup harus muat ke bawah
+     saja, tidak boleh bisa digeser kiri-kanan. */
+  overflow-x: hidden;
   flex-direction: column;
   position: absolute;
   scrollbar-color: #c79751 #dcaeeb;

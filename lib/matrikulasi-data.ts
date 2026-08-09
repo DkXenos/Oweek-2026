@@ -38,6 +38,10 @@ export type MatrikulasiProdi = {
   // field "prodi" di matrikulasi-jadwal.json. Harus sama persis.
   id: string;
   label: string;
+  // Kode lain di jadwal yang sebenarnya prodi yang sama (mis. CB ditulis "CBz"
+  // di sebagian baris). Ditaruh di sini, bukan diedit di jadwal, supaya
+  // matrikulasi-jadwal.json tetap salinan mentah yang bisa ditimpa utuh.
+  aliases?: string[];
   penugasan: PopupSection;
   ketentuan: PopupSection;
 };
@@ -114,16 +118,24 @@ export function isMatrikulasiBanner(
   );
 }
 
+// Semua kode yang menunjuk ke satu prodi: id-nya sendiri plus alias.
+export function kodeProdi(prodi: MatrikulasiProdi): string[] {
+  return [prodi.id, ...(prodi.aliases ?? [])];
+}
+
 // Ambil jadwal satu prodi, dikelompokkan per acara dan diurutkan tanggal-jam.
-// Acara yang tidak punya sesi untuk prodi itu tidak dikembalikan sama sekali,
-// jadi popup tidak menampilkan judul acara yang kosong.
+// KETIGA acara selalu dikembalikan walau sesinya kosong — judulnya tetap harus
+// muncul di popup supaya jelas bahwa prodi itu memang tidak punya acara tsb,
+// bukan datanya yang belum masuk.
 export function getAgendaGroups(
   data: MatrikulasiData | null,
   prodiId: string | null,
 ): AgendaGroup[] {
-  if (!data || !prodiId) return [];
+  const prodi = findProdi(data, prodiId);
+  if (!data || !prodi) return [];
 
-  const jadwalProdi = data.jadwal.filter((item) => item.prodi === prodiId);
+  const kode = new Set(kodeProdi(prodi));
+  const jadwalProdi = data.jadwal.filter((item) => kode.has(item.prodi));
 
   return KATEGORI_URUT.map(({ kategori, label }) => ({
     kategori,
@@ -141,5 +153,5 @@ export function getAgendaGroups(
         lokasi: item.lokasi,
         waktu: formatWaktu(item.mulai, item.selesai),
       })),
-  })).filter((group) => group.sesi.length > 0);
+  }));
 }

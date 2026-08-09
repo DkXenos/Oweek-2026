@@ -17,7 +17,7 @@ export default function Keterangan({
     return(
         <>
             <h1 className="keterangan-title">{data.title}</h1>
-            <div className="keterangan-detail">
+            <div className={`keterangan-detail${agenda && agenda.length > 0 ? " keterangan-detail-agenda" : ""}`}>
                 {data.subtitle && data.subtitle.trim() !== "" && (
                     <div className="keterangan-subtitle">{data.subtitle}</div>
                 )}

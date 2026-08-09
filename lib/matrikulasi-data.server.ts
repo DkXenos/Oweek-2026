@@ -7,7 +7,7 @@ import type {
   MatrikulasiKategori,
   MatrikulasiProdi,
 } from "./matrikulasi-data";
-import { KATEGORI_URUT } from "./matrikulasi-data";
+import { KATEGORI_URUT, kodeProdi } from "./matrikulasi-data";
 
 // Hanya untuk server component. Tipe + helper yang dipakai client ada di
 // matrikulasi-data.ts (tanpa fs), supaya bundle client tidak ikut menarik
@@ -76,14 +76,19 @@ function assertMatrikulasiKonten(
       typeof prodi !== "object" ||
       typeof prodi.id !== "string" ||
       prodi.id.trim() === "" ||
-      typeof prodi.label !== "string"
+      typeof prodi.label !== "string" ||
+      (prodi.aliases !== undefined && !isStringArray(prodi.aliases))
     ) {
       throw new Error("Format prodi matrikulasi tidak valid.");
     }
-    if (seen.has(prodi.id)) {
-      throw new Error(`Prodi matrikulasi duplikat: ${prodi.id}.`);
+    // id dan alias berbagi satu namespace: dua prodi tidak boleh mengklaim
+    // kode yang sama, karena join ke jadwal jadi ambigu.
+    for (const kode of kodeProdi(prodi)) {
+      if (seen.has(kode)) {
+        throw new Error(`Kode prodi matrikulasi duplikat: ${kode}.`);
+      }
+      seen.add(kode);
     }
-    seen.add(prodi.id);
 
     assertSection(prodi.penugasan, `penugasan ${prodi.id}`);
     assertSection(prodi.ketentuan, `ketentuan ${prodi.id}`);
@@ -131,11 +136,14 @@ export async function getMatrikulasiData(): Promise<MatrikulasiData | null> {
     assertMatrikulasiKonten(konten);
     assertMatrikulasiJadwal(jadwal);
 
-    // Kode prodi di jadwal harus punya pasangan di matrikulasi-data.json,
-    // kalau tidak sesinya tidak akan pernah tampil di dropdown mana pun.
-    const kodeProdi = new Set(konten.prodi.map((prodi: MatrikulasiProdi) => prodi.id));
+    // Kode prodi di jadwal harus punya pasangan (id atau alias) di
+    // matrikulasi-data.json, kalau tidak sesinya tidak akan pernah tampil
+    // di dropdown mana pun.
+    const semuaKode = new Set(
+      konten.prodi.flatMap((prodi: MatrikulasiProdi) => kodeProdi(prodi)),
+    );
     for (const item of jadwal) {
-      if (!kodeProdi.has(item.prodi)) {
+      if (!semuaKode.has(item.prodi)) {
         throw new Error(
           `Prodi "${item.prodi}" ada di jadwal tapi tidak ada di matrikulasi-data.json.`,
         );

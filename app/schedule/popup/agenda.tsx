@@ -12,26 +12,32 @@ export default function Agenda({ groups }: { groups: AgendaGroup[] }) {
         <section className="agenda-group" key={group.kategori}>
           <h2 className="agenda-title">{group.label}</h2>
 
-          {group.sesi.map((sesi) => (
-            <div className="agenda-sesi" key={sesi.id}>
-              <div className="agenda-row">
-                <span className="agenda-dot" />
-                <span className="agenda-text">{sesi.tanggal}</span>
-              </div>
+          {group.sesi.length === 0 ? (
+            <p className="agenda-kosong">Tidak ada jadwal untuk prodi ini</p>
+          ) : (
+            <div className="agenda-sesi-list">
+              {group.sesi.map((sesi) => (
+                <div className="agenda-sesi" key={sesi.id}>
+                  <div className="agenda-row">
+                    <span className="agenda-dot" />
+                    <span className="agenda-text">{sesi.tanggal}</span>
+                  </div>
 
-              {sesi.lokasi && (
-                <div className="agenda-row">
-                  <span className="agenda-dot" />
-                  <span className="agenda-text">{sesi.lokasi}</span>
+                  {sesi.lokasi && (
+                    <div className="agenda-row">
+                      <span className="agenda-dot" />
+                      <span className="agenda-text">{sesi.lokasi}</span>
+                    </div>
+                  )}
+
+                  <div className="agenda-row">
+                    <span className="agenda-dot" />
+                    <span className="agenda-text">{sesi.waktu}</span>
+                  </div>
                 </div>
-              )}
-
-              <div className="agenda-row">
-                <span className="agenda-dot" />
-                <span className="agenda-text">{sesi.waktu}</span>
-              </div>
+              ))}
             </div>
-          ))}
+          )}
         </section>
       ))}
     </div>

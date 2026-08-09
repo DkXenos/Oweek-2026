@@ -37,6 +37,9 @@
     {
       "id": "CB",
       "label": "CB",
+      "aliases": [
+        "CBz"
+      ],
       "penugasan": {
         "title": "Penugasan CB",
         "content": [
@@ -47,22 +50,6 @@
         "title": "Ketentuan CB",
         "content": [
           "placeholder ketentuan CB"
-        ]
-      }
-    },
-    {
-      "id": "CBz",
-      "label": "CBz",
-      "penugasan": {
-        "title": "Penugasan CBz",
-        "content": [
-          "placeholder penugasan CBz"
-        ]
-      },
-      "ketentuan": {
-        "title": "Ketentuan CBz",
-        "content": [
-          "placeholder ketentuan CBz"
         ]
       }
     },

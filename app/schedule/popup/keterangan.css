@@ -2396,3 +2396,26 @@
     height: auto;
   }
 }
+
+/* Baris keterangan dulu dikunci lebar tetap (16rem–30rem, beda-beda per
+   breakpoint) sehingga teksnya rata kiri di kolom sempit dan gampang bikin
+   isi popup melebihi lebarnya. Lebarnya tidak diperlukan: biarkan mengikuti
+   isi, dibatasi lebar popup, dan ditengahkan. */
+.keterangan-item {
+  width: auto;
+  max-width: 100%;
+  min-width: 0;
+  justify-content: center;
+  text-align: center;
+}
+
+.keterangan-detail {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.keterangan-detail-text {
+  min-width: 0;
+  text-align: center;
+  overflow-wrap: anywhere;
+}

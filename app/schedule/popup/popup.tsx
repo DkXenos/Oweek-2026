@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import ScheduleButton from "./popup-button";
 import Keterangan from "./keterangan";
 import Penugasan from "./penugasan";
@@ -31,6 +32,14 @@ export default function Popup({
 }: PopupProps) {
   const [activeTab, setActiveTab] = useState<PopupTab>("keterangan");
   const [selectedProdiId, setSelectedProdiId] = useState<string | null>(null);
+  // Popup di-portal ke <body>. Kalau dirender di tempat aslinya, dia terkurung
+  // di stacking context .layer-6 (z-index 8) sehingga footer (z-index 100)
+  // menutupi tombol X — z-index 2002 milik popup tidak menolong di dalam sana.
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Resolve entry berdasarkan banner yang diklik. Clamp agar index selalu valid.
   const selectedIndex = Math.max(
@@ -97,7 +106,9 @@ export default function Popup({
     }
   };
 
-  return (
+  if (!mounted) return null;
+
+  return createPortal(
     <div
       className="popup-backdrop"
       onClick={(event) => {
@@ -170,6 +181,7 @@ export default function Popup({
           </defs>
         </svg>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }

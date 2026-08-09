@@ -4,8 +4,8 @@
 .agenda {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 2em;
+  align-items: stretch;
+  gap: 1.8em;
   width: 100%;
   font-size: 1.5rem;
 }
@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.8em;
+  gap: 0.7em;
   width: 100%;
 }
 
@@ -27,31 +27,50 @@
   text-align: center;
 }
 
-/* Sesi kedua dan seterusnya dalam satu acara dipisah garis tipis supaya
-   jelas ini jadwal terpisah, bukan lanjutan baris di atasnya. */
+.agenda-kosong {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9em;
+  font-style: italic;
+  color: #a98cc4;
+  text-align: center;
+}
+
+/* Sesi mengisi lebar popup dulu, baru turun ke baris berikutnya. Di layar
+   sempit (aturan portrait di paling bawah file) baru ditumpuk ke bawah. */
+.agenda-sesi-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0.8em;
+  width: 100%;
+}
+
+/* Tiap sesi jadi kartu sendiri supaya jadwal yang satu tidak terbaca
+   nyambung dengan jadwal di sebelahnya. */
 .agenda-sesi {
+  /* Tanpa min-width: kartu boleh menyusut sampai selebar popup, jadi tidak
+     pernah memaksa munculnya scroll horizontal di layar sempit. */
+  flex: 1 1 14em;
+  min-width: 0;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
-  width: 100%;
-  max-width: 28em;
-  padding-top: 0.8em;
-}
-
-.agenda-sesi + .agenda-sesi {
-  border-top: 0.08em solid rgba(167, 103, 209, 0.35);
-}
-
-.agenda-sesi:first-of-type {
-  padding-top: 0;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.7em 0.9em;
+  border: 0.08em solid rgba(167, 103, 209, 0.35);
+  border-radius: 0.8em;
 }
 
 .agenda-row {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  justify-content: center;
   gap: 0.7em;
   width: 100%;
+  min-width: 0;
 }
 
 .agenda-dot {
@@ -65,11 +84,13 @@
 }
 
 .agenda-text {
+  min-width: 0;
   font-family: "Poppins-Bold", sans-serif;
   font-weight: 700;
   font-size: 1em;
   line-height: 1.35;
   color: #7b52a8;
+  text-align: center;
   overflow-wrap: anywhere;
 }
 
@@ -271,5 +292,25 @@
 @media (max-width: 344px) and (max-height: 882px) and (orientation: portrait) {
   .agenda {
     font-size: 0.8rem;
+  }
+}
+
+/* Wrapper keterangan defaultnya menyusut mengikuti isi; saat berisi agenda
+   ia harus melebar penuh supaya kartu sesi bisa memakai lebar popup. */
+.keterangan-detail.keterangan-detail-agenda {
+  width: 100%;
+  align-self: stretch;
+  margin-left: 0;
+}
+
+/* HP portrait: kartu ditumpuk ke bawah seperti list biasa. */
+@media (max-width: 768px) and (orientation: portrait) {
+  .agenda-sesi-list {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .agenda-sesi {
+    max-width: 100%;
   }
 }
