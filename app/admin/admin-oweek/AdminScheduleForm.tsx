@@ -10,7 +10,7 @@ type AdminScheduleFormProps = {
   action: (formData: FormData) => void;
 };
 
-// Selama diedit, field yang aslinya array (time, do, dont, content) disimpan
+// Selama diedit, field yang aslinya array (time, content) disimpan
 // sebagai teks multi-baris. Konversi ke array baru dilakukan saat submit /
 // download supaya caret input tidak "loncat" tiap ketikan.
 type DraftEntry = {
@@ -24,8 +24,7 @@ type DraftEntry = {
     // saat disimpan / didownload.
     dresscodeDoImage: string;
     dresscodeDontImage: string;
-    do: string;
-    dont: string;
+    dresscode: string;
   };
   penugasan: { title: string; content: string };
   ketentuan: { title: string; content: string };
@@ -52,8 +51,7 @@ function toDraft(data: ScheduleData): DraftEntry[] {
       time: linesToText(entry.keterangan.time),
       dresscodeDoImage: entry.keterangan.dresscodeDoImage,
       dresscodeDontImage: entry.keterangan.dresscodeDontImage,
-      do: linesToText(entry.keterangan.do),
-      dont: linesToText(entry.keterangan.dont),
+      dresscode: entry.keterangan.dresscode,
     },
     penugasan: {
       title: entry.penugasan.title,
@@ -76,8 +74,7 @@ function fromDraft(draft: DraftEntry[]): ScheduleData {
       time: textToLines(entry.keterangan.time),
       dresscodeDoImage: entry.keterangan.dresscodeDoImage,
       dresscodeDontImage: entry.keterangan.dresscodeDontImage,
-      do: textToLines(entry.keterangan.do),
-      dont: textToLines(entry.keterangan.dont),
+      dresscode: entry.keterangan.dresscode,
     },
     penugasan: {
       title: entry.penugasan.title,
@@ -241,33 +238,18 @@ export default function AdminScheduleForm({
                 />
               </label>
 
-              <label className="admin-field">
-                <span>Dresscode DO (satu baris = satu item)</span>
-                <textarea
-                  rows={3}
-                  value={entry.keterangan.do}
+              <label className="admin-field admin-field-wide">
+                <span>Dresscode (satu baris teks, tampil di tengah)</span>
+                <input
+                  type="text"
+                  value={entry.keterangan.dresscode}
                   onChange={(event) =>
                     updateEntry(index, {
                       ...entry,
-                      keterangan: { ...entry.keterangan, do: event.target.value },
+                      keterangan: { ...entry.keterangan, dresscode: event.target.value },
                     })
                   }
-                  placeholder={"Kemeja Putih\nJeans Hitam\nSepatu Hitam"}
-                />
-              </label>
-
-              <label className="admin-field">
-                <span>Dresscode DON&apos;T (satu baris = satu item)</span>
-                <textarea
-                  rows={3}
-                  value={entry.keterangan.dont}
-                  onChange={(event) =>
-                    updateEntry(index, {
-                      ...entry,
-                      keterangan: { ...entry.keterangan, dont: event.target.value },
-                    })
-                  }
-                  placeholder={"Atasan Batik\nJeans Hitam\nSepatu Sneakers"}
+                  placeholder="Kemeja Putih, Jeans Hitam, Sepatu Hitam"
                 />
               </label>
             </div>

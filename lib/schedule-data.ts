@@ -14,9 +14,10 @@ export type KeteranganData = {
   // TIDAK diedit lewat form admin. Contoh: "/assets/dresscode/day1-do.png".
   dresscodeDoImage: string;
   dresscodeDontImage: string;
-  // Teks dresscode DO dan DON'T (mis. "Kemeja Putih"). Ini yang diedit admin.
-  do: string[];
-  dont: string[];
+  // Satu baris teks dresscode yang tampil di tengah, di bawah gambar
+  // DO/DON'T (mis. "Kemeja Putih, Jeans Hitam, Sepatu Hitam").
+  // Ini yang diedit admin.
+  dresscode: string;
   parentsGathering?: string;
 };
 
@@ -73,8 +74,7 @@ function assertScheduleData(value: unknown): asserts value is ScheduleData {
       !isStringArray(keterangan.time) ||
       typeof keterangan.dresscodeDoImage !== "string" ||
       typeof keterangan.dresscodeDontImage !== "string" ||
-      !isStringArray(keterangan.do) ||
-      !isStringArray(keterangan.dont)
+      typeof keterangan.dresscode !== "string"
     ) {
       throw new Error("Format keterangan schedule tidak valid.");
     }

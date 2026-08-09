@@ -48,28 +48,20 @@ export default function Keterangan({
             <h2 className="keterangan-dresscode-title">Dresscode</h2>
             <div className="keterangan-dresscode-box">
                 <div className="keterangan-dresscode-do">
-                    <h3 className="dresscode-text-do dresscode-text">DO</h3>
                     <div className="image-box">
                         <img src={data.dresscodeDoImage} alt="" />
                     </div>
-                    <div className="dresscode-detail">
-                        {data.do.map((text, id) => (
-                            <p key={id} className="dresscode-text">{text}</p>
-                        ))}
-                    </div>
                 </div>
                 <div className="keterangan-dresscode-dont">
-                    <h3 className="dresscode-text-dont dresscode-text">DON'T</h3>
                     <div className="image-box">
                         <img src={data.dresscodeDontImage} alt="" />
                     </div>
-                    <div className="dresscode-detail">
-                        {data.dont.map((text, id) => (
-                            <p key={id} className="dresscode-text">{text}</p>
-                        ))}
-                    </div>
-                </div>   
+                </div>
             </div>
+            {/* Satu baris teks dresscode, di tengah, di bawah kedua gambar. */}
+            {data.dresscode && data.dresscode.trim() !== "" && (
+                <p className="dresscode-text keterangan-dresscode-text">{data.dresscode}</p>
+            )}
         </>
     )
 }

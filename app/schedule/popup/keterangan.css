@@ -4,6 +4,7 @@
   letter-spacing: 0.04em;
   font-size: 3rem;
   padding-bottom: 1rem;
+  text-align: center;
 }
 
 .keterangan-subtitle {
@@ -2417,5 +2418,16 @@
 .keterangan-detail-text {
   min-width: 0;
   text-align: center;
+  overflow-wrap: anywhere;
+}
+
+/* Satu baris teks dresscode di bawah gambar DO/DON'T, selalu di tengah.
+   Ukuran fontnya ikut .dresscode-text per breakpoint. */
+.keterangan-dresscode-text {
+  display: block;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   overflow-wrap: anywhere;
 }

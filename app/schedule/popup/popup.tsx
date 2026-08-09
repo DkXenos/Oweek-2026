@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import ScheduleButton from "./popup-button";
 import Keterangan from "./keterangan";
@@ -36,6 +36,11 @@ export default function Popup({
   // di stacking context .layer-6 (z-index 8) sehingga footer (z-index 100)
   // menutupi tombol X — z-index 2002 milik popup tidak menolong di dalam sana.
   const [mounted, setMounted] = useState(false);
+  // Panah ke bawah sebagai petunjuk bahwa isi popup masih bisa di-scroll.
+  // Hanya tampil kalau kontennya memang lebih tinggi dari areanya DAN user
+  // belum scroll sama sekali.
+  const bodyRef = useRef<HTMLDivElement | null>(null);
+  const [showScrollHint, setShowScrollHint] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -88,6 +93,31 @@ export default function Popup({
     setSelectedProdiId(null);
   }, [selectedImageId]);
 
+  const updateScrollHint = useCallback(() => {
+    const body = bodyRef.current;
+    if (!body) return;
+    const scrollable = body.scrollHeight - body.clientHeight > 8;
+    setShowScrollHint(scrollable && body.scrollTop <= 8);
+  }, []);
+
+  useEffect(() => {
+    const body = bodyRef.current;
+    if (!body) return;
+
+    updateScrollHint();
+    body.addEventListener("scroll", updateScrollHint, { passive: true });
+    window.addEventListener("resize", updateScrollHint);
+    // Gambar dresscode dimuat belakangan; tingginya baru diketahui setelah load.
+    body.addEventListener("load", updateScrollHint, true);
+
+    return () => {
+      body.removeEventListener("scroll", updateScrollHint);
+      window.removeEventListener("resize", updateScrollHint);
+      body.removeEventListener("load", updateScrollHint, true);
+    };
+    // Ganti tab / prodi mengganti isi popup, jadi hint dihitung ulang.
+  }, [mounted, activeTab, selectedImageId, selectedProdiId, isContentLocked, updateScrollHint]);
+
   const renderContent = () => {
     if (!entry || isContentLocked) return null;
     switch (activeTab) {
@@ -122,7 +152,7 @@ export default function Popup({
           <div className="popup-navbar">
             <ScheduleButton selectedTab={activeTab} onSelectTab={setActiveTab} />
           </div>
-          <div className="popup-text-body">
+          <div className="popup-text-body" ref={bodyRef}>
             {isMatrikulasi && matrikulasiData && (
               <ProdiSelect
                 data={matrikulasiData}
@@ -132,6 +162,14 @@ export default function Popup({
             )}
             {renderContent()}
           </div>
+        </div>
+        <div
+          className={`popup-scroll-hint${showScrollHint ? "" : " popup-scroll-hint-hidden"}`}
+          aria-hidden="true"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="#a767d1" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="5 9 12 16 19 9" />
+          </svg>
         </div>
       </div>
       <div className="close-button-container" onClick={(event) => event.stopPropagation()}>

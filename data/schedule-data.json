@@ -11,16 +11,7 @@
       ],
       "dresscodeDoImage": "/assets/schedule/template-schedule.jpg",
       "dresscodeDontImage": "/assets/schedule/template-schedule.jpg",
-      "do": [
-        "Kemeja Putih",
-        "Jeans Hitam",
-        "Sepatu Hitam"
-      ],
-      "dont": [
-        "Atasan Batik",
-        "Jeans Hitam",
-        "Sepatu Sneakers"
-      ]
+      "dresscode": "Kemeja Putih, Jeans Hitam, Sepatu Hitam"
     },
     "penugasan": {
       "title": "Refleksi Pribadi",
@@ -49,16 +40,7 @@
       ],
       "dresscodeDoImage": "/assets/dresscode/17benar.webp",
       "dresscodeDontImage": "/assets/dresscode/17salah.webp",
-      "do": [
-        "Kemeja Putih",
-        "Jeans Hitam",
-        "Sepatu Hitam"
-      ],
-      "dont": [
-        "Atasan Batik",
-        "Jeans Hitam",
-        "Sepatu Sneakers"
-      ]
+      "dresscode": "Kemeja Putih, Jeans Hitam, Sepatu Hitam"
     },
     "penugasan": {
       "title": "Refleksi Pribadi",
@@ -75,8 +57,8 @@
   },
   {
     "keterangan": {
-      "title": "MATRIKULASI & INDUSTRY VISIT",
-      "subtitle": "test subjudul",
+      "title": "MATRIKULASI & INDUSTRY VISIT & PRODI DAY",
+      "subtitle": "Glimpse of Tomorrow",
       "date": "hari, tanggal bulan tahun",
       "location": "Universitas Ciputra Surabaya",
       "time": [
@@ -84,16 +66,7 @@
       ],
       "dresscodeDoImage": "/assets/dresscode/",
       "dresscodeDontImage": "/assets/dresscode/",
-      "do": [
-        "baju do",
-        "baju do",
-        "baju do"
-      ],
-      "dont": [
-        "baju dont",
-        "baju dont",
-        "baju dont"
-      ]
+      "dresscode": "Dresscode"
     },
     "penugasan": {
       "title": "tugas matrikulasi",
@@ -119,16 +92,7 @@
       ],
       "dresscodeDoImage": "/assets/dresscode/",
       "dresscodeDontImage": "/assets/dresscode/",
-      "do": [
-        "baju do",
-        "baju do",
-        "baju do"
-      ],
-      "dont": [
-        "baju dont",
-        "baju dont",
-        "baju dont"
-      ]
+      "dresscode": "Dresscode"
     },
     "penugasan": {
       "title": "tugas matrikulasi",
@@ -155,16 +119,7 @@
       ],
       "dresscodeDoImage": "/assets/dresscode/day1b.webp",
       "dresscodeDontImage": "/assets/dresscode/day1s.webp",
-      "do": [
-        "Kemeja Putih",
-        "Jeans Hitam",
-        "Sepatu Hitam"
-      ],
-      "dont": [
-        "Atasan Batik",
-        "Jeans Hitam",
-        "Sepatu Sneakers"
-      ]
+      "dresscode": "Kemeja Putih, Jeans Hitam, Sepatu Hitam"
     },
     "penugasan": {
       "title": "Refleksi Pribadi",
@@ -190,16 +145,7 @@
       ],
       "dresscodeDoImage": "/assets/dresscode/day2b.webp",
       "dresscodeDontImage": "/assets/dresscode/day2s.webp",
-      "do": [
-        "Kemeja Putih",
-        "Jeans Hitam",
-        "Sepatu Hitam"
-      ],
-      "dont": [
-        "Atasan Batik",
-        "Jeans Hitam",
-        "Sepatu Sneakers"
-      ]
+      "dresscode": "Kemeja Putih, Jeans Hitam, Sepatu Hitam"
     },
     "penugasan": {
       "title": "Refleksi Pribadi",
@@ -225,16 +171,7 @@
       ],
       "dresscodeDoImage": "/assets/dresscode/day3b.webp",
       "dresscodeDontImage": "/assets/dresscode/day3s.webp",
-      "do": [
-        "Kemeja Putih",
-        "Jeans Hitam",
-        "Sepatu Hitam"
-      ],
-      "dont": [
-        "Atasan Batik",
-        "Jeans Hitam",
-        "Sepatu Sneakers"
-      ]
+      "dresscode": "Kemeja Putih, Jeans Hitam, Sepatu Hitam"
     },
     "penugasan": {
       "title": "Refleksi Pribadi",
@@ -260,16 +197,7 @@
       ],
       "dresscodeDoImage": "/assets/dresscode/day4b.webp",
       "dresscodeDontImage": "/assets/dresscode/day4s.webp",
-      "do": [
-        "Kemeja Putih",
-        "Jeans Hitam",
-        "Sepatu Hitam"
-      ],
-      "dont": [
-        "Atasan Batik",
-        "Jeans Hitam",
-        "Sepatu Sneakers"
-      ]
+      "dresscode": "Kemeja Putih, Jeans Hitam, Sepatu Hitam"
     },
     "penugasan": {
       "title": "Refleksi Pribadi",
