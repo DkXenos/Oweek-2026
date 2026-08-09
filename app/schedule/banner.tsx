@@ -4,8 +4,15 @@ import "./banner.css";
 import Popup from "./popup/popup";
 import { useEffect, useState } from "react";
 import type { ScheduleData } from "../../lib/schedule-data";
+import type { MatrikulasiData } from "../../lib/matrikulasi-data";
 
-export default function Banner({ data }: { data: ScheduleData }) {
+export default function Banner({
+  data,
+  matrikulasiData = null,
+}: {
+  data: ScheduleData;
+  matrikulasiData?: MatrikulasiData | null;
+}) {
   const images = [
     { id: "0", src: "/assets/thumbnail/praoweek.webp" },
     { id: "1", src: "/assets/thumbnail/upacarabendera.webp" },
@@ -148,6 +155,7 @@ export default function Banner({ data }: { data: ScheduleData }) {
       {isOpen && (
         <Popup
           data={data}
+          matrikulasiData={matrikulasiData}
           selectedImageId={selectedImageId}
           onClose={closePopup}
         />

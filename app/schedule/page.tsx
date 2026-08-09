@@ -1,4 +1,5 @@
 import { getScheduleData } from "../../lib/schedule-data";
+import { getMatrikulasiData } from "../../lib/matrikulasi-data.server";
 import "./style.css";
 import Banner from "./banner";
 
@@ -8,7 +9,10 @@ import Banner from "./banner";
 // only ever changes at deploy time.
 
 export default async function Schedule() {
-  const scheduleData = await getScheduleData();
+  const [scheduleData, matrikulasiData] = await Promise.all([
+    getScheduleData(),
+    getMatrikulasiData(),
+  ]);
   return (
     <>
       <div className="background">
@@ -84,7 +88,7 @@ export default async function Schedule() {
               className="schedule-banner"
             />
           </div>
-          <Banner data={scheduleData} />
+          <Banner data={scheduleData} matrikulasiData={matrikulasiData} />
         </div>
         {/* layer cup (8)---------------------------------------------------------------------------------------------------- */}
         <div className="layer layer-8">

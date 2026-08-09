@@ -5,18 +5,28 @@ import ScheduleButton from "./popup-button";
 import Keterangan from "./keterangan";
 import Penugasan from "./penugasan";
 import Ketentuan from "./ketentuan";
+import ProdiSelect from "./prodi-select";
 import type { ScheduleData } from "../../../lib/schedule-data";
+import type { MatrikulasiData } from "../../../lib/matrikulasi-data";
+import { findProdi, isMatrikulasiBanner } from "../../../lib/matrikulasi-data";
 
 type PopupTab = "keterangan" | "penugasan" | "ketentuan";
 
 interface PopupProps {
   data: ScheduleData;
+  matrikulasiData?: MatrikulasiData | null;
   selectedImageId: string | null;
   onClose: () => void;
 }
 
-export default function Popup({ data, selectedImageId, onClose }: PopupProps) {
+export default function Popup({
+  data,
+  matrikulasiData = null,
+  selectedImageId,
+  onClose,
+}: PopupProps) {
   const [activeTab, setActiveTab] = useState<PopupTab>("keterangan");
+  const [selectedProdiId, setSelectedProdiId] = useState<string | null>(null);
 
   // Resolve entry berdasarkan banner yang diklik. Clamp agar index selalu valid.
   const selectedIndex = Math.max(
@@ -47,13 +57,29 @@ export default function Popup({ data, selectedImageId, onClose }: PopupProps) {
 
   const showParentsGatheringLink = selectedImageId === "8";
 
+  // Kasus khusus matrikulasi: user WAJIB pilih prodi dulu. Selama belum
+  // memilih, popup hanya menampilkan dropdown — tidak ada konten sama sekali,
+  // termasuk tab keterangan. Setelah prodi dipilih, keterangan (dresscode dll)
+  // tetap diambil dari schedule-data, sedangkan penugasan & ketentuan diambil
+  // dari data prodi terpilih.
+  const isMatrikulasi = isMatrikulasiBanner(matrikulasiData, selectedImageId);
+  const selectedProdi = isMatrikulasi
+    ? findProdi(matrikulasiData, selectedProdiId)
+    : null;
+  const isContentLocked = isMatrikulasi && !selectedProdi;
+
+  // Kalau banner yang dibuka berganti, reset pilihan prodi.
+  useEffect(() => {
+    setSelectedProdiId(null);
+  }, [selectedImageId]);
+
   const renderContent = () => {
-    if (!entry) return null;
+    if (!entry || isContentLocked) return null;
     switch (activeTab) {
       case "penugasan":
-        return <Penugasan data={entry.penugasan} />;
+        return <Penugasan data={selectedProdi?.penugasan ?? entry.penugasan} />;
       case "ketentuan":
-        return <Ketentuan data={entry.ketentuan} />;
+        return <Ketentuan data={selectedProdi?.ketentuan ?? entry.ketentuan} />;
       default:
         return (
           <Keterangan
@@ -78,7 +104,16 @@ export default function Popup({ data, selectedImageId, onClose }: PopupProps) {
           <div className="popup-navbar">
             <ScheduleButton selectedTab={activeTab} onSelectTab={setActiveTab} />
           </div>
-          <div className="popup-text-body">{renderContent()}</div>
+          <div className="popup-text-body">
+            {isMatrikulasi && matrikulasiData && (
+              <ProdiSelect
+                data={matrikulasiData}
+                selectedProdi={selectedProdi}
+                onSelectProdi={setSelectedProdiId}
+              />
+            )}
+            {renderContent()}
+          </div>
         </div>
       </div>
       <div className="close-button-container" onClick={(event) => event.stopPropagation()}>

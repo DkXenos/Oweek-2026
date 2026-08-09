@@ -1,0 +1,126 @@
+{
+  "bannerId": "2",
+  "placeholder": "Pilih Program Studi",
+  "prodi": [
+    {
+      "id": "ibm",
+      "label": "International Business Management",
+      "penugasan": {
+        "title": "penugasan matrikulasi IBM",
+        "content": ["placeholder penugasan IBM"]
+      },
+      "ketentuan": {
+        "title": "ketentuan matrikulasi IBM",
+        "content": ["placeholder ketentuan IBM"]
+      }
+    },
+    {
+      "id": "vcd",
+      "label": "Visual Communication Design",
+      "penugasan": {
+        "title": "penugasan matrikulasi VCD",
+        "content": ["placeholder penugasan VCD"]
+      },
+      "ketentuan": {
+        "title": "ketentuan matrikulasi VCD",
+        "content": ["placeholder ketentuan VCD"]
+      }
+    },
+    {
+      "id": "ipd",
+      "label": "Product Design",
+      "penugasan": {
+        "title": "penugasan matrikulasi Product Design",
+        "content": ["placeholder penugasan Product Design"]
+      },
+      "ketentuan": {
+        "title": "ketentuan matrikulasi Product Design",
+        "content": ["placeholder ketentuan Product Design"]
+      }
+    },
+    {
+      "id": "iar",
+      "label": "Interior Architecture",
+      "penugasan": {
+        "title": "penugasan matrikulasi Interior Architecture",
+        "content": ["placeholder penugasan Interior Architecture"]
+      },
+      "ketentuan": {
+        "title": "ketentuan matrikulasi Interior Architecture",
+        "content": ["placeholder ketentuan Interior Architecture"]
+      }
+    },
+    {
+      "id": "ift",
+      "label": "Informatics",
+      "penugasan": {
+        "title": "penugasan matrikulasi Informatics",
+        "content": ["placeholder penugasan Informatics"]
+      },
+      "ketentuan": {
+        "title": "ketentuan matrikulasi Informatics",
+        "content": ["placeholder ketentuan Informatics"]
+      }
+    },
+    {
+      "id": "acc",
+      "label": "Accounting",
+      "penugasan": {
+        "title": "penugasan matrikulasi Accounting",
+        "content": ["placeholder penugasan Accounting"]
+      },
+      "ketentuan": {
+        "title": "ketentuan matrikulasi Accounting",
+        "content": ["placeholder ketentuan Accounting"]
+      }
+    },
+    {
+      "id": "psy",
+      "label": "Psychology",
+      "penugasan": {
+        "title": "penugasan matrikulasi Psychology",
+        "content": ["placeholder penugasan Psychology"]
+      },
+      "ketentuan": {
+        "title": "ketentuan matrikulasi Psychology",
+        "content": ["placeholder ketentuan Psychology"]
+      }
+    },
+    {
+      "id": "clb",
+      "label": "Culinary Business",
+      "penugasan": {
+        "title": "penugasan matrikulasi Culinary Business",
+        "content": ["placeholder penugasan Culinary Business"]
+      },
+      "ketentuan": {
+        "title": "ketentuan matrikulasi Culinary Business",
+        "content": ["placeholder ketentuan Culinary Business"]
+      }
+    },
+    {
+      "id": "hto",
+      "label": "Hotel & Tourism Business",
+      "penugasan": {
+        "title": "penugasan matrikulasi Hotel & Tourism Business",
+        "content": ["placeholder penugasan Hotel & Tourism Business"]
+      },
+      "ketentuan": {
+        "title": "ketentuan matrikulasi Hotel & Tourism Business",
+        "content": ["placeholder ketentuan Hotel & Tourism Business"]
+      }
+    },
+    {
+      "id": "ftb",
+      "label": "Fashion Product Design & Business",
+      "penugasan": {
+        "title": "penugasan matrikulasi Fashion",
+        "content": ["placeholder penugasan Fashion"]
+      },
+      "ketentuan": {
+        "title": "ketentuan matrikulasi Fashion",
+        "content": ["placeholder ketentuan Fashion"]
+      }
+    }
+  ]
+}
