@@ -7,7 +7,8 @@
     "tanggal": "2026-08-03",
     "lokasi": null,
     "mulai": "08:00",
-    "selesai": "12:00"
+    "selesai": "12:00",
+    "dresscode": null
   },
   {
     "id": "2026-08-04-med-matrikulasi",
@@ -17,7 +18,8 @@
     "tanggal": "2026-08-04",
     "lokasi": null,
     "mulai": "08:00",
-    "selesai": "12:30"
+    "selesai": "12:30",
+    "dresscode": null
   },
   {
     "id": "2026-08-05-med-matrikulasi",
@@ -27,7 +29,8 @@
     "tanggal": "2026-08-05",
     "lokasi": null,
     "mulai": "08:00",
-    "selesai": "12:00"
+    "selesai": "12:00",
+    "dresscode": null
   },
   {
     "id": "2026-08-06-med-matrikulasi",
@@ -37,7 +40,8 @@
     "tanggal": "2026-08-06",
     "lokasi": null,
     "mulai": "08:00",
-    "selesai": "12:00"
+    "selesai": "12:00",
+    "dresscode": null
   },
   {
     "id": "2026-08-07-med-matrikulasi",
@@ -47,7 +51,8 @@
     "tanggal": "2026-08-07",
     "lokasi": null,
     "mulai": "08:00",
-    "selesai": "11:30"
+    "selesai": "11:30",
+    "dresscode": null
   },
   {
     "id": "2026-08-10-dem-matrikulasi",
@@ -57,7 +62,8 @@
     "tanggal": "2026-08-10",
     "lokasi": null,
     "mulai": "08:00",
-    "selesai": "12:00"
+    "selesai": "12:00",
+    "dresscode": null
   },
   {
     "id": "2026-08-10-med-matrikulasi",
@@ -67,7 +73,8 @@
     "tanggal": "2026-08-10",
     "lokasi": null,
     "mulai": "08:00",
-    "selesai": "12:00"
+    "selesai": "12:00",
+    "dresscode": null
   },
   {
     "id": "2026-08-11-dem-matrikulasi",
@@ -77,7 +84,8 @@
     "tanggal": "2026-08-11",
     "lokasi": null,
     "mulai": "08:00",
-    "selesai": "12:00"
+    "selesai": "12:00",
+    "dresscode": null
   },
   {
     "id": "2026-08-11-med-matrikulasi",
@@ -87,7 +95,8 @@
     "tanggal": "2026-08-11",
     "lokasi": null,
     "mulai": "08:00",
-    "selesai": "12:30"
+    "selesai": "12:30",
+    "dresscode": null
   },
   {
     "id": "2026-08-12-dem-matrikulasi",
@@ -97,7 +106,8 @@
     "tanggal": "2026-08-12",
     "lokasi": null,
     "mulai": "08:00",
-    "selesai": "12:00"
+    "selesai": "12:00",
+    "dresscode": null
   },
   {
     "id": "2026-08-12-med-matrikulasi",
@@ -107,7 +117,8 @@
     "tanggal": "2026-08-12",
     "lokasi": null,
     "mulai": "08:00",
-    "selesai": "12:00"
+    "selesai": "12:00",
+    "dresscode": null
   },
   {
     "id": "2026-08-13-dem-industry-visit",
@@ -117,7 +128,8 @@
     "tanggal": "2026-08-13",
     "lokasi": null,
     "mulai": "08:00",
-    "selesai": "12:00"
+    "selesai": "12:00",
+    "dresscode": null
   },
   {
     "id": "2026-08-13-med-industry-visit",
@@ -127,7 +139,8 @@
     "tanggal": "2026-08-13",
     "lokasi": null,
     "mulai": "08:00",
-    "selesai": "12:00"
+    "selesai": "12:00",
+    "dresscode": null
   },
   {
     "id": "2026-08-21-vcd-prodi-day",
@@ -137,7 +150,8 @@
     "tanggal": "2026-08-21",
     "lokasi": "Lantai 19",
     "mulai": "07:00",
-    "selesai": "15:43"
+    "selesai": "15:43",
+    "dresscode": null
   },
   {
     "id": "2026-08-21-ftp-matrikulasi",
@@ -147,7 +161,8 @@
     "tanggal": "2026-08-21",
     "lokasi": "422",
     "mulai": "07:30",
-    "selesai": "14:30"
+    "selesai": "14:30",
+    "dresscode": null
   },
   {
     "id": "2026-08-21-ars-matrikulasi",
@@ -157,7 +172,8 @@
     "tanggal": "2026-08-21",
     "lokasi": "1834",
     "mulai": "08:00",
-    "selesai": "12:00"
+    "selesai": "12:00",
+    "dresscode": null
   },
   {
     "id": "2026-08-24-com-matrikulasi",
@@ -167,7 +183,8 @@
     "tanggal": "2026-08-24",
     "lokasi": "1434 - 1435",
     "mulai": "07:00",
-    "selesai": "16:32"
+    "selesai": "16:32",
+    "dresscode": null
   },
   {
     "id": "2026-08-24-dem-matrikulasi",
@@ -177,7 +194,8 @@
     "tanggal": "2026-08-24",
     "lokasi": "606",
     "mulai": "07:00",
-    "selesai": "15:00"
+    "selesai": "15:00",
+    "dresscode": null
   },
   {
     "id": "2026-08-24-ibm-rc-industry-visit",
@@ -187,7 +205,8 @@
     "tanggal": "2026-08-24",
     "lokasi": "Auditorium (di UC)",
     "mulai": "07:00",
-    "selesai": "11:47"
+    "selesai": "11:47",
+    "dresscode": null
   },
   {
     "id": "2026-08-24-imt-industry-visit",
@@ -197,7 +216,8 @@
     "tanggal": "2026-08-24",
     "lokasi": "Cihos (Kloter 1)",
     "mulai": "07:25",
-    "selesai": "11:00"
+    "selesai": "11:00",
+    "dresscode": null
   },
   {
     "id": "2026-08-24-ars-prodi-day",
@@ -207,7 +227,8 @@
     "tanggal": "2026-08-24",
     "lokasi": "1834",
     "mulai": "07:30",
-    "selesai": "15:45"
+    "selesai": "15:45",
+    "dresscode": null
   },
   {
     "id": "2026-08-24-cbz-prodi-day",
@@ -217,7 +238,8 @@
     "tanggal": "2026-08-24",
     "lokasi": "404",
     "mulai": "07:30",
-    "selesai": "16:20"
+    "selesai": "16:20",
+    "dresscode": null
   },
   {
     "id": "2026-08-24-fdb-prodi-day",
@@ -227,7 +249,8 @@
     "tanggal": "2026-08-24",
     "lokasi": "1733",
     "mulai": "07:30",
-    "selesai": "16:13"
+    "selesai": "16:13",
+    "dresscode": null
   },
   {
     "id": "2026-08-24-fdb-industry-visit",
@@ -237,7 +260,8 @@
     "tanggal": "2026-08-24",
     "lokasi": "1733 (di UC)",
     "mulai": "07:30",
-    "selesai": "16:13"
+    "selesai": "16:13",
+    "dresscode": null
   },
   {
     "id": "2026-08-24-ibm-ic-matrikulasi",
@@ -247,7 +271,8 @@
     "tanggal": "2026-08-24",
     "lokasi": "Theater 931 (di UC)",
     "mulai": "07:30",
-    "selesai": "16:20"
+    "selesai": "16:20",
+    "dresscode": null
   },
   {
     "id": "2026-08-24-isb-prodi-day",
@@ -257,7 +282,8 @@
     "tanggal": "2026-08-24",
     "lokasi": "Studio 2 SIFT",
     "mulai": "07:30",
-    "selesai": null
+    "selesai": null,
+    "dresscode": null
   },
   {
     "id": "2026-08-24-med-prodi-day",
@@ -267,7 +293,8 @@
     "tanggal": "2026-08-24",
     "lokasi": "Theater lt. 7",
     "mulai": "07:30",
-    "selesai": "16:12"
+    "selesai": "16:12",
+    "dresscode": null
   },
   {
     "id": "2026-08-24-vcd-industry-visit",
@@ -277,7 +304,8 @@
     "tanggal": "2026-08-24",
     "lokasi": "CV Akronim Design Bureau & PT. Mojiken Interaktif Mandiri",
     "mulai": "07:30",
-    "selesai": "12:45"
+    "selesai": "12:45",
+    "dresscode": null
   },
   {
     "id": "2026-08-24-ftp-industry-visit",
@@ -287,7 +315,8 @@
     "tanggal": "2026-08-24",
     "lokasi": "PT. Ares Kusuma Jaya",
     "mulai": "08:00",
-    "selesai": "12:00"
+    "selesai": "12:00",
+    "dresscode": null
   },
   {
     "id": "2026-08-24-psy-matrikulasi",
@@ -297,7 +326,8 @@
     "tanggal": "2026-08-24",
     "lokasi": "Tech Space",
     "mulai": "08:00",
-    "selesai": "16:20"
+    "selesai": "16:20",
+    "dresscode": null
   },
   {
     "id": "2026-08-24-imt-industry-visit-2",
@@ -307,7 +337,8 @@
     "tanggal": "2026-08-24",
     "lokasi": "Cihos (Kloter 2)",
     "mulai": "11:55",
-    "selesai": "15:30"
+    "selesai": "15:30",
+    "dresscode": null
   },
   {
     "id": "2026-08-24-isb-industry-visit",
@@ -317,7 +348,8 @@
     "tanggal": "2026-08-24",
     "lokasi": "PT. Jasa Indonesia",
     "mulai": "13:25",
-    "selesai": "16:00"
+    "selesai": "16:00",
+    "dresscode": null
   },
   {
     "id": "2026-08-26-dem-matrikulasi",
@@ -327,7 +359,8 @@
     "tanggal": "2026-08-26",
     "lokasi": "606",
     "mulai": "07:00",
-    "selesai": "15:05"
+    "selesai": "15:05",
+    "dresscode": null
   },
   {
     "id": "2026-08-26-hteb-prodi-day",
@@ -337,7 +370,8 @@
     "tanggal": "2026-08-26",
     "lokasi": "515",
     "mulai": "07:00",
-    "selesai": "16:12"
+    "selesai": "16:12",
+    "dresscode": null
   },
   {
     "id": "2026-08-26-ibm-ic-prodi-day",
@@ -347,7 +381,8 @@
     "tanggal": "2026-08-26",
     "lokasi": "Theatre 931",
     "mulai": "07:00",
-    "selesai": "16:20"
+    "selesai": "16:20",
+    "dresscode": null
   },
   {
     "id": "2026-08-26-ibm-rc-prodi-day",
@@ -357,7 +392,8 @@
     "tanggal": "2026-08-26",
     "lokasi": "Auditorium",
     "mulai": "07:00",
-    "selesai": "16:57"
+    "selesai": "16:57",
+    "dresscode": null
   },
   {
     "id": "2026-08-26-psy-prodi-day",
@@ -367,7 +403,8 @@
     "tanggal": "2026-08-26",
     "lokasi": "Tech Space",
     "mulai": "07:00",
-    "selesai": "16:20"
+    "selesai": "16:20",
+    "dresscode": null
   },
   {
     "id": "2026-08-26-acc-industry-visit",
@@ -377,7 +414,8 @@
     "tanggal": "2026-08-26",
     "lokasi": "1032 (di UC)",
     "mulai": "07:30",
-    "selesai": "11:05"
+    "selesai": "11:05",
+    "dresscode": null
   },
   {
     "id": "2026-08-26-ars-prodi-day",
@@ -387,7 +425,8 @@
     "tanggal": "2026-08-26",
     "lokasi": null,
     "mulai": "07:30",
-    "selesai": "11:45"
+    "selesai": "11:45",
+    "dresscode": null
   },
   {
     "id": "2026-08-26-com-prodi-day",
@@ -397,7 +436,8 @@
     "tanggal": "2026-08-26",
     "lokasi": "FiKom Hub",
     "mulai": "07:30",
-    "selesai": "16:27"
+    "selesai": "16:27",
+    "dresscode": null
   },
   {
     "id": "2026-08-26-imt-prodi-day",
@@ -407,7 +447,8 @@
     "tanggal": "2026-08-26",
     "lokasi": "Integrity Hall",
     "mulai": "07:30",
-    "selesai": "16:27"
+    "selesai": "16:27",
+    "dresscode": null
   },
   {
     "id": "2026-08-26-isb-prodi-day",
@@ -417,7 +458,8 @@
     "tanggal": "2026-08-26",
     "lokasi": "Integrity Hall",
     "mulai": "07:30",
-    "selesai": "16:20"
+    "selesai": "16:20",
+    "dresscode": null
   },
   {
     "id": "2026-08-26-med-matrikulasi",
@@ -427,7 +469,8 @@
     "tanggal": "2026-08-26",
     "lokasi": "Theater lt. 7",
     "mulai": "07:30",
-    "selesai": "15:42"
+    "selesai": "15:42",
+    "dresscode": null
   },
   {
     "id": "2026-08-26-vcd-matrikulasi",
@@ -437,7 +480,8 @@
     "tanggal": "2026-08-26",
     "lokasi": "1931",
     "mulai": "07:30",
-    "selesai": "16:40"
+    "selesai": "16:40",
+    "dresscode": null
   },
   {
     "id": "2026-08-26-cb-industry-visit",
@@ -447,7 +491,8 @@
     "tanggal": "2026-08-26",
     "lokasi": "Bogasari",
     "mulai": "07:45",
-    "selesai": "13:15"
+    "selesai": "13:15",
+    "dresscode": null
   },
   {
     "id": "2026-08-26-cb-industry-visit-2",
@@ -457,7 +502,8 @@
     "tanggal": "2026-08-26",
     "lokasi": "Hotel CW",
     "mulai": "07:45",
-    "selesai": "12:30"
+    "selesai": "12:30",
+    "dresscode": null
   },
   {
     "id": "2026-08-26-fdb-matrikulasi",
@@ -467,7 +513,8 @@
     "tanggal": "2026-08-26",
     "lokasi": null,
     "mulai": "08:30",
-    "selesai": "11:10"
+    "selesai": "11:10",
+    "dresscode": null
   },
   {
     "id": "2026-08-26-isb-matrikulasi",
@@ -477,7 +524,8 @@
     "tanggal": "2026-08-26",
     "lokasi": "Studio 2 SIFT",
     "mulai": "13:40",
-    "selesai": "15:50"
+    "selesai": "15:50",
+    "dresscode": null
   },
   {
     "id": "2026-08-27-ars-industry-visit",
@@ -487,7 +535,8 @@
     "tanggal": "2026-08-27",
     "lokasi": "Citraland Utara",
     "mulai": "07:00",
-    "selesai": "11:30"
+    "selesai": "11:30",
+    "dresscode": null
   },
   {
     "id": "2026-08-27-dem-matrikulasi",
@@ -497,7 +546,8 @@
     "tanggal": "2026-08-27",
     "lokasi": "606",
     "mulai": "07:00",
-    "selesai": "15:05"
+    "selesai": "15:05",
+    "dresscode": null
   },
   {
     "id": "2026-08-27-hteb-industry-visit",
@@ -507,7 +557,8 @@
     "tanggal": "2026-08-27",
     "lokasi": null,
     "mulai": "07:00",
-    "selesai": "16:12"
+    "selesai": "16:12",
+    "dresscode": null
   },
   {
     "id": "2026-08-27-imt-matrikulasi",
@@ -517,7 +568,8 @@
     "tanggal": "2026-08-27",
     "lokasi": "504",
     "mulai": "07:00",
-    "selesai": "16:27"
+    "selesai": "16:27",
+    "dresscode": null
   },
   {
     "id": "2026-08-27-psy-industry-visit",
@@ -527,7 +579,8 @@
     "tanggal": "2026-08-27",
     "lokasi": null,
     "mulai": "07:00",
-    "selesai": "12:50"
+    "selesai": "12:50",
+    "dresscode": null
   },
   {
     "id": "2026-08-27-acc-prodi-day",
@@ -537,7 +590,8 @@
     "tanggal": "2026-08-27",
     "lokasi": "1032",
     "mulai": "07:30",
-    "selesai": "16:30"
+    "selesai": "16:30",
+    "dresscode": null
   },
   {
     "id": "2026-08-27-ftp-prodi-day",
@@ -547,7 +601,8 @@
     "tanggal": "2026-08-27",
     "lokasi": "505A dan 227",
     "mulai": "07:30",
-    "selesai": "15:30"
+    "selesai": "15:30",
+    "dresscode": null
   },
   {
     "id": "2026-08-27-ibm-ic-industry-visit",
@@ -557,7 +612,8 @@
     "tanggal": "2026-08-27",
     "lokasi": "di UC",
     "mulai": "07:30",
-    "selesai": "11:00"
+    "selesai": "11:00",
+    "dresscode": null
   },
   {
     "id": "2026-08-27-isb-prodi-day",
@@ -567,7 +623,8 @@
     "tanggal": "2026-08-27",
     "lokasi": "Studio 2 SIFT",
     "mulai": "07:30",
-    "selesai": "16:27"
+    "selesai": "16:27",
+    "dresscode": null
   },
   {
     "id": "2026-08-27-med-matrikulasi",
@@ -577,7 +634,8 @@
     "tanggal": "2026-08-27",
     "lokasi": "Theater lt. 7",
     "mulai": "07:30",
-    "selesai": "15:35"
+    "selesai": "15:35",
+    "dresscode": null
   },
   {
     "id": "2026-08-27-vcd-matrikulasi",
@@ -587,7 +645,8 @@
     "tanggal": "2026-08-27",
     "lokasi": "Lab. Komputer Lt. 12",
     "mulai": "07:30",
-    "selesai": "16:40"
+    "selesai": "16:40",
+    "dresscode": null
   },
   {
     "id": "2026-08-27-cbz-matrikulasi",
@@ -597,7 +656,8 @@
     "tanggal": "2026-08-27",
     "lokasi": "107",
     "mulai": "08:00",
-    "selesai": "13:15"
+    "selesai": "13:15",
+    "dresscode": null
   },
   {
     "id": "2026-08-27-ibm-rc-matrikulasi",
@@ -607,7 +667,8 @@
     "tanggal": "2026-08-27",
     "lokasi": "Auditorium",
     "mulai": "08:00",
-    "selesai": "15:00"
+    "selesai": "15:00",
+    "dresscode": null
   },
   {
     "id": "2026-08-27-fdb-matrikulasi",
@@ -617,7 +678,8 @@
     "tanggal": "2026-08-27",
     "lokasi": null,
     "mulai": "08:30",
-    "selesai": "11:10"
+    "selesai": "11:10",
+    "dresscode": null
   },
   {
     "id": "2026-08-27-com-industry-visit",
@@ -627,7 +689,8 @@
     "tanggal": "2026-08-27",
     "lokasi": "JTV Ketintang",
     "mulai": "10:00",
-    "selesai": "16:05"
+    "selesai": "16:05",
+    "dresscode": null
   },
   {
     "id": "2026-08-27-com-industry-visit-2",
@@ -637,6 +700,7 @@
     "tanggal": "2026-08-27",
     "lokasi": "Jamoe Iboe",
     "mulai": "10:00",
-    "selesai": "14:40"
+    "selesai": "14:40",
+    "dresscode": null
   }
 ]

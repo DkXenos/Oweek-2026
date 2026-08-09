@@ -112,7 +112,10 @@ function assertMatrikulasiJadwal(
       typeof item.tanggal !== "string" ||
       typeof item.mulai !== "string" ||
       !isNullableString(item.lokasi) ||
-      !isNullableString(item.selesai)
+      !isNullableString(item.selesai) ||
+      // Boleh tidak ada sama sekali: file jadwal mentah kadang di-replace utuh
+      // dari sumber yang belum punya kolom dresscode.
+      (item.dresscode !== undefined && !isNullableString(item.dresscode))
     ) {
       throw new Error("Format baris jadwal matrikulasi tidak valid.");
     }

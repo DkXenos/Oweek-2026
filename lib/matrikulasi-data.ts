@@ -31,6 +31,9 @@ export type MatrikulasiJadwal = {
   mulai: string;
   // null = jam selesai belum ditentukan, ditampilkan "07.30 - selesai".
   selesai: string | null;
+  // Dresscode per hari, teks saja (tanpa gambar DO/DON'T). null / tidak ada
+  // = belum ditentukan, barisnya tidak ditampilkan di popup.
+  dresscode?: string | null;
 };
 
 export type MatrikulasiProdi = {
@@ -62,6 +65,7 @@ export type AgendaSesi = {
   tanggal: string;
   lokasi: string | null;
   waktu: string;
+  dresscode: string | null;
 };
 
 export type AgendaGroup = {
@@ -152,6 +156,7 @@ export function getAgendaGroups(
         tanggal: formatTanggal(item.hari, item.tanggal),
         lokasi: item.lokasi,
         waktu: formatWaktu(item.mulai, item.selesai),
+        dresscode: item.dresscode?.trim() ? item.dresscode.trim() : null,
       })),
   }));
 }

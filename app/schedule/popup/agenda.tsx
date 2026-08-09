@@ -34,6 +34,17 @@ export default function Agenda({ groups }: { groups: AgendaGroup[] }) {
                     <span className="agenda-dot" />
                     <span className="agenda-text">{sesi.waktu}</span>
                   </div>
+
+                  {/* Dresscode per hari, teks saja. Banner matrikulasi tidak
+                      memakai blok dresscode + gambar DO/DON'T di keterangan. */}
+                  {sesi.dresscode && (
+                    <div className="agenda-row">
+                      <span className="agenda-dot" />
+                      <span className="agenda-text">
+                        Dresscode: {sesi.dresscode}
+                      </span>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
