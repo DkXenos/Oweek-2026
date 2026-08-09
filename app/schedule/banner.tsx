@@ -10,11 +10,11 @@ export default function Banner({ data }: { data: ScheduleData }) {
     { id: "0", src: "/assets/thumbnail/praoweek.webp" },
     { id: "1", src: "/assets/thumbnail/upacarabendera.webp" },
     { id: "2", src: "/assets/thumbnail/matrikulasi.png" },
-    { id: "3", src: "/assets/thumbnail/day1.webp" },
-    { id: "4", src: "/assets/thumbnail/day2.webp" },
-    { id: "5", src: "/assets/thumbnail/day3.webp" },
-    { id: "6", src: "/assets/thumbnail/day4.webp" },
-    { id: "7", src: "/assets/thumbnail/day5.webp" },
+    { id: "3", src: "/assets/thumbnail/parents.png" },
+    { id: "4", src: "/assets/thumbnail/day1.png" },
+    { id: "5", src: "/assets/thumbnail/day2.webp" },
+    { id: "6", src: "/assets/thumbnail/day3.webp" },
+    { id: "7", src: "/assets/thumbnail/day4.webp" },
     { id: "8", src: "/assets/thumbnail/day5.webp" },
   ];
 

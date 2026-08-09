@@ -110,6 +110,41 @@
   },
   {
     "keterangan": {
+      "title": "PARENTS GATHERING",
+      "subtitle": "judul parents gathering",
+      "date": "hari, tanggal bulan tahun",
+      "location": "Universitas Ciputra Surabaya",
+      "time": [
+        "00.00 - 00.00 WIB"
+      ],
+      "dresscodeDoImage": "/assets/dresscode/",
+      "dresscodeDontImage": "/assets/dresscode/",
+      "do": [
+        "baju do",
+        "baju do",
+        "baju do"
+      ],
+      "dont": [
+        "baju dont",
+        "baju dont",
+        "baju dont"
+      ]
+    },
+    "penugasan": {
+      "title": "tugas matrikulasi",
+      "content": [
+        "matrikulasi"
+      ]
+    },
+    "ketentuan": {
+      "title": "ketentuan matrikulasi",
+      "content": [
+        "matrikulasi"
+      ]
+    }
+  },
+  {
+    "keterangan": {
       "title": "DAY 1",
       "subtitle": "WE SEE THE LIGHT (TALKSHOW & SHOWCASE SELLING)",
       "date": "Senin, 31 Agustus 2026",
@@ -246,42 +281,6 @@
       "title": "Ketentuan Parkir",
       "content": [
         "day 4"
-      ]
-    }
-  },
-  {
-    "keterangan": {
-      "title": "DAY 5",
-      "subtitle": "THE GOLDEN EPILOGUE (SIDANG SENAT & CLOSING)",
-      "date": "Jumat, 4 September 2026",
-      "location": "Universitas Ciputra Surabaya",
-      "time": [
-        "07.00 - 17.00 WIB"
-      ],
-      "parentsGathering": "https://example.com/parents-gathering",
-      "dresscodeDoImage": "/assets/dresscode/day5b.webp",
-      "dresscodeDontImage": "/assets/dresscode/day5s.webp",
-      "do": [
-        "Kemeja Putih",
-        "Jeans Hitam",
-        "Sepatu Hitam"
-      ],
-      "dont": [
-        "Atasan Batik",
-        "Jeans Hitam",
-        "Sepatu Sneakers"
-      ]
-    },
-    "penugasan": {
-      "title": "Refleksi Pribadi",
-      "content": [
-        "day5"
-      ]
-    },
-    "ketentuan": {
-      "title": "Ketentuan Parkir",
-      "content": [
-        "day 5"
       ]
     }
   }
