@@ -45,6 +45,8 @@ export default function Popup({ data, selectedImageId, onClose }: PopupProps) {
     };
   }, []);
 
+  const showParentsGatheringLink = selectedImageId === "8";
+
   const renderContent = () => {
     if (!entry) return null;
     switch (activeTab) {
@@ -53,7 +55,12 @@ export default function Popup({ data, selectedImageId, onClose }: PopupProps) {
       case "ketentuan":
         return <Ketentuan data={entry.ketentuan} />;
       default:
-        return <Keterangan data={entry.keterangan} />;
+        return (
+          <Keterangan
+            data={entry.keterangan}
+            showParentsGatheringLink={showParentsGatheringLink}
+          />
+        );
     }
   };
 

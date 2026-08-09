@@ -17,6 +17,7 @@ export type KeteranganData = {
   // Teks dresscode DO dan DON'T (mis. "Kemeja Putih"). Ini yang diedit admin.
   do: string[];
   dont: string[];
+  parentsGathering?: string;
 };
 
 export type PopupSection = {

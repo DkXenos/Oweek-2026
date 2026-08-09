@@ -1,7 +1,13 @@
 import type { KeteranganData } from "../../../lib/schedule-data";
 import "./keterangan.css";
 
-export default function Keterangan({ data }: { data: KeteranganData }) {
+export default function Keterangan({
+  data,
+  showParentsGatheringLink,
+}: {
+  data: KeteranganData;
+  showParentsGatheringLink: boolean;
+}) {
     return(
         <>
             <h1 className="keterangan-title">{data.title}</h1>
@@ -24,6 +30,9 @@ export default function Keterangan({ data }: { data: KeteranganData }) {
                     </div>
                 ))}
             </div>
+            {showParentsGatheringLink && data.parentsGathering && (
+                <a href={data.parentsGathering} className="keterangan-dresscode-title"><u>Pelajari lebih lanjut --{`>`}</u></a>
+            )}
             <h2 className="keterangan-dresscode-title">Dresscode</h2>
             <div className="keterangan-dresscode-box">
                 <div className="keterangan-dresscode-do">
@@ -47,7 +56,7 @@ export default function Keterangan({ data }: { data: KeteranganData }) {
                             <p key={id} className="dresscode-text">{text}</p>
                         ))}
                     </div>
-                </div>
+                </div>   
             </div>
         </>
     )

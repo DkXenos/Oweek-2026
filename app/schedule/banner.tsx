@@ -15,6 +15,7 @@ export default function Banner({ data }: { data: ScheduleData }) {
     { id: "5", src: "/assets/thumbnail/day3.webp" },
     { id: "6", src: "/assets/thumbnail/day4.webp" },
     { id: "7", src: "/assets/thumbnail/day5.webp" },
+    { id: "8", src: "/assets/thumbnail/day5.webp" },
   ];
 
   const [page, setPage] = useState(0);
