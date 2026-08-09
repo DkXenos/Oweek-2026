@@ -272,7 +272,10 @@ export default function AdminScheduleForm({
               </label>
 
               <label className="admin-field admin-field-wide">
-                <span>Isi Penugasan (satu baris = satu poin)</span>
+                <span>
+                  Isi Penugasan (satu baris = satu poin). Format: &quot;## JUDUL&quot; =
+                  sub-judul, *tebal*, [LINK](https://...) = hyperlink
+                </span>
                 <textarea
                   rows={4}
                   value={entry.penugasan.content}
@@ -304,7 +307,10 @@ export default function AdminScheduleForm({
               </label>
 
               <label className="admin-field admin-field-wide">
-                <span>Isi Ketentuan (satu baris = satu poin)</span>
+                <span>
+                  Isi Ketentuan (satu baris = satu poin). Format: *tebal*,
+                  [LINK](https://...) = hyperlink
+                </span>
                 <textarea
                   rows={4}
                   value={entry.ketentuan.content}

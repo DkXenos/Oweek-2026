@@ -1,5 +1,6 @@
 import "./ketentuan_penugasan.css";
 import type { PopupSection } from "../../../lib/schedule-data";
+import RichText from "./rich-text";
 
 // Satu baris content yang diawali "## " dirender sebagai sub-judul (tanpa bullet),
 // dipakai untuk memisahkan blok penugasan dalam satu hari, mis. penugasan DAY 2
@@ -24,8 +25,11 @@ export default function Penugasan({ data }: { data: PopupSection }) {
 
                     return (
                         <div key={id} className="content-text-box">
-                            <span className="popup-dot" />
-                            <span className="content-text">{content}</span>
+                            {/* Bullet-nya dibuat lewat ::before di .content-bullet supaya
+                                sejajar dengan baris pertama teks, bukan di tengah paragraf. */}
+                            <span className="content-text content-bullet">
+                                <RichText text={content} />
+                            </span>
                         </div>
                     );
                 })}

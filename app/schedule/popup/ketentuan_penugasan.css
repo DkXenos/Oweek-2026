@@ -15,27 +15,52 @@
 .content-text-box {
   width: inherit;
   height: auto;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
   margin-bottom: 0.5rem;
-}
-
-.popup-dot {
-  display: block;
-  flex-shrink: 0;
-  border-radius: 50%;
-  background: #a767d1;
-  width: 1rem;
-  height: 1rem;
 }
 
 .content-text {
   font-family: "Poppins";
   color: #a767d1;
-  display: flex;
-  justify-content: center;
+  display: block;
+  text-align: left;
+  line-height: 1.5;
   font-size: 1rem;
+}
+
+/* Bullet dibuat sebagai ::before dengan satuan em supaya ukurannya ikut
+   font-size .content-text yang responsif, dan pakai hanging indent supaya
+   titiknya sejajar huruf pertama baris pertama — bukan di tengah paragraf. */
+.content-bullet {
+  padding-left: 1.6em;
+  text-indent: -1.6em;
+}
+
+.content-bullet::before {
+  content: "";
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  margin-right: 0.85em;
+  border-radius: 50%;
+  background: #a767d1;
+  vertical-align: 0.02em;
+  text-indent: 0;
+}
+
+/* Penekanan di dalam teks: ditulis *seperti ini* di data. */
+.content-bold {
+  font-family: "Poppins-bold";
+  font-weight: 600;
+}
+
+/* Hyperlink: ditulis [LINK](https://...) di data, selalu buka tab baru. */
+.content-link {
+  font-family: "Poppins-bold";
+  font-weight: 600;
+  color: #f338ac;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  word-break: break-word;
 }
 
 /* Sub-judul di dalam tab penugasan (baris "## ..."): tanpa bullet, dan diberi
@@ -59,13 +84,7 @@
   }
 
   .content-text-box {
-    gap: 3rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 2.2rem;
-    height: 2.2rem;
   }
 
   .content-text {
@@ -80,13 +99,7 @@
   }
 
   .content-text-box {
-    gap: 3rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 2.2rem;
-    height: 2.2rem;
   }
 
   .content-text {
@@ -101,13 +114,7 @@
   }
 
   .content-text-box {
-    gap: 3rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 2.2rem;
-    height: 2.2rem;
   }
 
   .content-text {
@@ -122,13 +129,7 @@
   }
 
   .content-text-box {
-    gap: 3rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 2.2rem;
-    height: 2.2rem;
   }
 
   .content-text {
@@ -143,13 +144,7 @@
   }
 
   .content-text-box {
-    gap: 3rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 2.2rem;
-    height: 2.2rem;
   }
 
   .content-text {
@@ -164,13 +159,7 @@
   }
 
   .content-text-box {
-    gap: 3rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 2.2rem;
-    height: 2.2rem;
   }
 
   .content-text {
@@ -185,13 +174,7 @@
   }
 
   .content-text-box {
-    gap: 3rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 2.2rem;
-    height: 2.2rem;
   }
 
   .content-text {
@@ -206,13 +189,7 @@
   }
 
   .content-text-box {
-    gap: 3rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 2rem;
-    height: 2rem;
   }
 
   .content-text {
@@ -227,13 +204,7 @@
   }
 
   .content-text-box {
-    gap: 3rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 1.8rem;
-    height: 1.8rem;
   }
 
   .content-text {
@@ -248,13 +219,7 @@
   }
 
   .content-text-box {
-    gap: 2rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 1.4rem;
-    height: 1.4rem;
   }
 
   .content-text {
@@ -269,13 +234,7 @@
   }
 
   .content-text-box {
-    gap: 2.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 1.5rem;
-    height: 1.5rem;
   }
 
   .content-text {
@@ -290,13 +249,7 @@
   }
 
   .content-text-box {
-    gap: 2.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 1.4 rem;
-    height: 1.4rem;
   }
 
   .content-text {
@@ -311,13 +264,7 @@
   }
 
   .content-text-box {
-    gap: 2.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 1.2rem;
-    height: 1.2rem;
   }
 
   .content-text {
@@ -332,13 +279,7 @@
   }
 
   .content-text-box {
-    gap: 2.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 1rem;
-    height: 1rem;
   }
 
   .content-text {
@@ -353,13 +294,7 @@
   }
 
   .content-text-box {
-    gap: 2.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 1rem;
-    height: 1rem;
   }
 
   .content-text {
@@ -374,13 +309,7 @@
   }
 
   .content-text-box {
-    gap: 2rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 1rem;
-    height: 1rem;
   }
 
   .content-text {
@@ -395,13 +324,7 @@
   }
 
   .content-text-box {
-    gap: 2rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 1rem;
-    height: 1rem;
   }
 
   .content-text {
@@ -416,13 +339,7 @@
   }
 
   .content-text-box {
-    gap: 2rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 1rem;
-    height: 1rem;
   }
 
   .content-text {
@@ -437,13 +354,7 @@
   }
 
   .content-text-box {
-    gap: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 1.1rem;
-    height: 1.1rem;
   }
 
   .content-text {
@@ -458,13 +369,7 @@
   }
 
   .content-text-box {
-    gap: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 1.1rem;
-    height: 1.1rem;
   }
 
   .content-text {
@@ -479,13 +384,7 @@
   }
 
   .content-text-box {
-    gap: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 0.8rem;
-    height: 0.8rem;
   }
 
   .content-text {
@@ -500,13 +399,7 @@
   }
 
   .content-text-box {
-    gap: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 0.8rem;
-    height: 0.8rem;
   }
 
   .content-text {
@@ -521,13 +414,7 @@
   }
 
   .content-text-box {
-    gap: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 0.8rem;
-    height: 0.8rem;
   }
 
   .content-text {
@@ -542,13 +429,7 @@
   }
 
   .content-text-box {
-    gap: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 1.2rem;
-    height: 1.2rem;
   }
 
   .content-text {
@@ -563,13 +444,7 @@
   }
 
   .content-text-box {
-    gap: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 1.2rem;
-    height: 1.2rem;
   }
 
   .content-text {
@@ -584,13 +459,7 @@
   }
 
   .content-text-box {
-    gap: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 0.8rem;
-    height: 0.8rem;
   }
 
   .content-text {
@@ -605,13 +474,7 @@
   }
 
   .content-text-box {
-    gap: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 0.8rem;
-    height: 0.8rem;
   }
 
   .content-text {
@@ -626,13 +489,7 @@
   }
 
   .content-text-box {
-    gap: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 0.8rem;
-    height: 0.8rem;
   }
 
   .content-text {
@@ -647,13 +504,7 @@
   }
 
   .content-text-box {
-    gap: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 0.7rem;
-    height: 0.7rem;
   }
 
   .content-text {
@@ -668,13 +519,7 @@
   }
 
   .content-text-box {
-    gap: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 0.7rem;
-    height: 0.7rem;
   }
 
   .content-text {
@@ -689,13 +534,7 @@
   }
 
   .content-text-box {
-    gap: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 0.7rem;
-    height: 0.7rem;
   }
 
   .content-text {
@@ -710,13 +549,7 @@
   }
 
   .content-text-box {
-    gap: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 0.7rem;
-    height: 0.7rem;
   }
 
   .content-text {
@@ -731,13 +564,7 @@
   }
 
   .content-text-box {
-    gap: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 0.7rem;
-    height: 0.7rem;
   }
 
   .content-text {
@@ -752,13 +579,7 @@
   }
 
   .content-text-box {
-    gap: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 0.7rem;
-    height: 0.7rem;
   }
 
   .content-text {
@@ -773,13 +594,7 @@
   }
 
   .content-text-box {
-    gap: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 0.7rem;
-    height: 0.7rem;
   }
 
   .content-text {
@@ -794,13 +609,7 @@
   }
 
   .content-text-box {
-    gap: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 0.7rem;
-    height: 0.7rem;
   }
 
   .content-text {
@@ -815,13 +624,7 @@
   }
 
   .content-text-box {
-    gap: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 0.7rem;
-    height: 0.7rem;
   }
 
   .content-text {
@@ -836,13 +639,7 @@
   }
 
   .content-text-box {
-    gap: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 0.7rem;
-    height: 0.7rem;
   }
 
   .content-text {
@@ -857,13 +654,7 @@
   }
 
   .content-text-box {
-    gap: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 0.7rem;
-    height: 0.7rem;
   }
 
   .content-text {
@@ -878,13 +669,7 @@
   }
 
   .content-text-box {
-    gap: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .popup-dot {
-    width: 0.7rem;
-    height: 0.7rem;
   }
 
   .content-text {
