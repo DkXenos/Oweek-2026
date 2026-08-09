@@ -11,7 +11,7 @@
       ],
       "dresscodeDoImage": "",
       "dresscodeDontImage": "",
-      "dresscode": "Kemeja Putih, Jeans Hitam, Sepatu Hitam"
+      "dresscode": "Pakaian Berkerah, Sopan, dan Rapi"
     },
     "penugasan": {
       "title": "Penugasan Pra-Oweek",
@@ -52,7 +52,7 @@
       ],
       "dresscodeDoImage": "/assets/dresscode/17benar.webp",
       "dresscodeDontImage": "/assets/dresscode/17salah.webp",
-      "dresscode": "Kemeja Putih, Jeans Hitam, Sepatu Hitam"
+      "dresscode": "Kemeja Putih, Celana Panjang Hitam / Warna Gelap, Sepatu Hitam"
     },
     "penugasan": {
       "title": "Penugasan 17 Agustus",
@@ -206,7 +206,7 @@
       ],
       "dresscodeDoImage": "/assets/dresscode/day1b.webp",
       "dresscodeDontImage": "/assets/dresscode/day1s.webp",
-      "dresscode": "Kemeja Putih, Jeans Hitam, Sepatu Hitam"
+      "dresscode": "Kemeja/Blouse Putih, Celana Panjang Hitam / Warna Gelap (Dilarang Ripped Jeans), Sepatu Bebas (Menutupi Jari dan Tumit)"
     },
     "penugasan": {
       "title": "Penugasan Day 1",
@@ -243,7 +243,7 @@
       ],
       "dresscodeDoImage": "/assets/dresscode/day2b.webp",
       "dresscodeDontImage": "/assets/dresscode/day2s.webp",
-      "dresscode": "Kemeja Putih, Jeans Hitam, Sepatu Hitam"
+      "dresscode": "Kemeja/Blouse Warna Bebas, Celana Panjang Bebas (Dilarang Ripped Jeans), Sepatu Bebas (Menutupi Jari dan Tumit)"
     },
     "penugasan": {
       "title": "Penugasan Day 2",
@@ -294,7 +294,7 @@
       ],
       "dresscodeDoImage": "/assets/dresscode/day3b.webp",
       "dresscodeDontImage": "/assets/dresscode/day3s.webp",
-      "dresscode": "Kemeja Putih, Jeans Hitam, Sepatu Hitam"
+      "dresscode": "Atasan Batik Berkerah/Blouse (Bukan Outer/Vest), Celana Panjang Bebas (Dilarang Ripped Jeans), Sepatu Bebas (Menutupi Jari dan Tumit)"
     },
     "penugasan": {
       "title": "Penugasan Day 3",
@@ -345,7 +345,7 @@
       ],
       "dresscodeDoImage": "/assets/dresscode/day4b.webp",
       "dresscodeDontImage": "/assets/dresscode/day4s.webp",
-      "dresscode": "Kemeja Putih, Jeans Hitam, Sepatu Hitam"
+      "dresscode": "Kaos Universitas Ciputra Surabaya, Celana Panjang Bebas (Dilarang Ripped Jeans), Sepatu Bebas (Menutupi Jari dan Tumit), Menggunakan Atribut/Aksesoris Sesuai Main Ingredient"
     },
     "penugasan": {
       "title": "Penugasan Day 4 (Selling Day)",
@@ -401,7 +401,7 @@
       ],
       "dresscodeDoImage": "/assets/dresscode/day5b.webp",
       "dresscodeDontImage": "/assets/dresscode/day5s.webp",
-      "dresscode": "Kemeja Putih, Celana Panjang/Rok Hitam atau Warna Gelap, Sepatu Bebas (Menutupi Jari dan Tumit)"
+      "dresscode": "Kemeja Putih, Celana Panjang/Rok Hitam atau Warna Gelap (Rok di Bawah Lutut dan Tidak Ketat), Sepatu Bebas (Menutupi Jari dan Tumit), WAJIB Membawa Jas Almamater"
     },
     "penugasan": {
       "title": "Penugasan Day 5 (Closing)",
