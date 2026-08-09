@@ -1,0 +1,622 @@
+[
+  {
+    "id": "2026-08-03-med",
+    "prodi": "MED",
+    "kategori": "matrikulasi",
+    "hari": "Senin",
+    "tanggal": "2026-08-03",
+    "lokasi": null,
+    "mulai": "08:00",
+    "selesai": "12:00"
+  },
+  {
+    "id": "2026-08-04-med",
+    "prodi": "MED",
+    "kategori": "matrikulasi",
+    "hari": "Selasa",
+    "tanggal": "2026-08-04",
+    "lokasi": null,
+    "mulai": "08:00",
+    "selesai": "12:30"
+  },
+  {
+    "id": "2026-08-05-med",
+    "prodi": "MED",
+    "kategori": "matrikulasi",
+    "hari": "Rabu",
+    "tanggal": "2026-08-05",
+    "lokasi": null,
+    "mulai": "08:00",
+    "selesai": "12:00"
+  },
+  {
+    "id": "2026-08-06-med",
+    "prodi": "MED",
+    "kategori": "matrikulasi",
+    "hari": "Kamis",
+    "tanggal": "2026-08-06",
+    "lokasi": null,
+    "mulai": "08:00",
+    "selesai": "12:00"
+  },
+  {
+    "id": "2026-08-07-med",
+    "prodi": "MED",
+    "kategori": "matrikulasi",
+    "hari": "Jumat",
+    "tanggal": "2026-08-07",
+    "lokasi": null,
+    "mulai": "08:00",
+    "selesai": "11:30"
+  },
+  {
+    "id": "2026-08-10-dem",
+    "prodi": "DEM",
+    "kategori": "matrikulasi",
+    "hari": "Senin",
+    "tanggal": "2026-08-10",
+    "lokasi": null,
+    "mulai": "08:00",
+    "selesai": "12:00"
+  },
+  {
+    "id": "2026-08-10-med",
+    "prodi": "MED",
+    "kategori": "matrikulasi",
+    "hari": "Senin",
+    "tanggal": "2026-08-10",
+    "lokasi": null,
+    "mulai": "08:00",
+    "selesai": "12:00"
+  },
+  {
+    "id": "2026-08-11-dem",
+    "prodi": "DEM",
+    "kategori": "matrikulasi",
+    "hari": "Selasa",
+    "tanggal": "2026-08-11",
+    "lokasi": null,
+    "mulai": "08:00",
+    "selesai": "12:00"
+  },
+  {
+    "id": "2026-08-11-med",
+    "prodi": "MED",
+    "kategori": "matrikulasi",
+    "hari": "Selasa",
+    "tanggal": "2026-08-11",
+    "lokasi": null,
+    "mulai": "08:00",
+    "selesai": "12:30"
+  },
+  {
+    "id": "2026-08-12-dem",
+    "prodi": "DEM",
+    "kategori": "matrikulasi",
+    "hari": "Rabu",
+    "tanggal": "2026-08-12",
+    "lokasi": null,
+    "mulai": "08:00",
+    "selesai": "12:00"
+  },
+  {
+    "id": "2026-08-12-med",
+    "prodi": "MED",
+    "kategori": "matrikulasi",
+    "hari": "Rabu",
+    "tanggal": "2026-08-12",
+    "lokasi": null,
+    "mulai": "08:00",
+    "selesai": "12:00"
+  },
+  {
+    "id": "2026-08-13-dem",
+    "prodi": "DEM",
+    "kategori": "matrikulasi",
+    "hari": "Kamis",
+    "tanggal": "2026-08-13",
+    "lokasi": null,
+    "mulai": "08:00",
+    "selesai": "12:00"
+  },
+  {
+    "id": "2026-08-13-med",
+    "prodi": "MED",
+    "kategori": "matrikulasi",
+    "hari": "Kamis",
+    "tanggal": "2026-08-13",
+    "lokasi": null,
+    "mulai": "08:00",
+    "selesai": "12:00"
+  },
+  {
+    "id": "2026-08-21-vcd",
+    "prodi": "VCD",
+    "kategori": "prodi-day",
+    "hari": "Jumat",
+    "tanggal": "2026-08-21",
+    "lokasi": "Lantai 19",
+    "mulai": "07:00",
+    "selesai": "15:43"
+  },
+  {
+    "id": "2026-08-21-ftp",
+    "prodi": "FTP",
+    "kategori": "prodi-day",
+    "hari": "Jumat",
+    "tanggal": "2026-08-21",
+    "lokasi": "422",
+    "mulai": "07:30",
+    "selesai": "14:30"
+  },
+  {
+    "id": "2026-08-21-ars",
+    "prodi": "ARS",
+    "kategori": "prodi-day",
+    "hari": "Jumat",
+    "tanggal": "2026-08-21",
+    "lokasi": "1834",
+    "mulai": "08:00",
+    "selesai": "12:00"
+  },
+  {
+    "id": "2026-08-24-com",
+    "prodi": "COM",
+    "kategori": "prodi-day",
+    "hari": "Senin",
+    "tanggal": "2026-08-24",
+    "lokasi": "1434 - 1435",
+    "mulai": "07:00",
+    "selesai": "16:32"
+  },
+  {
+    "id": "2026-08-24-dem",
+    "prodi": "DEM",
+    "kategori": "prodi-day",
+    "hari": "Senin",
+    "tanggal": "2026-08-24",
+    "lokasi": "606",
+    "mulai": "07:00",
+    "selesai": null
+  },
+  {
+    "id": "2026-08-24-ibm-rc",
+    "prodi": "IBM-RC",
+    "kategori": "prodi-day",
+    "hari": "Senin",
+    "tanggal": "2026-08-24",
+    "lokasi": "Auditorium",
+    "mulai": "07:00",
+    "selesai": "11:47"
+  },
+  {
+    "id": "2026-08-24-imt-kloter-1",
+    "prodi": "IMT",
+    "kategori": "industry-visit",
+    "hari": "Senin",
+    "tanggal": "2026-08-24",
+    "lokasi": "Cihos (Kloter 1)",
+    "mulai": "07:25",
+    "selesai": "11:00"
+  },
+  {
+    "id": "2026-08-24-ars",
+    "prodi": "ARS",
+    "kategori": "prodi-day",
+    "hari": "Senin",
+    "tanggal": "2026-08-24",
+    "lokasi": "1834",
+    "mulai": "07:30",
+    "selesai": "15:45"
+  },
+  {
+    "id": "2026-08-24-cbz",
+    "prodi": "CBz",
+    "kategori": "prodi-day",
+    "hari": "Senin",
+    "tanggal": "2026-08-24",
+    "lokasi": "404",
+    "mulai": "07:30",
+    "selesai": "16:20"
+  },
+  {
+    "id": "2026-08-24-fdb",
+    "prodi": "FDB",
+    "kategori": "industry-visit",
+    "hari": "Senin",
+    "tanggal": "2026-08-24",
+    "lokasi": "1733",
+    "mulai": "07:30",
+    "selesai": "16:13"
+  },
+  {
+    "id": "2026-08-24-ibm-ic",
+    "prodi": "IBM-IC",
+    "kategori": "prodi-day",
+    "hari": "Senin",
+    "tanggal": "2026-08-24",
+    "lokasi": "Theater 931",
+    "mulai": "07:30",
+    "selesai": "16:20"
+  },
+  {
+    "id": "2026-08-24-isb",
+    "prodi": "ISB",
+    "kategori": "prodi-day",
+    "hari": "Senin",
+    "tanggal": "2026-08-24",
+    "lokasi": "Studio 2 SIFT",
+    "mulai": "07:30",
+    "selesai": null
+  },
+  {
+    "id": "2026-08-24-med",
+    "prodi": "MED",
+    "kategori": "prodi-day",
+    "hari": "Senin",
+    "tanggal": "2026-08-24",
+    "lokasi": "Theater lt. 7",
+    "mulai": "07:30",
+    "selesai": null
+  },
+  {
+    "id": "2026-08-24-vcd",
+    "prodi": "VCD",
+    "kategori": "industry-visit",
+    "hari": "Senin",
+    "tanggal": "2026-08-24",
+    "lokasi": "CV Akronim Design Bureau & PT. Mojiken Interaktif Mandiri",
+    "mulai": "07:30",
+    "selesai": "12:45"
+  },
+  {
+    "id": "2026-08-24-ftp",
+    "prodi": "FTP",
+    "kategori": "industry-visit",
+    "hari": "Senin",
+    "tanggal": "2026-08-24",
+    "lokasi": "PT. Ares Kusuma Jaya",
+    "mulai": "08:00",
+    "selesai": "12:00"
+  },
+  {
+    "id": "2026-08-24-psy",
+    "prodi": "PSY",
+    "kategori": "industry-visit",
+    "hari": "Senin",
+    "tanggal": "2026-08-24",
+    "lokasi": "Tech Space",
+    "mulai": "08:00",
+    "selesai": "16:20"
+  },
+  {
+    "id": "2026-08-24-imt-kloter-2",
+    "prodi": "IMT",
+    "kategori": "industry-visit",
+    "hari": "Senin",
+    "tanggal": "2026-08-24",
+    "lokasi": "Cihos (Kloter 2)",
+    "mulai": "11:55",
+    "selesai": "15:30"
+  },
+  {
+    "id": "2026-08-24-isb-iv",
+    "prodi": "ISB",
+    "kategori": "industry-visit",
+    "hari": "Senin",
+    "tanggal": "2026-08-24",
+    "lokasi": "PT. Jasa Indonesia",
+    "mulai": "13:25",
+    "selesai": "16:00"
+  },
+  {
+    "id": "2026-08-26-dem",
+    "prodi": "DEM",
+    "kategori": "prodi-day",
+    "hari": "Rabu",
+    "tanggal": "2026-08-26",
+    "lokasi": "606",
+    "mulai": "07:00",
+    "selesai": "15:05"
+  },
+  {
+    "id": "2026-08-26-hteb",
+    "prodi": "HTEB",
+    "kategori": "prodi-day",
+    "hari": "Rabu",
+    "tanggal": "2026-08-26",
+    "lokasi": "515",
+    "mulai": "07:00",
+    "selesai": null
+  },
+  {
+    "id": "2026-08-26-ibm-ic",
+    "prodi": "IBM-IC",
+    "kategori": "prodi-day",
+    "hari": "Rabu",
+    "tanggal": "2026-08-26",
+    "lokasi": "Theatre 931",
+    "mulai": "07:00",
+    "selesai": "16:20"
+  },
+  {
+    "id": "2026-08-26-ibm-rc",
+    "prodi": "IBM-RC",
+    "kategori": "prodi-day",
+    "hari": "Rabu",
+    "tanggal": "2026-08-26",
+    "lokasi": "Auditorium",
+    "mulai": "07:00",
+    "selesai": "16:57"
+  },
+  {
+    "id": "2026-08-26-psy",
+    "prodi": "PSY",
+    "kategori": "prodi-day",
+    "hari": "Rabu",
+    "tanggal": "2026-08-26",
+    "lokasi": "Tech Space",
+    "mulai": "07:00",
+    "selesai": "16:20"
+  },
+  {
+    "id": "2026-08-26-acc",
+    "prodi": "ACC",
+    "kategori": "prodi-day",
+    "hari": "Rabu",
+    "tanggal": "2026-08-26",
+    "lokasi": "1032",
+    "mulai": "07:30",
+    "selesai": "11:05"
+  },
+  {
+    "id": "2026-08-26-ars",
+    "prodi": "ARS",
+    "kategori": "prodi-day",
+    "hari": "Rabu",
+    "tanggal": "2026-08-26",
+    "lokasi": null,
+    "mulai": "07:30",
+    "selesai": "11:45"
+  },
+  {
+    "id": "2026-08-26-com",
+    "prodi": "COM",
+    "kategori": "prodi-day",
+    "hari": "Rabu",
+    "tanggal": "2026-08-26",
+    "lokasi": "FiKom Hub",
+    "mulai": "07:30",
+    "selesai": "16:27"
+  },
+  {
+    "id": "2026-08-26-imt",
+    "prodi": "IMT",
+    "kategori": "prodi-day",
+    "hari": "Rabu",
+    "tanggal": "2026-08-26",
+    "lokasi": "Integrity Hall",
+    "mulai": "07:30",
+    "selesai": "16:27"
+  },
+  {
+    "id": "2026-08-26-isb",
+    "prodi": "ISB",
+    "kategori": "prodi-day",
+    "hari": "Rabu",
+    "tanggal": "2026-08-26",
+    "lokasi": "Integrity Hall",
+    "mulai": "07:30",
+    "selesai": "16:20"
+  },
+  {
+    "id": "2026-08-26-med",
+    "prodi": "MED",
+    "kategori": "prodi-day",
+    "hari": "Rabu",
+    "tanggal": "2026-08-26",
+    "lokasi": "Theater lt. 7",
+    "mulai": "07:30",
+    "selesai": "15:42"
+  },
+  {
+    "id": "2026-08-26-vcd",
+    "prodi": "VCD",
+    "kategori": "prodi-day",
+    "hari": "Rabu",
+    "tanggal": "2026-08-26",
+    "lokasi": "1931",
+    "mulai": "07:30",
+    "selesai": "16:40"
+  },
+  {
+    "id": "2026-08-26-cb-bogasari",
+    "prodi": "CB",
+    "kategori": "industry-visit",
+    "hari": "Rabu",
+    "tanggal": "2026-08-26",
+    "lokasi": "Bogasari",
+    "mulai": "07:45",
+    "selesai": "13:15"
+  },
+  {
+    "id": "2026-08-26-cb-hotel-cw",
+    "prodi": "CB",
+    "kategori": "industry-visit",
+    "hari": "Rabu",
+    "tanggal": "2026-08-26",
+    "lokasi": "Hotel CW",
+    "mulai": "07:45",
+    "selesai": "12:30"
+  },
+  {
+    "id": "2026-08-26-fdb",
+    "prodi": "FDB",
+    "kategori": "prodi-day",
+    "hari": "Rabu",
+    "tanggal": "2026-08-26",
+    "lokasi": null,
+    "mulai": "08:30",
+    "selesai": "11:10"
+  },
+  {
+    "id": "2026-08-27-ars",
+    "prodi": "ARS",
+    "kategori": "industry-visit",
+    "hari": "Kamis",
+    "tanggal": "2026-08-27",
+    "lokasi": "Citraland Utara",
+    "mulai": "07:00",
+    "selesai": "11:30"
+  },
+  {
+    "id": "2026-08-27-dem",
+    "prodi": "DEM",
+    "kategori": "prodi-day",
+    "hari": "Kamis",
+    "tanggal": "2026-08-27",
+    "lokasi": "606",
+    "mulai": "07:00",
+    "selesai": "15:05"
+  },
+  {
+    "id": "2026-08-27-hteb",
+    "prodi": "HTEB",
+    "kategori": "prodi-day",
+    "hari": "Kamis",
+    "tanggal": "2026-08-27",
+    "lokasi": null,
+    "mulai": "07:00",
+    "selesai": "16:12"
+  },
+  {
+    "id": "2026-08-27-imt",
+    "prodi": "IMT",
+    "kategori": "prodi-day",
+    "hari": "Kamis",
+    "tanggal": "2026-08-27",
+    "lokasi": "504",
+    "mulai": "07:00",
+    "selesai": "16:27"
+  },
+  {
+    "id": "2026-08-27-psy",
+    "prodi": "PSY",
+    "kategori": "industry-visit",
+    "hari": "Kamis",
+    "tanggal": "2026-08-27",
+    "lokasi": null,
+    "mulai": "07:00",
+    "selesai": "12:50"
+  },
+  {
+    "id": "2026-08-27-acc",
+    "prodi": "ACC",
+    "kategori": "prodi-day",
+    "hari": "Kamis",
+    "tanggal": "2026-08-27",
+    "lokasi": "1032",
+    "mulai": "07:30",
+    "selesai": null
+  },
+  {
+    "id": "2026-08-27-ftp",
+    "prodi": "FTP",
+    "kategori": "prodi-day",
+    "hari": "Kamis",
+    "tanggal": "2026-08-27",
+    "lokasi": "505A dan 227",
+    "mulai": "07:30",
+    "selesai": "15:30"
+  },
+  {
+    "id": "2026-08-27-ibm-ic",
+    "prodi": "IBM-IC",
+    "kategori": "prodi-day",
+    "hari": "Kamis",
+    "tanggal": "2026-08-27",
+    "lokasi": null,
+    "mulai": "07:30",
+    "selesai": "11:00"
+  },
+  {
+    "id": "2026-08-27-isb",
+    "prodi": "ISB",
+    "kategori": "prodi-day",
+    "hari": "Kamis",
+    "tanggal": "2026-08-27",
+    "lokasi": "Studio 2 SIFT",
+    "mulai": "07:30",
+    "selesai": "16:27"
+  },
+  {
+    "id": "2026-08-27-med",
+    "prodi": "MED",
+    "kategori": "prodi-day",
+    "hari": "Kamis",
+    "tanggal": "2026-08-27",
+    "lokasi": "Theater lt. 7",
+    "mulai": "07:30",
+    "selesai": "15:35"
+  },
+  {
+    "id": "2026-08-27-vcd",
+    "prodi": "VCD",
+    "kategori": "prodi-day",
+    "hari": "Kamis",
+    "tanggal": "2026-08-27",
+    "lokasi": "Lab. Komputer Lt. 12",
+    "mulai": "07:30",
+    "selesai": "16:40"
+  },
+  {
+    "id": "2026-08-27-cbz",
+    "prodi": "CBz",
+    "kategori": "prodi-day",
+    "hari": "Kamis",
+    "tanggal": "2026-08-27",
+    "lokasi": "107",
+    "mulai": "08:00",
+    "selesai": "13:15"
+  },
+  {
+    "id": "2026-08-27-ibm-rc",
+    "prodi": "IBM-RC",
+    "kategori": "prodi-day",
+    "hari": "Kamis",
+    "tanggal": "2026-08-27",
+    "lokasi": "Auditorium",
+    "mulai": "08:00",
+    "selesai": "15:00"
+  },
+  {
+    "id": "2026-08-27-fdb",
+    "prodi": "FDB",
+    "kategori": "prodi-day",
+    "hari": "Kamis",
+    "tanggal": "2026-08-27",
+    "lokasi": null,
+    "mulai": "08:30",
+    "selesai": "11:10"
+  },
+  {
+    "id": "2026-08-27-com-jtv",
+    "prodi": "COM",
+    "kategori": "industry-visit",
+    "hari": "Kamis",
+    "tanggal": "2026-08-27",
+    "lokasi": "JTV Ketintang",
+    "mulai": "10:00",
+    "selesai": "16:05"
+  },
+  {
+    "id": "2026-08-27-com-jamoe-iboe",
+    "prodi": "COM",
+    "kategori": "industry-visit",
+    "hari": "Kamis",
+    "tanggal": "2026-08-27",
+    "lokasi": "Jamoe Iboe",
+    "mulai": "10:00",
+    "selesai": "14:40"
+  }
+]

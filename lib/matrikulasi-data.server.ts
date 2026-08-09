@@ -1,19 +1,43 @@
 import { promises as fs } from "fs";
 import path from "path";
 import type { PopupSection } from "./schedule-data";
-import type { MatrikulasiData } from "./matrikulasi-data";
+import type {
+  MatrikulasiData,
+  MatrikulasiJadwal,
+  MatrikulasiKategori,
+  MatrikulasiProdi,
+} from "./matrikulasi-data";
+import { KATEGORI_URUT } from "./matrikulasi-data";
 
 // Hanya untuk server component. Tipe + helper yang dipakai client ada di
 // matrikulasi-data.ts (tanpa fs), supaya bundle client tidak ikut menarik
 // modul node dan build tidak gagal "Can't resolve 'fs'".
+//
+// Dua file terpisah, sengaja:
+// - matrikulasi-data.json  : konten per prodi (penugasan & ketentuan), diedit tim.
+// - matrikulasi-jadwal.json: jadwal mentah 3 acara, gampang di-replace utuh
+//   kalau ada revisi tanggal/lokasi tanpa menyentuh konten penugasan.
 const matrikulasiDataPath = path.join(
   process.cwd(),
   "data",
   "matrikulasi-data.json",
 );
+const matrikulasiJadwalPath = path.join(
+  process.cwd(),
+  "data",
+  "matrikulasi-jadwal.json",
+);
+
+const KATEGORI_VALID = new Set<string>(
+  KATEGORI_URUT.map(({ kategori }) => kategori),
+);
 
 function isStringArray(value: unknown): value is string[] {
   return Array.isArray(value) && value.every((item) => typeof item === "string");
+}
+
+function isNullableString(value: unknown): value is string | null {
+  return value === null || typeof value === "string";
 }
 
 function assertSection(
@@ -30,21 +54,23 @@ function assertSection(
   }
 }
 
-function assertMatrikulasiData(
+type MatrikulasiKonten = Omit<MatrikulasiData, "jadwal">;
+
+function assertMatrikulasiKonten(
   value: unknown,
-): asserts value is MatrikulasiData {
+): asserts value is MatrikulasiKonten {
   if (
     !value ||
     typeof value !== "object" ||
-    typeof (value as MatrikulasiData).bannerId !== "string" ||
-    typeof (value as MatrikulasiData).placeholder !== "string" ||
-    !Array.isArray((value as MatrikulasiData).prodi)
+    typeof (value as MatrikulasiKonten).bannerId !== "string" ||
+    typeof (value as MatrikulasiKonten).placeholder !== "string" ||
+    !Array.isArray((value as MatrikulasiKonten).prodi)
   ) {
     throw new Error("Format matrikulasi data tidak valid.");
   }
 
   const seen = new Set<string>();
-  for (const prodi of (value as MatrikulasiData).prodi) {
+  for (const prodi of (value as MatrikulasiKonten).prodi) {
     if (
       !prodi ||
       typeof prodi !== "object" ||
@@ -64,14 +90,59 @@ function assertMatrikulasiData(
   }
 }
 
+function assertMatrikulasiJadwal(
+  value: unknown,
+): asserts value is MatrikulasiJadwal[] {
+  if (!Array.isArray(value)) {
+    throw new Error("Jadwal matrikulasi harus berupa array.");
+  }
+
+  for (const item of value) {
+    if (
+      !item ||
+      typeof item !== "object" ||
+      typeof item.id !== "string" ||
+      typeof item.prodi !== "string" ||
+      typeof item.hari !== "string" ||
+      typeof item.tanggal !== "string" ||
+      typeof item.mulai !== "string" ||
+      !isNullableString(item.lokasi) ||
+      !isNullableString(item.selesai)
+    ) {
+      throw new Error("Format baris jadwal matrikulasi tidak valid.");
+    }
+    if (!KATEGORI_VALID.has(item.kategori as MatrikulasiKategori)) {
+      throw new Error(`Kategori jadwal tidak dikenal: ${String(item.kategori)}.`);
+    }
+  }
+}
+
 export async function getMatrikulasiData(): Promise<MatrikulasiData | null> {
   // Sengaja null-safe: kalau file belum ada / rusak, halaman schedule tetap
   // jalan dan popup matrikulasi cuma kembali ke perilaku normal (tanpa dropdown).
   try {
-    const file = await fs.readFile(matrikulasiDataPath, "utf8");
-    const data: unknown = JSON.parse(file);
-    assertMatrikulasiData(data);
-    return data;
+    const [kontenFile, jadwalFile] = await Promise.all([
+      fs.readFile(matrikulasiDataPath, "utf8"),
+      fs.readFile(matrikulasiJadwalPath, "utf8"),
+    ]);
+
+    const konten: unknown = JSON.parse(kontenFile);
+    const jadwal: unknown = JSON.parse(jadwalFile);
+    assertMatrikulasiKonten(konten);
+    assertMatrikulasiJadwal(jadwal);
+
+    // Kode prodi di jadwal harus punya pasangan di matrikulasi-data.json,
+    // kalau tidak sesinya tidak akan pernah tampil di dropdown mana pun.
+    const kodeProdi = new Set(konten.prodi.map((prodi: MatrikulasiProdi) => prodi.id));
+    for (const item of jadwal) {
+      if (!kodeProdi.has(item.prodi)) {
+        throw new Error(
+          `Prodi "${item.prodi}" ada di jadwal tapi tidak ada di matrikulasi-data.json.`,
+        );
+      }
+    }
+
+    return { ...konten, jadwal };
   } catch {
     return null;
   }

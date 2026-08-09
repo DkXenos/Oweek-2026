@@ -8,7 +8,11 @@ import Ketentuan from "./ketentuan";
 import ProdiSelect from "./prodi-select";
 import type { ScheduleData } from "../../../lib/schedule-data";
 import type { MatrikulasiData } from "../../../lib/matrikulasi-data";
-import { findProdi, isMatrikulasiBanner } from "../../../lib/matrikulasi-data";
+import {
+  findProdi,
+  getAgendaGroups,
+  isMatrikulasiBanner,
+} from "../../../lib/matrikulasi-data";
 
 type PopupTab = "keterangan" | "penugasan" | "ketentuan";
 
@@ -59,14 +63,16 @@ export default function Popup({
 
   // Kasus khusus matrikulasi: user WAJIB pilih prodi dulu. Selama belum
   // memilih, popup hanya menampilkan dropdown — tidak ada konten sama sekali,
-  // termasuk tab keterangan. Setelah prodi dipilih, keterangan (dresscode dll)
-  // tetap diambil dari schedule-data, sedangkan penugasan & ketentuan diambil
-  // dari data prodi terpilih.
+  // termasuk tab keterangan. Setelah prodi dipilih:
+  // - keterangan: judul & dresscode dari schedule-data, tapi tanggal/lokasi/jam
+  //   diganti agenda 3 acara (matrikulasi, industry visit, prodi day) prodi itu;
+  // - penugasan & ketentuan: dari data prodi terpilih.
   const isMatrikulasi = isMatrikulasiBanner(matrikulasiData, selectedImageId);
   const selectedProdi = isMatrikulasi
     ? findProdi(matrikulasiData, selectedProdiId)
     : null;
   const isContentLocked = isMatrikulasi && !selectedProdi;
+  const agenda = getAgendaGroups(matrikulasiData, selectedProdi?.id ?? null);
 
   // Kalau banner yang dibuka berganti, reset pilihan prodi.
   useEffect(() => {
@@ -85,6 +91,7 @@ export default function Popup({
           <Keterangan
             data={entry.keterangan}
             showParentsGatheringLink={showParentsGatheringLink}
+            agenda={agenda}
           />
         );
     }

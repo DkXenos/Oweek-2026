@@ -1,12 +1,18 @@
 import type { KeteranganData } from "../../../lib/schedule-data";
+import type { AgendaGroup } from "../../../lib/matrikulasi-data";
+import Agenda from "./agenda";
 import "./keterangan.css";
 
 export default function Keterangan({
   data,
   showParentsGatheringLink,
+  // Khusus banner matrikulasi: isinya 3 acara dengan tanggal/lokasi/jam
+  // masing-masing, jadi menggantikan baris date/location/time bawaan.
+  agenda,
 }: {
   data: KeteranganData;
   showParentsGatheringLink: boolean;
+  agenda?: AgendaGroup[];
 }) {
     return(
         <>
@@ -15,20 +21,26 @@ export default function Keterangan({
                 {data.subtitle && data.subtitle.trim() !== "" && (
                     <div className="keterangan-subtitle">{data.subtitle}</div>
                 )}
-                <div className="keterangan-item">
-                    <span className="keterangan-dot" />
-                    <span className="keterangan-detail-text">{data.date}</span>
-                </div>
-                <div className="keterangan-item">
-                    <span className="keterangan-dot" />
-                    <span className="keterangan-detail-text">{data.location}</span>
-                </div>
-                {data.time.map((time, id) => (
-                    <div key={id} className="keterangan-item">
-                        <span className="keterangan-dot" />
-                        <span className="keterangan-detail-text">{time}</span>
-                    </div>
-                ))}
+                {agenda && agenda.length > 0 ? (
+                    <Agenda groups={agenda} />
+                ) : (
+                    <>
+                        <div className="keterangan-item">
+                            <span className="keterangan-dot" />
+                            <span className="keterangan-detail-text">{data.date}</span>
+                        </div>
+                        <div className="keterangan-item">
+                            <span className="keterangan-dot" />
+                            <span className="keterangan-detail-text">{data.location}</span>
+                        </div>
+                        {data.time.map((time, id) => (
+                            <div key={id} className="keterangan-item">
+                                <span className="keterangan-dot" />
+                                <span className="keterangan-detail-text">{time}</span>
+                            </div>
+                        ))}
+                    </>
+                )}
             </div>
             {showParentsGatheringLink && data.parentsGathering && (
                 <a href={data.parentsGathering} className="keterangan-dresscode-title"><u>Pelajari lebih lanjut --{`>`}</u></a>

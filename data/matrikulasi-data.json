@@ -3,123 +3,259 @@
   "placeholder": "Pilih Program Studi",
   "prodi": [
     {
-      "id": "ibm",
-      "label": "International Business Management",
+      "id": "ACC",
+      "label": "ACC",
       "penugasan": {
-        "title": "penugasan matrikulasi IBM",
-        "content": ["placeholder penugasan IBM"]
+        "title": "Penugasan ACC",
+        "content": [
+          "placeholder penugasan ACC"
+        ]
       },
       "ketentuan": {
-        "title": "ketentuan matrikulasi IBM",
-        "content": ["placeholder ketentuan IBM"]
+        "title": "Ketentuan ACC",
+        "content": [
+          "placeholder ketentuan ACC"
+        ]
       }
     },
     {
-      "id": "vcd",
-      "label": "Visual Communication Design",
+      "id": "ARS",
+      "label": "ARS",
       "penugasan": {
-        "title": "penugasan matrikulasi VCD",
-        "content": ["placeholder penugasan VCD"]
+        "title": "Penugasan ARS",
+        "content": [
+          "placeholder penugasan ARS"
+        ]
       },
       "ketentuan": {
-        "title": "ketentuan matrikulasi VCD",
-        "content": ["placeholder ketentuan VCD"]
+        "title": "Ketentuan ARS",
+        "content": [
+          "placeholder ketentuan ARS"
+        ]
       }
     },
     {
-      "id": "ipd",
-      "label": "Product Design",
+      "id": "CB",
+      "label": "CB",
       "penugasan": {
-        "title": "penugasan matrikulasi Product Design",
-        "content": ["placeholder penugasan Product Design"]
+        "title": "Penugasan CB",
+        "content": [
+          "placeholder penugasan CB"
+        ]
       },
       "ketentuan": {
-        "title": "ketentuan matrikulasi Product Design",
-        "content": ["placeholder ketentuan Product Design"]
+        "title": "Ketentuan CB",
+        "content": [
+          "placeholder ketentuan CB"
+        ]
       }
     },
     {
-      "id": "iar",
-      "label": "Interior Architecture",
+      "id": "CBz",
+      "label": "CBz",
       "penugasan": {
-        "title": "penugasan matrikulasi Interior Architecture",
-        "content": ["placeholder penugasan Interior Architecture"]
+        "title": "Penugasan CBz",
+        "content": [
+          "placeholder penugasan CBz"
+        ]
       },
       "ketentuan": {
-        "title": "ketentuan matrikulasi Interior Architecture",
-        "content": ["placeholder ketentuan Interior Architecture"]
+        "title": "Ketentuan CBz",
+        "content": [
+          "placeholder ketentuan CBz"
+        ]
       }
     },
     {
-      "id": "ift",
-      "label": "Informatics",
+      "id": "COM",
+      "label": "COM",
       "penugasan": {
-        "title": "penugasan matrikulasi Informatics",
-        "content": ["placeholder penugasan Informatics"]
+        "title": "Penugasan COM",
+        "content": [
+          "placeholder penugasan COM"
+        ]
       },
       "ketentuan": {
-        "title": "ketentuan matrikulasi Informatics",
-        "content": ["placeholder ketentuan Informatics"]
+        "title": "Ketentuan COM",
+        "content": [
+          "placeholder ketentuan COM"
+        ]
       }
     },
     {
-      "id": "acc",
-      "label": "Accounting",
+      "id": "DEM",
+      "label": "DEM",
       "penugasan": {
-        "title": "penugasan matrikulasi Accounting",
-        "content": ["placeholder penugasan Accounting"]
+        "title": "Penugasan DEM",
+        "content": [
+          "placeholder penugasan DEM"
+        ]
       },
       "ketentuan": {
-        "title": "ketentuan matrikulasi Accounting",
-        "content": ["placeholder ketentuan Accounting"]
+        "title": "Ketentuan DEM",
+        "content": [
+          "placeholder ketentuan DEM"
+        ]
       }
     },
     {
-      "id": "psy",
-      "label": "Psychology",
+      "id": "FDB",
+      "label": "FDB",
       "penugasan": {
-        "title": "penugasan matrikulasi Psychology",
-        "content": ["placeholder penugasan Psychology"]
+        "title": "Penugasan FDB",
+        "content": [
+          "placeholder penugasan FDB"
+        ]
       },
       "ketentuan": {
-        "title": "ketentuan matrikulasi Psychology",
-        "content": ["placeholder ketentuan Psychology"]
+        "title": "Ketentuan FDB",
+        "content": [
+          "placeholder ketentuan FDB"
+        ]
       }
     },
     {
-      "id": "clb",
-      "label": "Culinary Business",
+      "id": "FTP",
+      "label": "FTP",
       "penugasan": {
-        "title": "penugasan matrikulasi Culinary Business",
-        "content": ["placeholder penugasan Culinary Business"]
+        "title": "Penugasan FTP",
+        "content": [
+          "placeholder penugasan FTP"
+        ]
       },
       "ketentuan": {
-        "title": "ketentuan matrikulasi Culinary Business",
-        "content": ["placeholder ketentuan Culinary Business"]
+        "title": "Ketentuan FTP",
+        "content": [
+          "placeholder ketentuan FTP"
+        ]
       }
     },
     {
-      "id": "hto",
-      "label": "Hotel & Tourism Business",
+      "id": "HTEB",
+      "label": "HTEB",
       "penugasan": {
-        "title": "penugasan matrikulasi Hotel & Tourism Business",
-        "content": ["placeholder penugasan Hotel & Tourism Business"]
+        "title": "Penugasan HTEB",
+        "content": [
+          "placeholder penugasan HTEB"
+        ]
       },
       "ketentuan": {
-        "title": "ketentuan matrikulasi Hotel & Tourism Business",
-        "content": ["placeholder ketentuan Hotel & Tourism Business"]
+        "title": "Ketentuan HTEB",
+        "content": [
+          "placeholder ketentuan HTEB"
+        ]
       }
     },
     {
-      "id": "ftb",
-      "label": "Fashion Product Design & Business",
+      "id": "IBM-IC",
+      "label": "IBM-IC",
       "penugasan": {
-        "title": "penugasan matrikulasi Fashion",
-        "content": ["placeholder penugasan Fashion"]
+        "title": "Penugasan IBM-IC",
+        "content": [
+          "placeholder penugasan IBM-IC"
+        ]
       },
       "ketentuan": {
-        "title": "ketentuan matrikulasi Fashion",
-        "content": ["placeholder ketentuan Fashion"]
+        "title": "Ketentuan IBM-IC",
+        "content": [
+          "placeholder ketentuan IBM-IC"
+        ]
+      }
+    },
+    {
+      "id": "IBM-RC",
+      "label": "IBM-RC",
+      "penugasan": {
+        "title": "Penugasan IBM-RC",
+        "content": [
+          "placeholder penugasan IBM-RC"
+        ]
+      },
+      "ketentuan": {
+        "title": "Ketentuan IBM-RC",
+        "content": [
+          "placeholder ketentuan IBM-RC"
+        ]
+      }
+    },
+    {
+      "id": "IMT",
+      "label": "IMT",
+      "penugasan": {
+        "title": "Penugasan IMT",
+        "content": [
+          "placeholder penugasan IMT"
+        ]
+      },
+      "ketentuan": {
+        "title": "Ketentuan IMT",
+        "content": [
+          "placeholder ketentuan IMT"
+        ]
+      }
+    },
+    {
+      "id": "ISB",
+      "label": "ISB",
+      "penugasan": {
+        "title": "Penugasan ISB",
+        "content": [
+          "placeholder penugasan ISB"
+        ]
+      },
+      "ketentuan": {
+        "title": "Ketentuan ISB",
+        "content": [
+          "placeholder ketentuan ISB"
+        ]
+      }
+    },
+    {
+      "id": "MED",
+      "label": "MED",
+      "penugasan": {
+        "title": "Penugasan MED",
+        "content": [
+          "placeholder penugasan MED"
+        ]
+      },
+      "ketentuan": {
+        "title": "Ketentuan MED",
+        "content": [
+          "placeholder ketentuan MED"
+        ]
+      }
+    },
+    {
+      "id": "PSY",
+      "label": "PSY",
+      "penugasan": {
+        "title": "Penugasan PSY",
+        "content": [
+          "placeholder penugasan PSY"
+        ]
+      },
+      "ketentuan": {
+        "title": "Ketentuan PSY",
+        "content": [
+          "placeholder ketentuan PSY"
+        ]
+      }
+    },
+    {
+      "id": "VCD",
+      "label": "VCD",
+      "penugasan": {
+        "title": "Penugasan VCD",
+        "content": [
+          "placeholder penugasan VCD"
+        ]
+      },
+      "ketentuan": {
+        "title": "Ketentuan VCD",
+        "content": [
+          "placeholder ketentuan VCD"
+        ]
       }
     }
   ]
