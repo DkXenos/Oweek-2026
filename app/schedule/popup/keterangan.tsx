@@ -15,6 +15,13 @@ export default function Keterangan({
   agenda?: AgendaGroup[];
 }) {
     const isAgenda = Boolean(agenda && agenda.length > 0);
+    // Path gambar bisa kosong selama datanya belum diisi. <img src=""> bikin
+    // browser me-request ulang halamannya, jadi elemennya jangan dirender.
+    const doImage = data.dresscodeDoImage?.trim() ?? "";
+    const dontImage = data.dresscodeDontImage?.trim() ?? "";
+    const dresscodeText = data.dresscode?.trim() ?? "";
+    const showDresscode =
+        !isAgenda && (doImage !== "" || dontImage !== "" || dresscodeText !== "");
 
     return(
         <>
@@ -50,24 +57,30 @@ export default function Keterangan({
             {/* Banner matrikulasi punya dresscode sendiri per hari di dalam
                 agenda, jadi blok dresscode + gambar DO/DON'T di sini disembunyikan
                 khusus untuk banner itu. Banner lain tidak berubah. */}
-            {!isAgenda && (
+            {showDresscode && (
                 <>
                     <h2 className="keterangan-dresscode-title">Dresscode</h2>
-                    <div className="keterangan-dresscode-box">
-                        <div className="keterangan-dresscode-do">
-                            <div className="image-box">
-                                <img src={data.dresscodeDoImage} alt="" />
-                            </div>
+                    {(doImage !== "" || dontImage !== "") && (
+                        <div className="keterangan-dresscode-box">
+                            {doImage !== "" && (
+                                <div className="keterangan-dresscode-do">
+                                    <div className="image-box">
+                                        <img src={doImage} alt="" />
+                                    </div>
+                                </div>
+                            )}
+                            {dontImage !== "" && (
+                                <div className="keterangan-dresscode-dont">
+                                    <div className="image-box">
+                                        <img src={dontImage} alt="" />
+                                    </div>
+                                </div>
+                            )}
                         </div>
-                        <div className="keterangan-dresscode-dont">
-                            <div className="image-box">
-                                <img src={data.dresscodeDontImage} alt="" />
-                            </div>
-                        </div>
-                    </div>
+                    )}
                     {/* Satu baris teks dresscode, di tengah, di bawah kedua gambar. */}
-                    {data.dresscode && data.dresscode.trim() !== "" && (
-                        <p className="dresscode-text keterangan-dresscode-text">{data.dresscode}</p>
+                    {dresscodeText !== "" && (
+                        <p className="dresscode-text keterangan-dresscode-text">{dresscodeText}</p>
                     )}
                 </>
             )}
