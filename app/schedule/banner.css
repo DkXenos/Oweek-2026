@@ -18,16 +18,20 @@
   margin-right: auto;
 }
 
+/* Dot pagination memakai bahasa visual yang sama dengan tombol tab popup:
+   isian krem/emas dengan outline gradasi emas (trik padding-box + border-box),
+   lalu berubah jadi gradasi ungu saat aktif. border-width-nya ikut diperbesar
+   di tiap breakpoint bersama width/height supaya tebalnya proporsional. */
 .pagination-dot {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  background: #b8b8b8;
+  border: 0.13rem solid transparent;
+  background:
+    linear-gradient(90deg, #fbf7ee, #ffed8f) padding-box,
+    linear-gradient(90deg, #e5a82f, #f8e89b, #e5a82f) border-box;
   cursor: pointer;
-  transition:
-    background-color 0.2s ease,
-    transform 0.2s ease;
-  /* border: 0.1rem solid #919191; */
+  transition: transform 0.2s ease;
 }
 
 .pagination-dot:hover,
@@ -36,7 +40,9 @@
 }
 
 .pagination-dot.active {
-  background: #EA6C9E;
+  background:
+    linear-gradient(90deg, #dbacea, #a869d1) padding-box,
+    linear-gradient(90deg, #e5a82f, #f8e89b, #e5a82f) border-box;
   transform: scale(1.3);
 }
 
@@ -249,6 +255,7 @@
   .pagination-dot {
     width: 4rem;
     height: 4rem;
+    border-width: 0.5rem;
   }
 
   /* popup......................................................................................... */
@@ -335,6 +342,7 @@
   .pagination-dot {
     width: 3.5rem;
     height: 3.5rem;
+    border-width: 0.44rem;
   }
 
   /* popup......................................................................................... */
@@ -421,6 +429,7 @@
   .pagination-dot {
     width: 3rem;
     height: 3rem;
+    border-width: 0.38rem;
   }
 
   /* popup......................................................................................... */
@@ -507,6 +516,7 @@
   .pagination-dot {
     width: 3rem;
     height: 3rem;
+    border-width: 0.38rem;
   }
 
   /* popup......................................................................................... */
@@ -593,6 +603,7 @@
   .pagination-dot {
     width: 3rem;
     height: 3rem;
+    border-width: 0.38rem;
   }
 
   /* popup......................................................................................... */
@@ -679,6 +690,7 @@
   .pagination-dot {
     width: 2.5rem;
     height: 2.5rem;
+    border-width: 0.31rem;
   }
 
   /* popup......................................................................................... */
@@ -765,6 +777,7 @@
   .pagination-dot {
     width: 2.25rem;
     height: 2.25rem;
+    border-width: 0.28rem;
   }
 
   /* popup......................................................................................... */
@@ -851,6 +864,7 @@
   .pagination-dot {
     width: 2.25rem;
     height: 2.25rem;
+    border-width: 0.28rem;
   }
 
   /* popup......................................................................................... */
@@ -937,6 +951,7 @@
   .pagination-dot {
     width: 2.1rem;
     height: 2.1rem;
+    border-width: 0.26rem;
   }
 
   /* popup......................................................................................... */
@@ -1023,6 +1038,7 @@
   .pagination-dot {
     width: 2.5rem;
     height: 2.5rem;
+    border-width: 0.31rem;
   }
 
   /* popup......................................................................................... */
@@ -1109,6 +1125,7 @@
   .pagination-dot {
     width: 1.8rem;
     height: 1.8rem;
+    border-width: 0.23rem;
   }
 
   /* popup......................................................................................... */
@@ -1195,6 +1212,7 @@
   .pagination-dot {
     width: 1.8rem;
     height: 1.8rem;
+    border-width: 0.23rem;
   }
 
   /* popup......................................................................................... */
@@ -1281,6 +1299,7 @@
   .pagination-dot {
     width: 1.6rem;
     height: 1.6rem;
+    border-width: 0.2rem;
   }
 
   /* popup......................................................................................... */
@@ -1367,6 +1386,7 @@
   .pagination-dot {
     width: 1.6rem;
     height: 1.6rem;
+    border-width: 0.2rem;
   }
 
 
@@ -1454,6 +1474,7 @@
   .pagination-dot {
     width: 1.6rem;
     height: 1.6rem;
+    border-width: 0.2rem;
   }
 
   /* popup......................................................................................... */
@@ -1540,6 +1561,7 @@
   .pagination-dot {
     width: 1.6rem;
     height: 1.6rem;
+    border-width: 0.2rem;
   }
 
   /* popup......................................................................................... */
@@ -1626,6 +1648,7 @@
   .pagination-dot {
     width: 1.5rem;
     height: 1.5rem;
+    border-width: 0.19rem;
   }
 
   /* popup......................................................................................... */
@@ -1712,6 +1735,7 @@
   .pagination-dot {
     width: 1.4rem;
     height: 1.4rem;
+    border-width: 0.17rem;
   }
 
   /* popup......................................................................................... */
@@ -1798,6 +1822,7 @@
   .pagination-dot {
     width: 1.7rem;
     height: 1.7rem;
+    border-width: 0.21rem;
   }
 
   /* popup......................................................................................... */
@@ -1884,6 +1909,7 @@
   .pagination-dot {
     width: 1.4rem;
     height: 1.4rem;
+    border-width: 0.17rem;
   }
 
   /* popup......................................................................................... */
@@ -1970,6 +1996,7 @@
   .pagination-dot {
     width: 1.2rem;
     height: 1.2rem;
+    border-width: 0.15rem;
   }
 
   /* popup......................................................................................... */
@@ -2056,6 +2083,7 @@
   .pagination-dot {
     width: 1.2rem;
     height: 1.2rem;
+    border-width: 0.15rem;
   }
 
   /* popup......................................................................................... */
@@ -2142,6 +2170,7 @@
   .pagination-dot {
     width: 1.2rem;
     height: 1.2rem;
+    border-width: 0.15rem;
   }
 
   /* popup......................................................................................... */
@@ -2228,6 +2257,7 @@
   .pagination-dot {
     width: 1.7rem;
     height: 1.7rem;
+    border-width: 0.21rem;
   }
 
   /* popup......................................................................................... */
@@ -2314,6 +2344,7 @@
   .pagination-dot {
     width: 1.7rem;
     height: 1.7rem;
+    border-width: 0.21rem;
   }
 
   /* popup......................................................................................... */
@@ -2400,6 +2431,7 @@
   .pagination-dot {
     width: 1.2rem;
     height: 1.2rem;
+    border-width: 0.15rem;
   }
 
   /* popup......................................................................................... */
@@ -2486,6 +2518,7 @@
   .pagination-dot {
     width: 1.5rem;
     height: 1.5rem;
+    border-width: 0.19rem;
   }
 
   /* popup......................................................................................... */
@@ -2572,6 +2605,7 @@
   .pagination-dot {
     width: 1.3rem;
     height: 1.3rem;
+    border-width: 0.16rem;
   }
 
   /* popup......................................................................................... */
@@ -2658,6 +2692,7 @@
   .pagination-dot {
     width: 1rem;
     height: 1rem;
+    border-width: 0.12rem;
   }
 
   /* popup......................................................................................... */
@@ -2744,6 +2779,7 @@
   .pagination-dot {
     width: 0.9rem;
     height: 0.9rem;
+    border-width: 0.12rem;
   }
 
   /* popup......................................................................................... */
@@ -2830,6 +2866,7 @@
   .pagination-dot {
     width: 0.9rem;
     height: 0.9rem;
+    border-width: 0.12rem;
   }
 
   /* popup......................................................................................... */
@@ -2917,6 +2954,7 @@
   .pagination-dot {
     width: 0.9rem;
     height: 0.9rem;
+    border-width: 0.12rem;
   }
 
   /* popup......................................................................................... */
@@ -3004,6 +3042,7 @@
   .pagination-dot {
     width: 0.9rem;
     height: 0.9rem;
+    border-width: 0.12rem;
   }
 
   /* popup......................................................................................... */
@@ -3091,6 +3130,7 @@
   .pagination-dot {
     width: 0.9rem;
     height: 0.9rem;
+    border-width: 0.12rem;
   }
 
   /* popup......................................................................................... */
@@ -3178,6 +3218,7 @@
   .pagination-dot {
     width: 0.8rem;
     height: 0.8rem;
+    border-width: 0.12rem;
   }
 
   /* popup......................................................................................... */
@@ -3265,6 +3306,7 @@
   .pagination-dot {
     width: 0.8rem;
     height: 0.8rem;
+    border-width: 0.12rem;
   }
 
   /* popup......................................................................................... */
@@ -3352,6 +3394,7 @@
   .pagination-dot {
     width: 0.8rem;
     height: 0.8rem;
+    border-width: 0.12rem;
   }
 
   /* popup......................................................................................... */
@@ -3439,6 +3482,7 @@
   .pagination-dot {
     width: 0.75rem;
     height: 0.75rem;
+    border-width: 0.12rem;
   }
 
   /* popup......................................................................................... */
@@ -3526,6 +3570,7 @@
   .pagination-dot {
     width: 0.75rem;
     height: 0.75rem;
+    border-width: 0.12rem;
   }
 
   /* popup......................................................................................... */
@@ -3613,6 +3658,7 @@
   .pagination-dot {
     width: 0.7rem;
     height: 0.7rem;
+    border-width: 0.12rem;
   }
 
   /* popup......................................................................................... */

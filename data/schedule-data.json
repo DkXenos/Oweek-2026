@@ -151,8 +151,8 @@
       "time": [
         "00.00 - 00.00 WIB"
       ],
-      "dresscodeDoImage": "/assets/dresscode/",
-      "dresscodeDontImage": "/assets/dresscode/",
+      "dresscodeDoImage": "",
+      "dresscodeDontImage": "",
       "dresscode": ""
     },
     "penugasan": {
@@ -177,8 +177,8 @@
       "time": [
         "00.00 - 00.00 WIB"
       ],
-      "dresscodeDoImage": "/assets/dresscode/",
-      "dresscodeDontImage": "/assets/dresscode/",
+      "dresscodeDoImage": "",
+      "dresscodeDontImage": "",
       "dresscode": ""
     },
     "penugasan": {
