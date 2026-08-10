@@ -52,7 +52,14 @@ export default function Keterangan({
                 )}
             </div>
             {showParentsGatheringLink && data.parentsGathering && (
-                <a href={data.parentsGathering} className="keterangan-dresscode-title"><u>Pelajari lebih lanjut --{`>`}</u></a>
+                <a
+                    href={data.parentsGathering}
+                    className="keterangan-dresscode-title keterangan-parents-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <u>Pelajari lebih lanjut --{`>`}</u>
+                </a>
             )}
             {/* Banner matrikulasi punya dresscode sendiri per hari di dalam
                 agenda, jadi blok dresscode + gambar DO/DON'T di sini disembunyikan

@@ -63,6 +63,20 @@
   color: #f338ac;
 }
 
+/* Link "Pelajari lebih lanjut" (banner Parents Gathering). Ukuran hurufnya ikut
+   .keterangan-dresscode-title yang sudah responsif di tiap breakpoint; di sini
+   hanya perilaku link-nya. */
+.keterangan-parents-link {
+  display: inline-block;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.keterangan-parents-link:hover,
+.keterangan-parents-link:focus-visible {
+  color: #a767d1;
+}
+
 .keterangan-dresscode-box {
   display: flex;
   justify-content: space-around;

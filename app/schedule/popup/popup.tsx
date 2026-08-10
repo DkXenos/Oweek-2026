@@ -73,7 +73,13 @@ export default function Popup({
     };
   }, []);
 
-  const showParentsGatheringLink = selectedImageId === "8";
+  // Link "Pelajari lebih lanjut" tampil di banner mana pun yang punya URL
+  // parentsGathering di data — saat ini banner PARENTS GATHERING. Sebelumnya
+  // ini di-hardcode ke banner id "8", yang justru DAY 5, jadi link-nya tidak
+  // pernah muncul. Basis data begini juga aman kalau urutan banner berubah.
+  const showParentsGatheringLink = Boolean(
+    entry?.keterangan.parentsGathering?.trim(),
+  );
 
   // Kasus khusus matrikulasi: user WAJIB pilih prodi dulu. Selama belum
   // memilih, popup hanya menampilkan dropdown — tidak ada konten sama sekali,

@@ -25,6 +25,9 @@ type DraftEntry = {
     dresscodeDoImage: string;
     dresscodeDontImage: string;
     dresscode: string;
+    // URL opsional untuk link "Pelajari lebih lanjut" (dipakai banner
+    // Parents Gathering). Kosong = link tidak ditampilkan.
+    parentsGathering: string;
   };
   penugasan: { title: string; content: string };
   ketentuan: { title: string; content: string };
@@ -52,6 +55,7 @@ function toDraft(data: ScheduleData): DraftEntry[] {
       dresscodeDoImage: entry.keterangan.dresscodeDoImage,
       dresscodeDontImage: entry.keterangan.dresscodeDontImage,
       dresscode: entry.keterangan.dresscode,
+      parentsGathering: entry.keterangan.parentsGathering ?? "",
     },
     penugasan: {
       title: entry.penugasan.title,
@@ -75,6 +79,10 @@ function fromDraft(draft: DraftEntry[]): ScheduleData {
       dresscodeDoImage: entry.keterangan.dresscodeDoImage,
       dresscodeDontImage: entry.keterangan.dresscodeDontImage,
       dresscode: entry.keterangan.dresscode,
+      // Field opsional: hanya ditulis ke JSON kalau memang diisi.
+      ...(entry.keterangan.parentsGathering.trim()
+        ? { parentsGathering: entry.keterangan.parentsGathering.trim() }
+        : {}),
     },
     penugasan: {
       title: entry.penugasan.title,
@@ -250,6 +258,27 @@ export default function AdminScheduleForm({
                     })
                   }
                   placeholder="Kemeja Putih, Jeans Hitam, Sepatu Hitam"
+                />
+              </label>
+
+              <label className="admin-field admin-field-wide">
+                <span>
+                  Link &quot;Pelajari lebih lanjut&quot; (opsional, dipakai banner
+                  Parents Gathering). Kosongkan kalau tidak dipakai.
+                </span>
+                <input
+                  type="url"
+                  value={entry.keterangan.parentsGathering}
+                  onChange={(event) =>
+                    updateEntry(index, {
+                      ...entry,
+                      keterangan: {
+                        ...entry.keterangan,
+                        parentsGathering: event.target.value,
+                      },
+                    })
+                  }
+                  placeholder="https://..."
                 />
               </label>
             </div>
