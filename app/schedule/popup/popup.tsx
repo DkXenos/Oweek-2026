@@ -94,6 +94,11 @@ export default function Popup({
   const isContentLocked = isMatrikulasi && !selectedProdi;
   const agenda = getAgendaGroups(matrikulasiData, selectedProdi?.id ?? null);
 
+  // Khusus banner matrikulasi: tombol tab tidak ditampilkan dan isinya dikunci
+  // di tab keterangan. activeTab sengaja tidak di-reset supaya tab pilihan user
+  // di banner lain tidak ikut berubah setelah membuka banner matrikulasi.
+  const currentTab: PopupTab = isMatrikulasi ? "keterangan" : activeTab;
+
   // Kalau banner yang dibuka berganti, reset pilihan prodi.
   useEffect(() => {
     setSelectedProdiId(null);
@@ -122,11 +127,11 @@ export default function Popup({
       body.removeEventListener("load", updateScrollHint, true);
     };
     // Ganti tab / prodi mengganti isi popup, jadi hint dihitung ulang.
-  }, [mounted, activeTab, selectedImageId, selectedProdiId, isContentLocked, updateScrollHint]);
+  }, [mounted, currentTab, selectedImageId, selectedProdiId, isContentLocked, updateScrollHint]);
 
   const renderContent = () => {
     if (!entry || isContentLocked) return null;
-    switch (activeTab) {
+    switch (currentTab) {
       case "penugasan":
         return <Penugasan data={selectedProdi?.penugasan ?? entry.penugasan} />;
       case "ketentuan":
@@ -155,8 +160,12 @@ export default function Popup({
     >
       <div className="popup-container" onClick={(event) => event.stopPropagation()}>
         <div className="popup-inner-shadow">
+          {/* Wadahnya tetap dirender walau tombolnya disembunyikan supaya
+              jarak atas isi popup tidak berubah. */}
           <div className="popup-navbar">
-            <ScheduleButton selectedTab={activeTab} onSelectTab={setActiveTab} />
+            {!isMatrikulasi && (
+              <ScheduleButton selectedTab={currentTab} onSelectTab={setActiveTab} />
+            )}
           </div>
           <div className="popup-text-body" ref={bodyRef}>
             {isMatrikulasi && matrikulasiData && (
@@ -165,6 +174,13 @@ export default function Popup({
                 selectedProdi={selectedProdi}
                 onSelectProdi={setSelectedProdiId}
               />
+            )}
+            {/* Selama prodi belum dipilih, isi popup memang kosong — beri
+                petunjuk supaya tidak terlihat seperti popup yang gagal muat. */}
+            {isContentLocked && (
+              <p className="prodi-select-hint">
+                Mohon pilih program studi terlebih dahulu
+              </p>
             )}
             {renderContent()}
           </div>
