@@ -76,13 +76,6 @@ export default function Keterangan({
                                     </div>
                                 </div>
                             )}
-                            {dontImage !== "" && (
-                                <div className="keterangan-dresscode-dont">
-                                    <div className="image-box">
-                                        <img src={dontImage} alt="" />
-                                    </div>
-                                </div>
-                            )}
                         </div>
                     )}
                     {/* Satu baris teks dresscode, di tengah, di bawah kedua gambar. */}
