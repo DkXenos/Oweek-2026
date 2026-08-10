@@ -35,16 +35,30 @@ export default function Keterangan({
                 ) : (
                     <>
                         <div className="keterangan-item">
-                            <span className="keterangan-dot" />
+                            <img
+                                src="/assets/schedule/date-icon.png"
+                                alt=""
+                                className="keterangan-icon"
+                            />
                             <span className="keterangan-detail-text">{data.date}</span>
                         </div>
                         <div className="keterangan-item">
-                            <span className="keterangan-dot" />
+                            <img
+                                src="/assets/schedule/location-icon.png"
+                                alt=""
+                                className="keterangan-icon"
+                            />
                             <span className="keterangan-detail-text">{data.location}</span>
                         </div>
+                        {/* Satu ikon jam per sesi/kloter — jumlah barisnya ikut
+                            panjang data.time. */}
                         {data.time.map((time, id) => (
                             <div key={id} className="keterangan-item">
-                                <span className="keterangan-dot" />
+                                <img
+                                    src="/assets/schedule/time-icon.png"
+                                    alt=""
+                                    className="keterangan-icon"
+                                />
                                 <span className="keterangan-detail-text">{time}</span>
                             </div>
                         ))}
