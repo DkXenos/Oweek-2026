@@ -73,11 +73,10 @@ export default function Popup({
     };
   }, []);
 
-  // Link "Pelajari lebih lanjut" tampil di banner mana pun yang punya URL
-  // parentsGathering di data — saat ini banner PARENTS GATHERING. Sebelumnya
-  // ini di-hardcode ke banner id "8", yang justru DAY 5, jadi link-nya tidak
-  // pernah muncul. Basis data begini juga aman kalau urutan banner berubah.
-  const showParentsGatheringLink = Boolean(
+  // Banner Parents Gathering dikenali dari adanya URL parentsGathering di data
+  // (bukan dari nomor banner, supaya aman kalau urutan banner berubah). URL itu
+  // sekaligus jadi link "Pelajari lebih lanjut" di tab keterangan.
+  const isParentsGathering = Boolean(
     entry?.keterangan.parentsGathering?.trim(),
   );
 
@@ -94,10 +93,12 @@ export default function Popup({
   const isContentLocked = isMatrikulasi && !selectedProdi;
   const agenda = getAgendaGroups(matrikulasiData, selectedProdi?.id ?? null);
 
-  // Khusus banner matrikulasi: tombol tab tidak ditampilkan dan isinya dikunci
-  // di tab keterangan. activeTab sengaja tidak di-reset supaya tab pilihan user
-  // di banner lain tidak ikut berubah setelah membuka banner matrikulasi.
-  const currentTab: PopupTab = isMatrikulasi ? "keterangan" : activeTab;
+  // Banner matrikulasi & Parents Gathering hanya punya isi keterangan: tombol
+  // tab tidak ditampilkan dan isinya dikunci di tab keterangan. activeTab
+  // sengaja tidak di-reset supaya tab pilihan user di banner lain tidak ikut
+  // berubah setelah membuka salah satu banner ini.
+  const isKeteranganOnly = isMatrikulasi || isParentsGathering;
+  const currentTab: PopupTab = isKeteranganOnly ? "keterangan" : activeTab;
 
   // Kalau banner yang dibuka berganti, reset pilihan prodi.
   useEffect(() => {
@@ -140,7 +141,7 @@ export default function Popup({
         return (
           <Keterangan
             data={entry.keterangan}
-            showParentsGatheringLink={showParentsGatheringLink}
+            showParentsGatheringLink={isParentsGathering}
             agenda={agenda}
           />
         );
@@ -163,7 +164,7 @@ export default function Popup({
           {/* Wadahnya tetap dirender walau tombolnya disembunyikan supaya
               jarak atas isi popup tidak berubah. */}
           <div className="popup-navbar">
-            {!isMatrikulasi && (
+            {!isKeteranganOnly && (
               <ScheduleButton selectedTab={currentTab} onSelectTab={setActiveTab} />
             )}
           </div>

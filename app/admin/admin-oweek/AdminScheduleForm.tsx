@@ -23,7 +23,6 @@ type DraftEntry = {
     // Path gambar tidak diedit di form, tapi tetap dibawa agar tidak hilang
     // saat disimpan / didownload.
     dresscodeDoImage: string;
-    dresscodeDontImage: string;
     dresscode: string;
     // URL opsional untuk link "Pelajari lebih lanjut" (dipakai banner
     // Parents Gathering). Kosong = link tidak ditampilkan.
@@ -53,7 +52,6 @@ function toDraft(data: ScheduleData): DraftEntry[] {
       location: entry.keterangan.location,
       time: linesToText(entry.keterangan.time),
       dresscodeDoImage: entry.keterangan.dresscodeDoImage,
-      dresscodeDontImage: entry.keterangan.dresscodeDontImage,
       dresscode: entry.keterangan.dresscode,
       parentsGathering: entry.keterangan.parentsGathering ?? "",
     },
@@ -77,7 +75,6 @@ function fromDraft(draft: DraftEntry[]): ScheduleData {
       location: entry.keterangan.location,
       time: textToLines(entry.keterangan.time),
       dresscodeDoImage: entry.keterangan.dresscodeDoImage,
-      dresscodeDontImage: entry.keterangan.dresscodeDontImage,
       dresscode: entry.keterangan.dresscode,
       // Field opsional: hanya ditulis ke JSON kalau memang diisi.
       ...(entry.keterangan.parentsGathering.trim()

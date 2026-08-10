@@ -77,6 +77,15 @@
   color: #a767d1;
 }
 
+/* Di dalam .keterangan-detail, jarak antar baris sudah diatur gap milik flex
+   column-nya. Margin bawaan .keterangan-dresscode-title (yang dipakai hanya
+   untuk ukuran font) dinolkan — selector dua tingkat supaya tetap menang
+   terhadap margin yang di-set ulang di tiap media query. */
+.keterangan-detail .keterangan-parents-link {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .keterangan-dresscode-box {
   display: flex;
   justify-content: space-around;

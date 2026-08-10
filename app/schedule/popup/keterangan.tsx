@@ -29,6 +29,18 @@ export default function Keterangan({
                 {data.subtitle && data.subtitle.trim() !== "" && (
                     <div className="keterangan-subtitle">{data.subtitle}</div>
                 )}
+                {/* Link "Pelajari lebih lanjut" (banner Parents Gathering) tampil
+                    di atas baris tanggal/lokasi/jam. */}
+                {showParentsGatheringLink && data.parentsGathering && (
+                    <a
+                        href={data.parentsGathering}
+                        className="keterangan-dresscode-title keterangan-parents-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <u>Pelajari lebih lanjut --{`>`}</u>
+                    </a>
+                )}
                 {isAgenda && agenda ? (
                     <Agenda groups={agenda} />
                 ) : (
@@ -50,16 +62,6 @@ export default function Keterangan({
                     </>
                 )}
             </div>
-            {showParentsGatheringLink && data.parentsGathering && (
-                <a
-                    href={data.parentsGathering}
-                    className="keterangan-dresscode-title keterangan-parents-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <u>Pelajari lebih lanjut --{`>`}</u>
-                </a>
-            )}
             {/* Banner matrikulasi punya dresscode sendiri per hari di dalam
                 agenda, jadi blok dresscode + gambar DO/DON'T di sini disembunyikan
                 khusus untuk banner itu. Banner lain tidak berubah. */}
