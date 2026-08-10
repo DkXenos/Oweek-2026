@@ -13,7 +13,6 @@ export type KeteranganData = {
   // Path gambar dresscode. Diisi manual dari code editor / file JSON,
   // TIDAK diedit lewat form admin. Contoh: "/assets/dresscode/day1-do.png".
   dresscodeDoImage: string;
-  dresscodeDontImage: string;
   // Satu baris teks dresscode yang tampil di tengah, di bawah gambar
   // DO/DON'T (mis. "Kemeja Putih, Jeans Hitam, Sepatu Hitam").
   // Ini yang diedit admin.
@@ -73,7 +72,6 @@ function assertScheduleData(value: unknown): asserts value is ScheduleData {
       typeof keterangan.location !== "string" ||
       !isStringArray(keterangan.time) ||
       typeof keterangan.dresscodeDoImage !== "string" ||
-      typeof keterangan.dresscodeDontImage !== "string" ||
       typeof keterangan.dresscode !== "string"
     ) {
       throw new Error("Format keterangan schedule tidak valid.");

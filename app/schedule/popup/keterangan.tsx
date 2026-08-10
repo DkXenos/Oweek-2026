@@ -18,10 +18,9 @@ export default function Keterangan({
     // Path gambar bisa kosong selama datanya belum diisi. <img src=""> bikin
     // browser me-request ulang halamannya, jadi elemennya jangan dirender.
     const doImage = data.dresscodeDoImage?.trim() ?? "";
-    const dontImage = data.dresscodeDontImage?.trim() ?? "";
     const dresscodeText = data.dresscode?.trim() ?? "";
     const showDresscode =
-        !isAgenda && (doImage !== "" || dontImage !== "" || dresscodeText !== "");
+        !isAgenda && (doImage !== "" || dresscodeText !== "");
 
     return(
         <>
@@ -67,7 +66,7 @@ export default function Keterangan({
             {showDresscode && (
                 <>
                     <h2 className="keterangan-dresscode-title">Dresscode</h2>
-                    {(doImage !== "" || dontImage !== "") && (
+                    {(doImage !== "") && (
                         <div className="keterangan-dresscode-box">
                             {doImage !== "" && (
                                 <div className="keterangan-dresscode-do">
