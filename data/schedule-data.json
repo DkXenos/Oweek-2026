@@ -5,7 +5,10 @@
       "subtitle": " ",
       "date": "Rabu, 14 Agustus 2026",
       "location": "UC Plaza & Universitas Ciputra Surabaya",
-      "time": ["Kloter 1 : 07.00 - 10.45 WIB", "Kloter 2 : 13.00 - 16.45 WIB"],
+      "time": [
+        "Kloter 1 : 07.00 - 10.45 WIB",
+        "Kloter 2 : 13.00 - 16.45 WIB"
+      ],
       "dresscodeDoImage": "",
       "dresscode": "Pakaian Berkerah, Sopan, dan Rapi"
     },
@@ -110,14 +113,16 @@
         "WAJIB mencetak stiker UC People satu sisi sebanyak minimal 5 stiker ukuran 9x6 cm menggunakan kertas stiker. DILARANG mengisi UC People Passport dengan unsur SARA.",
         "UC People WAJIB membawa UC People Passport selama masa Orientation Week berlangsung.",
         "Ketentuan desain digital UC Passport Sticker, border 4 pt dengan warna sesuai jurusan: IBM RC putih, IBM IC biru toska, Accounting jingga, VCD hijau muda, Architecture abu-abu, Fashion Design Business merah muda, Hotel Tourism & Event Business magenta, Culinary Business cokelat, Food Technology hitam, Informatics biru navy, ISB kuning, Medicine merah, Dental Medicine ungu, Psychology biru muda, dan Communication Science hijau gelap.",
-        "Contoh personal logo: [LINK](https://drive.google.com/file/d/1mAH7RHcJDzCwFNoGtwGmEdPoVI6JdyDu/view?usp=sharing)",
+        "Contoh personal logo: [LINK](https://drive.google.com/file/d/19ZbSOVplmMBZEQWjrF6p8KH7oXboLi0E/view?usp=drivesdk)",
         "Aset desain tambahan: [LINK](https://drive.google.com/drive/folders/1s8zJ0cnqmag9lVL6mG11BLbjfYU0_7U7?usp=drive_link)",
         "Logo Universitas, O-Week, & Magnify: [LINK](https://drive.google.com/drive/folders/1CoIgF9dfQ2FgiS67NuMYP0WVOGt_Aa34)",
         "## VISUALIZE YOUR FUTURE SELF",
         "*Periode unggah: 17-23 Agustus 2026.* *Deadline: 23 Agustus 2026 pukul 21:00 WIB.* Submit melalui UC E-learning.",
         "Gunakan AI untuk membuat visualisasi diri UC People 4 tahun ke depan sesuai dengan profesi impian atau tujuan yang ingin dicapai setelah menjalani perkuliahan di Universitas Ciputra.",
         "Hasil yang dibuat harus menggambarkan diri UC People sebagai versi masa depan (Future Self), menampilkan profesi atau pencapaian yang ingin diraih secara jelas, menggunakan visual yang positif, kreatif, dan sopan.",
-        "Tidak mengandung unsur SARA, kekerasan, pornografi, atau konten yang menyinggung pihak lain."
+        "Tidak mengandung unsur SARA, kekerasan, pornografi, atau konten yang menyinggung pihak lain.",
+        "## TUJUAN PENUGASAN",
+        "Melalui Visualize Your Future Self, diharapkan UC People mulai membangun visi, mengenali tujuan yang ingin dicapai, serta memotivasi diri untuk memaksimalkan potensi selama menjalani perjalanan sebagai mahasiswa Universitas Ciputra."
       ]
     },
     "ketentuan": {
@@ -143,17 +148,23 @@
       "subtitle": "Glimpse of Tomorrow",
       "date": "hari, tanggal bulan tahun",
       "location": "Universitas Ciputra Surabaya",
-      "time": ["00.00 - 00.00 WIB"],
+      "time": [
+        "00.00 - 00.00 WIB"
+      ],
       "dresscodeDoImage": "",
       "dresscode": ""
     },
     "penugasan": {
       "title": "tugas matrikulasi",
-      "content": ["matrikulasi"]
+      "content": [
+        "matrikulasi"
+      ]
     },
     "ketentuan": {
       "title": "ketentuan matrikulasi",
-      "content": ["matrikulasi"]
+      "content": [
+        "matrikulasi"
+      ]
     }
   },
   {
@@ -162,18 +173,25 @@
       "subtitle": "UC Parents Gathering 2026",
       "date": "Jumat, 28 Agustus 2026",
       "location": "Hybrid • Onsite (UC) + Zoom",
-      "time": ["Sesi 1 : 07:30 - 11:30 WIB", "Sesi 2 : 13:00 - 16:30 WIB"],
+      "time": [
+        "Sesi 1 : 07:30 - 11:30 WIB",
+        "Sesi 2 : 13:00 - 16:30 WIB"
+      ],
       "parentsGathering": "https://oweek.ciputra.ac.id/parents",
       "dresscodeDoImage": "",
       "dresscode": ""
     },
     "penugasan": {
       "title": "tugas matrikulasi",
-      "content": ["matrikulasi"]
+      "content": [
+        "matrikulasi"
+      ]
     },
     "ketentuan": {
       "title": "ketentuan matrikulasi",
-      "content": ["matrikulasi"]
+      "content": [
+        "matrikulasi"
+      ]
     }
   },
   {
@@ -182,7 +200,10 @@
       "subtitle": "WE SEE THE LIGHT (TALKSHOW & SHOWCASE SELLING)",
       "date": "Senin, 31 Agustus 2026",
       "location": "Hall Sekolah Ciputra Surabaya",
-      "time": ["Sesi 1 : 07.30 - 12.15 WIB", "Sesi 2 : 12.15 - 17.00 WIB"],
+      "time": [
+        "Sesi 1 : 07.30 - 12.15 WIB",
+        "Sesi 2 : 12.15 - 17.00 WIB"
+      ],
       "dresscodeDoImage": "/assets/dresscode/day1b.webp",
       "dresscode": "Kemeja/Blouse Putih, Celana Panjang Hitam / Warna Gelap (Dilarang Ripped Jeans), Sepatu Bebas (Menutupi Jari dan Tumit)"
     },
@@ -216,7 +237,9 @@
       "subtitle": "WHERE MAGIC FINDS YOU (STUDENT DEVELOPMENT PROGRAM & ORMAWA FEST)",
       "date": "Selasa, 1 September 2026",
       "location": "Universitas Ciputra Surabaya",
-      "time": ["07.00 - 17.00 WIB"],
+      "time": [
+        "07.00 - 17.00 WIB"
+      ],
       "dresscodeDoImage": "/assets/dresscode/day2b.webp",
       "dresscode": "Kemeja/Blouse Warna Bebas, Celana Panjang Bebas (Dilarang Ripped Jeans), Sepatu Bebas (Menutupi Jari dan Tumit)"
     },
@@ -227,16 +250,26 @@
         "Penugasan di buku penugasan: UC People WAJIB mengerjakan penugasan yang ada di buku penugasan O-Week masing-masing.",
         "Penugasan ini dikumpulkan kepada AMD maksimal pada hari Selasa, 1 September 2026 pukul 13:00 WIB kepada kakak mentor masing-masing.",
         "Penugasan ini dapat dikerjakan pada saat sesi sedang berlangsung.",
+        "# Penugasan Individu",
+        "UC People WAJIB mengerjakan soal yang terdapat pada Buku Penugasan selama sesi Student Development Program berlangsung.",
+        "UC People diminta untuk memecahkan kode dengan mencocokkan simbol pada cipher key hingga memperoleh jawaban terkait Organisasi/UKM yang berada di Universitas Ciputra.",
+        "UC People diminta menyelesaikan tantangan Scavenger Hunt dengan mencari informasi terkait nama UKM/Organisasi di lingkungan Universitas Ciputra dan UC People diminta untuk memberikan tick pada kotak yang tersedia setelah mengerjakan setiap soal.",
+        "UC People diminta mencari jawaban atas pertanyaan mengenai nama UKM/Organisasi yang ada di Universitas Ciputra dengan menandai huruf-huruf acak yang membentuk nama tersebut pada kotak Word Search Ormawa.",
+        "AMD diharapkan untuk mengingatkan UC People agar mengerjakan penugasan selama sesi berlangsung.",
+        "*Deadline pengumpulan: paling lambat pukul 19:00 WIB pada hari pelaksanaan Student Development Program.*",
         "## PENUGASAN ORMAWA FEST 2026",
-        "Exploration Card: UC People akan mendapatkan Exploration Card yang dibagikan oleh kakak mentor masing-masing.",
+        "# Exploration Card",
+        "UC People akan mendapatkan Exploration Card yang dibagikan oleh kakak mentor masing-masing.",
         "Exploration Card WAJIB dilengkapi dengan stiker yang didapatkan dengan menanyakan 3 pertanyaan kepada masing-masing ORMAWA (minimal 1 organisasi tingkat kampus (SC, SRB, MD), 1 SU, 1 UKM, dan 1 Club).",
         "Pertanyaan untuk ORMAWA: Apa tujuan dari ORMAWA ini? Kegiatan rutin apa yang dilakukan oleh ORMAWA ini? Apa benefit yang didapatkan dari mengikuti ORMAWA ini?",
         "UC People WAJIB mendapatkan minimal 10 stamp selama di Ormawa Fest.",
         "Pengumpulan Exploration Card: Kloter 1 & Kloter 2 maksimal hari Selasa, 1 September pukul 19:00 WIB ke kakak mentor masing-masing (hard copy) serta di-upload melalui E-learn. Kloter 3 maksimal hari Rabu, 2 September pukul 16:30 WIB ke kakak mentor masing-masing (hard copy) serta di-upload melalui E-learn.",
-        "Refleksi Pribadi: UC People WAJIB membuat refleksi pribadi di buku penugasan O-Week dengan minimal 75 kata.",
+        "# Refleksi Pribadi",
+        "UC People WAJIB membuat refleksi pribadi di buku penugasan O-Week dengan minimal 75 kata.",
         "Pengumpulan Refleksi Pribadi: Kloter 1 & Kloter 2 maksimal hari Selasa, 1 September pukul 19:00 WIB ke kakak mentor masing-masing. Kloter 3 maksimal hari Rabu, 2 September pukul 16:30 WIB ke kakak mentor masing-masing.",
         "Penugasan individu maksimal dikumpulkan pada hari Kamis, 28 Agustus 2026 pukul 07:30 WIB pada saat registrasi di Day 4, kepada kakak mentor masing-masing.",
-        "Video Kreatif TikTok: UC People WAJIB membuat video refleksi dengan durasi minimal 1 menit yang berisi jargon Magnify, nama lengkap, nomor & nama kelompok, dan jurusan.",
+        "# Video Kreatif TikTok",
+        "UC People WAJIB membuat video refleksi dengan durasi minimal 1 menit yang berisi jargon Magnify, nama lengkap, nomor & nama kelompok, dan jurusan.",
         "Dalam video, pilih 1 ORMAWA yang paling menarik lalu jelaskan alasan memilih ORMAWA tersebut, tujuannya, kegiatan rutinnya, dan benefit yang diperoleh jika bergabung.",
         "Video juga menghubungkan hasil Survey Tes HYOUMAN dengan pengalaman selama Ormawa Fest, serta menunjukkan Exploration Card yang telah terisi.",
         "Video wajib di-upload di TikTok dengan caption Nomor Kelompok_Nama Lengkap Mahasiswa (contoh: 001_Jonathan Hermanto) dan hashtag #fyp #magnify #NamaKelompok #ORMAWAFEST2026 #UC #UniversitasCiputra serta tag @oweekucs dan @kakakmentor masing-masing.",
@@ -264,7 +297,9 @@
       "subtitle": "INTO THE EVER AFTER (PRA-LDK & ORMAWA FEST)",
       "date": "Rabu, 2 September 2026",
       "location": "Universitas Ciputra Surabaya",
-      "time": ["07.00 - 17.00 WIB"],
+      "time": [
+        "07.00 - 17.00 WIB"
+      ],
       "dresscodeDoImage": "/assets/dresscode/day3b.webp",
       "dresscode": "Atasan Batik Berkerah/Blouse (Bukan Outer/Vest), Celana Panjang Bebas (Dilarang Ripped Jeans), Sepatu Bebas (Menutupi Jari dan Tumit)"
     },
@@ -276,15 +311,18 @@
         "Penugasan di e-learn: UC People mengerjakan penugasan sesi 1 dan sesi 2 di buku penugasan, lalu dikumpulkan melalui e-learn.",
         "Penugasan ini dikumpulkan pada hari Rabu, 2 September 2026 pukul 12:30 WIB.",
         "## PENUGASAN ORMAWA FEST 2026",
-        "Exploration Card: UC People akan mendapatkan Exploration Card yang dibagikan oleh kakak mentor masing-masing.",
+        "# Exploration Card",
+        "UC People akan mendapatkan Exploration Card yang dibagikan oleh kakak mentor masing-masing.",
         "Exploration Card WAJIB dilengkapi dengan stiker yang didapatkan dengan menanyakan 3 pertanyaan kepada masing-masing ORMAWA (minimal 1 organisasi tingkat kampus (SC, SRB, MD), 1 SU, 1 UKM, dan 1 Club).",
         "Pertanyaan untuk ORMAWA: Apa tujuan dari ORMAWA ini? Kegiatan rutin apa yang dilakukan oleh ORMAWA ini? Apa benefit yang didapatkan dari mengikuti ORMAWA ini?",
         "UC People WAJIB mendapatkan minimal 10 stamp selama di Ormawa Fest.",
         "Pengumpulan Exploration Card: Kloter 1 & Kloter 2 maksimal hari Selasa, 1 September pukul 19:00 WIB ke kakak mentor masing-masing (hard copy) serta di-upload melalui E-learn. Kloter 3 maksimal hari Rabu, 2 September pukul 16:30 WIB ke kakak mentor masing-masing (hard copy) serta di-upload melalui E-learn.",
-        "Refleksi Pribadi: UC People WAJIB membuat refleksi pribadi di buku penugasan O-Week dengan minimal 75 kata.",
+        "# Refleksi Pribadi",
+        "UC People WAJIB membuat refleksi pribadi di buku penugasan O-Week dengan minimal 75 kata.",
         "Pengumpulan Refleksi Pribadi: Kloter 1 & Kloter 2 maksimal hari Selasa, 1 September pukul 19:00 WIB ke kakak mentor masing-masing. Kloter 3 maksimal hari Rabu, 2 September pukul 16:30 WIB ke kakak mentor masing-masing.",
         "Penugasan individu maksimal dikumpulkan pada hari Kamis, 28 Agustus 2026 pukul 07:30 WIB pada saat registrasi di Day 4, kepada kakak mentor masing-masing.",
-        "Video Kreatif TikTok: UC People WAJIB membuat video refleksi dengan durasi minimal 1 menit yang berisi jargon Magnify, nama lengkap, nomor & nama kelompok, dan jurusan.",
+        "# Video Kreatif TikTok",
+        "UC People WAJIB membuat video refleksi dengan durasi minimal 1 menit yang berisi jargon Magnify, nama lengkap, nomor & nama kelompok, dan jurusan.",
         "Dalam video, pilih 1 ORMAWA yang paling menarik lalu jelaskan alasan memilih ORMAWA tersebut, tujuannya, kegiatan rutinnya, dan benefit yang diperoleh jika bergabung.",
         "Video juga menghubungkan hasil Survey Tes HYOUMAN dengan pengalaman selama Ormawa Fest, serta menunjukkan Exploration Card yang telah terisi.",
         "Video wajib di-upload di TikTok dengan caption Nomor Kelompok_Nama Lengkap Mahasiswa (contoh: 001_Jonathan Hermanto) dan hashtag #fyp #magnify #NamaKelompok #ORMAWAFEST2026 #UC #UniversitasCiputra serta tag @oweekucs dan @kakakmentor masing-masing.",
@@ -312,7 +350,9 @@
       "subtitle": "SYMBIOTIC PALLETE FOR INFINITE FLAVOURS (SELLING DAY)",
       "date": "Kamis, 3 September 2026",
       "location": "Universitas Ciputra Surabaya",
-      "time": ["07.00 - 17.00 WIB"],
+      "time": [
+        "07.00 - 17.00 WIB"
+      ],
       "dresscodeDoImage": "/assets/dresscode/day4b.webp",
       "dresscode": "Kaos Universitas Ciputra Surabaya, Celana Panjang Bebas (Dilarang Ripped Jeans), Sepatu Bebas (Menutupi Jari dan Tumit), Menggunakan Atribut/Aksesoris Sesuai Main Ingredient"
     },
@@ -320,31 +360,32 @@
       "title": "Penugasan Day 4 (Selling Day)",
       "content": [
         "## TM SELLING DAY",
-        "Kamis, 27 Agustus 2026 pukul 23:59 WIB: pengumpulan proposal.",
-        "Jumat, 28 Agustus 2026 pukul 20:00 WIB: info revisi proposal melalui AMD, kemudian AMD menginfokan ke UC People.",
-        "Minggu, 30 Agustus 2026 pukul 12:00 WIB: deadline revisi proposal.",
+        "*Kamis, 27 Agustus 2026 pukul 23:59 WIB:* pengumpulan proposal.",
+        "*Jumat, 28 Agustus 2026 pukul 20:00 WIB:* info revisi proposal melalui AMD, kemudian AMD menginfokan ke UC People.",
+        "*Minggu, 30 Agustus 2026 pukul 12:00 WIB:* deadline revisi proposal.",
         "## SHOWCASE",
-        "Setiap kelompok wajib mempersiapkan 2 (dua) perwakilan dan wajib membawa prototype produk yang akan dijual untuk dipresentasikan pada hari Senin, 31 Agustus 2026 di Universitas Ciputra Surabaya.",
-        "Waktu presentasi: Kloter 1 pukul 10:00 - 12:00 WIB dan Kloter 2 pukul 13:00 - 15:00 WIB. Ruang: R.934, R.935, R.936, R.937, R.938, R.939, dan Theater lantai 9 untuk Ruang Pelatihan Kasir Pintar.",
-        "Registrasi showcase: Kloter 1 pukul 08:30 - 11:30 WIB dan Kloter 2 pukul 13:10 - 16:10 WIB.",
+        "Setiap kelompok wajib mempersiapkan 2 (dua) perwakilan dan wajib membawa prototype produk yang akan dijual untuk dipresentasikan pada hari *Senin, 31 Agustus 2026* di Universitas Ciputra Surabaya.",
+        "Waktu presentasi: Kloter 1 *pukul 10:00 - 12:00 WIB* dan Kloter 2 *pukul 13:00 - 15:00 WIB*. Ruang: R.934, R.935, R.936, R.937, R.938, R.939, dan Theater lantai 9 untuk Ruang Pelatihan Kasir Pintar.",
+        "Registrasi showcase: Kloter 1 *pukul 08:30 - 11:30 WIB* dan Kloter 2 *pukul 13:10 - 16:10 WIB*.",
         "Setiap sesi presentasi dibagi menjadi 12 pos. Setiap kelompok wajib membawa prototype serta hard copy Poster Bisnis (ukuran A3, Art Paper, laminasi glossy). Presentasi dilakukan berdasarkan urutan kelompok UC People yang datang terlebih dahulu.",
         "Dresscode untuk presentasi adalah office look (jas hitam, kemeja warna bebas, celana panjang hitam, sepatu/flat shoes/heels berwarna hitam atau putih).",
         "## SELLING DAY",
-        "Kamis, 27 Agustus 2026 pukul 23:59 WIB: pengumpulan proposal.",
-        "Jumat, 28 Agustus 2026 pukul 20:00 WIB: info revisi proposal melalui AMD, kemudian AMD menginfokan ke UC People.",
-        "Minggu, 30 Agustus 2026 pukul 12:00 WIB: deadline revisi proposal.",
-        "Senin, 31 Agustus 2026 pukul 17:00 - 19:00 WIB: pembagian peminjaman modal selling dan showcase ide bisnis, dibagikan melalui AMD.",
-        "Rabu, 2 September 2026 pukul 06:00 - 07:00 WIB: pengumpulan hard copy checklist barang loading in dan Laporan Jasa Eksternal (bagi yang menggunakan).",
-        "Rabu, 2 September 2026 pukul 22:30 - 00:00 WIB: loading in.",
-        "Kamis, 3 September 2026 pukul 12:00 WIB: pengumpulan konten marketing di Google Drive untuk pemenang showcase.",
-        "Kamis, 3 September 2026 pukul 16:00 - 16:45 WIB: pengumpulan Laporan Pertanggungjawaban 50%.",
-        "Kamis, 3 September 2026 pukul 20:00 - 21:00 WIB: pengumpulan Laporan Pertanggungjawaban 100% dan laporan penjualan.",
-        "Kamis, 3 September 2026 pukul 21:00 WIB: pengumpulan pengembalian modal dan sumbangan sosial."
+        "*Kamis, 27 Agustus 2026 pukul 23:59 WIB:* pengumpulan proposal.",
+        "*Jumat, 28 Agustus 2026 pukul 20:00 WIB:* info revisi proposal melalui AMD, kemudian AMD menginfokan ke UC People.",
+        "*Minggu, 30 Agustus 2026 pukul 12:00 WIB:* deadline revisi proposal.",
+        "*Senin, 31 Agustus 2026 pukul 17:00 - 19:00 WIB:* pembagian peminjaman modal selling dan showcase ide bisnis, dibagikan melalui AMD.",
+        "*Rabu, 2 September 2026 pukul 06:00 - 07:00 WIB:* pengumpulan hard copy checklist barang loading in dan Laporan Jasa Eksternal (bagi yang menggunakan).",
+        "*Rabu, 2 September 2026 pukul 22:30 - 00:00 WIB:* loading in.",
+        "*Kamis, 3 September 2026 pukul 12:00 WIB:* pengumpulan konten marketing di Google Drive untuk pemenang showcase.",
+        "*Kamis, 3 September 2026 pukul 16:00 - 16:45 WIB:* pengumpulan Laporan Pertanggungjawaban 50%.",
+        "*Kamis, 3 September 2026 pukul 20:00 - 21:00 WIB:* pengumpulan Laporan Pertanggungjawaban 100% dan laporan penjualan.",
+        "*Kamis, 3 September 2026 pukul 21:00 WIB:* pengumpulan pengembalian modal dan sumbangan sosial."
       ]
     },
     "ketentuan": {
       "title": "Ketentuan Day 4 (Selling Day)",
       "content": [
+        "Guidebook Selling Day: [LINK](https://docs.google.com/document/d/1e9Dl2BpJcdwuhAkUCDu_G2DF0KKgLIoXk2faRyMULiE/edit?usp=sharing)",
         "## PERLENGKAPAN",
         "UC People WAJIB membawa peralatan makan, alat tulis, buku penugasan, tumbler, dan nametag.",
         "## KETENTUAN",
@@ -365,7 +406,9 @@
       "subtitle": "THE GOLDEN EPILOGUE (SIDANG SENAT & CLOSING CEREMONY)",
       "date": "Jumat, 4 September 2026",
       "location": "Multi Purpose Hall, Ciputra World Surabaya",
-      "time": ["14.00 - 21.10 WIB"],
+      "time": [
+        "14.00 - 21.10 WIB"
+      ],
       "dresscodeDoImage": "/assets/dresscode/day5b.webp",
       "dresscode": "Kemeja Putih, Celana Panjang/Rok Hitam atau Warna Gelap (Rok di Bawah Lutut dan Tidak Ketat), Sepatu Bebas (Menutupi Jari dan Tumit), WAJIB Membawa Jas Almamater"
     },

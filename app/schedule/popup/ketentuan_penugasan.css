@@ -76,6 +76,20 @@
   color: #f338ac;
 }
 
+/* Satu tingkat di bawah .content-heading (baris "# ..."): dipakai untuk tugas
+   tersendiri di dalam satu blok, mis. "# Exploration Card" di dalam
+   "## PENUGASAN ORMAWA FEST 2026". Sengaja lebih ringan — warnanya ungu seperti
+   teks isi, bukan pink, dan jaraknya lebih rapat. */
+.content-subheading-box {
+  margin-top: 1rem;
+}
+
+.content-subheading {
+  font-family: "Poppins-bold";
+  font-weight: 600;
+  color: #a767d1;
+}
+
 @media (max-width: 3840px) and (max-height: 2160px) {
   .popup-title {
     font-size: 3.75rem;
