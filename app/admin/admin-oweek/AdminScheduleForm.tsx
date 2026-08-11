@@ -4,6 +4,7 @@ import { useState } from "react";
 // Hanya import TYPE dari lib/schedule-data. Import type di-erase saat build,
 // jadi modul fs/path di lib itu TIDAK ikut ke bundle client.
 import type { ScheduleData } from "../../../lib/schedule-data";
+import AutoGrowTextarea from "./AutoGrowTextarea";
 
 type AdminScheduleFormProps = {
   initialData: ScheduleData;
@@ -230,8 +231,7 @@ export default function AdminScheduleForm({
 
               <label className="admin-field admin-field-wide">
                 <span>Waktu (satu baris = satu item)</span>
-                <textarea
-                  rows={3}
+                <AutoGrowTextarea
                   value={entry.keterangan.time}
                   onChange={(event) =>
                     updateEntry(index, {
@@ -303,8 +303,7 @@ export default function AdminScheduleForm({
                   judul blok, &quot;# Judul&quot; = sub-judul, *tebal*,
                   [LINK](https://...) = hyperlink
                 </span>
-                <textarea
-                  rows={4}
+                <AutoGrowTextarea
                   value={entry.penugasan.content}
                   onChange={(event) =>
                     updateEntry(index, {
@@ -339,8 +338,7 @@ export default function AdminScheduleForm({
                   judul blok, &quot;# Judul&quot; = sub-judul, *tebal*,
                   [LINK](https://...) = hyperlink
                 </span>
-                <textarea
-                  rows={4}
+                <AutoGrowTextarea
                   value={entry.ketentuan.content}
                   onChange={(event) =>
                     updateEntry(index, {

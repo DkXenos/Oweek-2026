@@ -123,7 +123,12 @@ export function isMatrikulasiBanner(
 }
 
 // Semua kode yang menunjuk ke satu prodi: id-nya sendiri plus alias.
-export function kodeProdi(prodi: MatrikulasiProdi): string[] {
+// Parameternya sengaja cuma { id, aliases } — form admin memakai bentuk draft
+// (content masih string, belum array) dan tetap boleh memanggil helper ini.
+export function kodeProdi(prodi: {
+  id: string;
+  aliases?: string[];
+}): string[] {
   return [prodi.id, ...(prodi.aliases ?? [])];
 }
 

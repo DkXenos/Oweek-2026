@@ -7,7 +7,12 @@ import {
   verifyAdminSessionToken,
 } from "@/lib/admin-auth";
 import { getScheduleData, saveScheduleData } from "../../../lib/schedule-data";
+import {
+  getMatrikulasiData,
+  saveMatrikulasiJadwal,
+} from "../../../lib/matrikulasi-data.server";
 import AdminScheduleForm from "./AdminScheduleForm";
+import AdminMatrikulasiForm from "./AdminMatrikulasiForm";
 import "./styles.css";
 
 // Admin harus selalu membaca data terbaru dari file JSON, bukan hasil cache build.
@@ -61,6 +66,33 @@ async function updateScheduleAction(formData: FormData) {
   redirect("/admin/admin-oweek?status=saved");
 }
 
+async function updateMatrikulasiAction(formData: FormData) {
+  "use server";
+
+  await requireAdmin();
+
+  try {
+    // Form matrikulasi hanya mengirim jadwal; daftar prodi tidak bisa diubah
+    // dari sana. Validasi struktur ada di saveMatrikulasiJadwal().
+    const jadwal = JSON.parse(
+      String(formData.get("matrikulasiJadwalJson") || "[]"),
+    ) as unknown;
+    await saveMatrikulasiJadwal(jadwal);
+    revalidatePath("/schedule");
+  } catch (error) {
+    const code = (error as NodeJS.ErrnoException)?.code;
+    const message =
+      code === "EROFS" || code === "EACCES"
+        ? "Menyimpan tidak tersedia di situs yang sudah dideploy (filesystem server read-only). Klik Download JSON, lalu commit file data/matrikulasi-jadwal.json ke repo dan deploy ulang."
+        : error instanceof Error
+          ? error.message
+          : "Data matrikulasi gagal disimpan.";
+    redirect(`/admin/admin-oweek?error=${encodeURIComponent(message)}`);
+  }
+
+  redirect("/admin/admin-oweek?status=saved");
+}
+
 async function logoutAction() {
   "use server";
 
@@ -73,7 +105,10 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
   await requireAdmin();
 
   const params = await searchParams;
-  const scheduleData = await getScheduleData();
+  const [scheduleData, matrikulasiData] = await Promise.all([
+    getScheduleData(),
+    getMatrikulasiData(),
+  ]);
   // Di deployment (Vercel) menyimpan ke file tidak akan permanen.
   const isDeployed = !!process.env.VERCEL;
 
@@ -112,7 +147,23 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
           <p className="admin-message">{params.error}</p>
         ) : null}
 
+        <h2 className="admin-section-heading">Jadwal Harian</h2>
         <AdminScheduleForm initialData={scheduleData} action={updateScheduleAction} />
+
+        <h2 className="admin-section-heading">Matrikulasi × Industry Visit × Prodi Day</h2>
+        {matrikulasiData ? (
+          <AdminMatrikulasiForm
+            initialData={matrikulasiData}
+            action={updateMatrikulasiAction}
+          />
+        ) : (
+          <p className="admin-notice">
+            Data matrikulasi tidak bisa dibaca. Periksa{" "}
+            <code>data/matrikulasi-data.json</code> dan{" "}
+            <code>data/matrikulasi-jadwal.json</code> — kemungkinan formatnya
+            tidak valid atau ada kode prodi di jadwal yang belum terdaftar.
+          </p>
+        )}
       </section>
     </main>
   );

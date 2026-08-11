@@ -146,6 +146,17 @@
   font-family: "Poppins-Bold", sans-serif;
 }
 
+/* Pemisah antara editor jadwal harian dan editor matrikulasi. Satu tingkat di
+   atas .admin-section-title yang dipakai di dalam tiap editor. */
+.admin-section-heading {
+  margin: 2.5rem 0 1rem;
+  border-bottom: 3px solid rgba(162, 85, 187, 0.35);
+  padding-bottom: 0.6rem;
+  color: #7d3d9f;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 1.5rem;
+}
+
 .admin-section-title {
   margin: 1.75rem 0 1rem;
   border-radius: 8px;
@@ -254,6 +265,33 @@
 .admin-field textarea {
   resize: vertical;
   line-height: 1.55;
+}
+
+/* Textarea yang tumbuh mengikuti isi (lihat AutoGrowTextarea.tsx). Tinggi
+   sebenarnya di-set lewat inline style oleh komponen; min-height di sini yang
+   menentukan ukuran minimum, dan bertambah saat kotaknya diklik supaya ada
+   ruang menulis. Transition-nya sengaja hanya min-height — tinggi hasil
+   pengetikan harus langsung, tanpa animasi yang bikin caret "geser". */
+/* Selector-nya sengaja textarea.admin-autogrow (bukan .admin-autogrow saja):
+   .admin-field textarea di atas punya spesifisitas yang sama, jadi tanpa ini
+   min-height 2.8rem miliknya yang menang. */
+textarea.admin-autogrow {
+  min-height: 7rem;
+  overflow-y: hidden;
+  resize: none;
+  transition: min-height 0.18s ease;
+}
+
+textarea.admin-autogrow:focus {
+  min-height: 18rem;
+}
+
+/* Saat sedang diketik, kolomnya dibuat selebar grid supaya baris panjang tidak
+   terpotong-potong. Hanya berlaku di grid 2 kolom (layar lebar). */
+@media (min-width: 641px) {
+  .admin-form-grid .admin-field:focus-within {
+    grid-column: 1 / -1;
+  }
 }
 
 .admin-field select:focus,

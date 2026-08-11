@@ -54,7 +54,7 @@ function assertSection(
   }
 }
 
-type MatrikulasiKonten = Omit<MatrikulasiData, "jadwal">;
+export type MatrikulasiKonten = Omit<MatrikulasiData, "jadwal">;
 
 function assertMatrikulasiKonten(
   value: unknown,
@@ -161,4 +161,61 @@ export async function getMatrikulasiData(): Promise<MatrikulasiData | null> {
 
 export function serializeMatrikulasiData(data: MatrikulasiData): string {
   return `${JSON.stringify(data, null, 2)}\n`;
+}
+
+// Serialisasi kanonik file jadwal. Dipakai saat menulis dari admin DAN saat
+// tombol download membuat file, supaya hasil download bisa langsung ditaruh ke
+// data/matrikulasi-jadwal.json tanpa diformat ulang.
+export function serializeMatrikulasiJadwal(jadwal: MatrikulasiJadwal[]): string {
+  return `${JSON.stringify(jadwal, null, 2)}\n`;
+}
+
+// Kode prodi di jadwal wajib punya pasangan (id atau alias) di konten. Aturan
+// yang sama dipakai getMatrikulasiData() saat membaca — dicek juga di sini
+// supaya admin tidak bisa menyimpan data yang nanti gagal dibaca.
+function assertJadwalCocokDenganKonten(
+  konten: MatrikulasiKonten,
+  jadwal: MatrikulasiJadwal[],
+): void {
+  const semuaKode = new Set(
+    konten.prodi.flatMap((prodi: MatrikulasiProdi) => kodeProdi(prodi)),
+  );
+  for (const item of jadwal) {
+    if (!semuaKode.has(item.prodi)) {
+      throw new Error(
+        `Prodi "${item.prodi}" ada di jadwal tapi tidak ada di daftar prodi.`,
+      );
+    }
+  }
+
+  const idTerpakai = new Set<string>();
+  for (const item of jadwal) {
+    if (item.id.trim() === "") {
+      throw new Error("Ada baris jadwal tanpa id.");
+    }
+    if (idTerpakai.has(item.id)) {
+      throw new Error(`Id baris jadwal duplikat: ${item.id}.`);
+    }
+    idTerpakai.add(item.id);
+  }
+}
+
+// Dipakai server action admin. Yang bisa diedit dari admin cuma jadwal, jadi
+// hanya matrikulasi-jadwal.json yang ditulis ulang. Daftar prodi di
+// matrikulasi-data.json dibaca dari file (bukan dikirim dari browser) supaya
+// tidak bisa ikut terubah lewat form.
+export async function saveMatrikulasiJadwal(jadwal: unknown): Promise<void> {
+  assertMatrikulasiJadwal(jadwal);
+
+  const kontenFile = await fs.readFile(matrikulasiDataPath, "utf8");
+  const konten: unknown = JSON.parse(kontenFile);
+  assertMatrikulasiKonten(konten);
+  assertJadwalCocokDenganKonten(konten, jadwal);
+
+  await fs.mkdir(path.dirname(matrikulasiJadwalPath), { recursive: true });
+  await fs.writeFile(
+    matrikulasiJadwalPath,
+    serializeMatrikulasiJadwal(jadwal),
+    "utf8",
+  );
 }
