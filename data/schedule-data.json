@@ -5,10 +5,7 @@
       "subtitle": " ",
       "date": "Rabu, 14 Agustus 2026",
       "location": "UC Plaza & Universitas Ciputra Surabaya",
-      "time": [
-        "Kloter 1 : 07.00 - 10.45 WIB",
-        "Kloter 2 : 13.00 - 16.45 WIB"
-      ],
+      "time": ["Kloter 1 : 07.00 - 10.45 WIB", "Kloter 2 : 13.00 - 16.45 WIB"],
       "dresscodeDoImage": "",
       "dresscode": "Pakaian Berkerah, Sopan, dan Rapi"
     },
@@ -148,23 +145,17 @@
       "subtitle": "Glimpse of Tomorrow",
       "date": "hari, tanggal bulan tahun",
       "location": "Universitas Ciputra Surabaya",
-      "time": [
-        "00.00 - 00.00 WIB"
-      ],
+      "time": ["00.00 - 00.00 WIB"],
       "dresscodeDoImage": "",
       "dresscode": ""
     },
     "penugasan": {
       "title": "tugas matrikulasi",
-      "content": [
-        "matrikulasi"
-      ]
+      "content": ["matrikulasi"]
     },
     "ketentuan": {
       "title": "ketentuan matrikulasi",
-      "content": [
-        "matrikulasi"
-      ]
+      "content": ["matrikulasi"]
     }
   },
   {
@@ -173,36 +164,31 @@
       "subtitle": "UC Parents Gathering 2026",
       "date": "Jumat, 28 Agustus 2026",
       "location": "Hybrid • Onsite (UC) + Zoom",
-      "time": [
-        "Sesi 1 : 07:30 - 11:30 WIB",
-        "Sesi 2 : 13:00 - 16:30 WIB"
-      ],
+      "time": ["Sesi 1 : 07:30 - 11:30 WIB", "Sesi 2 : 13:00 - 16:30 WIB"],
       "parentsGathering": "https://oweek.ciputra.ac.id/parents",
       "dresscodeDoImage": "",
       "dresscode": ""
     },
     "penugasan": {
       "title": "tugas matrikulasi",
-      "content": [
-        "matrikulasi"
-      ]
+      "content": ["matrikulasi"]
     },
     "ketentuan": {
       "title": "ketentuan matrikulasi",
-      "content": [
-        "matrikulasi"
-      ]
+      "content": ["matrikulasi"]
     }
   },
   {
     "keterangan": {
       "title": "DAY 1",
-      "subtitle": "WE SEE THE LIGHT (TALKSHOW & SHOWCASE SELLING)",
+      "subtitle": ["TALKSHOW & SHOWCASE SELLING", "\"WE SEE THE LIGHT\""],
       "date": "Senin, 31 Agustus 2026",
       "location": "Hall Sekolah Ciputra Surabaya",
       "time": [
-        "Sesi 1 : 07.30 - 12.15 WIB",
-        "Sesi 2 : 12.15 - 17.00 WIB"
+        "Sesi 1 : 07.30 - 11.20 WIB",
+        "Showcase Kloter 1 : 10.00 - 12.00 WIB",
+        "Showcase Kloter 2 : 13.00 - 15.00 WIB",
+        "Sesi 2 : 12.20 - 16.10 WIB"
       ],
       "dresscodeDoImage": "/assets/dresscode/day1b.webp",
       "dresscode": "Kemeja/Blouse Putih, Celana Panjang Hitam / Warna Gelap (Dilarang Ripped Jeans), Sepatu Bebas (Menutupi Jari dan Tumit)"
@@ -234,11 +220,28 @@
   {
     "keterangan": {
       "title": "DAY 2",
-      "subtitle": "WHERE MAGIC FINDS YOU (STUDENT DEVELOPMENT PROGRAM & ORMAWA FEST)",
+      "subtitle": [
+        "STUDENT DEVELOPMENT PROGRAM & ORMAWA FEST",
+        "\"WHERE MAGIC FINDS YOU\""
+      ],
       "date": "Selasa, 1 September 2026",
       "location": "Universitas Ciputra Surabaya",
-      "time": [
-        "07.00 - 17.00 WIB"
+      "time": ["07.00 - 17.00 WIB"],
+      "kloter": [
+        {
+          "name": "Kloter I",
+          "date": "1 September 2026",
+          "time": "13.00 - 15.00 WIB",
+          "fakultas": "SBM",
+          "jurusan": "IBM-RC, IBM-IC, ACC"
+        },
+        {
+          "name": "Kloter II",
+          "date": "1 September 2026",
+          "time": "15.00 - 17.00 WIB",
+          "fakultas": "SIFT, SOC, SOM & SOP",
+          "jurusan": "IMT, ISB, DEM, MED, COM, PSY"
+        }
       ],
       "dresscodeDoImage": "/assets/dresscode/day2b.webp",
       "dresscode": "Kemeja/Blouse Warna Bebas, Celana Panjang Bebas (Dilarang Ripped Jeans), Sepatu Bebas (Menutupi Jari dan Tumit)"
@@ -294,11 +297,18 @@
   {
     "keterangan": {
       "title": "DAY 3",
-      "subtitle": "INTO THE EVER AFTER (PRA-LDK & ORMAWA FEST)",
+      "subtitle": ["PRA-LDK & ORMAWA FEST", "\"INTO THE EVER AFTER\""],
       "date": "Rabu, 2 September 2026",
       "location": "Universitas Ciputra Surabaya",
-      "time": [
-        "07.00 - 17.00 WIB"
+      "time": ["07.00 - 15.45 WIB"],
+      "kloter": [
+        {
+          "name": "Kloter III",
+          "date": "2 September 2026",
+          "time": "12.45 - 14.45 WIB",
+          "fakultas": "SOT & SCI",
+          "jurusan": "CBz, FTP, HTEB, ARS, FDB, VCD"
+        }
       ],
       "dresscodeDoImage": "/assets/dresscode/day3b.webp",
       "dresscode": "Atasan Batik Berkerah/Blouse (Bukan Outer/Vest), Celana Panjang Bebas (Dilarang Ripped Jeans), Sepatu Bebas (Menutupi Jari dan Tumit)"
@@ -347,12 +357,13 @@
   {
     "keterangan": {
       "title": "DAY 4",
-      "subtitle": "SYMBIOTIC PALLETE FOR INFINITE FLAVOURS (SELLING DAY)",
+      "subtitle": [
+        "SELLING DAY",
+        "\"SYMBIOTIC PALETTE FOR INFINITE FLAVOURS\""
+      ],
       "date": "Kamis, 3 September 2026",
       "location": "Universitas Ciputra Surabaya",
-      "time": [
-        "07.00 - 17.00 WIB"
-      ],
+      "time": ["07.00 - 17.00 WIB"],
       "dresscodeDoImage": "/assets/dresscode/day4b.webp",
       "dresscode": "Kaos Universitas Ciputra Surabaya, Celana Panjang Bebas (Dilarang Ripped Jeans), Sepatu Bebas (Menutupi Jari dan Tumit), Menggunakan Atribut/Aksesoris Sesuai Main Ingredient"
     },
@@ -403,12 +414,13 @@
   {
     "keterangan": {
       "title": "DAY 5",
-      "subtitle": "THE GOLDEN EPILOGUE (SIDANG SENAT & CLOSING CEREMONY)",
+      "subtitle": [
+        "SIDANG SENAT & CLOSING CEREMONY",
+        "\"THE GOLDEN EPILOGUE\""
+      ],
       "date": "Jumat, 4 September 2026",
       "location": "Multi Purpose Hall, Ciputra World Surabaya",
-      "time": [
-        "14.00 - 21.10 WIB"
-      ],
+      "time": ["14.00 - 21.00 WIB"],
       "dresscodeDoImage": "/assets/dresscode/day5b.webp",
       "dresscode": "Kemeja Putih, Celana Panjang/Rok Hitam atau Warna Gelap (Rok di Bawah Lutut dan Tidak Ketat), Sepatu Bebas (Menutupi Jari dan Tumit), WAJIB Membawa Jas Almamater"
     },
