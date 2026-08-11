@@ -6,7 +6,7 @@ import path from "path";
 // dan ketentuan.
 export type KeteranganData = {
   title: string;
-  subtitle: string;
+  subtitle: string | string[];
   date: string;
   location: string;
   time: string[];
@@ -40,10 +40,15 @@ export type ScheduleData = ScheduleEntry[];
 const scheduleDataPath = path.join(process.cwd(), "data", "schedule-data.json");
 
 function isStringArray(value: unknown): value is string[] {
-  return Array.isArray(value) && value.every((item) => typeof item === "string");
+  return (
+    Array.isArray(value) && value.every((item) => typeof item === "string")
+  );
 }
 
-function assertSection(value: unknown, label: string): asserts value is PopupSection {
+function assertSection(
+  value: unknown,
+  label: string,
+): asserts value is PopupSection {
   if (
     !value ||
     typeof value !== "object" ||
@@ -69,7 +74,10 @@ function assertScheduleData(value: unknown): asserts value is ScheduleData {
       !keterangan ||
       typeof keterangan !== "object" ||
       typeof keterangan.title !== "string" ||
-      typeof keterangan.subtitle !== "string" ||
+      !(
+        typeof keterangan.subtitle === "string" ||
+        isStringArray(keterangan.subtitle)
+      ) ||
       typeof keterangan.date !== "string" ||
       typeof keterangan.location !== "string" ||
       !isStringArray(keterangan.time) ||

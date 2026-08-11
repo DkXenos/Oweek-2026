@@ -44,11 +44,21 @@ function textToLines(text: string): string[] {
     .filter(Boolean);
 }
 
+function toSubtitle(text: string): string | string[] {
+  const lines = textToLines(text);
+  if (lines.length > 1) return lines;
+  return lines[0] ?? "";
+}
+
 function toDraft(data: ScheduleData): DraftEntry[] {
   return data.map((entry) => ({
     keterangan: {
       title: entry.keterangan.title,
-      subtitle: entry.keterangan.subtitle,
+      // subtitle boleh satu baris (string) atau beberapa baris (array); di form
+      // keduanya diedit sebagai teks multi-baris.
+      subtitle: Array.isArray(entry.keterangan.subtitle)
+        ? linesToText(entry.keterangan.subtitle)
+        : entry.keterangan.subtitle,
       date: entry.keterangan.date,
       location: entry.keterangan.location,
       time: linesToText(entry.keterangan.time),
@@ -71,7 +81,9 @@ function fromDraft(draft: DraftEntry[]): ScheduleData {
   return draft.map((entry) => ({
     keterangan: {
       title: entry.keterangan.title,
-      subtitle: entry.keterangan.subtitle,
+      // Ditulis balik sebagai array hanya kalau memang lebih dari satu baris,
+      // supaya subtitle satu baris tetap tersimpan sebagai string biasa.
+      subtitle: toSubtitle(entry.keterangan.subtitle),
       date: entry.keterangan.date,
       location: entry.keterangan.location,
       time: textToLines(entry.keterangan.time),
@@ -202,9 +214,8 @@ export default function AdminScheduleForm({
               </label>
 
               <label className="admin-field admin-field-wide">
-                <span>Subjudul</span>
-                <input
-                  type="text"
+                <span>Subjudul (satu baris = satu baris tampilan)</span>
+                <AutoGrowTextarea
                   value={entry.keterangan.subtitle}
                   onChange={(event) =>
                     updateEntry(index, {

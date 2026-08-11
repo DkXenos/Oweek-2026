@@ -4,15 +4,15 @@ import Agenda from "./agenda";
 import "./keterangan.css";
 
 export default function Keterangan({
-  data,
-  showParentsGatheringLink,
-  // Khusus banner matrikulasi: isinya 3 acara dengan tanggal/lokasi/jam
-  // masing-masing, jadi menggantikan baris date/location/time bawaan.
-  agenda,
+    data,
+    showParentsGatheringLink,
+    // Khusus banner matrikulasi: isinya 3 acara dengan tanggal/lokasi/jam
+    // masing-masing, jadi menggantikan baris date/location/time bawaan.
+    agenda,
 }: {
-  data: KeteranganData;
-  showParentsGatheringLink: boolean;
-  agenda?: AgendaGroup[];
+    data: KeteranganData;
+    showParentsGatheringLink: boolean;
+    agenda?: AgendaGroup[];
 }) {
     const isAgenda = Boolean(agenda && agenda.length > 0);
     // Path gambar bisa kosong selama datanya belum diisi. <img src=""> bikin
@@ -22,12 +22,24 @@ export default function Keterangan({
     const showDresscode =
         !isAgenda && (doImage !== "" || dresscodeText !== "");
 
-    return(
+    const subtitleLines = (Array.isArray(data.subtitle) ? data.subtitle : [data.subtitle])
+        .flatMap((line) =>
+            line
+                .split(/\r?\n|\.\.\.+/)
+                .map((part) => part.trim())
+                .filter(Boolean)
+        );
+
+    return (
         <>
             <h1 className="keterangan-title">{data.title}</h1>
             <div className={`keterangan-detail${isAgenda ? " keterangan-detail-agenda" : ""}`}>
-                {data.subtitle && data.subtitle.trim() !== "" && (
-                    <div className="keterangan-subtitle">{data.subtitle}</div>
+                {data.subtitle && (
+                    <div className="keterangan-subtitle">
+                        {subtitleLines.map((line, index) => (
+                            <div key={`${line}-${index}`}>{line}</div>
+                        ))}
+                    </div>
                 )}
                 {/* Link "Pelajari lebih lanjut" (banner Parents Gathering) tampil
                     di atas baris tanggal/lokasi/jam. */}
