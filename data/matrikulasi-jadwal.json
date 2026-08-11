@@ -127,8 +127,8 @@
     "hari": "Kamis",
     "tanggal": "2026-08-13",
     "lokasi": null,
-    "mulai": "08:00",
-    "selesai": "12:00",
+    "mulai": "07:30",
+    "selesai": "13:30",
     "dresscode": null
   },
   {
@@ -138,8 +138,8 @@
     "hari": "Kamis",
     "tanggal": "2026-08-13",
     "lokasi": null,
-    "mulai": "08:00",
-    "selesai": "12:00",
+    "mulai": "07:00",
+    "selesai": "12:30",
     "dresscode": null
   },
   {
@@ -159,7 +159,7 @@
     "kategori": "matrikulasi",
     "hari": "Jumat",
     "tanggal": "2026-08-21",
-    "lokasi": "422",
+    "lokasi": "422 (UC Main Building)",
     "mulai": "07:30",
     "selesai": "14:30",
     "dresscode": null
@@ -170,7 +170,7 @@
     "kategori": "matrikulasi",
     "hari": "Jumat",
     "tanggal": "2026-08-21",
-    "lokasi": "1834",
+    "lokasi": "1834 (UC Tower)",
     "mulai": "08:00",
     "selesai": "12:00",
     "dresscode": null
@@ -181,7 +181,7 @@
     "kategori": "matrikulasi",
     "hari": "Senin",
     "tanggal": "2026-08-24",
-    "lokasi": "1434 - 1435",
+    "lokasi": "1434 - 1435 (UC Tower)",
     "mulai": "07:00",
     "selesai": "16:32",
     "dresscode": null
@@ -192,7 +192,7 @@
     "kategori": "matrikulasi",
     "hari": "Senin",
     "tanggal": "2026-08-24",
-    "lokasi": "606",
+    "lokasi": "606 (UC Main Building)",
     "mulai": "07:00",
     "selesai": "15:00",
     "dresscode": null
@@ -203,7 +203,7 @@
     "kategori": "industry-visit",
     "hari": "Senin",
     "tanggal": "2026-08-24",
-    "lokasi": "Auditorium (di UC)",
+    "lokasi": "Auditorium (Lantai 7 Main Building)",
     "mulai": "07:00",
     "selesai": "11:47",
     "dresscode": null
@@ -225,7 +225,7 @@
     "kategori": "prodi-day",
     "hari": "Senin",
     "tanggal": "2026-08-24",
-    "lokasi": "1834",
+    "lokasi": " 1834 (UC Tower)",
     "mulai": "07:30",
     "selesai": "15:45",
     "dresscode": null
@@ -236,7 +236,7 @@
     "kategori": "prodi-day",
     "hari": "Senin",
     "tanggal": "2026-08-24",
-    "lokasi": "404",
+    "lokasi": "404 (UC Main Building)",
     "mulai": "07:30",
     "selesai": "16:20",
     "dresscode": null
@@ -247,9 +247,9 @@
     "kategori": "prodi-day",
     "hari": "Senin",
     "tanggal": "2026-08-24",
-    "lokasi": "1733",
+    "lokasi": "1733 (UC Tower)",
     "mulai": "07:30",
-    "selesai": "16:13",
+    "selesai": "12:00",
     "dresscode": null
   },
   {
@@ -258,9 +258,9 @@
     "kategori": "industry-visit",
     "hari": "Senin",
     "tanggal": "2026-08-24",
-    "lokasi": "1733 (di UC)",
-    "mulai": "07:30",
-    "selesai": "16:13",
+    "lokasi": "1733 (UC Tower)",
+    "mulai": "12:00",
+    "selesai": "16:30",
     "dresscode": null
   },
   {
@@ -269,7 +269,7 @@
     "kategori": "matrikulasi",
     "hari": "Senin",
     "tanggal": "2026-08-24",
-    "lokasi": "Theater 931 (di UC)",
+    "lokasi": "Theater 931 (UC Tower)",
     "mulai": "07:30",
     "selesai": "16:20",
     "dresscode": null
@@ -280,9 +280,9 @@
     "kategori": "prodi-day",
     "hari": "Senin",
     "tanggal": "2026-08-24",
-    "lokasi": "Studio 2 SIFT",
+    "lokasi": "Studio 2 SIFT (Lantai 5 UC Main Building)",
     "mulai": "07:30",
-    "selesai": null,
+    "selesai": "12.00",
     "dresscode": null
   },
   {
@@ -291,7 +291,7 @@
     "kategori": "prodi-day",
     "hari": "Senin",
     "tanggal": "2026-08-24",
-    "lokasi": "Theater lt. 7",
+    "lokasi": "Theater (Lantai 7 UC Main Building)",
     "mulai": "07:30",
     "selesai": "16:12",
     "dresscode": null
@@ -324,7 +324,7 @@
     "kategori": "matrikulasi",
     "hari": "Senin",
     "tanggal": "2026-08-24",
-    "lokasi": "Tech Space",
+    "lokasi": "Tech Space (Lantai 7 UC Main Building)",
     "mulai": "08:00",
     "selesai": "16:20",
     "dresscode": null
@@ -357,7 +357,7 @@
     "kategori": "matrikulasi",
     "hari": "Rabu",
     "tanggal": "2026-08-26",
-    "lokasi": "606",
+    "lokasi": "606 (UC Main Building)",
     "mulai": "07:00",
     "selesai": "15:05",
     "dresscode": null
@@ -368,9 +368,9 @@
     "kategori": "prodi-day",
     "hari": "Rabu",
     "tanggal": "2026-08-26",
-    "lokasi": "515",
+    "lokasi": "515 (UC Main Building)",
     "mulai": "07:00",
-    "selesai": "16:12",
+    "selesai": "10:30",
     "dresscode": null
   },
   {
@@ -379,7 +379,7 @@
     "kategori": "prodi-day",
     "hari": "Rabu",
     "tanggal": "2026-08-26",
-    "lokasi": "Theatre 931",
+    "lokasi": "Theatre 931 (UC Tower)",
     "mulai": "07:00",
     "selesai": "16:20",
     "dresscode": null
@@ -390,7 +390,7 @@
     "kategori": "prodi-day",
     "hari": "Rabu",
     "tanggal": "2026-08-26",
-    "lokasi": "Auditorium",
+    "lokasi": "Auditorium (Lantai 7 Main Building)",
     "mulai": "07:00",
     "selesai": "16:57",
     "dresscode": null
@@ -401,7 +401,7 @@
     "kategori": "prodi-day",
     "hari": "Rabu",
     "tanggal": "2026-08-26",
-    "lokasi": "Tech Space",
+    "lokasi": "Tech Space (Lantai 7 UC Main Building)",
     "mulai": "07:00",
     "selesai": "16:20",
     "dresscode": null
@@ -412,7 +412,7 @@
     "kategori": "industry-visit",
     "hari": "Rabu",
     "tanggal": "2026-08-26",
-    "lokasi": "1032 (di UC)",
+    "lokasi": "1032 (UC Tower)",
     "mulai": "07:30",
     "selesai": "11:05",
     "dresscode": null
@@ -434,7 +434,7 @@
     "kategori": "prodi-day",
     "hari": "Rabu",
     "tanggal": "2026-08-26",
-    "lokasi": "FiKom Hub",
+    "lokasi": "FiKom Hub (Lantai 14 UC Tower)",
     "mulai": "07:30",
     "selesai": "16:27",
     "dresscode": null
@@ -445,7 +445,7 @@
     "kategori": "prodi-day",
     "hari": "Rabu",
     "tanggal": "2026-08-26",
-    "lokasi": "Integrity Hall",
+    "lokasi": "Integrity Hall (Lantai 7 UC Main Building)",
     "mulai": "07:30",
     "selesai": "16:27",
     "dresscode": null
@@ -456,7 +456,7 @@
     "kategori": "prodi-day",
     "hari": "Rabu",
     "tanggal": "2026-08-26",
-    "lokasi": "Integrity Hall",
+    "lokasi": "Integrity Hall (Lantai 7 UC Main Building)",
     "mulai": "07:30",
     "selesai": "16:20",
     "dresscode": null
@@ -467,7 +467,7 @@
     "kategori": "matrikulasi",
     "hari": "Rabu",
     "tanggal": "2026-08-26",
-    "lokasi": "Theater lt. 7",
+    "lokasi": "Theater (Lantai 7 UC Main Building)",
     "mulai": "07:30",
     "selesai": "15:42",
     "dresscode": null
@@ -478,7 +478,7 @@
     "kategori": "matrikulasi",
     "hari": "Rabu",
     "tanggal": "2026-08-26",
-    "lokasi": "1931",
+    "lokasi": "1931 (UC Tower)",
     "mulai": "07:30",
     "selesai": "16:40",
     "dresscode": null
@@ -522,7 +522,7 @@
     "kategori": "matrikulasi",
     "hari": "Rabu",
     "tanggal": "2026-08-26",
-    "lokasi": "Studio 2 SIFT",
+    "lokasi": "Studio 2 SIFT (Lantai 5 UC Main Building)",
     "mulai": "13:40",
     "selesai": "15:50",
     "dresscode": null
@@ -544,7 +544,7 @@
     "kategori": "matrikulasi",
     "hari": "Kamis",
     "tanggal": "2026-08-27",
-    "lokasi": "606",
+    "lokasi": "606 (UC Main Building)",
     "mulai": "07:00",
     "selesai": "15:05",
     "dresscode": null
@@ -561,12 +561,23 @@
     "dresscode": null
   },
   {
+    "id": "2026-08-27-hteb-matrikulasi",
+    "prodi": "HTEB",
+    "kategori": "matrikulasi",
+    "hari": "Kamis",
+    "tanggal": "2026-08-27",
+    "lokasi": null,
+    "mulai": "10:30",
+    "selesai": "16:12",
+    "dresscode": null
+  },
+  {
     "id": "2026-08-27-imt-matrikulasi",
     "prodi": "IMT",
     "kategori": "matrikulasi",
     "hari": "Kamis",
     "tanggal": "2026-08-27",
-    "lokasi": "504",
+    "lokasi": "504 (UC Main Building)",
     "mulai": "07:00",
     "selesai": "16:27",
     "dresscode": null
@@ -588,7 +599,7 @@
     "kategori": "prodi-day",
     "hari": "Kamis",
     "tanggal": "2026-08-27",
-    "lokasi": "1032",
+    "lokasi": "1032 (UC Tower)",
     "mulai": "07:30",
     "selesai": "16:30",
     "dresscode": null
@@ -599,7 +610,7 @@
     "kategori": "prodi-day",
     "hari": "Kamis",
     "tanggal": "2026-08-27",
-    "lokasi": "505A dan 227",
+    "lokasi": "505A dan 227 (UC Main Building)",
     "mulai": "07:30",
     "selesai": "15:30",
     "dresscode": null
@@ -621,7 +632,7 @@
     "kategori": "prodi-day",
     "hari": "Kamis",
     "tanggal": "2026-08-27",
-    "lokasi": "Studio 2 SIFT",
+    "lokasi": "Studio 2 SIFT (Lantai 5 UC Main Building)",
     "mulai": "07:30",
     "selesai": "16:27",
     "dresscode": null
@@ -632,7 +643,7 @@
     "kategori": "matrikulasi",
     "hari": "Kamis",
     "tanggal": "2026-08-27",
-    "lokasi": "Theater lt. 7",
+    "lokasi": "Theater (Lantai 7 UC Main Building)",
     "mulai": "07:30",
     "selesai": "15:35",
     "dresscode": null
@@ -643,7 +654,7 @@
     "kategori": "matrikulasi",
     "hari": "Kamis",
     "tanggal": "2026-08-27",
-    "lokasi": "Lab. Komputer Lt. 12",
+    "lokasi": "Lab. Komputer (Lantai 12 UC Tower)",
     "mulai": "07:30",
     "selesai": "16:40",
     "dresscode": null
@@ -654,7 +665,7 @@
     "kategori": "matrikulasi",
     "hari": "Kamis",
     "tanggal": "2026-08-27",
-    "lokasi": "107",
+    "lokasi": "107 (UC Main Building)",
     "mulai": "08:00",
     "selesai": "13:15",
     "dresscode": null
@@ -665,7 +676,7 @@
     "kategori": "matrikulasi",
     "hari": "Kamis",
     "tanggal": "2026-08-27",
-    "lokasi": "Auditorium",
+    "lokasi": "Auditorium (Lantai 7 Main Building)",
     "mulai": "08:00",
     "selesai": "15:00",
     "dresscode": null

@@ -62,6 +62,30 @@ export default function Keterangan({
                     </>
                 )}
             </div>
+            {(data.kloter1?.length || data.kloter2?.length) && (
+                <div className="keterangan-kloter-container">
+                    <div className="keterangan-kloter-column">
+                        <h3 className="keterangan-kloter-title">Kloter 1</h3>
+                        <ul className="keterangan-kloter-list">
+                            {data.kloter1?.map((item, index) => (
+                                <li key={index} className="keterangan-kloter-item">
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div className="keterangan-kloter-column">
+                        <h3 className="keterangan-kloter-title">Kloter 2</h3>
+                        <ul className="keterangan-kloter-list">
+                            {data.kloter2?.map((item, index) => (
+                                <li key={index} className="keterangan-kloter-item">
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            )}
             {/* Banner matrikulasi punya dresscode sendiri per hari di dalam
                 agenda, jadi blok dresscode + gambar DO/DON'T di sini disembunyikan
                 khusus untuk banner itu. Banner lain tidak berubah. */}

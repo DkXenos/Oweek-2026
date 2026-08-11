@@ -18,6 +18,8 @@ export type KeteranganData = {
   // Ini yang diedit admin.
   dresscode: string;
   parentsGathering?: string;
+  kloter1?: string[];
+  kloter2?: string[];
 };
 
 export type PopupSection = {

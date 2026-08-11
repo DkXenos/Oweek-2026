@@ -3,14 +3,34 @@
     "keterangan": {
       "title": "PRA OWEEK",
       "subtitle": " ",
-      "date": "Rabu, 14 Agustus 2026",
-      "location": "UC Plaza & Universitas Ciputra Surabaya",
+      "date": "Jumat, 14 Agustus 2026",
+      "location": "Online",
       "time": [
-        "Kloter 1 : 07.00 - 10.45 WIB",
-        "Kloter 2 : 13.00 - 16.45 WIB"
+        "Kloter 1 : 07:00 - 10:45 WIB",
+        "Kloter 2 : 13:00 - 16:45 WIB"
       ],
       "dresscodeDoImage": "",
-      "dresscode": "Pakaian Berkerah, Sopan, dan Rapi"
+      "dresscode": "Pakaian Berkerah, Sopan, dan Rapi",
+      "kloter1": [
+        "FDB", 
+        "ACC", 
+        "IBM-RC", 
+        "VCD", 
+        "PSY", 
+        "ARS", 
+        "HTEB"
+      ],
+      "kloter2": [
+        "IBM-IC", 
+        "CBz", 
+        "MED-RC", 
+        "MED-IC", 
+        "DEM", 
+        "FTP", 
+        "ISB",
+        "IMT",
+        "COM"
+      ]
     },
     "penugasan": {
       "title": "Penugasan Pra-Oweek",
@@ -42,12 +62,12 @@
       "title": "INDEPENDENCE DAY",
       "subtitle": "UPACARA BENDERA & OPENING CEREMONY & SEMINAR 5E & TM SELLING",
       "date": "Minggu, 17 Agustus 2026",
-      "location": "Universitas Ciputra Surabaya",
+      "location": "UC Plaza, Universitas Ciputra Surabaya",
       "time": [
-        "06.30 - 08.05 WIB (Upacara Bendera)",
-        "08.05 - 09.48 WIB (Opening Ceremony)",
-        "09.48 - 13.32 WIB (Seminar 5E)",
-        "14.20 - 16.47 WIB (TM SELLING)"
+        "06:30 - 08:10 WIB (Upacara Bendera)",
+        "08:10 - 10:04 WIB (Opening Ceremony)",
+        "09:48 - 13:32 WIB (Seminar 5E)",
+        "13:43 - 16:10 WIB (TM SELLING)"
       ],
       "dresscodeDoImage": "/assets/dresscode/17benar.webp",
       "dresscode": "Kemeja Putih, Celana Panjang Hitam / Warna Gelap, Sepatu Hitam"
@@ -149,7 +169,7 @@
       "date": "hari, tanggal bulan tahun",
       "location": "Universitas Ciputra Surabaya",
       "time": [
-        "00.00 - 00.00 WIB"
+        "00:00 - 00:00 WIB"
       ],
       "dresscodeDoImage": "",
       "dresscode": ""
@@ -178,6 +198,26 @@
         "Sesi 2 : 13:00 - 16:30 WIB"
       ],
       "parentsGathering": "https://oweek.ciputra.ac.id/parents",
+      "kloter1": [
+        "MED-IC & MED-RC",
+        "DPR",
+        "CDC",
+        "FDB",
+        "VCD",
+        "INA",
+        "ARS",
+        "ISB",
+        "ISB-DS",
+        "IMT-AI & IMT-FSD",
+        "FTP",
+        "HTEB",
+        "CBZ",
+        "PSY"
+      ],
+      "kloter2": [
+        "IBM-IC & IBM-RC",
+        "ACC"
+      ],
       "dresscodeDoImage": "",
       "dresscode": ""
     },
@@ -201,8 +241,8 @@
       "date": "Senin, 31 Agustus 2026",
       "location": "Hall Sekolah Ciputra Surabaya",
       "time": [
-        "Sesi 1 : 07.30 - 12.15 WIB",
-        "Sesi 2 : 12.15 - 17.00 WIB"
+        "Sesi 1 : 07:30 - 12:15 WIB",
+        "Sesi 2 : 12:15 - 17:00 WIB"
       ],
       "dresscodeDoImage": "/assets/dresscode/day1b.webp",
       "dresscode": "Kemeja/Blouse Putih, Celana Panjang Hitam / Warna Gelap (Dilarang Ripped Jeans), Sepatu Bebas (Menutupi Jari dan Tumit)"
@@ -238,7 +278,7 @@
       "date": "Selasa, 1 September 2026",
       "location": "Universitas Ciputra Surabaya",
       "time": [
-        "07.00 - 17.00 WIB"
+        "07:00 - 17:00 WIB"
       ],
       "dresscodeDoImage": "/assets/dresscode/day2b.webp",
       "dresscode": "Kemeja/Blouse Warna Bebas, Celana Panjang Bebas (Dilarang Ripped Jeans), Sepatu Bebas (Menutupi Jari dan Tumit)"
@@ -298,7 +338,7 @@
       "date": "Rabu, 2 September 2026",
       "location": "Universitas Ciputra Surabaya",
       "time": [
-        "07.00 - 17.00 WIB"
+        "07:00 - 17:00 WIB"
       ],
       "dresscodeDoImage": "/assets/dresscode/day3b.webp",
       "dresscode": "Atasan Batik Berkerah/Blouse (Bukan Outer/Vest), Celana Panjang Bebas (Dilarang Ripped Jeans), Sepatu Bebas (Menutupi Jari dan Tumit)"
@@ -351,7 +391,7 @@
       "date": "Kamis, 3 September 2026",
       "location": "Universitas Ciputra Surabaya",
       "time": [
-        "07.00 - 17.00 WIB"
+        "07:00 - 17:00 WIB"
       ],
       "dresscodeDoImage": "/assets/dresscode/day4b.webp",
       "dresscode": "Kaos Universitas Ciputra Surabaya, Celana Panjang Bebas (Dilarang Ripped Jeans), Sepatu Bebas (Menutupi Jari dan Tumit), Menggunakan Atribut/Aksesoris Sesuai Main Ingredient"
@@ -407,7 +447,7 @@
       "date": "Jumat, 4 September 2026",
       "location": "Multi Purpose Hall, Ciputra World Surabaya",
       "time": [
-        "14.00 - 21.10 WIB"
+        "14:00 - 21:10 WIB"
       ],
       "dresscodeDoImage": "/assets/dresscode/day5b.webp",
       "dresscode": "Kemeja Putih, Celana Panjang/Rok Hitam atau Warna Gelap (Rok di Bawah Lutut dan Tidak Ketat), Sepatu Bebas (Menutupi Jari dan Tumit), WAJIB Membawa Jas Almamater"
