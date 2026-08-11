@@ -22,19 +22,23 @@ export default function Keterangan({
     const showDresscode =
         !isAgenda && (doImage !== "" || dresscodeText !== "");
 
+    const subtitleLines = (Array.isArray(data.subtitle) ? data.subtitle : [data.subtitle])
+        .flatMap((line) =>
+            line
+                .split(/\r?\n|\.\.\.+/)
+                .map((part) => part.trim())
+                .filter(Boolean)
+        );
+
     return (
         <>
             <h1 className="keterangan-title">{data.title}</h1>
             <div className={`keterangan-detail${isAgenda ? " keterangan-detail-agenda" : ""}`}>
                 {data.subtitle && (
                     <div className="keterangan-subtitle">
-                        {Array.isArray(data.subtitle) ? (
-                            data.subtitle.map((line, index) => (
-                                <div key={index}>{line}</div>
-                            ))
-                        ) : (
-                            data.subtitle
-                        )}
+                        {subtitleLines.map((line, index) => (
+                            <div key={`${line}-${index}`}>{line}</div>
+                        ))}
                     </div>
                 )}
                 {/* Link "Pelajari lebih lanjut" (banner Parents Gathering) tampil
