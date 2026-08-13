@@ -58,15 +58,48 @@ export default function Banner({
   const prevPage = () =>
     setPage((current) => (current - 1 + pageCount) % pageCount);
 
+  // Tombol/gesture "back" menutup popup, bukan meninggalkan halaman. Saat popup
+  // dibuka kita dorong satu history entry dengan URL yang sama persis (route,
+  // URL bar, dan tampilan tidak berubah), lalu back cukup mem-pop entry itu.
+  //
+  // Push-nya sengaja di event handler, bukan di useEffect: di dev, StrictMode
+  // menjalankan effect dua kali (mount -> cleanup -> mount), sehingga cleanup
+  // yang memanggil history.back() bikin popstate menyusul setelah popup dibuka
+  // ulang — popup langsung tertutup sendiri. Event handler tidak double-invoke.
   const openPopup = (imageId: string) => {
     setSelectedImageId(imageId);
     setIsOpen(true);
+    window.history.pushState(
+      { ...window.history.state, oweekPopup: true },
+      "",
+      window.location.href,
+    );
   };
 
+  // Semua jalur tutup (X, backdrop, ESC) lewat sini. Kalau entry dummy masih di
+  // puncak history, konsumsi dulu lewat back() supaya history tidak menumpuk;
+  // penutupan state-nya dikerjakan oleh listener popstate di bawah, jadi hanya
+  // ada satu tempat yang benar-benar menutup popup.
   const closePopup = () => {
+    if (window.history.state?.oweekPopup) {
+      window.history.back();
+      return;
+    }
     setIsOpen(false);
     setSelectedImageId(null);
   };
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handlePopState = () => {
+      setIsOpen(false);
+      setSelectedImageId(null);
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, [isOpen]);
 
   return (
     <>

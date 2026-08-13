@@ -41,10 +41,27 @@ export default function Popup({
   // belum scroll sama sekali.
   const bodyRef = useRef<HTMLDivElement | null>(null);
   const [showScrollHint, setShowScrollHint] = useState(false);
+  // onClose bisa berubah identitasnya tiap render parent; disimpan di ref supaya
+  // listener ESC/popstate cukup dipasang sekali (tidak remount history entry).
+  const onCloseRef = useRef(onClose);
+  onCloseRef.current = onClose;
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  // ESC menutup popup (desktop).
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        onCloseRef.current();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
 
   // Resolve entry berdasarkan banner yang diklik. Clamp agar index selalu valid.
   const selectedIndex = Math.max(
